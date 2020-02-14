@@ -15,15 +15,15 @@
 
 |Description  | Shortcut                  |
 |---          |---                        |
-| Open Windows Explorer  | [WINDOWS] + E  |
-| New folder  | [CTRL] + [SHIFT] + N  |
-| Jump to the navigation bar  | [CTRL] + L |
+| Open Windows Explorer  | <kbd>Win</kbd> + <kbd>E</kbd>  |
+| New folder  | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>  |
+| Jump to the navigation bar  | <kbd>Ctrl</kbd> + <kbd>L</kbd> |
 
 ### Google Chrome
 * [Google Chrome Shortcuts](https://support.google.com/chrome/answer/157179)
 
 |Description  | Shortcut                  |
 |---          |---                        |
-|Download resource directly | [Alt] + Click  |
-|Switch Tab (->) | [CTRL] + [TAB]  |
-|Switch Tab (<-) | [CTRL] + [SHIFT] + [TAB]  |
+|Download resource directly | <kbd>Alt</kbd> + <kbd>Click</kbd>  |
+|Switch Tab (->) | <kbd>Ctrl</kbd> + <kbd>Tab</kbd>  |
+|Switch Tab (<-) | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>  |
