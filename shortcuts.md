@@ -27,3 +27,4 @@
 |Download resource directly | <kbd>Alt</kbd> + <kbd>Click</kbd>  |
 |Switch Tab (->) | <kbd>Ctrl</kbd> + <kbd>Tab</kbd>  |
 |Switch Tab (<-) | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>  |
+|Incognito mode | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>  |
