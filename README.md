@@ -27,6 +27,10 @@ A repository with useful shortcuts/setups/snippets etc.
 * [Dillinger - Markdown Editor](https://dillinger.io/)
 * [Draw.io - Flowchart maker](https://www.draw.io/)
 
+## Open-Source Softwares
+* [youtube-dl](https://github.com/ytdl-org/youtube-dl)
+* [FFmpeg](https://www.ffmpeg.org/)
+
 ## Color
 * [colorsinspo](https://colorsinspo.com/)
 
