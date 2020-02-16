@@ -10,6 +10,14 @@ A repository with useful shortcuts/setups/snippets etc.
 * [w3schools - CSS Selectors](https://www.w3schools.com/cssref/css_selectors.asp)
 * [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
 
+## .NET (Reference)
+* [C# Documentation](https://docs.microsoft.com/de-de/dotnet/csharp/)
+* [PInvoke.net](http://pinvoke.net/)
+
+## Package managers
+* [npm](https://www.npmjs.com/)
+* [NuGet](https://www.nuget.org/)
+
 ## Resources
 * [List of Free Learning Resources](https://github.com/EbookFoundation/free-programming-books/blob/master/README.md)
 ### Online learning platforms
