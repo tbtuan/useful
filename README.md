@@ -19,5 +19,9 @@ A repository with useful shortcuts/setups/snippets etc.
 * [Dillinger - Markdown Editor](https://dillinger.io/)
 * [Draw.io - Flowchart maker](https://www.draw.io/)
 
+## Color
+* [colorsinspo](https://colorsinspo.com/)
+
+
 ## Misc
 * [Public APIs](https://github.com/public-apis/public-apis#books)
