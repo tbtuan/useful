@@ -1,6 +1,14 @@
 # useful
 A repository with useful shortcuts/setups/snippets etc.
 
+## Web Development (Reference)
+* [DevDocs](https://devdocs.io/)
+* [Can I use](https://caniuse.com/)
+* [w3.org](https://www.w3.org/TR/html52/)
+* [MDN - JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+* [MDN - CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+* [w3schools - CSS Selectors](https://www.w3schools.com/cssref/css_selectors.asp)
+* [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
 
 ## Resources
 * [List of Free Learning Resources](https://github.com/EbookFoundation/free-programming-books/blob/master/README.md)
