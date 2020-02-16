@@ -18,3 +18,6 @@ A repository with useful shortcuts/setups/snippets etc.
 ## Online editors
 * [Dillinger - Markdown Editor](https://dillinger.io/)
 * [Draw.io - Flowchart maker](https://www.draw.io/)
+
+## Misc
+* [Public APIs](https://github.com/public-apis/public-apis#books)
