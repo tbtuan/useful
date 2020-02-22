@@ -1,3 +1,9 @@
+# Main
+* [Readme](./readme.md)
+* [Command](./command.md)
+* [Setup](./setup.md)
+* [Shortcut](#Index)
+
 ## Index
 
 * [IntelliJ](#IntelliJ)
