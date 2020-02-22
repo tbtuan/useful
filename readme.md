@@ -1,6 +1,12 @@
 # useful
 A repository with useful shortcuts/setups/snippets etc.
 
+# Main
+* [Readme](#)
+* [Command](./command.md)
+* [Setup](./setup.md)
+* [Shortcut](./shortcut.md)
+
 ## Web Development (Reference)
 * [DevDocs](https://devdocs.io/)
 * [Can I use](https://caniuse.com/)
