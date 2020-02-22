@@ -1,5 +1,5 @@
 # Main
-* [Readme](./readme)
+* [Readme](./readme.md)
 * [Command](#index)
 * [Setup](./setup.md)
 * [Shortcut](./shortcut.md)
