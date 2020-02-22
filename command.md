@@ -1,3 +1,9 @@
+# Main
+* [Readme](./readme)
+* [Command](#index)
+* [Setup](./setup.md)
+* [Shortcut](./shortcut.md)
+
 ## Index
 
 * [Git](#Git)
