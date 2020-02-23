@@ -11,6 +11,7 @@ A repository with useful shortcuts/setups/snippets etc.
 * [DevDocs](https://devdocs.io/)
 * [Can I use](https://caniuse.com/)
 * [w3.org](https://www.w3.org/TR/html52/)
+* [MDN - HTTP](https://developer.mozilla.org/docs/Web/HTTP)
 * [MDN - JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 * [MDN - CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 * [w3schools - CSS Selectors](https://www.w3schools.com/cssref/css_selectors.asp)
