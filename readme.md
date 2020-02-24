@@ -7,6 +7,11 @@ A repository with useful shortcuts/setups/snippets etc.
 * [Setup](./setup.md)
 * [Shortcut](./shortcut.md)
 
+## Security
+* [Firefox Monitor](https://monitor.firefox.com/)
+* [have i been pwned?](https://haveibeenpwned.com/)
+* [twofactorauth](https://twofactorauth.org/)
+
 ## Web Development (Reference)
 * [DevDocs](https://devdocs.io/)
 * [Can I use](https://caniuse.com/)
