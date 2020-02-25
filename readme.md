@@ -23,12 +23,17 @@ A repository with useful shortcuts/setups/snippets etc.
 * [MDN - HTTP](https://developer.mozilla.org/docs/Web/HTTP)
 * [MDN - JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 * [MDN - CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
-* [w3schools - CSS Selectors](https://www.w3schools.com/cssref/css_selectors.asp)
+* [w3schools - JS Reference](https://www.w3schools.com/jsref/)
+* [w3schools - CSS Reference](https://www.w3schools.com/cssref/)
 * [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
 
 ## .NET (Reference)
 * [C# Documentation](https://docs.microsoft.com/de-de/dotnet/csharp/)
 * [PInvoke.net](http://pinvoke.net/)
+
+## Java (Reference)
+* [Java Platform, Standard Edition Documentation](https://docs.oracle.com/en/java/javase/index.html)
+* [Gradle Build Language Reference](https://docs.gradle.org/current/dsl/)
 
 ## Package managers
 * [npm](https://www.npmjs.com/)
@@ -57,7 +62,6 @@ A repository with useful shortcuts/setups/snippets etc.
 
 ## Color
 * [colorsinspo](https://colorsinspo.com/)
-
 
 ## Misc
 * [Public APIs](https://github.com/public-apis/public-apis#books)
