@@ -7,6 +7,9 @@ A repository with useful shortcuts/setups/snippets etc.
 * [Setup](./setup.md)
 * [Shortcut](./shortcut.md)
 
+## File sharing
+* [Firefox Send](https://send.firefox.com/)
+
 ## Security
 * [Firefox Monitor](https://monitor.firefox.com/)
 * [have i been pwned?](https://haveibeenpwned.com/)
