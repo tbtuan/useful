@@ -11,6 +11,7 @@ A repository with useful shortcuts/setups/snippets etc.
 * [Firefox Monitor](https://monitor.firefox.com/)
 * [have i been pwned?](https://haveibeenpwned.com/)
 * [twofactorauth](https://twofactorauth.org/)
+* [Shodan](https://www.shodan.io/)
 
 ## Web Development (Reference)
 * [DevDocs](https://devdocs.io/)
