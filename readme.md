@@ -1,5 +1,11 @@
 # useful
-A repository with useful shortcuts/setups/snippets etc.
+A repository with useful 
+- websites
+- shortcuts for various applications
+- setups
+- command
+- snippets
+- free learning resources etc.
 
 # Main
 * [Readme](#)
@@ -43,18 +49,13 @@ A repository with useful shortcuts/setups/snippets etc.
 * [npm](https://www.npmjs.com/)
 * [NuGet](https://www.nuget.org/)
 
-## Resources
+## Free Learning Resources
+### EBooks
 * [List of Free Learning Resources](https://github.com/EbookFoundation/free-programming-books/blob/master/README.md)
 ### Online learning platforms
-#### Free
 * [Excercism](https://exercism.io/)
 * [freeCodeCamp](https://www.freecodecamp.org/)
 * [Codecademy](https://www.codecademy.com/)
-#### Paid
-* [Udacity](https://www.udacity.com/)
-* [Pluralsight](https://www.pluralsight.com/)
-* [LinkedIn Learning](https://www.linkedin.com/learning)
-* [Treehouse](https://teamtreehouse.com/)
 
 ## Online editors
 * [Dillinger - Markdown Editor](https://dillinger.io/)
