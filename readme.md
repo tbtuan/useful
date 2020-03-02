@@ -24,6 +24,7 @@ A repository with useful
 
 ## Web Development (Reference)
 * [Public APIs](https://github.com/public-apis/public-apis#books)
+* [High Performance Browser Networking](https://hpbn.co/)
 * [DevDocs](https://devdocs.io/)
 * [Can I use](https://caniuse.com/)
 * [w3.org](https://www.w3.org/TR/html52/)
