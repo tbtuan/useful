@@ -35,6 +35,9 @@ A repository with useful shortcuts/setups/snippets etc.
 * [Java Platform, Standard Edition Documentation](https://docs.oracle.com/en/java/javase/index.html)
 * [Gradle Build Language Reference](https://docs.gradle.org/current/dsl/)
 
+## Win32 (Reference)
+* [Windows API Index](https://docs.microsoft.com/en-us/windows/win32/apiindex/windows-api-list)
+
 ## Package managers
 * [npm](https://www.npmjs.com/)
 * [NuGet](https://www.nuget.org/)
