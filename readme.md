@@ -22,7 +22,9 @@ A repository with useful
 * [twofactorauth](https://twofactorauth.org/)
 * [Shodan](https://www.shodan.io/)
 
-## Web Development (Reference)
+## References
+
+### Web Development
 * [Public APIs](https://github.com/public-apis/public-apis#books)
 * [High Performance Browser Networking](https://hpbn.co/)
 * [DevDocs](https://devdocs.io/)
@@ -35,15 +37,15 @@ A repository with useful
 * [w3schools - CSS Reference](https://www.w3schools.com/cssref/)
 * [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
 
-## .NET (Reference)
+### .NET
 * [C# Documentation](https://docs.microsoft.com/de-de/dotnet/csharp/)
 * [PInvoke.net](http://pinvoke.net/)
 
-## Java (Reference)
+### Java
 * [Java Platform, Standard Edition Documentation](https://docs.oracle.com/en/java/javase/index.html)
 * [Gradle Build Language Reference](https://docs.gradle.org/current/dsl/)
 
-## Win32 (Reference)
+### Win32
 * [Windows API Index](https://docs.microsoft.com/en-us/windows/win32/apiindex/windows-api-list)
 
 ## Package managers
