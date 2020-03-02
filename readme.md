@@ -17,6 +17,7 @@ A repository with useful shortcuts/setups/snippets etc.
 * [Shodan](https://www.shodan.io/)
 
 ## Web Development (Reference)
+* [Public APIs](https://github.com/public-apis/public-apis#books)
 * [DevDocs](https://devdocs.io/)
 * [Can I use](https://caniuse.com/)
 * [w3.org](https://www.w3.org/TR/html52/)
@@ -65,6 +66,3 @@ A repository with useful shortcuts/setups/snippets etc.
 
 ## Color
 * [colorsinspo](https://colorsinspo.com/)
-
-## Misc
-* [Public APIs](https://github.com/public-apis/public-apis#books)
