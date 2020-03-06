@@ -52,14 +52,6 @@ A repository with useful
 * [npm](https://www.npmjs.com/)
 * [NuGet](https://www.nuget.org/)
 
-## Free Learning Resources
-### EBooks
-* [List of Free Learning Resources](https://github.com/EbookFoundation/free-programming-books/blob/master/README.md)
-### Online learning platforms
-* [Excercism](https://exercism.io/)
-* [freeCodeCamp](https://www.freecodecamp.org/)
-* [Codecademy](https://www.codecademy.com/)
-
 ## Online editors
 * [Dillinger - Markdown Editor](https://dillinger.io/)
 * [Draw.io - Flowchart maker](https://www.draw.io/)
