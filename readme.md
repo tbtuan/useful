@@ -13,15 +13,6 @@ A repository with useful
 * [Setup](./setup.md)
 * [Shortcut](./shortcut.md)
 
-## File sharing
-* [Firefox Send](https://send.firefox.com/)
-
-## Security
-* [Firefox Monitor](https://monitor.firefox.com/)
-* [have i been pwned?](https://haveibeenpwned.com/)
-* [twofactorauth](https://twofactorauth.org/)
-* [Shodan](https://www.shodan.io/)
-
 ## References
 
 ### Web Development
@@ -51,14 +42,3 @@ A repository with useful
 ## Package managers
 * [npm](https://www.npmjs.com/)
 * [NuGet](https://www.nuget.org/)
-
-## Online editors
-* [Dillinger - Markdown Editor](https://dillinger.io/)
-* [Draw.io - Flowchart maker](https://www.draw.io/)
-
-## Open-Source Softwares
-* [youtube-dl](https://github.com/ytdl-org/youtube-dl)
-* [FFmpeg](https://www.ffmpeg.org/)
-
-## Color
-* [colorsinspo](https://colorsinspo.com/)
