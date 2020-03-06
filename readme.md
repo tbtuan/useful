@@ -15,6 +15,9 @@ A repository with useful
 
 ## References
 
+### General
+* [Top 25 Most Dangerous Software Errors](http://cwe.mitre.org/top25/)
+
 ### Web Development
 * [Public APIs](https://github.com/public-apis/public-apis#books)
 * [High Performance Browser Networking](https://hpbn.co/)
