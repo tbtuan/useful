@@ -9,4 +9,15 @@ Apache
 Documentation
 https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html
 
-TLS 1.2/1.3 only
+|Description  | Text                  |
+|---          |---                        |
+| TLS 1.2/1.3 only (*.conf inside "sites-available") | ```text 
+<VirtualHost *:443>
+    ServerName www.example.com
+    DocumentRoot /var/www/html
+
+    SSLEngine on
+    SSLProtocol -all +TLSv1.2 +TLSv1.3
+    SSLCertificateFile /etc/letsencrypt/live/example.com/cert.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
+</VirtualHost>``` |
