@@ -19,3 +19,7 @@
 
 ## Color
 * [colorsinspo](https://colorsinspo.com/)
+
+## CSS
+* [Box-shadow](https://brumm.af/shadows)
+* [CSS Gradient](https://cssgradient.io/)
