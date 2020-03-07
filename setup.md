@@ -22,4 +22,5 @@ LoadModule ssl_module modules/mod_ssl.so
     SSLProtocol -all +TLSv1.2 +TLSv1.3
     SSLCertificateFile /etc/letsencrypt/live/example.com/cert.pem
     SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
-</VirtualHost>```
+</VirtualHost>
+```
