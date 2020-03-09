@@ -24,3 +24,9 @@ LoadModule ssl_module modules/mod_ssl.so
     SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
 </VirtualHost>
 ```
+
+VSCode
+
+Useful extensions
+* [emmet](https://docs.emmet.io/)
+* [Live Server](https://ritwickdey.github.io/vscode-live-server/)
