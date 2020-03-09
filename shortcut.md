@@ -16,6 +16,13 @@
 
 ### Visual Studio Code
 
+* [VSCode Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+
+|Description  | Shortcut                  |
+|---          |---                        |
+| Command Palette  | <kbd>F1</kbd> / <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>  |
+| Quick Open  | <kbd>Ctrl</kbd> + <kbd>P</kbd> |
+
 ### Windows
 #### Windows Explorer
 
