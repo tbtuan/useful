@@ -2,6 +2,7 @@
 * [Firefox Send](https://send.firefox.com/)
 
 ## Security
+* [Connection Information (DoH/DoT/WARP)](https://1.1.1.1/help)
 * [Cloudflare ESNI Checker](https://www.cloudflare.com/ssl/encrypted-sni/)
 * [Firefox Monitor](https://monitor.firefox.com/)
 * [have i been pwned?](https://haveibeenpwned.com/)
