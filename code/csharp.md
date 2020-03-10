@@ -1,3 +1,11 @@
+### Named Argument
+```csharp
+// system is optional
+void Log(string msg, string system = "asdf", int priority) {
+}
+// Method call
+Log("Tracker", priority: 0);
+```
 
 ### Extension Method
 ```csharp
