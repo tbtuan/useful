@@ -2,6 +2,7 @@
 * [Firefox Send](https://send.firefox.com/)
 
 ## Security
+* [Cloudflare ESNI Checker](https://www.cloudflare.com/ssl/encrypted-sni/)
 * [Firefox Monitor](https://monitor.firefox.com/)
 * [have i been pwned?](https://haveibeenpwned.com/)
 * [twofactorauth](https://twofactorauth.org/)
@@ -21,5 +22,6 @@
 * [colorsinspo](https://colorsinspo.com/)
 
 ## CSS
+* [CSS Grid Generator - LayoutIt](https://grid.layoutit.com/)
 * [Box-shadow](https://brumm.af/shadows)
 * [CSS Gradient](https://cssgradient.io/)
