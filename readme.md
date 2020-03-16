@@ -17,6 +17,8 @@ A repository with useful
 
 ### General
 * [Top 25 Most Dangerous Software Errors](http://cwe.mitre.org/top25/)
+* [W3Techs](https://w3techs.com/)
+* [TIOBE-Index](https://www.tiobe.com/tiobe-index/)
 
 ### Web Development
 * [Public APIs](https://github.com/public-apis/public-apis#books)
