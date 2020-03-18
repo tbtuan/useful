@@ -19,8 +19,12 @@
 * [youtube-dl](https://github.com/ytdl-org/youtube-dl)
 * [FFmpeg](https://www.ffmpeg.org/)
 
+## Type
+* [Google Fonts](https://fonts.google.com/)
+
 ## Color
 * [Adobe Color](https://color.adobe.com/)
+* [colormind.io](http://colormind.io/)
 * [colorsinspo](https://colorsinspo.com/)
 
 ## CSS
