@@ -32,10 +32,12 @@ A repository with useful
 * [w3schools - JS Reference](https://www.w3schools.com/jsref/)
 * [w3schools - CSS Reference](https://www.w3schools.com/cssref/)
 * [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
+* [npm](https://www.npmjs.com/)
 
 ### .NET
 * [C# Documentation](https://docs.microsoft.com/de-de/dotnet/csharp/)
 * [PInvoke.net](http://pinvoke.net/)
+* [NuGet](https://www.nuget.org/)
 
 ### Java
 * [Java Platform, Standard Edition Documentation](https://docs.oracle.com/en/java/javase/index.html)
@@ -43,7 +45,4 @@ A repository with useful
 
 ### Win32
 * [Windows API Index](https://docs.microsoft.com/en-us/windows/win32/apiindex/windows-api-list)
-
-## Package managers
-* [npm](https://www.npmjs.com/)
-* [NuGet](https://www.nuget.org/)
+* [Using WMI](https://docs.microsoft.com/en-us/windows/win32/wmisdk/connecting-to-wmi-remotely-with-c-)
