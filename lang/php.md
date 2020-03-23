@@ -38,7 +38,7 @@ class Point {
 
 	private $x;
 	private $y;
-	
+
 	// __contruct = constructor
 	function __construct($x, $y) {
 		// this isn't optional
@@ -49,16 +49,16 @@ class Point {
 	function getX() {
 		return $this->x;
 	}
-	
+
 	function getY() {
 		return $this->y;
 	}
   
-  // Function with $array (passed by ref) default parameters
-  function &returnFirstElement(&$array, $a=123) {
-    // & before function name + $array
+	// Function with $array (passed by ref) default parameters
+	function &returnFirstElement(&$array, $a=123) {
+	// & before function name + $array
 	  return $array[0];
-  }
+	}
   
 }
 
