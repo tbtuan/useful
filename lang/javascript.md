@@ -52,3 +52,16 @@ if (username) {
 let defaultName = username || 'Stranger';
 
 ```
+
+### RegEx
+
+[RegExp](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+
+```js
+
+let string = "This is a string 123";
+// Regex + flag (i = ignorecase, g = global)
+let regex = /this|string|\d/ig;
+regex.test(string);
+string.match(regex);
+```
