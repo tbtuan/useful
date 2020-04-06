@@ -31,3 +31,25 @@ function App() {
 
 ReactDOM.render(<App />, document.getElementById("root"))
 ```
+
+### Inline-CSS in JSX
+
+```jsx
+import React from "react"
+import ReactDOM from "react-dom"
+
+function App() {
+  const style = {
+    color: "black",
+    backgroundColor: "yellow"
+  };
+  return (
+      <div>
+        <p style={style}>1</p>
+        <p>2</p>
+      </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"))
+```
