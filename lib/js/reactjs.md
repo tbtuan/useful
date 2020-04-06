@@ -9,6 +9,25 @@ ReactDOM.render(
     <p>1</p>
     <p>2</p>
   </div>
-  , document.getElementById("root");
+  , document.getElementById("root")
 )
+```
+
+### Javascript in JSX
+
+```jsx
+import React from "react"
+import ReactDOM from "react-dom"
+
+function App() {
+  const number = 1;
+  return (
+      <div>
+        <p>{number}</p>
+        <p>2</p>
+      </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"))
 ```
