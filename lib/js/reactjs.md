@@ -32,7 +32,7 @@ function App() {
 ReactDOM.render(<App />, document.getElementById("root"))
 ```
 
-### Inline-CSS in JSX
+### CSS in JSX
 
 ```jsx
 import React from "react"
@@ -46,10 +46,40 @@ function App() {
   return (
       <div>
         <p style={style}>1</p>
-        <p>2</p>
+        <p className="myClass">2</p>
       </div>
   );
 }
 
 ReactDOM.render(<App />, document.getElementById("root"))
 ```
+
+### Props in JSX
+
+```jsx
+// Inside App.js
+import React from "react"
+
+const App = () => {
+  return (
+      <Card 
+          name="Name" 
+          img="https://via.placeholder.com/200x120" 
+      />
+  );
+}
+
+// Inside Card.js
+import React from "react"
+
+const Card = (props) => {
+    return (
+        <div>
+            <img src={props.img}/>
+            <h2>{props.name}</h2>
+        </div>
+    )
+}
+
+```
+
