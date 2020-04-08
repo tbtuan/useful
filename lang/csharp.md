@@ -7,6 +7,20 @@ void Log(string msg, string system = "asdf", int priority) {
 Log("Tracker", priority: 0);
 ```
 
+### out-Keyword
+```csharp
+// Parse s and save result
+string s = "42";
+int result;
+int.TryParse(s, out result)
+```
+
+
+### Lambda
+```csharp
+people.Find(person => person.Name == "John");
+```
+
 ### Extension Method
 ```csharp
 // Must be static
@@ -54,6 +68,10 @@ MyDelegate f1 = func1;
 MyDelegate f2 = func2;
 MyDelegate f1f2 = f1 + f2; // f1 then f2
 f1f2 -= f1 // Remove f1 from the chain
+f1f2 += delegate(string s)
+{
+   // With an anonymous delegate
+}
 ```
 
 #### Event handler
@@ -94,4 +112,44 @@ class Program {
         Console.WriteLine("Output from obj_valueChanged");
     }
 }
+```
+
+#### Thread/Task
+```csharp
+Thread t = new Thread(MyMethod);
+t.Start();
+
+Task.Run(() => MyMethod());
+Tasks.Factory.StartNew(() => MyMethod());
+```
+
+#### Monitor
+```csharp
+Object myLock = new Object();
+Monitor.Enter(myLock);
+try {
+  // Do critical stuff
+} finally {
+  Monitor.Exit(myLock);
+}
+// Same as lock(myLock) { }
+```
+
+#### Mutex
+```csharp
+Mutex mutex = new Mutex();
+mutex.WaitOne();
+MyMethod();
+mutex.ReleaseMutex();
+```
+
+#### Reader-Writer-Lock
+```csharp
+ReaderWriterLockSlim readerWriterLockSlim = new ReaderWriterLockSlim();
+readerWriterLockSlim.EnterReadLock();
+MyReadMethod();
+readerWriterLockSlim.ExitReadLock();
+readerWriterLockSlim.EnterWriteLock();
+MyWriteMethod();
+readerWriterLockSlim.ExitWriteLock();
 ```
