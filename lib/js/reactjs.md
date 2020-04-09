@@ -83,3 +83,19 @@ const Card = (props) => {
 
 ```
 
+### High Order Functions
+```jsx
+// Inside App.js
+import React from "react"
+
+const App = () => {
+    const cardsComponent = cardsData.map(card => <Card key={card.id} img={card.img} name={card.name} />)
+    
+    return (
+        <div>
+            {cardsComponent}            
+        </div>
+    )
+}
+
+```
