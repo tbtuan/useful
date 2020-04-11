@@ -99,3 +99,34 @@ const App = () => {
 }
 
 ```
+
+### Class-Components
+```jsx
+// Inside App.js
+import React, { Component } from "react"
+
+ class App extends Component {
+    
+    render() {
+      const cardsComponent = cardsData.map(card => <Card key={card.id} img={card.img} name={card.name} />)   
+      return (
+          <div>
+              {cardsComponent}            
+          </div>
+      )
+    }
+    
+}
+
+```
+
+```
+
+### States
+```jsx
+constructor(props) {
+  super(props);
+  this.state = { counter: 0 };
+}
+
+```
