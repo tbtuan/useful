@@ -120,13 +120,30 @@ import React, { Component } from "react"
 
 ```
 
-```
-
 ### States
+
 ```jsx
 constructor(props) {
   super(props);
   this.state = { counter: 0 };
+}
+
+```
+
+### Event handling
+
+```jsx
+function handleClick() {
+    console.log("Button 1 was clicked")
+}
+
+function App() {
+    return (
+        <div>
+            <button onClick={handleClick}>Button 1</button>
+            <button onClick={() => console.log("Button 2 was clicked")}>Button 2</button>
+        </div>
+    )
 }
 
 ```
