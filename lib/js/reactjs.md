@@ -1,3 +1,8 @@
+## Resources
+
+* [React documentation](https://reactjs.org/docs/react-api.html)
+* [React lifecycle methods diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
 ### Render
 
 ```jsx
