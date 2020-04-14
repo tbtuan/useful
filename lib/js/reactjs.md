@@ -158,6 +158,7 @@ class App extends React.Component {
             count: 0
         }
         this.handleClick = this.handleClick.bind(this)
+        this.handleCustomClick = this.handleCustomClick.bind(this)
     }
     
     handleClick() {
@@ -168,14 +169,28 @@ class App extends React.Component {
         })
     }
     
+    handleCustomClick(number) {
+        this.setState(prevState => {
+            return {
+                count: prevState.count + number
+            }
+        })
+    }
+    
     render() {
         return (
             <div>
                 <h1>{this.state.count}</h1>
                 <button onClick={this.handleClick}>Count</button>
+                <button 
+                  onClick={() => this.handleCustomClick(Math.random())} 
+                  handleCustomClick={this.handleCustomClick}>Custom count</button>
             </div>
         )
     }
 }
 
+// Triggering handleClick on another component using props
+onClick={() => props.handleCustomClick(42)}
+onClick={() => props.handleCustomClick(props.number)}
 ```
