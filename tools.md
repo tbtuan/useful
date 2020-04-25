@@ -8,6 +8,7 @@
 * [have i been pwned?](https://haveibeenpwned.com/)
 * [twofactorauth](https://twofactorauth.org/)
 * [Shodan](https://www.shodan.io/)
+* [Let's encrypt](https://letsencrypt.org/)
 
 ## Online editors
 * [Dillinger - Markdown Editor](https://dillinger.io/)
