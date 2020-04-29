@@ -1,4 +1,6 @@
-# What is the purpose of /useful
+# /useful
+What is the purpose of /useful?
+
 /useful is
 - a repository for keeping track of everything you would bookmark.
 - a cheatsheet to show the essential concepts of any programming languages/large-scale libaries or frameworks
