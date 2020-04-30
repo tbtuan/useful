@@ -9,3 +9,6 @@
 
 ### Misc
 * [Learn X in Y Minutes](https://learnxinyminutes.com/)
+* [Developer Roadmap](https://roadmap.sh/)
+* [Web Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap)
+* [Game Developer Roadmap](https://github.com/utilForever/game-developer-roadmap)
