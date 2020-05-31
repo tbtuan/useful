@@ -29,7 +29,8 @@ LoadModule ssl_module modules/mod_ssl.so
 
 ## Firebase
 
-Receive [FIREBASE_TOKEN] with firebase:ci
+Receive [FIREBASE_TOKEN] with firebase login:ci
+
 Store the token inside the repository (Setting -> Secrets)
 
 ```yml
