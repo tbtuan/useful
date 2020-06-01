@@ -80,7 +80,7 @@ int main() {
 
 ```
 
-# Copy-Constructor/Assignment operators
+# Other constructors/assignment operators
 
 ```cpp
 class Vector2D {
@@ -100,9 +100,13 @@ class Vector2D {
         { }
 		// Copy constructor
 		Vector2D(const Vector2D& v2) { }
+		// Move constructor
+		Vector2D(const Vector2D&& v2) { }
 		// Destructor
 		~Vector2D() { }
-		// Copy assignment operator (here we remove "=")
+		// Copy assignment operator (remove "=" operator)
+		Vector2D& operator=(Vector2D& other) = delete;
+		// Move assignment operator
 		Vector2D& operator=(Vector2D&& other) = delete;
 
 };
