@@ -7,8 +7,10 @@ metaDescription: 'C++ Cheatsheet'
 # Types
 
 ```cpp
-void** // void pointer
-void (**)() // Function list pointer which returns void
+unsigned int // positive number 
+std::size_t // Unsigned int but used for objects (size depends on the underlying architecture 32/64-bit)
+void* // void pointer
+void (*)() // Function pointer which returns void
 ```
 
 # Initialization
