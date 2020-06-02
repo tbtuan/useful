@@ -1,8 +1,15 @@
 ---
 title: 'C++'
 metaTitle: 'C++ - /useful'
-metaDescription: 'This is the meta description for this page'
+metaDescription: 'C++ Cheatsheet'
 ---
+
+# Types
+
+```cpp
+void** // void pointer
+void (**)() // Function list pointer which returns void
+```
 
 # Initialization
 
@@ -101,11 +108,11 @@ class Vector2D {
 		// Copy constructor
 		Vector2D(const Vector2D& v2) { }
 		// Move constructor
-		Vector2D(const Vector2D&& v2) { }
+		Vector2D(Vector2D&& v2) { }
 		// Destructor
 		~Vector2D() { }
 		// Copy assignment operator (remove "=" operator)
-		Vector2D& operator=(Vector2D& other) = delete;
+		Vector2D& operator=(const Vector2D& other) = delete;
 		// Move assignment operator
 		Vector2D& operator=(Vector2D&& other) = delete;
 
@@ -184,3 +191,5 @@ class Bar: public Foo {
 class Bar: public C {
 };
 ```
+
+# Memory management
