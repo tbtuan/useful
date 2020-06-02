@@ -1,4 +1,8 @@
-# /useful
+<h1 align="center">/useful</h1>
+
+<p align="center">
+    <a><img src="https://github.com/tbtuan/useful/workflows/build/badge.svg" alt="Build status"></a>
+</p>
 
 What is the purpose of /useful?
 
