@@ -3,8 +3,10 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import Link from './link';
 import config from '../../config';
-import { Sidebar, ListItem } from './styles/Sidebar';
+import { Sidebar, SidebarWrapper, ListItem } from './styles/Sidebar';
 import { Divide } from 'react-feather';
+import { faEdit, faClock } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const useActiveHash = () => {
   let [prev] = useState(null);
@@ -58,6 +60,7 @@ const SidebarLayout = ({ location }) => {
                 parent {
                   ... on File {
                     relativePath
+                    modifiedTime
                   }
                 }
                 tableOfContents
@@ -72,6 +75,7 @@ const SidebarLayout = ({ location }) => {
 
         let finalNavItems;
         let relativePath;
+        let modifiedTime;
 
         if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
           const navItems = allMdx.edges.map((item, index) => {
@@ -98,7 +102,9 @@ const SidebarLayout = ({ location }) => {
             }
             if (innerItems) {
               relativePath = item.node.parent.relativePath;
-              console.log(relativePath);
+              modifiedTime = new Date(
+                Date.parse(item.node.parent.modifiedTime)
+              ).toLocaleDateString();
               finalNavItems = innerItems;
             }
           });
@@ -106,19 +112,24 @@ const SidebarLayout = ({ location }) => {
 
         if (finalNavItems && finalNavItems.length) {
           return (
-            <div style={{ flex: '0 0 16rem', order: 2, marginLeft: 'auto' }}>
+            <SidebarWrapper>
               <Sidebar>
                 <div className={'rightSideMod'}>
+                  <p className={'rightSideEdit'}>
+                    <FontAwesomeIcon icon={faClock} />
+                    {modifiedTime}
+                  </p>
                   {docsLocation && (
                     <Link className={'rightSideEdit'} to={`${docsLocation}/${relativePath}`}>
+                      <FontAwesomeIcon icon={faEdit} />
                       Edit this page
                     </Link>
                   )}
                 </div>
-                <li className={'rightSideTitle'}>TABLE OF CONTENTS</li>
+                <li className={'rightSideTitle'}>On this page</li>
                 {finalNavItems}
               </Sidebar>
-            </div>
+            </SidebarWrapper>
           );
         } else {
           return (

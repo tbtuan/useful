@@ -1,8 +1,8 @@
 import { injectGlobal } from 'emotion';
 
 export const baseStyles = injectGlobal`
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js');
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
   * {
     margin: 0;
@@ -39,7 +39,7 @@ export const baseStyles = injectGlobal`
   }
 
   body {
-    font-family: 'Roboto';
+    font-family: 'Open Sans';
   }
   .visibleMobile {
     display: none;

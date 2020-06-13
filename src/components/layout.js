@@ -35,7 +35,9 @@ const Wrapper = styled('div')`
   }
 `;
 
-const Content = styled('main')``;
+const Content = styled('main')`
+  width: 100%;
+`;
 
 const LeftSideBarWidth = styled('div')`
   position: fixed;

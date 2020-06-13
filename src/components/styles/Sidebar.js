@@ -1,14 +1,20 @@
 import styled from '@emotion/styled';
 
+export const SidebarWrapper = styled('div')`
+  flex: 0 0 16rem;
+  order: 2;
+  margin-left: auto;
+  margin-top: -4rem;
+  background-color: ${props => props.theme.colors.background};
+`;
+
 export const Sidebar = styled('nav')`
   position: sticky;
-  top: calc(4rem + 2.5rem + 3rem);
+  top: calc(2rem + 2.5rem + 3rem);
   max-height: calc(100vh - 4rem - 2.5rem - 3rem - 3rem);
   right: 0;
   margin-left: 3rem;
   overflow: auto;
-
-  background: ${props => props.theme.colors.background};
 
   .rightSideTitle {
     font-size: 0.8rem;
@@ -35,6 +41,10 @@ export const Sidebar = styled('nav')`
     letter-spacing: 1.2px;
     padding: 7px 24px 7px 16px;
     color: ${props => props.theme.colors.text};
+
+    svg {
+      margin-right: 0.5rem;
+    }
   }
 
   li {
@@ -46,7 +56,6 @@ export const Sidebar = styled('nav')`
   li a {
     font-size: 12px;
     font-weight: 500;
-    line-height: 1.5;
     padding: 7px 24px 7px 16px;
 
     color: ${props => props.theme.colors.text};
