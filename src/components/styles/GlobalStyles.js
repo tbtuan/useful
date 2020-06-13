@@ -588,16 +588,6 @@ export const baseStyles = injectGlobal`
     opacity: 0.7;
   }
 
-  .heading1 {
-    font-size: 26px;
-    font-weight: 800;
-    line-height: 1.5;
-    margin-bottom: 16px;
-    /* Anchor link */
-    padding-top: 5rem;
-    margin-top: calc(-4rem + 32px);
-  }
-
   .heading2 {
     font-size: 24px;
     font-weight: 700;
@@ -652,7 +642,7 @@ export const baseStyles = injectGlobal`
 
   .topnav {
     margin-left: auto;
-    padding-right: 6rem;
+    padding-right: 5rem;
     -webkit-transition: top 0.5s, bottom 0.5s;
   }
 

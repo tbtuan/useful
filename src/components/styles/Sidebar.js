@@ -38,7 +38,6 @@ export const Sidebar = styled('nav')`
     font-size: 0.8rem;
     line-height: 1;
     font-weight: 500;
-    letter-spacing: 1.2px;
     padding: 7px 24px 7px 16px;
     color: ${props => props.theme.colors.text};
 

@@ -11,6 +11,25 @@ const StyledPre = styled('pre')`
   border-radius: 1em;
   border: 2px solid red;
   border-radius: 0.4rem;
+
+  pre {
+    background-color: ${props => props.theme.colors.preFormattedText} !important;
+  }
+`;
+
+const Heading1 = styled('h1')`
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  /* Anchor link */
+  padding-top: 5rem;
+  margin-top: calc(-4rem + 32px);
+
+  a {
+    position: absolute;
+    margin-left: -1.25rem;
+  }
 `;
 
 const removeWhitespace = input => {
@@ -21,14 +40,9 @@ export default {
   h1: props => {
     const heading = props.children;
     return (
-      <div>
-        <h1 className="heading1" id={removeWhitespace(heading)}>
-          {heading}
-          <a className="hash-link hidden" href={`#${removeWhitespace(heading)}`}>
-            #
-          </a>
-        </h1>
-      </div>
+      <Heading1 id={removeWhitespace(heading)}>
+        <a href={`#${removeWhitespace(heading)}`}>#</a> {heading}
+      </Heading1>
     );
   },
   h2: props => (
@@ -50,6 +64,17 @@ export default {
   pre: props => <StyledPre {...props} />,
   code: CodeBlock,
   a: AnchorTag,
+
+  /*ul: props => {
+    const unorderedlist = props.children;
+    return <ul style={{ padding: '0' }}>{unorderedlist}</ul>;
+  },
+
+  li: props => {
+    const listitem = props.children;
+    return <li style={{ listStyle: 'none' }}>{listitem}</li>;
+  },*/
+
   // TODO add `img`
   // TODO add `blockquote`
   // TODO add `ul`

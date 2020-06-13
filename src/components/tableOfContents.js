@@ -5,14 +5,14 @@ import Link from './link';
 import config from '../../config';
 import { Sidebar, SidebarWrapper, ListItem } from './styles/Sidebar';
 import { Divide } from 'react-feather';
-import { faEdit, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faClock, faThList } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const useActiveHash = () => {
   let [prev] = useState(null);
 
   useEffect(() => {
-    const links = document.querySelectorAll("[class^='heading1']");
+    const links = document.querySelectorAll("[class*='Heading1']");
 
     const handleObserver = entries => {
       entries.forEach(entry => {
@@ -118,6 +118,10 @@ const SidebarLayout = ({ location }) => {
                   <p className={'rightSideEdit'}>
                     <FontAwesomeIcon icon={faClock} />
                     {modifiedTime}
+                  </p>
+                  <p className={'rightSideEdit'}>
+                    <FontAwesomeIcon icon={faThList} />
+                    Change view
                   </p>
                   {docsLocation && (
                     <Link className={'rightSideEdit'} to={`${docsLocation}/${relativePath}`}>
