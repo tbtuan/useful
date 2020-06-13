@@ -46,15 +46,10 @@ const LeftSideBarWidth = styled('div')`
 
 const ContentWrapper = styled('div')`
   display: flex;
-  /*
-  padding-left: 3rem;
-  padding-right: 3rem;*/
   margin-left: 18rem;
-  padding: 3rem;
+  padding-left: 3rem;
   position: relative;
   padding-top: calc(4rem);
-
-  order: 1;
 
   background: ${({ theme }) => theme.colors.background};
 

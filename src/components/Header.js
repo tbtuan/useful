@@ -9,6 +9,8 @@ import { DarkModeSwitch } from './DarkModeSwitch';
 import Search from './search/SearchContainer';
 import Sidebar from './sidebar';
 
+const gitHub = require('./images/github.svg');
+
 function myFunction() {
   var x = document.getElementById('navbar');
 
@@ -38,7 +40,7 @@ const Navbar = styled('nav')`
   position: fixed; // Changed
   width: 100%; // Changed
   height: 4rem;
-  border-bottom: 1px solid #e6ecf1;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.seperator};
 
   @media (max-width: 767px) {
     display: block;
@@ -47,6 +49,31 @@ const Navbar = styled('nav')`
 
   @media (min-width: 768px) and (max-width: 991px) {
     padding: 10px;
+  }
+`;
+
+const SearchBox = styled('input')`
+  flex-grow: 1;
+  margin-left: 2rem;
+  margin-right: 4rem;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  border-style: solid;
+  background-color: ${({ theme }) => theme.colors.textbox};
+  border-color: ${({ theme }) => theme.colors.textbox};
+  border-radius: 0.5rem;
+`;
+
+const RightNavLink = styled('a')`
+  height: 21px;
+
+  svg {
+    min-width: 21px;
+    min-height: 21px;
+    max-width: 21px;
+    max-height: 21px;
+    fill: ${({ theme }) => theme.colors.navbarLink};
+    margin-right: 0.5rem;
   }
 `;
 
@@ -91,45 +118,11 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
         <Navbar>
           <div className={'navBarHeader'}>
             <Title href="/">{headerTitle}</Title>
-            {/* <Search /> */}
           </div>
-          <input
-            type="text"
-            style={{
-              flexGrow: 1,
-              marginLeft: '2rem',
-              marginRight: '4rem',
-              lineHeight: '1.8rem',
-              fontSize: '1rem',
-              maxWidth: '56%',
-              borderStyle: 'solid',
-              backgroundColor: '#EAE4DD',
-              borderColor: '#EAE4DD',
-              borderRadius: '0.5rem',
-            }}
-          />
+          <SearchBox />
           <div id="navbar" className={'topnav'}>
-            {/* <div className={'visibleMobile'}>
-              <Sidebar location={location} />
-              <hr />
-            </div> */}
             <ul className={'navBarUL navBarNav navBarULRight'}>
-              {/* {headerLinks.map((link, key) => {
-                if (link.link !== '' && link.text !== '') {
-                  return (
-                    <li key={key}>
-                      <a
-                        className="sidebarLink"
-                        href={link.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        dangerouslySetInnerHTML={{ __html: link.text }}
-                      />
-                    </li>
-                  );
-                }
-              })} */}
-              <a
+              <RightNavLink
                 className="sidebarLink"
                 href="https://github.com/tbtuan/useful"
                 target="_blank"
@@ -138,7 +131,7 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <path d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0"></path>
                 </svg>
-              </a>
+              </RightNavLink>
               <DarkModeSwitch
                 isDarkThemeActive={isDarkThemeActive}
                 toggleActiveTheme={toggleActiveTheme}

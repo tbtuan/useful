@@ -33,7 +33,8 @@ const StyledSwitch = styled('div')`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: ${props => props.theme.colors.switchbg};
+    //background-color: #ccc;
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -51,27 +52,22 @@ const StyledSwitch = styled('div')`
     -webkit-transition: 0.4s;
     transition: 0.4s;
     //box-shadow: 0 0px 15px #2020203d;
-    background-color: #DECCC0;
+    background-color: ${props => props.theme.colors.switch};
+    //background-color: #DECCC0;
     /*background: white url(${NightImage});
     background-repeat: no-repeat;
     background-position: center;*/
   }
 
   input:checked + .slider {
-    background-color: #e0d9d1;
-    //background-color: #D0CBC7;
-    //background-color: #FFE3D0;
-    //background: linear-gradient(to right, #fefb72, #f0bb31);
+    background-color: ${props => props.theme.colors.switchbg};
   }
 
   input:checked + .slider:before {
     -webkit-transform: translateX(27px);
     -ms-transform: translateX(27px);
     transform: translateX(27px);
-    /*background: white url(${DayImage});
-    background-repeat: no-repeat;
-    background-position: center;*/
-    background-color: #f78a48;
+    background-color: ${props => props.theme.colors.switch};
     //background-color: #716a63;
     //background-color: #ef9b44;
   }

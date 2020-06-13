@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-// import Link from './link';
+import Link from './link';
 import config from '../../config';
 import { Sidebar, ListItem } from './styles/Sidebar';
+import { Divide } from 'react-feather';
 
 const useActiveHash = () => {
   let [prev] = useState(null);
@@ -42,11 +43,22 @@ const SidebarLayout = ({ location }) => {
     <StaticQuery
       query={graphql`
         query {
+          site {
+            siteMetadata {
+              title
+              docsLocation
+            }
+          }
           allMdx {
             edges {
               node {
                 fields {
                   slug
+                }
+                parent {
+                  ... on File {
+                    relativePath
+                  }
                 }
                 tableOfContents
               }
@@ -54,10 +66,12 @@ const SidebarLayout = ({ location }) => {
           }
         }
       `}
-      render={({ allMdx }) => {
+      render={({ allMdx, site }) => {
+        const docsLocation = site.siteMetadata.docsLocation;
         let navItems = [];
 
         let finalNavItems;
+        let relativePath;
 
         if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
           const navItems = allMdx.edges.map((item, index) => {
@@ -83,6 +97,8 @@ const SidebarLayout = ({ location }) => {
               }
             }
             if (innerItems) {
+              relativePath = item.node.parent.relativePath;
+              console.log(relativePath);
               finalNavItems = innerItems;
             }
           });
@@ -90,10 +106,19 @@ const SidebarLayout = ({ location }) => {
 
         if (finalNavItems && finalNavItems.length) {
           return (
-            <Sidebar>
-              <li className={'rightSideTitle'}>TABLE OF CONTENTS</li>
-              {finalNavItems}
-            </Sidebar>
+            <div style={{ flex: '0 0 16rem', order: 2, marginLeft: 'auto' }}>
+              <Sidebar>
+                <div className={'rightSideMod'}>
+                  {docsLocation && (
+                    <Link className={'rightSideEdit'} to={`${docsLocation}/${relativePath}`}>
+                      Edit this page
+                    </Link>
+                  )}
+                </div>
+                <li className={'rightSideTitle'}>TABLE OF CONTENTS</li>
+                {finalNavItems}
+              </Sidebar>
+            </div>
           );
         } else {
           return (

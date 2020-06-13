@@ -1,6 +1,7 @@
 import { injectGlobal } from 'emotion';
 
 export const baseStyles = injectGlobal`
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js');
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
   * {
@@ -106,19 +107,6 @@ export const baseStyles = injectGlobal`
     height: 30px;
     margin: 0 15px;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
-  }
-
-  .sidebarLink {
-    height: 21px;
-  }
-
-  .sidebarLink svg {
-    min-width: 21px;
-    min-height: 21px;
-    max-width: 21px;
-    max-height: 21px;
-    fill: #CEC6BE;
-    margin-right: 0.5rem;
   }
 
   .githubIcon {
@@ -663,6 +651,8 @@ export const baseStyles = injectGlobal`
   }
 
   .topnav {
+    margin-left: auto;
+    padding-right: 6rem;
     -webkit-transition: top 0.5s, bottom 0.5s;
   }
 
