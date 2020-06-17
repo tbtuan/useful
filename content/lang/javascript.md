@@ -4,6 +4,8 @@ metaTitle: 'Syntax Highlighting is the meta title tag for this page'
 metaDescription: 'This is the meta description for this page'
 ---
 
+## Placeholder
+
 [JavaScript Pro Tips - Code This, Not That](https://github.com/codediodeio/code-this-not-that-js)
 
 ```js

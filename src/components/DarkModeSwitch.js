@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import NightImage from './images/night.png';
-import DayImage from './images/day.png';
-
 const StyledSwitch = styled('div')`
   display: flex;
   justify-content: flex-end;
@@ -51,12 +48,7 @@ const StyledSwitch = styled('div')`
     margin: auto 0;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-    //box-shadow: 0 0px 15px #2020203d;
     background-color: ${props => props.theme.colors.switch};
-    //background-color: #DECCC0;
-    /*background: white url(${NightImage});
-    background-repeat: no-repeat;
-    background-position: center;*/
   }
 
   input:checked + .slider {
@@ -68,8 +60,6 @@ const StyledSwitch = styled('div')`
     -ms-transform: translateX(27px);
     transform: translateX(27px);
     background-color: ${props => props.theme.colors.switch};
-    //background-color: #716a63;
-    //background-color: #ef9b44;
   }
 
   /* Rounded sliders */

@@ -17,7 +17,7 @@ const StyledPre = styled('pre')`
   }
 `;
 
-const Heading1 = styled('h1')`
+const Heading2 = styled('h2')`
   font-size: 26px;
   font-weight: 800;
   line-height: 1.5;
@@ -37,17 +37,18 @@ const removeWhitespace = input => {
 };
 
 export default {
-  h1: props => {
+  h1: props => (
+    <h1 className="heading1" id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />
+  ),
+  h2: props => {
     const heading = props.children;
+
     return (
-      <Heading1 id={removeWhitespace(heading)}>
+      <Heading2 id={removeWhitespace(heading)}>
         <a href={`#${removeWhitespace(heading)}`}>#</a> {heading}
-      </Heading1>
+      </Heading2>
     );
   },
-  h2: props => (
-    <h2 className="heading2" id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />
-  ),
   h3: props => (
     <h3 className="heading3" id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />
   ),

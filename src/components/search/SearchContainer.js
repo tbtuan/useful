@@ -11,6 +11,7 @@ class Search extends Component {
     isError: false,
     searchQuery: '',
   };
+
   /**
    * React lifecycle method to fetch the data
    */
@@ -18,6 +19,7 @@ class Search extends Component {
     Axios.get('https://bvaughn.github.io/js-search/books.json')
       .then(result => {
         const bookData = result.data;
+
         this.setState({ bookList: bookData.books });
         this.rebuildIndex();
       })
@@ -34,7 +36,9 @@ class Search extends Component {
    */
   rebuildIndex = () => {
     const { bookList } = this.state;
+
     const dataToSearch = new JsSearch.Search('isbn');
+
     /**
      *  defines a indexing strategy for the data
      * more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy
@@ -65,16 +69,21 @@ class Search extends Component {
    */
   searchData = e => {
     const { search } = this.state;
+
     const queryResult = search.search(e.target.value);
+
     this.setState({ searchQuery: e.target.value, searchResults: queryResult });
   };
+
   handleSubmit = e => {
     e.preventDefault();
   };
 
   render() {
     const { bookList, searchResults, searchQuery } = this.state;
+
     const queryResults = searchQuery === '' ? bookList : searchResults;
+
     return (
       <div>
         <div>

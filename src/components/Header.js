@@ -1,15 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
-import Link from './link';
 
-import config from '../../config.js';
 import { DarkModeSwitch } from './DarkModeSwitch';
 
 import Search from './search/SearchContainer';
-import Sidebar from './sidebar';
 
-const gitHub = require('./images/github.svg');
 import { faIndent, faSun } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -93,65 +89,99 @@ const StyledBgDiv = styled('div')`
   }
 `;
 
-const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
-  <StaticQuery
-    query={graphql`
-      query headerTitleQuery {
-        site {
-          siteMetadata {
-            headerTitle
-            githubUrl
-            headerLinks {
-              link
-              text
+const NavbarTab = styled('div')`
+  background-color: #001934;
+  background: ${({ theme }) => theme.colors.background};
+  border-radius: 0;
+  border-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  height: 4rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.background};
+  border-left: 1px solid ${({ theme }) => theme.colors.seperator};
+  border-right: 1px solid ${({ theme }) => theme.colors.seperator};
+
+  min-width: 18rem;
+  padding-left: 2.5rem;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+`;
+
+const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          site {
+            siteMetadata {
+              headerTitle
+              headerLinks {
+                link
+                text
+              }
+            }
+          }
+          mdx {
+            fields {
+              id
+              title
+              slug
+            }
+            frontmatter {
+              title
+              metaTitle
+              metaDescription
             }
           }
         }
-      }
-    `}
-    render={data => {
-      const {
-        site: {
-          siteMetadata: { headerTitle },
-        },
-      } = data;
+      `}
+      render={data => {
+        const {
+          mdx,
+          site: {
+            siteMetadata: { headerTitle, title },
+          },
+        } = data;
 
-      return (
-        <Navbar>
-          <div className={'navBarHeader'}>
-            <Title href="/">{headerTitle}</Title>
-          </div>
-          <SearchBox />
-          <div id="navbar" className={'topnav'}>
-            <ul className={'navBarUL navBarNav navBarULRight'}>
-              <RightNavLink href="https://github.com/tbtuan/useful" target="_blank">
-                <FontAwesomeIcon icon={faGithub} />
-              </RightNavLink>
-              <DarkModeSwitch
-                isDarkThemeActive={isDarkThemeActive}
-                toggleActiveTheme={toggleActiveTheme}
-              />
-            </ul>
-          </div>
-          <StyledBgDiv isDarkThemeActive={isDarkThemeActive}>
-            <div className={'navBarDefault removePadd'}>
-              <span
-                onClick={myFunction}
-                className={'navBarToggle'}
-                onKeyDown={myFunction}
-                role="button"
-                tabIndex={0}
-              >
-                <span className={'iconBar'}></span>
-                <span className={'iconBar'}></span>
-                <span className={'iconBar'}></span>
-              </span>
+        return (
+          <Navbar>
+            <div className={'navBarHeader'}>
+              <Title href="/">{headerTitle}</Title>
             </div>
-          </StyledBgDiv>
-        </Navbar>
-      );
-    }}
-  />
-);
+            <NavbarTab>{location.pathname}</NavbarTab>
+            <SearchBox />
+            <div id="navbar" className={'topnav'}>
+              <ul className={'navBarUL navBarNav navBarULRight'}>
+                <RightNavLink href="https://github.com/tbtuan/useful" target="_blank">
+                  <FontAwesomeIcon icon={faGithub} />
+                </RightNavLink>
+                <DarkModeSwitch
+                  isDarkThemeActive={isDarkThemeActive}
+                  toggleActiveTheme={toggleActiveTheme}
+                />
+              </ul>
+            </div>
+            <StyledBgDiv isDarkThemeActive={isDarkThemeActive}>
+              <div className={'navBarDefault removePadd'}>
+                <span
+                  onClick={myFunction}
+                  className={'navBarToggle'}
+                  onKeyDown={myFunction}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <span className={'iconBar'}></span>
+                  <span className={'iconBar'}></span>
+                  <span className={'iconBar'}></span>
+                </span>
+              </div>
+            </StyledBgDiv>
+          </Navbar>
+        );
+      }}
+    />
+  );
+};
 
 export default Header;

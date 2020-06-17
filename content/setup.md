@@ -4,7 +4,7 @@ metaTitle: 'This is the title tag of this page'
 metaDescription: 'This is the meta description'
 ---
 
-# Apache
+## Apache
 
 Documentation
 https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html
@@ -25,9 +25,9 @@ LoadModule ssl_module modules/mod_ssl.so
 </VirtualHost>
 ```
 
-# Github Action
+## Github Action
 
-## Firebase
+### Firebase
 
 Receive [FIREBASE_TOKEN] with firebase login:ci
 
@@ -59,7 +59,7 @@ jobs:
           firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
 ```
 
-# VSCode
+## VSCode
 
 Useful extensions
 

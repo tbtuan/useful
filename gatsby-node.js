@@ -74,7 +74,6 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
       alias: {
         $components: path.resolve(__dirname, 'src/components'),
-        buble: '@philpl/buble', // to reduce bundle size
       },
     },
   });

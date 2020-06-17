@@ -4,16 +4,16 @@ metaTitle: 'C++ - /useful'
 metaDescription: 'C++ Cheatsheet'
 ---
 
-# Types
+## Types
 
 ```cpp
-unsigned int // positive number 
+unsigned int // positive number
 std::size_t // Unsigned int but used for objects (size depends on the underlying architecture 32/64-bit)
 void* // void pointer
 void (*)() // Function pointer which returns void
 ```
 
-# Initialization
+## Initialization
 
 ```cpp
 // Default initialization
@@ -33,13 +33,13 @@ char& c = a[0];
 
 ```
 
-# Reference/Dereferencing
+## Reference/Dereferencing
 
 ```cpp
 
 ```
 
-# Constructor/Destructor
+## Constructor/Destructor
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 
 ```
 
-# Other constructors/assignment operators
+## Other constructors/assignment operators
 
 ```cpp
 class Vector2D {
@@ -126,7 +126,7 @@ int main() {
 }
 ```
 
-# Access modifiers
+## Access modifiers
 
 ```cpp
 class Foo {
@@ -143,7 +143,7 @@ class Foo {
 };
 ```
 
-# Dynamic polymorphism
+## Dynamic polymorphism
 
 ```cpp
 class A {};
@@ -194,4 +194,4 @@ class Bar: public C {
 };
 ```
 
-# Memory management
+## Memory management

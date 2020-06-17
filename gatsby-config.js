@@ -1,9 +1,7 @@
 require('dotenv').config();
 const config = require('./config');
 const plugins = [
-  'gatsby-plugin-sass',
   'gatsby-plugin-sitemap',
-  'gatsby-plugin-sharp',
   {
     resolve: `gatsby-plugin-layout`,
     options: {
@@ -11,7 +9,6 @@ const plugins = [
     },
   },
   'gatsby-plugin-catch-links',
-  'gatsby-plugin-emotion',
   'gatsby-plugin-react-helmet',
   {
     resolve: 'gatsby-source-filesystem',
@@ -24,13 +21,6 @@ const plugins = [
     resolve: 'gatsby-plugin-mdx',
     options: {
       gatsbyRemarkPlugins: [
-        {
-          resolve: 'gatsby-remark-images',
-          options: {
-            maxWidth: 1035,
-            sizeByPixelDensity: true,
-          },
-        },
         {
           resolve: 'gatsby-remark-copy-linked-files',
         },
@@ -73,8 +63,6 @@ module.exports = {
     }, // backwards compatible
     headerTitle: config.header.title,
     githubUrl: config.header.githubUrl,
-    helpUrl: config.header.helpUrl,
-    tweetText: config.header.tweetText,
     headerLinks: config.header.links,
     siteUrl: config.gatsby.siteUrl,
   },

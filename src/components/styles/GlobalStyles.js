@@ -3,7 +3,6 @@ import { injectGlobal } from 'emotion';
 export const baseStyles = injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -88,42 +87,10 @@ export const baseStyles = injectGlobal`
     height: 100%;
   }
 
-  .diffNewLine {
-    color: #22863a;
-    background-color: #f0fff4;
-  }
-
-  .diffRemoveLine {
-    color: red;
-    background-color: #ffcccc;
-  }
-  .navBarParent {
-    width: 100%;
-    float: left;
-    display: flex;
-    align-items: center;
-  }
   .divider {
     height: 30px;
     margin: 0 15px;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
-  }
-
-  .githubIcon {
-    width: 15px;
-    margin-right: 5px;
-  }
-
-  .githubSection {
-    display: flex;
-    align-items: center;
-    color: #000;
-    opacity: 0.7;
-  }
-
-  .githubSection:hover {
-    text-decoration: none;
-    opacity: 1;
   }
 
   .navbar-default .navbar-toggle .icon-bar {
@@ -219,19 +186,6 @@ export const baseStyles = injectGlobal`
     color: black;
     font-size: 14px;
   }
-  .logoWrapper {
-    padding: 21px 0;
-    padding-left: 20px;
-  }
-
-  .logoContent {
-    font-family: 'Roboto';
-    margin-left: 16px;
-    font-size: 28px;
-    line-height: 1.5;
-    font-weight: 500;
-    padding-right: 10px;
-  }
 
   /* Header section starts here */
   .removePadd {
@@ -241,11 +195,6 @@ export const baseStyles = injectGlobal`
     min-width: 18rem;
     padding-left: 2.5rem;
     padding-right: 20px;
-    display: flex;
-    align-items: center;
-  }
-  .navBarBrand {
-    padding: 0px 0px;
     display: flex;
     align-items: center;
   }
@@ -291,54 +240,9 @@ export const baseStyles = injectGlobal`
   }
 
   /* Header section ends here */
-  .sidebarTitle {
-    /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
-    background-color: #f8f8f8;
-    padding: 18px 16px;
-    font-family: 'Poppins';
-    font-size: 18px;
-    font-weight: 600;
-    color: #001934;
-    display: flex;
-    align-items: center;
-  }
 
   .sideBarShow {
     display: none;
-  }
-
-  .sidebarTitle a {
-    color: #001934;
-  }
-
-  .greenCircle {
-    width: 8px;
-    height: 8px;
-    background-color: #1cd3c6;
-    border-radius: 50%;
-    margin: 0 12px;
-  }
-
-  .headerNav {
-    font-family: 'Roboto';
-    padding: 0px 24px;
-    color: #001933;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1em;
-  }
-
-  .headerNav a {
-    color: #001933;
-    text-decoration: none;
-  }
-
-  .headerNav a:hover {
-    text-decoration: none;
-  }
-
-  .logoWrapper img {
-    width: 40px;
   }
 
   .sideBarUL {
@@ -445,19 +349,6 @@ export const baseStyles = injectGlobal`
     margin-bottom: 32px;
   }
 
-  .gitBtn {
-    height: 30px;
-    min-height: 30px;
-    display: flex;
-    align-items: center;
-  }
-
-  .gitBtn img {
-    width: 15px;
-    display: inline-block;
-    margin-right: 5px;
-  }
-
   .addPaddTopBottom {
     padding: 50px 0;
   }
@@ -538,55 +429,7 @@ export const baseStyles = injectGlobal`
     max-width: 100%;
   }
   /* end image */
-  .githubBtn {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    padding: 10px 0px;
-    padding-left: 15px;
-    max-height: 40px;
-  }
-  .githubBtn span span {
-    display: flex;
-    align-items: center;
-  }
 
-  .communitySection {
-    font-size: 24px;
-    font-weight: 700;
-  }
-  .authorSection {
-    padding: 20px 0;
-  }
-  .authorSection,
-  .authorName {
-    display: flex;
-    align-items: center;
-  }
-  .authorImg img {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    min-width: 75px;
-    max-width: 75px;
-    min-height: 75px;
-    max-height: 75px;
-  }
-  .authorDetails {
-    padding-left: 10px;
-  }
-  .authorDesc {
-    padding-top: 5px;
-    font-size: 14px;
-  }
-  .authorName img {
-    margin-left: 10px;
-    display: inline-block;
-    width: 20px;
-  }
-  .authorName img:hover {
-    opacity: 0.7;
-  }
 
   .heading2 {
     font-size: 24px;
@@ -666,12 +509,6 @@ export const baseStyles = injectGlobal`
       padding-right: 50px;
       font-size: 16px;
     }
-    .navBarBrand {
-      min-height: 40px;
-    }
-    .navBarBrand img {
-      margin-right: 8px;
-    }
     .topnav.responsive .visibleMobile {
       display: block;
     }
@@ -688,9 +525,6 @@ export const baseStyles = injectGlobal`
     hr {
       margin-top: 0;
       margin-bottom: 0;
-    }
-    .navBarParent {
-      display: block;
     }
     .separator {
       margin-top: 20px;
@@ -730,21 +564,10 @@ export const baseStyles = injectGlobal`
       align-self: flex-start;
     }
 
-    .navBarBrand {
-      font-size: 20px;
-      padding: 0 0;
-      padding-left: 0;
-      flex: initial;
-      padding-right: 15px;
-    }
 
     .titleWrapper {
       padding: 0 15px;
       display: block;
-    }
-
-    .gitBtn {
-      display: inline-block;
     }
 
     .mobileView {
@@ -772,15 +595,9 @@ export const baseStyles = injectGlobal`
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
-    .navBarBrand {
-      font-size: 22px;
-    }
     .navBarHeader {
       min-width: 240px;
       flex: initial;
-    }
-    .githubBtn {
-      padding: 10px 10px;
     }
     .divider {
       margin: 0 5px;

@@ -4,7 +4,7 @@ metaTitle: 'C++ - /useful'
 metaDescription: 'C++ - Tricks'
 ---
 
-### Singleton-Pattern
+## Singleton-Pattern
 
 ```cpp
 

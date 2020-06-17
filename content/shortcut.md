@@ -4,19 +4,21 @@ metaTitle: 'This is the title tag of this page'
 metaDescription: 'This is the meta description'
 ---
 
-# IntelliJ
-* [IntelliJ Shortcuts](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
+## IntelliJ
 
-# Visual Studio Code
+- [IntelliJ Shortcuts](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
 
-* [VSCode Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+## Visual Studio Code
+
+- [VSCode Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
 | Description     | Shortcut                                                          |
 | --------------- | ----------------------------------------------------------------- |
 | Command Palette | <kbd>F1</kbd> / <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> |
 | Quick Open      | <kbd>Ctrl</kbd> + <kbd>P</kbd>                                    |
 
-# Windows
+## Windows
+
 ## Windows Explorer
 
 | Description                | Shortcut                                          |
@@ -25,8 +27,9 @@ metaDescription: 'This is the meta description'
 | New folder                 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> |
 | Jump to the navigation bar | <kbd>Ctrl</kbd> + <kbd>L</kbd>                    |
 
-# Google Chrome
-* [Google Chrome Shortcuts](https://support.google.com/chrome/answer/157179)
+## Google Chrome
+
+- [Google Chrome Shortcuts](https://support.google.com/chrome/answer/157179)
 
 | Description                | Shortcut                                            |
 | -------------------------- | --------------------------------------------------- |

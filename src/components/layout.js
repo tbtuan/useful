@@ -5,6 +5,7 @@ import { MDXProvider } from '@mdx-js/react';
 import ThemeProvider from './theme/themeProvider';
 import mdxComponents from './mdxComponents';
 import Sidebar from './sidebar';
+import Header from './Header';
 import TableOfContents from './tableOfContents';
 
 const Wrapper = styled('div')`
@@ -39,13 +40,6 @@ const Content = styled('main')`
   width: 100%;
 `;
 
-const LeftSideBarWidth = styled('div')`
-  position: fixed;
-  width: 18rem;
-  left: 0;
-  top: 80px;
-`;
-
 const ContentWrapper = styled('div')`
   display: flex;
   margin-left: 18rem;
@@ -73,6 +67,7 @@ const ContentWrapper = styled('div')`
 const Layout = ({ children, location }) => (
   <ThemeProvider location={location}>
     <MDXProvider components={mdxComponents}>
+      {/* <Header location={location} /> */}
       <Wrapper>
         <Sidebar location={location} />
         <ContentWrapper>

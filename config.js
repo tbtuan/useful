@@ -7,8 +7,6 @@ const config = {
   header: {
     title: '/useful',
     githubUrl: 'https://github.com/tbtuan/useful',
-    helpUrl: '',
-    tweetText: '',
     links: [{ text: '', link: '' }],
   },
   sidebar: {
@@ -19,7 +17,6 @@ const config = {
     links: [{ text: 'Github', link: 'https://github.com/tbtuan' }],
     frontline: false,
     ignoreIndex: true,
-    // title: "<a href='./'>graphql </a><div class='greenCircle'></div><a href='./'>react</a>",
   },
   siteMetadata: {
     title: '/useful',

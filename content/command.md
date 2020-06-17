@@ -4,7 +4,7 @@ metaTitle: 'This is the title tag of this page'
 metaDescription: 'This is the meta description'
 ---
 
-# Git
+## Git
 
 - [Git Documentation](https://git-scm.com/docs)
 
@@ -23,7 +23,7 @@ metaDescription: 'This is the meta description'
 | Delete "old" branch and push "new" branch   | `git push origin :[OLD] [NEW]`                                                                                                    |
 | Reset upstream for "new" branch             | `git push -u origin [NEW]`                                                                                                        |
 
-# npm
+## npm
 
 - [npm - CLI documentation](https://docs.npmjs.com/cli-documentation/cli)
 
@@ -33,7 +33,7 @@ metaDescription: 'This is the meta description'
 | Install "package" and save for development purpose (used for test suites etc.)       | `install [PACKAGE] --save-dev"`      |
 | Clean cache                                                                          | `npm cache clean --force`            |
 
-# ssh
+## ssh
 
 - [OpenSSH Manual](https://www.openssh.com/manual.html)
 

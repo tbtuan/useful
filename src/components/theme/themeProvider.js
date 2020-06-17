@@ -1,10 +1,16 @@
-import { React, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { Global } from '@emotion/core';
 
 import { lightTheme, darkTheme } from './index';
 import Header from '../Header';
 import { baseStyles } from '../styles/GlobalStyles';
+
+export const ThemeContext = React.createContext({
+  isDarkThemeActive2: false,
+  toggleTheme: () => toggleActiveTheme(),
+});
 
 const ThemeProvider = props => {
   const [isDarkThemeActive, setDarkThemeActive] = useState(false);

@@ -4,14 +4,14 @@ metaTitle: 'Syntax Highlighting is the meta title tag for this page'
 metaDescription: 'This is the meta description for this page'
 ---
 
-### Echo
+## Echo
 
 ```php
 <?php echo $a; ?>
 <?= /*Shorthand*/ $a; ?>
 ```
 
-### Array
+## Array
 
 ```php
 // Methods
@@ -29,7 +29,7 @@ $array2["key2"] = "value2";
 $array2 = array("key1" => "value1", "key2" => "value2");
 ```
 
-### Foreach
+## Foreach
 
 ```php
 foreach($array as $key => $value) {
@@ -37,7 +37,7 @@ foreach($array as $key => $value) {
 }
 ```
 
-### Class
+## Class
 
 ```php
 class Point {

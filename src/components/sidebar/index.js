@@ -2,7 +2,6 @@ import React from 'react';
 import Tree from './tree';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
-import { ExternalLink } from 'react-feather';
 import config from '../../../config';
 
 // eslint-disable-next-line no-unused-vars
@@ -112,14 +111,9 @@ const SidebarLayout = ({ location }) => (
     render={({ allMdx }) => {
       return (
         <Sidebar>
-          {/* {config.sidebar.title ? (
-            <div
-              className={'sidebarTitle hiddenMobile'}
-              dangerouslySetInnerHTML={{ __html: config.sidebar.title }}
-            />
-          ) : null} */}
           <ul className={'sideBarUL'}>
             <Tree edges={allMdx.edges} />
+
             {/* {config.sidebar.links && config.sidebar.links.length > 0 && <Divider />}
             {config.sidebar.links.map((link, key) => {
               if (link.link !== '' && link.text !== '') {

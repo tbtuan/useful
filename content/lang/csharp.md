@@ -4,7 +4,7 @@ metaTitle: 'Syntax Highlighting is the meta title tag for this page'
 metaDescription: 'This is the meta description for this page'
 ---
 
-# Named Argument
+## Named Argument
 
 ```csharp
 // system is optional
@@ -14,7 +14,7 @@ void Log(string msg, string system = "asdf", int priority) {
 Log("Tracker", priority: 0);
 ```
 
-# out-Keyword
+## out-Keyword
 
 ```csharp
 // Parse s and save result
@@ -23,13 +23,13 @@ int result;
 int.TryParse(s, out result)
 ```
 
-# Lambda
+## Lambda
 
 ```csharp
 people.Find(person => person.Name == "John");
 ```
 
-# Extension Method
+## Extension Method
 
 ```csharp
 // Must be static
@@ -44,13 +44,13 @@ public static class ExtensionMethods {
 Console.ReadLine().toInt("a");
 ```
 
-# String interpolation
+## String interpolation
 
 ```csharp
 Console.WriteLine($"System: {system}, Priority: {priority}, Msg: {msg}");
 ```
 
-# Delegates
+## Delegates
 
 ```csharp
 // delegates = function pointers
@@ -86,7 +86,7 @@ f1f2 += delegate(string s)
 }
 ```
 
-# Event handler
+## Event handler
 
 ```csharp
 // Define delegate for Event handler (delegate is a special class therefore it can be outside)
@@ -127,7 +127,7 @@ class Program {
 }
 ```
 
-# Thread/Task
+## Thread/Task
 
 ```csharp
 Thread t = new Thread(MyMethod);
@@ -137,7 +137,7 @@ Task.Run(() => MyMethod());
 Tasks.Factory.StartNew(() => MyMethod());
 ```
 
-# Monitor
+## Monitor
 
 ```csharp
 Object myLock = new Object();
@@ -150,7 +150,7 @@ try {
 // Same as lock(myLock) { }
 ```
 
-# Mutex
+## Mutex
 
 ```csharp
 Mutex mutex = new Mutex();
@@ -159,7 +159,7 @@ MyMethod();
 mutex.ReleaseMutex();
 ```
 
-# Reader-Writer-Lock
+## Reader-Writer-Lock
 
 ```csharp
 ReaderWriterLockSlim readerWriterLockSlim = new ReaderWriterLockSlim();
