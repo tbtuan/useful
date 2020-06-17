@@ -1,6 +1,9 @@
 require('dotenv').config();
 const config = require('./config');
 const plugins = [
+  {
+    resolve: `gatsby-plugin-emotion`,
+  },
   'gatsby-plugin-sitemap',
   {
     resolve: `gatsby-plugin-layout`,

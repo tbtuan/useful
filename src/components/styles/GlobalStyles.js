@@ -46,10 +46,6 @@ export const baseStyles = injectGlobal`
   .visibleMobileView {
     display: none !important;
   }
-  .video-responsive {
-    position: relative;
-    padding-bottom: 56.2%;
-  }
   a {
     text-decoration: none;
   }
@@ -81,11 +77,6 @@ export const baseStyles = injectGlobal`
   .navBarToggle .iconBar:first-child {
     margin-top: 0px;
   }
-  .video-responsive iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
 
   .divider {
     height: 30px;
@@ -100,91 +91,6 @@ export const baseStyles = injectGlobal`
   .navbar-default .navbar-toggle:focus,
   .navbar-default .navbar-toggle:hover {
     background-color: #001933;
-  }
-
-  .headerWrapper {
-    border-bottom: 1px solid rgb(212, 218, 223);
-    box-shadow: rgba(116, 129, 141, 0.1) 0px 1px 1px 0px;
-    display: flex;
-    align-items: center;
-  }
-  .formElement {
-    background-color: transparent;
-    padding: 4px;
-    border-radius: 5px;
-    position: relative;
-  }
-  .formElement:focus {
-    outline: none;
-    border: none;
-  }
-  .formElement svg path {
-    fill: #2fd2c5;
-  }
-  .searchInput {
-    width: 100%;
-    background-color: rgba(28,211,198,.12) !important;
-    border-width: 0 !important;
-    color: #C2C2C2;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    opacity: .6;
-    padding-left: 38px;
-    max-width: 600px;
-  }
-  .searchInput:focus,
-  .searchInput:visited,
-  .searchInput:hover,
-  .searchInput:focus-within {
-    outline: none;
-    border: 0;
-  }
-  .searchWrapper {
-    padding-left: 0px;
-    padding-right: 20px;
-    flex: 1;
-    position: relative;
-  }
-  .searchWrapper a {
-    font-weight: 500;
-  }
-  .hitWrapper {
-    background-color: #fff;
-    padding: 0.7em 1em 0.4em;
-    border-radius: 4px;
-    position: absolute;
-    width: 80vw;
-    max-width: 30em;
-    top: 40px;
-    border: 1px solid #ccc;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
-    height: auto;
-    max-height: 80vh;
-    overflow: scroll;
-    left: 0;
-  }
-  .hitWrapper ul li {
-    margin-top: 0.7em;
-    padding-top: 0.7em;
-    border-top: 1px solid;
-    list-style-type: none;
-  }
-  .hitWrapper ul li:first-child {
-    border-top: 0px;
-    margin-top: 0px;
-    color: black !important;
-    padding: 0px;
-  }
-  .showResults {
-    display: block;
-  }
-  .hideResults {
-    display: none;
-  }
-  .hitWrapper span {
-    color: black;
-    font-size: 14px;
   }
 
   /* Header section starts here */
@@ -386,6 +292,7 @@ export const baseStyles = injectGlobal`
   /* tables.css */
   table {
     padding: 0;
+    border-spacing: 0;
   }
 
   table tr {
@@ -490,15 +397,10 @@ export const baseStyles = injectGlobal`
   }
 
   @media (max-width: 767px) {
-    .formElement svg path {
-      fill: #001934;
-    }
     .visibleMobileView {
       display: block !important;
     }
-    .searchInput {
-      color: #001934;
-    }
+
     .responsive {
       margin-top: 15px;
       position: relative;
@@ -575,23 +477,6 @@ export const baseStyles = injectGlobal`
       padding-left: 0 !important;
     }
 
-    .searchWrapper {
-      padding: 0px 0;
-      padding-top: 0px;
-      position: absolute;
-      bottom: 0px;
-      width: calc(100% - 70px);
-      position: absolute;
-      left: 40px;
-      top: 8px;
-    }
-    .hitWrapper {
-      width: 100%;
-      right: 0;
-      top: 35px;
-      max-height: fit-content;
-      position: static;
-    }
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
@@ -603,14 +488,8 @@ export const baseStyles = injectGlobal`
       margin: 0 5px;
       height: 20px;
     }
-    .hitWrapper {
-      max-width: 500px;
-    }
     .navBarUL li a {
       padding: 10px 5px;
-    }
-    .searchWrapper {
-      padding-left: 0px;
     }
   }
 `;

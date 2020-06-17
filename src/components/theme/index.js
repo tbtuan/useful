@@ -1,11 +1,4 @@
-const baseTheme = {
-  fonts: {
-    mono: '"SF Mono", "Roboto Mono", Menlo, monospace',
-  },
-};
-
 const lightTheme = {
-  ...baseTheme,
   colors: {
     background: '#fff',
     heading: '#000',
@@ -22,7 +15,6 @@ const lightTheme = {
 };
 
 const darkTheme = {
-  ...baseTheme,
   colors: {
     background: '#292D3E',
     heading: '#fff',
