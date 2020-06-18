@@ -7,13 +7,19 @@ import styled from '@emotion/styled';
 
 const Collapser = styled('button')``;
 
+let currentLayer = 0;
+
 const TreeNode = styled(
-  ({ className = '', setCollapsed, collapsed, url, title, items, ...rest }) => {
+  ({ className = '', setCollapsed, collapsed, layer, url, title, items, ...rest }) => {
     const isCollapsed = collapsed[url];
 
     const collapse = () => {
       setCollapsed(url);
     };
+
+    if (layer === 2) {
+      return null;
+    }
 
     const hasChildren = items.length !== 0;
 
@@ -30,16 +36,7 @@ const TreeNode = styled(
 
     return (
       <li className={calculatedClassName}>
-        {title && (
-          <Link to={url}>
-            {title}
-            {title && hasChildren ? (
-              <button onClick={collapse} aria-label="collapse" className="collapser">
-                {!isCollapsed ? <OpenedSvg /> : <ClosedSvg />}
-              </button>
-            ) : null}
-          </Link>
-        )}
+        {title && <Link to={url}>{title}</Link>}
 
         {!isCollapsed && hasChildren ? (
           <ul>
@@ -48,6 +45,7 @@ const TreeNode = styled(
                 key={item.url + index.toString()}
                 setCollapsed={setCollapsed}
                 collapsed={collapsed}
+                layer={currentLayer + 1}
                 {...item}
               />
             ))}

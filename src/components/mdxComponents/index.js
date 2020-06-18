@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 import CodeBlock from './codeBlock';
 import AnchorTag from './anchor';
+import { Link } from 'emotion-icons/fa-solid';
 
 const StyledPre = styled('pre')`
   padding: 0.5rem;
@@ -56,8 +57,8 @@ const Table = styled('table')`
     padding: 6px 13px;
   }
 
-  tr th :first-child,
-  tr td :first-child {
+  tr th :first-of-type,
+  tr td :first-of-type {
     margin-top: 0;
   }
 
@@ -85,7 +86,7 @@ export default {
 
     return (
       <Heading2 id={removeWhitespace(heading)}>
-        <a href={`#${removeWhitespace(heading)}`}>#</a> {heading}
+        <a href={`#${removeWhitespace(heading)}`}>#{/* <Link /> */}</a> {heading}
       </Heading2>
     );
   },

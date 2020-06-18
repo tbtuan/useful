@@ -87,19 +87,4 @@ const Layout = props => {
   );
 };
 
-// const Layout = ({ children, location }) => (
-//   <ThemeProvider location={location}>
-//     <MDXProvider components={mdxComponents}>
-//       {/* <Header location={location} /> */}
-//       <Wrapper>
-//         <Sidebar location={location} />
-//         <ContentWrapper>
-//           <TableOfContents location={location} />
-//           <Content>{children}</Content>
-//         </ContentWrapper>
-//       </Wrapper>
-//     </MDXProvider>
-//   </ThemeProvider>
-// );
-
 export default Layout;

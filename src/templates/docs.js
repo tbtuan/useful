@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { graphql } from 'gatsby';
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
 
@@ -75,6 +75,11 @@ const Padding = styled('div')`
   padding: 50px 0;
 `;
 
+const Container = styled('div')`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 500px));
+`;
+
 const forcedNavOrder = config.sidebar.forcedNavOrder;
 
 export default class MDXRuntimeTest extends Component {
@@ -135,29 +140,197 @@ export default class MDXRuntimeTest extends Component {
 
     const metaDescription = mdx.frontmatter.metaDescription;
 
+    const type = mdx.frontmatter.type;
+
     let canonicalUrl = config.gatsby.siteUrl;
 
     canonicalUrl =
       config.gatsby.pathPrefix !== '/' ? canonicalUrl + config.gatsby.pathPrefix : canonicalUrl;
     canonicalUrl = canonicalUrl + mdx.fields.slug;
 
-    return (
-      <Layout {...this.props}>
-        {metaTitle ? <title>{metaTitle}</title> : null}
-        {metaTitle ? <meta name="title" content={metaTitle} /> : null}
-        {metaDescription ? <meta name="description" content={metaDescription} /> : null}
-        {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
-        {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
-        <link rel="canonical" href={canonicalUrl} />
-        <TitleWrapper>
-          <StyledHeading>{mdx.fields.title}</StyledHeading>
-        </TitleWrapper>
-        <StyledMainWrapper>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </StyledMainWrapper>
-        <Padding />
-      </Layout>
-    );
+    if (type && type === 'collection') {
+      let finalNavItems;
+
+      const TreeNode = styled(({ url, title, items, ...rest }) => {
+        const hasChildren = items.length !== 0;
+        console.log(hasChildren, url);
+        if (!url && hasChildren) {
+          console.log(items.items);
+        }
+        return !url && hasChildren ? (
+          <Container>
+            {items.map((item, index) => (
+              <TreeNode key={item.url + index.toString()} {...item} />
+            ))}
+          </Container>
+        ) : (
+          <li>
+            {title && <Link to={url}>{title}</Link>}
+            {hasChildren ? (
+              <ul>
+                {items.map((item, index) => (
+                  <TreeNode key={item.url + index.toString()} {...item} />
+                ))}
+              </ul>
+            ) : null}
+          </li>
+        );
+      })``;
+
+      const calculateTreeData = (edges, subpath) => {
+        const originalData = edges.filter(
+          ({
+            node: {
+              fields: { slug },
+            },
+          }) => slug !== subpath && slug.startsWith(subpath)
+        );
+
+        const tree = originalData.reduce(
+          (
+            accu,
+            {
+              node: {
+                fields: { slug, title },
+              },
+            }
+          ) => {
+            const parts = slug.split('/');
+
+            let { items: prevItems } = accu;
+
+            const slicedParts =
+              config.gatsby && config.gatsby.trailingSlash
+                ? parts.slice(1, -2)
+                : parts.slice(1, -1);
+
+            for (const part of slicedParts) {
+              let tmp = prevItems && prevItems.find(({ label }) => label == part);
+
+              if (tmp) {
+                if (!tmp.items) {
+                  tmp.items = [];
+                }
+              } else {
+                tmp = { label: part, items: [] };
+                prevItems.push(tmp);
+              }
+              prevItems = tmp.items;
+            }
+            const slicedLength =
+              config.gatsby && config.gatsby.trailingSlash ? parts.length - 2 : parts.length - 1;
+
+            const existingItem = prevItems.find(({ label }) => label === parts[slicedLength]);
+
+            if (existingItem) {
+              existingItem.url = slug;
+              existingItem.title = title;
+            } else {
+              prevItems.push({
+                label: parts[slicedLength],
+                url: slug,
+                items: [],
+                title,
+              });
+            }
+            return accu;
+          },
+          { items: [] }
+        );
+
+        const tmp = [...forcedNavOrder];
+        tmp.reverse();
+        const tmp2 = tmp.reduce((accu, slug) => {
+          const parts = slug.split('/');
+
+          let { items: prevItems } = accu;
+
+          const slicedParts =
+            config.gatsby && config.gatsby.trailingSlash ? parts.slice(1, -2) : parts.slice(1, -1);
+
+          for (const part of slicedParts) {
+            let tmp = prevItems.find(item => item && item.label == part);
+
+            if (tmp) {
+              if (!tmp.items) {
+                tmp.items = [];
+              }
+            } else {
+              tmp = { label: part, items: [] };
+              prevItems.push(tmp);
+            }
+            if (tmp && tmp.items) {
+              prevItems = tmp.items;
+            }
+          }
+          // sort items alphabetically.
+          prevItems.map(item => {
+            item.items = item.items.sort(function(a, b) {
+              if (a.label < b.label) return -1;
+              if (a.label > b.label) return 1;
+              return 0;
+            });
+          });
+          const slicedLength =
+            config.gatsby && config.gatsby.trailingSlash ? parts.length - 2 : parts.length - 1;
+
+          const index = prevItems.findIndex(({ label }) => label === parts[slicedLength]);
+
+          if (prevItems.length) {
+            accu.items.unshift(prevItems.splice(index, 1)[0]);
+          }
+          return accu;
+        }, tree);
+        console.log('wwww');
+        return tmp2.items[0];
+      };
+
+      const Tree = ({ edges, subpath }) => {
+        let [treeData] = useState(() => {
+          return calculateTreeData(edges, subpath);
+        });
+        console.log(treeData);
+        return <TreeNode {...treeData} />;
+      };
+      //item.node.fields.slug.startsWith(location.pathname)
+
+      return (
+        <Layout {...this.props}>
+          {metaTitle ? <title>{metaTitle}</title> : null}
+          {metaTitle ? <meta name="title" content={metaTitle} /> : null}
+          {metaDescription ? <meta name="description" content={metaDescription} /> : null}
+          {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
+          {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
+          <link rel="canonical" href={canonicalUrl} />
+          <TitleWrapper>
+            <StyledHeading>{mdx.fields.title}</StyledHeading>
+          </TitleWrapper>
+          <StyledMainWrapper>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+            <Tree edges={allMdx.edges} subpath={location.pathname} />
+          </StyledMainWrapper>
+          <Padding />
+        </Layout>
+      );
+    } else {
+      return (
+        <Layout {...this.props}>
+          {metaTitle ? <title>{metaTitle}</title> : null}
+          {metaTitle ? <meta name="title" content={metaTitle} /> : null}
+          {metaDescription ? <meta name="description" content={metaDescription} /> : null}
+          {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
+          {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
+          <link rel="canonical" href={canonicalUrl} />
+          <TitleWrapper>
+            <StyledHeading>{mdx.fields.title}</StyledHeading>
+          </TitleWrapper>
+          <StyledMainWrapper>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </StyledMainWrapper>
+          <Padding />
+        </Layout>
+      );
+    }
   }
 }
 
@@ -185,6 +358,7 @@ export const pageQuery = graphql`
       frontmatter {
         metaTitle
         metaDescription
+        type
       }
     }
     allMdx {
@@ -194,6 +368,7 @@ export const pageQuery = graphql`
             slug
             title
           }
+          tableOfContents
         }
       }
     }

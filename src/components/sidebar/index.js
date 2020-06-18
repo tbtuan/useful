@@ -151,9 +151,7 @@ const SidebarUL = styled('ul')`
     padding-left: 3rem;
   }
 
-  .item .item {
-    margin-left: 16px;
-  }
+
 
   .item > a:hover {
     //background: ${({ theme }) => theme.colors.nav};
