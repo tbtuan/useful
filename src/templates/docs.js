@@ -281,7 +281,6 @@ export default class MDXRuntimeTest extends Component {
           }
           return accu;
         }, tree);
-        console.log('wwww');
         return tmp2.items[0];
       };
 
@@ -307,7 +306,9 @@ export default class MDXRuntimeTest extends Component {
           </TitleWrapper>
           <StyledMainWrapper>
             <MDXRenderer>{mdx.body}</MDXRenderer>
-            <Tree edges={allMdx.edges} subpath={location.pathname} />
+            {typeof window === 'undefined' ? null : (
+              <Tree edges={allMdx.edges} subpath={location.pathname} />
+            )}
           </StyledMainWrapper>
           <Padding />
         </Layout>
