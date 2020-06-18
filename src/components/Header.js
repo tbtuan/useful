@@ -6,19 +6,7 @@ import { DarkModeSwitch } from './DarkModeSwitch';
 
 import Search from './search/SearchContainer';
 
-import { faIndent, faSun } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-function myFunction() {
-  var x = document.getElementById('navbar');
-
-  if (x.className === 'topnav') {
-    x.className += ' responsive';
-  } else {
-    x.className = 'topnav';
-  }
-}
+import { Github } from 'emotion-icons/fa-brands';
 
 const Title = styled('a')`
   color: ${({ theme }) => theme.colors.text};
@@ -76,16 +64,33 @@ const RightNavLink = styled('a')`
   }
 `;
 
-const StyledBgDiv = styled('div')`
-  height: 60px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-color: #f8f8f8;
-  position: relative;
-  display: none;
-  background: ${({ theme }) => theme.colors.background};
+const NavbarHeader = styled('div')`
+  min-width: 18rem;
+  padding-left: 2.5rem;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
 
   @media (max-width: 767px) {
-    display: block;
+    display: flex;
+    min-width: auto;
+    padding-right: 0;
+    align-items: center;
+    align-self: flex-start;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navBarHeader {
+      min-width: 240px;
+      flex: initial;
+    }
+    .divider {
+      margin: 0 5px;
+      height: 20px;
+    }
+    .navBarUL li a {
+      padding: 10px 5px;
+    }
   }
 `;
 
@@ -106,6 +111,27 @@ const NavbarTab = styled('div')`
   padding-right: 20px;
   display: flex;
   align-items: center;
+`;
+
+const NavbarRight = styled('div')`
+  margin-left: auto;
+  padding-right: 5rem;
+  -webkit-transition: top 0.5s, bottom 0.5s;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  justify-content: space-between;
+  //align-items: center;
+
+  @media (max-width: 767px) {
+    position: static;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    margin: 7.5px 0px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+  }
 `;
 
 const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => {
@@ -146,37 +172,20 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => {
 
         return (
           <Navbar>
-            <div className={'navBarHeader'}>
+            <NavbarHeader>
               <Title href="/">{headerTitle}</Title>
-            </div>
+            </NavbarHeader>
             <NavbarTab>{location.pathname}</NavbarTab>
             <SearchBox />
-            <div id="navbar" className={'topnav'}>
-              <ul className={'navBarUL navBarNav navBarULRight'}>
-                <RightNavLink href="https://github.com/tbtuan/useful" target="_blank">
-                  <FontAwesomeIcon icon={faGithub} />
-                </RightNavLink>
-                <DarkModeSwitch
-                  isDarkThemeActive={isDarkThemeActive}
-                  toggleActiveTheme={toggleActiveTheme}
-                />
-              </ul>
-            </div>
-            <StyledBgDiv isDarkThemeActive={isDarkThemeActive}>
-              <div className={'navBarDefault removePadd'}>
-                <span
-                  onClick={myFunction}
-                  className={'navBarToggle'}
-                  onKeyDown={myFunction}
-                  role="button"
-                  tabIndex={0}
-                >
-                  <span className={'iconBar'}></span>
-                  <span className={'iconBar'}></span>
-                  <span className={'iconBar'}></span>
-                </span>
-              </div>
-            </StyledBgDiv>
+            <NavbarRight>
+              <RightNavLink href="https://github.com/tbtuan/useful" target="_blank">
+                <Github />
+              </RightNavLink>
+              <DarkModeSwitch
+                isDarkThemeActive={isDarkThemeActive}
+                toggleActiveTheme={toggleActiveTheme}
+              />
+            </NavbarRight>
           </Navbar>
         );
       }}

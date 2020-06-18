@@ -3,8 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import Link from './link';
 import config from '../../config';
-import { faEdit, faClock, faThList } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Edit, Clock, ThList } from 'emotion-icons/fa-solid';
 
 import styled from '@emotion/styled';
 
@@ -23,20 +22,6 @@ const Sidebar = styled('nav')`
   right: 0;
   margin-left: 3rem;
   overflow: auto;
-
-  .rightSideTitle {
-    font-size: 0.8rem;
-    line-height: 1;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    padding: 7px 24px 7px 16px;
-    //border-left: 1px solid #e6ecf1;
-    //border-left-color: rgb(230, 236, 241);
-    //border-left-color: rgb(0, 0, 0);
-
-    color: ${props => props.theme.colors.text};
-  }
 
   li {
     list-style-type: none;
@@ -58,6 +43,20 @@ const Sidebar = styled('nav')`
   }
 `;
 
+const TOCTitle = styled('li')`
+  font-size: 0.8rem;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 7px 24px 7px 16px;
+  //border-left: 1px solid #e6ecf1;
+  //border-left-color: rgb(230, 236, 241);
+  //border-left-color: rgb(0, 0, 0);
+
+  color: ${props => props.theme.colors.text};
+`;
+
 const MarkdownMod = styled('div')`
   margin-bottom: 2rem;
 `;
@@ -68,10 +67,25 @@ const MarkdownModItem = styled('p')`
   font-weight: 500;
   padding: 7px 24px 7px 16px;
   color: ${props => props.theme.colors.text};
+`;
 
-  svg {
-    margin-right: 0.5rem;
-  }
+const StyledClock = styled(Clock)`
+  width: 18px;
+  margin-right: 0.5rem;
+`;
+
+const StyledThList = styled(ThList)`
+  width: 18px;
+  margin-right: 0.5rem;
+`;
+
+const StyledEdit = styled(Edit)`
+  width: 18px;
+  margin-right: 0.5rem;
+`;
+
+const StyledLink = styled(Link)`
+  color: ${props => props.theme.colors.text};
 `;
 
 const ListItem = styled(({ className, active, level, ...props }) => {
@@ -193,13 +207,12 @@ const SidebarLayout = ({ location }) => {
 
         if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
           const navItems = allMdx.edges.map((item, index) => {
-            let innerItems;
-
             let innerInnerItems;
-
             if (item !== undefined) {
               if (
                 item.node.fields.slug === location.pathname ||
+                // trailing slash
+                item.node.fields.slug + '/' === location.pathname ||
                 config.gatsby.pathPrefix + item.node.fields.slug === location.pathname
               ) {
                 if (item.node.tableOfContents.items) {
@@ -240,28 +253,27 @@ const SidebarLayout = ({ location }) => {
             }
           });
         }
-
         if (finalNavItems && finalNavItems.length) {
           return (
             <SidebarWrapper>
               <Sidebar>
                 <MarkdownMod>
                   <MarkdownModItem>
-                    <FontAwesomeIcon icon={faClock} />
+                    <StyledClock />
                     {modifiedTime}
                   </MarkdownModItem>
                   <MarkdownModItem>
-                    <FontAwesomeIcon icon={faThList} />
+                    <StyledThList />
                     Change view
                   </MarkdownModItem>
                   <MarkdownModItem>
-                    <Link to={`${docsLocation}/${relativePath}`}>
-                      <FontAwesomeIcon icon={faEdit} />
+                    <StyledLink to={`${docsLocation}/${relativePath}`}>
+                      <StyledEdit />
                       Edit this page
-                    </Link>
+                    </StyledLink>
                   </MarkdownModItem>
                 </MarkdownMod>
-                <li className={'rightSideTitle'}>On this page</li>
+                <TOCTitle>On this page</TOCTitle>
                 {finalNavItems}
               </Sidebar>
             </SidebarWrapper>

@@ -34,12 +34,6 @@ export const baseStyles = injectGlobal`
   body {
     font-family: 'Open Sans';
   }
-  .visibleMobile {
-    display: none;
-  }
-  .visibleMobileView {
-    display: none !important;
-  }
   a {
     text-decoration: none;
   }
@@ -48,16 +42,6 @@ export const baseStyles = injectGlobal`
   }
   .displayInline {
     display: inline-block;
-  }
-  .navBarToggle {
-    border: 0px solid #fff;
-    border-radius: 4px;
-    width: 36px;
-    height: 33px;
-    position: absolute;
-    right: 20px;
-    padding: 8px 5px;
-    display: none;
   }
   .navBarToggle .iconBar {
     display: block;
@@ -91,41 +75,7 @@ export const baseStyles = injectGlobal`
   .removePadd {
     padding: 0 !important;
   }
-  .navBarHeader {
-    min-width: 18rem;
-    padding-left: 2.5rem;
-    padding-right: 20px;
-    display: flex;
-    align-items: center;
-  }
   
-  .navBarUL li {
-    list-style-type: none;
-  }
-  .navBarUL {
-    -webkit-overflow-scrolling: touch;
-  }
-  .navBarUL li a {
-    font-family: 'Roboto';
-    color: #fff !important;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1em;
-    opacity: 1;
-    padding: 10px 15px;
-  }
-  .navBarNav {
-    display: flex;
-    justify-content: space-between;
-    //align-items: center;
-  }
-  .navBarUL li a img,
-  .navBarUL li a .shareIcon {
-    width: 20px;
-  }
-  .navBarUL li a:hover {
-    opacity: 0.7;
-  }
   pre {
     border: 0 !important;
     background-color: rgb(245, 247, 249); /* !important; */
@@ -140,10 +90,6 @@ export const baseStyles = injectGlobal`
   }
 
   /* Header section ends here */
-
-  .sideBarShow {
-    display: none;
-  }
 
   .sideBarUL {
     margin-top: 2rem; // changed
@@ -384,12 +330,6 @@ export const baseStyles = injectGlobal`
     overflow: auto;
   }
 
-  .topnav {
-    margin-left: auto;
-    padding-right: 5rem;
-    -webkit-transition: top 0.5s, bottom 0.5s;
-  }
-
   @media (max-width: 767px) {
     .visibleMobileView {
       display: block !important;
@@ -405,19 +345,6 @@ export const baseStyles = injectGlobal`
       padding-right: 50px;
       font-size: 16px;
     }
-    .topnav.responsive .visibleMobile {
-      display: block;
-    }
-    .topnav .navBarUL {
-      display: none;
-    }
-    .topnav.responsive .navBarUL {
-      display: block;
-      text-align: left;
-    }
-    .hiddenMobile {
-      display: none !important;
-    }
     hr {
       margin-top: 0;
       margin-bottom: 0;
@@ -425,22 +352,6 @@ export const baseStyles = injectGlobal`
     .separator {
       margin-top: 20px;
       margin-bottom: 20px;
-    }
-    .navBarULRight {
-      position: static;
-      align-self: flex-end;
-    }
-    .navBarUL {
-      display: flex;
-      align-items: center;
-      margin: 7.5px 0px;
-    }
-    .navBarUL li {
-      height: 37px;
-    }
-    .navBarUL li a {
-      font-size: 14px;
-      padding: 10px 15px;
     }
 
     .navBarToggle {
@@ -451,15 +362,6 @@ export const baseStyles = injectGlobal`
       top: 15px;
       background: #fff;
     }
-
-    .navBarHeader {
-      display: flex;
-      min-width: auto;
-      padding-right: 0;
-      align-items: center;
-      align-self: flex-start;
-    }
-
 
     .titleWrapper {
       padding: 0 15px;
@@ -474,16 +376,9 @@ export const baseStyles = injectGlobal`
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
-    .navBarHeader {
-      min-width: 240px;
-      flex: initial;
-    }
     .divider {
       margin: 0 5px;
       height: 20px;
-    }
-    .navBarUL li a {
-      padding: 10px 5px;
     }
   }
 `;
