@@ -40,7 +40,6 @@ const Navbar = styled('nav')`
 `;
 
 const SearchBox = styled('input')`
-  flex-grow: 1;
   margin-left: 2rem;
   margin-right: 4rem;
   line-height: 1.8rem;
@@ -134,7 +133,7 @@ const NavbarRight = styled('div')`
   }
 `;
 
-const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => {
+const Header = ({ location }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -171,22 +170,26 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => {
         } = data;
 
         return (
-          <Navbar>
+          <div>
             <NavbarHeader>
               <Title href="/">{headerTitle}</Title>
             </NavbarHeader>
-            <NavbarTab>{location.pathname}</NavbarTab>
+            {/* <NavbarTab>{location.pathname}</NavbarTab> */}
             <SearchBox />
-            <NavbarRight>
-              <RightNavLink href="https://github.com/tbtuan/useful" target="_blank">
-                <Github />
-              </RightNavLink>
-              <DarkModeSwitch
-                isDarkThemeActive={isDarkThemeActive}
-                toggleActiveTheme={toggleActiveTheme}
-              />
-            </NavbarRight>
-          </Navbar>
+          </div>
+          /* <NavbarRight>
+          <RightNavLink href="https://github.com/tbtuan/useful" target="_blank">
+            <Github />
+          </RightNavLink>
+          <DarkModeSwitch
+            isDarkThemeActive={isDarkThemeActive}
+            toggleActiveTheme={toggleActiveTheme}
+          />
+        </NavbarRight> */
+          // <div />
+          // <Navbar>
+
+          // </Navbar>
         );
       }}
     />
