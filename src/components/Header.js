@@ -88,7 +88,7 @@ const NavbarHeader = styled('div')`
       margin: 0 5px;
       height: 20px;
     }
-    .navBarUL li a {
+    li a {
       padding: 10px 5px;
     }
   }

@@ -9,27 +9,10 @@ import Header from './Header';
 import TableOfContents from './tableOfContents';
 
 const Wrapper = styled('div')`
-  .sideBarUL li a {
-    color: ${({ theme }) => theme.colors.text};
-  }
   background: ${({ theme }) => theme.colors.background};
   height: auto;
   top: 4rem;
   position: relative;
-
-  .sideBarUL .item > a:hover {
-    //background: ${({ theme }) => theme.colors.nav};
-    background-color: ${({ theme }) => theme.colors.link};
-    //background-color: #1ed3c6;
-    color: #fff !important;
-
-    /* background: #F8F8F8 */
-  }
-
-  .sideBarUL .active > a {
-    background-color: ${({ theme }) => theme.colors.link};
-    color: #fff !important;
-  }
 
   @media only screen and (max-width: 767px) {
     display: block;

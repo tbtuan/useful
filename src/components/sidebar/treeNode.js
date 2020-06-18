@@ -3,53 +3,69 @@ import OpenedSvg from '../images/opened';
 import ClosedSvg from '../images/closed';
 import config from '../../../config';
 import Link from '../link';
+import styled from '@emotion/styled';
 
-const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, ...rest }) => {
-  const isCollapsed = collapsed[url];
+const Collapser = styled('button')``;
 
-  const collapse = () => {
-    setCollapsed(url);
-  };
+const TreeNode = styled(
+  ({ className = '', setCollapsed, collapsed, url, title, items, ...rest }) => {
+    const isCollapsed = collapsed[url];
 
-  const hasChildren = items.length !== 0;
+    const collapse = () => {
+      setCollapsed(url);
+    };
 
-  let location;
+    const hasChildren = items.length !== 0;
 
-  if (typeof document != 'undefined') {
-    location = document.location;
+    let location;
+
+    if (typeof document != 'undefined') {
+      location = document.location;
+    }
+    const active =
+      location &&
+      (location.pathname === url || location.pathname === config.gatsby.pathPrefix + url);
+
+    const calculatedClassName = `${className} item ${active ? 'active' : ''}`;
+
+    return (
+      <li className={calculatedClassName}>
+        {title && (
+          <Link to={url}>
+            {title}
+            {title && hasChildren ? (
+              <button onClick={collapse} aria-label="collapse" className="collapser">
+                {!isCollapsed ? <OpenedSvg /> : <ClosedSvg />}
+              </button>
+            ) : null}
+          </Link>
+        )}
+
+        {!isCollapsed && hasChildren ? (
+          <ul>
+            {items.map((item, index) => (
+              <TreeNode
+                key={item.url + index.toString()}
+                setCollapsed={setCollapsed}
+                collapsed={collapsed}
+                {...item}
+              />
+            ))}
+          </ul>
+        ) : null}
+      </li>
+    );
   }
-  const active =
-    location && (location.pathname === url || location.pathname === config.gatsby.pathPrefix + url);
-
-  const calculatedClassName = `${className} item ${active ? 'active' : ''}`;
-
-  return (
-    <li className={calculatedClassName}>
-      {title && (
-        <Link to={url}>
-          {title}
-          {!config.sidebar.frontLine && title && hasChildren ? (
-            <button onClick={collapse} aria-label="collapse" className="collapser">
-              {!isCollapsed ? <OpenedSvg /> : <ClosedSvg />}
-            </button>
-          ) : null}
-        </Link>
-      )}
-
-      {!isCollapsed && hasChildren ? (
-        <ul>
-          {items.map((item, index) => (
-            <TreeNode
-              key={item.url + index.toString()}
-              setCollapsed={setCollapsed}
-              collapsed={collapsed}
-              {...item}
-            />
-          ))}
-        </ul>
-      ) : null}
-    </li>
-  );
-};
+)`
+  .collapser {
+    background: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+    cursor: pointer;
+  }
+`;
 
 export default TreeNode;

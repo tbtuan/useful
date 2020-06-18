@@ -1,6 +1,21 @@
 import React, { useState } from 'react';
 import config from '../../../config';
 import TreeNode from './treeNode';
+import styled from '@emotion/styled';
+
+const TreeRoot = styled(TreeNode)`
+  ul li .collapser svg path {
+    fill: #3b454e !important;
+  }
+
+  ul .item ul .item {
+    border-left: 1px solid #e6ecf1;
+  }
+
+  // ul > li {
+  //   margin-left: 0 !important;
+  // }
+`;
 
 const calculateTreeData = edges => {
   const originalData = config.sidebar.ignoreIndex
@@ -140,12 +155,8 @@ const Tree = ({ edges }) => {
   };
 
   return (
-    <TreeNode
-      className={`${config.sidebar.frontLine ? 'showFrontLine' : 'hideFrontLine'} firstLevel`}
-      setCollapsed={toggle}
-      collapsed={collapsed}
-      {...treeData}
-    />
+    <TreeRoot setCollapsed={toggle} collapsed={collapsed} {...treeData} />
+    //<TreeNode className={` firstLevel`} setCollapsed={toggle} collapsed={collapsed} {...treeData} />
   );
 };
 

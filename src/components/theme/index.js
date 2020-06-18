@@ -11,6 +11,8 @@ const lightTheme = {
     switchbg: '#e0d9d1',
     textbox: '#eae4dd',
     navbarLink: '#cec6be',
+    tableHeader: '#CFCFCF',
+    trSecondth: '#f8f8f8',
   },
 };
 
@@ -27,6 +29,8 @@ const darkTheme = {
     switchbg: '#1f212b',
     textbox: '#20232f',
     navbarLink: '#151619',
+    tableHeader: '#191C26',
+    trSecondth: '#202330',
   },
 };
 

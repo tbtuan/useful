@@ -92,6 +92,61 @@ const Divider = styled(props => (
   }
 `;
 
+const SidebarUL = styled('ul')`
+  margin-top: 2rem;
+
+  li {
+    list-style-type: none;
+    width: auto;
+  }
+
+  li a {
+    color: ${({ theme }) => theme.colors.text};
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 7px 24px 7px 16px;
+    padding-left: 10px;
+    padding-right: 25px;
+    border-style: solid none solid solid;
+    border-width: 1px 0px 1px 1px;
+    border-color: transparent currentcolor transparent transparent;
+  }
+
+  .item {
+    list-style: none;
+    padding: 0;
+  }
+
+  .item > a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding-right: 35px;
+    padding-left: 3rem;
+  }
+
+  .item .item {
+    margin-left: 16px;
+  }
+
+  .item > a:hover {
+    //background: ${({ theme }) => theme.colors.nav};
+    background-color: ${({ theme }) => theme.colors.link};
+    //background-color: #1ed3c6;
+    color: #fff !important;
+
+    /* background: #F8F8F8 */
+  }
+
+  .active > a {
+    background-color: ${({ theme }) => theme.colors.link};
+    color: #fff !important;
+  }
+`;
+
 const SidebarLayout = ({ location }) => (
   <StaticQuery
     query={graphql`
@@ -111,21 +166,9 @@ const SidebarLayout = ({ location }) => (
     render={({ allMdx }) => {
       return (
         <Sidebar>
-          <ul className={'sideBarUL'}>
+          <SidebarUL>
             <Tree edges={allMdx.edges} />
-
-            {/* {config.sidebar.links && config.sidebar.links.length > 0 && <Divider />}
-            {config.sidebar.links.map((link, key) => {
-              if (link.link !== '' && link.text !== '') {
-                return (
-                  <ListItem key={key} to={link.link}>
-                    {link.text}
-                    <ExternalLink size={14} />
-                  </ListItem>
-                );
-              }
-            })} */}
-          </ul>
+          </SidebarUL>
         </Sidebar>
       );
     }}

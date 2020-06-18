@@ -58,6 +58,23 @@ const StyledMainWrapper = styled.div`
   }
 `;
 
+const TitleWrapper = styled('div')`
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(230, 236, 241);
+  margin-bottom: 32px;
+
+  @media (max-width: 767px) {
+    padding: 0 15px;
+    display: block;
+  }
+`;
+
+const Padding = styled('div')`
+  padding: 50px 0;
+`;
+
 const forcedNavOrder = config.sidebar.forcedNavOrder;
 
 export default class MDXRuntimeTest extends Component {
@@ -132,13 +149,13 @@ export default class MDXRuntimeTest extends Component {
         {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
         {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
         <link rel="canonical" href={canonicalUrl} />
-        <div className={'titleWrapper'}>
+        <TitleWrapper>
           <StyledHeading>{mdx.fields.title}</StyledHeading>
-        </div>
+        </TitleWrapper>
         <StyledMainWrapper>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </StyledMainWrapper>
-        <div className={'addPaddTopBottom'}></div>
+        <Padding />
       </Layout>
     );
   }

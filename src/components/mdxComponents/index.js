@@ -32,6 +32,46 @@ const Heading2 = styled('h2')`
   }
 `;
 
+const Table = styled('table')`
+  padding: 0;
+  border-style: none;
+  border-spacing: 0;
+
+  tr {
+    margin: 0;
+    padding: 0;
+  }
+
+  tr th {
+    font-weight: bold;
+    background-color: ${props => props.theme.colors.tableHeader};
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+
+  tr td {
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+
+  tr th :first-child,
+  tr td :first-child {
+    margin-top: 0;
+  }
+
+  tr th :last-child,
+  tr td :last-child {
+    margin-bottom: 0;
+  }
+
+  tr:nth-of-type(2n) {
+    padding: 5px;
+    background-color: ${props => props.theme.colors.trSecondth};
+  }
+`;
+
 const removeWhitespace = input => {
   return input.replace(/\s+/g, '').toLowerCase();
 };
@@ -65,7 +105,9 @@ export default {
   pre: props => <StyledPre {...props} />,
   code: CodeBlock,
   a: AnchorTag,
-
+  table: props => {
+    return <Table {...props} />;
+  },
   /*ul: props => {
     const unorderedlist = props.children;
     return <ul style={{ padding: '0' }}>{unorderedlist}</ul>;

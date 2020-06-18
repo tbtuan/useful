@@ -15,7 +15,6 @@ const config = {
       '/lang', // add trailing slash if enabled above /codeblock
     ],
     links: [{ text: 'Github', link: 'https://github.com/tbtuan' }],
-    frontline: false,
     ignoreIndex: true,
   },
   siteMetadata: {
