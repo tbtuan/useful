@@ -38,22 +38,6 @@ const Sidebar = styled('nav')`
     color: ${props => props.theme.colors.text};
   }
 
-  .rightSideMod {
-    margin-bottom: 2rem;
-  }
-
-  .rightSideEdit {
-    font-size: 0.8rem;
-    line-height: 1;
-    font-weight: 500;
-    padding: 7px 24px 7px 16px;
-    color: ${props => props.theme.colors.text};
-
-    svg {
-      margin-right: 0.5rem;
-    }
-  }
-
   li {
     list-style-type: none;
     //border-left: 1px solid #e6ecf1;
@@ -71,6 +55,22 @@ const Sidebar = styled('nav')`
   @media only screen and (max-width: 50rem) {
     width: 100%;
     position: relative;
+  }
+`;
+
+const MarkdownMod = styled('div')`
+  margin-bottom: 2rem;
+`;
+
+const MarkdownModItem = styled('p')`
+  font-size: 0.8rem;
+  line-height: 1;
+  font-weight: 500;
+  padding: 7px 24px 7px 16px;
+  color: ${props => props.theme.colors.text};
+
+  svg {
+    margin-right: 0.5rem;
   }
 `;
 
@@ -245,22 +245,22 @@ const SidebarLayout = ({ location }) => {
           return (
             <SidebarWrapper>
               <Sidebar>
-                <div className={'rightSideMod'}>
-                  <p className={'rightSideEdit'}>
+                <MarkdownMod>
+                  <MarkdownModItem>
                     <FontAwesomeIcon icon={faClock} />
                     {modifiedTime}
-                  </p>
-                  <p className={'rightSideEdit'}>
+                  </MarkdownModItem>
+                  <MarkdownModItem>
                     <FontAwesomeIcon icon={faThList} />
                     Change view
-                  </p>
-                  {docsLocation && (
-                    <Link className={'rightSideEdit'} to={`${docsLocation}/${relativePath}`}>
+                  </MarkdownModItem>
+                  <MarkdownModItem>
+                    <Link to={`${docsLocation}/${relativePath}`}>
                       <FontAwesomeIcon icon={faEdit} />
                       Edit this page
                     </Link>
-                  )}
-                </div>
+                  </MarkdownModItem>
+                </MarkdownMod>
                 <li className={'rightSideTitle'}>On this page</li>
                 {finalNavItems}
               </Sidebar>
