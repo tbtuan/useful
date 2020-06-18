@@ -77,7 +77,24 @@ const Padding = styled('div')`
 
 const Container = styled('div')`
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 500px));
+  grid-template-columns: repeat(3, minmax(0, 20rem));
+  grid-gap: 1rem;
+`;
+
+const Divider = styled(props => (
+  <li {...props}>
+    <hr />
+  </li>
+))`
+  list-style: none;
+  padding: 0.5rem 0;
+
+  hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #ede7f3;
+  }
 `;
 
 const forcedNavOrder = config.sidebar.forcedNavOrder;
@@ -100,6 +117,8 @@ export default class MDXRuntimeTest extends Component {
     const navItems = allMdx.edges
       .map(({ node }) => node.fields.slug)
       .filter(slug => slug !== '/')
+      // Root dir only
+      .filter(slug => slug.split('/').length < 3)
       .sort()
       .reduce(
         (acc, cur) => {
@@ -150,31 +169,43 @@ export default class MDXRuntimeTest extends Component {
 
     if (type && type === 'collection') {
       let finalNavItems;
-
-      const TreeNode = styled(({ url, title, items, ...rest }) => {
+      let currentLayer = 0;
+      const TreeNode = styled(({ url, title, layer, items, ...rest }) => {
         const hasChildren = items.length !== 0;
-        console.log(hasChildren, url);
-        if (!url && hasChildren) {
-          console.log(items.items);
+        if (!layer) {
+          layer = 0;
         }
-        return !url && hasChildren ? (
-          <Container>
-            {items.map((item, index) => (
-              <TreeNode key={item.url + index.toString()} {...item} />
-            ))}
-          </Container>
-        ) : (
-          <li>
-            {title && <Link to={url}>{title}</Link>}
-            {hasChildren ? (
-              <ul>
-                {items.map((item, index) => (
-                  <TreeNode key={item.url + index.toString()} {...item} />
-                ))}
-              </ul>
-            ) : null}
-          </li>
-        );
+        console.log(layer);
+        if (layer == 0) {
+          return (
+            <Container>
+              {items.map((item, index) => (
+                <TreeNode key={item.url + index.toString()} layer={layer + 1} {...item} />
+              ))}
+            </Container>
+          );
+        } else if (layer == 1) {
+          return (
+            <div>
+              {title && <Link to={url}>{title}</Link>}
+              <Divider />
+              {hasChildren ? (
+                <div>
+                  {items.map((item, index) => (
+                    <TreeNode key={item.url + index.toString()} layer={layer + 1} {...item} />
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          );
+        } else {
+          return (
+            <div>
+              <Link to={url}>{title}</Link>
+              <br />
+            </div>
+          );
+        }
       })``;
 
       const calculateTreeData = (edges, subpath) => {
@@ -288,7 +319,6 @@ export default class MDXRuntimeTest extends Component {
         let [treeData] = useState(() => {
           return calculateTreeData(edges, subpath);
         });
-        console.log(treeData);
         return <TreeNode {...treeData} />;
       };
       //item.node.fields.slug.startsWith(location.pathname)

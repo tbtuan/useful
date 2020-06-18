@@ -36,11 +36,6 @@ const Sidebar = styled('nav')`
 
     color: ${props => props.theme.colors.text};
   }
-
-  @media only screen and (max-width: 50rem) {
-    width: 100%;
-    position: relative;
-  }
 `;
 
 const TOCTitle = styled('li')`

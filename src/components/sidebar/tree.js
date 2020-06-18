@@ -24,10 +24,9 @@ const calculateTreeData = edges => {
           node: {
             fields: { slug },
           },
-        }) => slug !== '/'
+        }) => slug !== '/' && slug.split('/').length < 3
       )
     : edges;
-
   const tree = originalData.reduce(
     (
       accu,
