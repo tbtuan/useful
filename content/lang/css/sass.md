@@ -1,7 +1,7 @@
 ---
-title: 'Tricks'
-metaTitle: 'This is the title tag of this page'
-metaDescription: 'This is the meta description'
+title: 'Sass'
+metaTitle: '/useful - css/sass'
+metaDescription: 'CSS - Sass'
 ---
 
 ## Center div

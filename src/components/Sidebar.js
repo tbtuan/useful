@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Header from '../Header';
-import Footer from '../Footer';
-import Navigation from '../Navigation';
+import Header from './Header';
+import Footer from './Footer';
+import Navigation from './navigation';
 
 import { StaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
@@ -78,7 +78,7 @@ const SidebarLayout = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
       return (
         <Sidebar>
           <Header />
-          <Navigation />
+          <Navigation location={location} />
           <Footer isDarkThemeActive={isDarkThemeActive} toggleActiveTheme={toggleActiveTheme} />
         </Sidebar>
       );

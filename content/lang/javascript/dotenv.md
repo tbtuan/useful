@@ -1,7 +1,7 @@
 ---
-title: 'Tricks'
-metaTitle: 'This is the title tag of this page'
-metaDescription: 'This is the meta description'
+title: 'dotenv'
+metaTitle: '/useful - javascript/dotenv'
+metaDescription: 'Javascript - dotenv'
 ---
 
 ## Center div

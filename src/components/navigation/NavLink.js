@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import config from '../../config';
-import Link from './link';
+import config from '../../../config';
+import Link from '../link';
 
 const StyledLi = styled('li')`
   list-style: none;

@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import NavLink from './NavLink';
 import { Paperclip, Code, Cogs, Terminal, Book, Keyboard, Bookmark } from 'emotion-icons/fa-solid';
-import Search from './search/SearchContainer';
+import Search from '../search/SearchContainer';
 
 import { Github } from 'emotion-icons/fa-brands';
 
