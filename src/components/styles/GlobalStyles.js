@@ -26,29 +26,9 @@ export const baseStyles = injectGlobal`
     border: 0 !important;
     background-color: rgb(245, 247, 249); /* !important; */
   }
-  
-  blockquote {
-    color: rgb(116, 129, 141);
-    margin: 0px 0px 24px;
-    padding: 0px 0px 0px 12px;
-    border-left: 4px solid rgb(230, 236, 241);
-    border-color: rgb(230, 236, 241);
-  }
+
 
   /* Header section ends here */
-
-  .smallContent {
-    display: block;
-    margin: 0px;
-    padding: 0px;
-    color: #6e6e6e;
-  }
-
-  .smallContent span {
-    font-size: 12px;
-    line-height: 1.625;
-    font-weight: 400;
-  }
 
   .paragraph {
     margin: 16px 0px 32px;

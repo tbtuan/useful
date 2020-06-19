@@ -1,7 +1,7 @@
 ---
-title: 'Command'
-metaTitle: 'This is the title tag of this page'
-metaDescription: 'This is the meta description'
+title: 'Commands'
+metaTitle: '/useful - Commands'
+metaDescription: 'Commands for CLIs'
 ---
 
 ## Git

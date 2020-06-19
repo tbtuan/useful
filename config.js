@@ -10,6 +10,15 @@ const config = {
     links: [{ text: '', link: '' }],
   },
   sidebar: {
+    navigation: [
+      { text: 'Commands', link: '/command' },
+      { text: 'Languages', link: '/lang' },
+      { text: 'Learning', link: '/learning' },
+      { text: 'References', link: '/reference' },
+      { text: 'Setups', link: '/setup' },
+      { text: 'Shortcuts', link: '/shurtcut' },
+      { text: 'Tools', link: '/tools' },
+    ],
     links: [{ text: 'Github', link: 'https://github.com/tbtuan' }],
     ignoreIndex: true,
   },

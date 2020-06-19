@@ -1,7 +1,7 @@
 ---
 title: 'Tools'
-metaTitle: 'This is the title tag of this page'
-metaDescription: 'This is the meta description'
+metaTitle: '/useful - Tools'
+metaDescription: 'Tools to use'
 ---
 
 ## File sharing

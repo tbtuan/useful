@@ -5,7 +5,7 @@ import CodeBlock from './codeBlock';
 import AnchorTag from './anchor';
 import { Link } from 'emotion-icons/fa-solid';
 
-const StyledPre = styled('pre')`
+const Pre = styled('pre')`
   padding: 0.5rem;
   z-index: 1;
   background: ${props => props.theme.colors.preFormattedText};
@@ -141,7 +141,7 @@ export default {
   h5: props => <Heading5 id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
   h6: props => <Heading6 id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
   p: props => <p className="paragraph" {...props} />,
-  pre: props => <StyledPre {...props} />,
+  pre: props => <Pre {...props} />,
   code: CodeBlock,
   a: AnchorTag,
   table: props => {
