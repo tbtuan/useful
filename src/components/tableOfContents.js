@@ -83,15 +83,7 @@ const StyledLink = styled(Link)`
   color: ${props => props.theme.colors.text};
 `;
 
-const ListItem = styled(({ className, active, level, ...props }) => {
-  return (
-    <li className={className}>
-      <a href={props.to} {...props}>
-        {props.children}
-      </a>
-    </li>
-  );
-})`
+const StyledLi = styled('li')`
   list-style: none;
 
   a {
@@ -113,19 +105,29 @@ const ListItem = styled(({ className, active, level, ...props }) => {
     ${props =>
       props.active &&
       `
-      color: #1ED3C6;
-      border-color: ${({ theme }) => theme.colors.seperator};
-      //border-color: rgb(230,236,241) !important;
-      border-style: solid none solid solid;
-      border-width: 1px 0px 1px 1px;
-      background-color: #fff;
-    `} // external link icon
-    svg {
+    color: #1ED3C6;
+    border-color: ${({ theme }) => theme.colors.seperator};
+    //border-color: rgb(230,236,241) !important;
+    border-style: solid none solid solid;
+    border-width: 1px 0px 1px 1px;
+    background-color: #fff;
+  `} // external link icon
+  svg {
       float: right;
       margin-right: 1rem;
     }
   }
 `;
+
+const ListItem = styled(({ active, level, ...props }) => {
+  return (
+    <StyledLi>
+      <a href={props.to} {...props}>
+        {props.children}
+      </a>
+    </StyledLi>
+  );
+})``;
 
 const useActiveHash = () => {
   let [prev] = useState(null);

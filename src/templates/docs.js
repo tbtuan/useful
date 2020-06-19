@@ -12,7 +12,6 @@ const StyledHeading = styled('h1')`
   line-height: 1.5;
   font-weight: 500;
   border-left: 2px solid ${({ theme }) => theme.colors.link};
-  //border-left: 2px solid #1ed3c6;
   padding: 0 16px;
   flex: 1;
   margin-top: 0;
@@ -20,8 +19,12 @@ const StyledHeading = styled('h1')`
   color: ${props => props.theme.colors.heading};
 `;
 
-const StyledMainWrapper = styled.div`
-  //max-width: 1024px;
+const StyledLink = styled(Link)`
+  color: ${props => props.theme.colors.text} !important;
+  font-size: 0.75rem;
+`;
+
+const StyledMainWrapper = styled('div')`
   color: ${props => props.theme.colors.text};
 
   ul,
@@ -58,6 +61,18 @@ const StyledMainWrapper = styled.div`
   }
 `;
 
+const CollectionTitleWrapper = styled('div')`
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  margin-bottom: 32px;
+
+  @media (max-width: 767px) {
+    padding: 0 15px;
+    display: block;
+  }
+`;
+
 const TitleWrapper = styled('div')`
   display: flex;
   align-items: center;
@@ -78,7 +93,7 @@ const Padding = styled('div')`
 const Container = styled('div')`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 20rem));
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 `;
 
 const Divider = styled(props => (
@@ -97,8 +112,6 @@ const Divider = styled(props => (
   }
 `;
 
-const forcedNavOrder = config.sidebar.forcedNavOrder;
-
 export default class MDXRuntimeTest extends Component {
   render() {
     const { data } = this.props;
@@ -113,46 +126,6 @@ export default class MDXRuntimeTest extends Component {
         siteMetadata: { docsLocation, title },
       },
     } = data;
-
-    const navItems = allMdx.edges
-      .map(({ node }) => node.fields.slug)
-      .filter(slug => slug !== '/')
-      // Root dir only
-      .filter(slug => slug.split('/').length < 3)
-      .sort()
-      .reduce(
-        (acc, cur) => {
-          if (forcedNavOrder.find(url => url === cur)) {
-            return { ...acc, [cur]: [cur] };
-          }
-
-          let prefix = cur.split('/')[1];
-
-          if (config.gatsby && config.gatsby.trailingSlash) {
-            prefix = prefix + '/';
-          }
-
-          if (prefix && forcedNavOrder.find(url => url === `/${prefix}`)) {
-            return { ...acc, [`/${prefix}`]: [...acc[`/${prefix}`], cur] };
-          } else {
-            return { ...acc, items: [...acc.items, cur] };
-          }
-        },
-        { items: [] }
-      );
-
-    const nav = forcedNavOrder
-      .reduce((acc, cur) => {
-        return acc.concat(navItems[cur]);
-      }, [])
-      .concat(navItems.items)
-      .map(slug => {
-        if (slug) {
-          const { node } = allMdx.edges.find(({ node }) => node.fields.slug === slug);
-
-          return { title: node.fields.title, url: node.fields.slug };
-        }
-      });
 
     // meta tags
     const metaTitle = mdx.frontmatter.metaTitle;
@@ -175,7 +148,6 @@ export default class MDXRuntimeTest extends Component {
         if (!layer) {
           layer = 0;
         }
-        console.log(layer);
         if (layer == 0) {
           return (
             <Container>
@@ -201,7 +173,7 @@ export default class MDXRuntimeTest extends Component {
         } else {
           return (
             <div>
-              <Link to={url}>{title}</Link>
+              <StyledLink to={url}>{title}</StyledLink>
               <br />
             </div>
           );
@@ -269,7 +241,7 @@ export default class MDXRuntimeTest extends Component {
           { items: [] }
         );
 
-        const tmp = [...forcedNavOrder];
+        const tmp = [''];
         tmp.reverse();
         const tmp2 = tmp.reduce((accu, slug) => {
           const parts = slug.split('/');
@@ -331,9 +303,9 @@ export default class MDXRuntimeTest extends Component {
           {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
           {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
           <link rel="canonical" href={canonicalUrl} />
-          <TitleWrapper>
+          <CollectionTitleWrapper>
             <StyledHeading>{mdx.fields.title}</StyledHeading>
-          </TitleWrapper>
+          </CollectionTitleWrapper>
           <StyledMainWrapper>
             <MDXRenderer>{mdx.body}</MDXRenderer>
             {typeof window === 'undefined' ? null : (

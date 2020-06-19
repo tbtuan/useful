@@ -93,25 +93,6 @@ const NavbarHeader = styled('div')`
   }
 `;
 
-const NavbarTab = styled('div')`
-  background-color: #001934;
-  background: ${({ theme }) => theme.colors.background};
-  border-radius: 0;
-  border-top: 0;
-  margin-bottom: 0;
-  border: 0;
-  height: 4rem;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.background};
-  border-left: 1px solid ${({ theme }) => theme.colors.seperator};
-  border-right: 1px solid ${({ theme }) => theme.colors.seperator};
-
-  min-width: 18rem;
-  padding-left: 2.5rem;
-  padding-right: 20px;
-  display: flex;
-  align-items: center;
-`;
-
 const NavbarRight = styled('div')`
   margin-left: auto;
   padding-right: 5rem;

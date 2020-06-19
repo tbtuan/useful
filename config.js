@@ -10,10 +10,6 @@ const config = {
     links: [{ text: '', link: '' }],
   },
   sidebar: {
-    forcedNavOrder: [''], // /codeblock
-    collapsedNav: [
-      '/lang', // add trailing slash if enabled above /codeblock
-    ],
     links: [{ text: 'Github', link: 'https://github.com/tbtuan' }],
     ignoreIndex: true,
   },

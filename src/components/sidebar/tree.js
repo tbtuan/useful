@@ -11,10 +11,6 @@ const TreeRoot = styled(TreeNode)`
   ul .item ul .item {
     border-left: 1px solid #e6ecf1;
   }
-
-  // ul > li {
-  //   margin-left: 0 !important;
-  // }
 `;
 
 const calculateTreeData = edges => {
@@ -77,14 +73,8 @@ const calculateTreeData = edges => {
     { items: [] }
   );
 
-  const {
-    sidebar: { forcedNavOrder = [] },
-  } = config;
+  const tmp = [''];
 
-  const tmp = [...forcedNavOrder];
-
-  if (config.gatsby && config.gatsby.trailingSlash) {
-  }
   tmp.reverse();
   return tmp.reduce((accu, slug) => {
     const parts = slug.split('/');
@@ -134,29 +124,7 @@ const Tree = ({ edges }) => {
     return calculateTreeData(edges);
   });
 
-  const defaultCollapsed = {};
-
-  treeData.items.forEach(item => {
-    if (config.sidebar.collapsedNav && config.sidebar.collapsedNav.includes(item.url)) {
-      defaultCollapsed[item.url] = true;
-      item.items.forEach(subitem => (defaultCollapsed[subitem.url] = true));
-    } else {
-      defaultCollapsed[item.url] = false;
-    }
-  });
-  const [collapsed, setCollapsed] = useState(defaultCollapsed);
-
-  const toggle = url => {
-    setCollapsed({
-      ...collapsed,
-      [url]: !collapsed[url],
-    });
-  };
-
-  return (
-    <TreeRoot setCollapsed={toggle} collapsed={collapsed} {...treeData} />
-    //<TreeNode className={` firstLevel`} setCollapsed={toggle} collapsed={collapsed} {...treeData} />
-  );
+  return <TreeRoot {...treeData} />;
 };
 
 export default Tree;
