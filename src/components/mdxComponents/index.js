@@ -15,7 +15,7 @@ const Pre = styled('pre')`
   z-index: 1;
   background: ${props => props.theme.colors.preFormattedText};
   border-radius: 1em;
-  border: 2px solid red;
+
   border-radius: 0.4rem;
 
   pre {

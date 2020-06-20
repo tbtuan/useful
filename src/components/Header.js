@@ -2,17 +2,17 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
 
-import Search from './search/SearchContainer';
+import Link from './link';
 
-import { Github } from 'emotion-icons/fa-brands';
+import Search from './search/SearchContainer';
 
 const Header = styled('header')`
   padding-top: 1.5rem;
   width: 100%;
 `;
 
-const Title = styled('a')`
-  padding-left: 2.5rem;
+const Title = styled(Link)`
+  margin-left: 2.5rem;
   color: ${({ theme }) => theme.colors.text};
 `;
 
@@ -56,7 +56,7 @@ const HeaderLayout = ({ location }) => {
 
         return (
           <Header>
-            <Title href="/">{headerTitle}</Title>
+            <Title to="/">{headerTitle}</Title>
             <Divider />
             <SearchBox />
             <Divider />

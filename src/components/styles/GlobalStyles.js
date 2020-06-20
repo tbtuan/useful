@@ -15,16 +15,5 @@ export const baseStyles = injectGlobal`
   body {
     font-family: 'Open Sans';
   }
-  a {
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: none;
-  }
-  
-  pre {
-    border: 0 !important;
-    background-color: rgb(245, 247, 249); /* !important; */
-  }
 
 `;
