@@ -10,7 +10,6 @@ import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { Global } from '@emotion/core';
 
 import { lightTheme, darkTheme } from './theme';
-import { baseStyles } from './styles/GlobalStyles';
 
 const Wrapper = styled('div')`
   background: ${({ theme }) => theme.colors.background};
@@ -62,7 +61,6 @@ const Layout = props => {
 
   return (
     <EmotionThemeProvider theme={isDarkThemeActive ? darkTheme : lightTheme}>
-      <Global styles={baseStyles} />
       <MDXProvider components={mdxComponents}>
         <Wrapper>
           <Sidebar
