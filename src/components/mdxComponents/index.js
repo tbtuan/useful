@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 import CodeBlock from './codeBlock';
 import AnchorTag from './anchor';
-import { Link } from 'emotion-icons/fa-solid';
+import { Link, Paragraph } from 'emotion-icons/fa-solid';
 
 const StyledLink = styled(Link)`
   width: 20px;
@@ -54,14 +54,6 @@ const Heading2 = styled('h2')`
 `;
 
 const Heading3 = styled('h3')`
-  // .heading2 {
-  //   font-size: 24px;
-  //   font-weight: 700;
-  //   line-height: 1.5;
-  //   margin-bottom: 16px;
-  //   margin-top: 32px;
-  // }
-
   font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
@@ -95,8 +87,13 @@ const Heading6 = styled('h6')`
 
 const Table = styled('table')`
   padding: 0;
-  border-style: none;
+  border: solid 1px;
+  border-color: ${props => props.theme.colors.tableHeader};
   border-spacing: 0;
+  border-radius: 2px;
+  border-spacing: 0;
+
+  border-radius: 2px;
 
   tr {
     margin: 0;
@@ -105,6 +102,7 @@ const Table = styled('table')`
 
   tr th {
     font-weight: bold;
+    font-size: 13px;
     background-color: ${props => props.theme.colors.tableHeader};
     text-align: left;
     margin: 0;
@@ -113,6 +111,7 @@ const Table = styled('table')`
 
   tr td {
     text-align: left;
+    font-size: 13px;
     margin: 0;
     padding: 6px 13px;
   }
@@ -142,6 +141,24 @@ const Li = styled('li')`
   padding: 0;
 `;
 
+const Kbd = styled('kbd')`
+  display: inline-block;
+  padding: 2px 5px;
+  font: 11px Open Sans;
+  font-weight: bold;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 2px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+`;
+
+const P = styled('p')`
+  margin: 16px 0px 16px;
+  line-height: 1.625;
+`;
+
 const removeWhitespace = input => {
   return input.replace(/\s+/g, '').toLowerCase();
 };
@@ -164,28 +181,14 @@ export default {
   h4: props => <Heading4 id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
   h5: props => <Heading5 id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
   h6: props => <Heading6 id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
-  p: props => <p className="paragraph" {...props} />,
+  p: props => <P {...props} />,
   pre: props => <Pre {...props} />,
   code: CodeBlock,
   a: AnchorTag,
-  table: props => {
-    return <Table {...props} />;
-  },
-  ul: props => {
-    return <Ul {...props} />;
-  },
-  li: props => {
-    return <Li {...props} />;
-  },
-  /*ul: props => {
-    const unorderedlist = props.children;
-    return <ul style={{ padding: '0' }}>{unorderedlist}</ul>;
-  },
-
-  li: props => {
-    const listitem = props.children;
-    return <li style={{ listStyle: 'none' }}>{listitem}</li>;
-  },*/
+  table: props => <Table {...props} />,
+  ul: props => <Ul {...props} />,
+  li: props => <Li {...props} />,
+  kbd: props => <Kbd {...props} />,
 
   // TODO add `blockquote`
 };

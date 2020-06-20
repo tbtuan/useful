@@ -76,7 +76,6 @@ const Layout = props => {
           </ContentWrapper>
         </Wrapper>
       </MDXProvider>
-      {/* {children} */}
     </EmotionThemeProvider>
   );
 };

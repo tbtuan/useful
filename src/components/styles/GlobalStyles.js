@@ -27,19 +27,4 @@ export const baseStyles = injectGlobal`
     background-color: rgb(245, 247, 249); /* !important; */
   }
 
-
-  /* Header section ends here */
-
-  .paragraph {
-    margin: 16px 0px 32px;
-    line-height: 1.625;
-  }
-
-  .pre {
-    font-size: 14px;
-    margin: 0px;
-    padding: 16px;
-    overflow: auto;
-  }
-
 `;

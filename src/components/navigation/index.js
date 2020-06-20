@@ -79,13 +79,13 @@ const NavigationLayout = ({ location }) => {
       <NavLink text="Learning" link="/learning" location={location}>
         <StyledBook />
       </NavLink>
-      <NavLink text="References" link="/reference" location={location}>
+      <NavLink text="References" link="/references" location={location}>
         <StyledBookmark />
       </NavLink>
-      <NavLink text="Setups" link="/setup" location={location}>
+      <NavLink text="Setups" link="/setups" location={location}>
         <StyledCogs />
       </NavLink>
-      <NavLink text="Shortcuts" link="/shortcut" location={location}>
+      <NavLink text="Shortcuts" link="/shortcuts" location={location}>
         <StyledKeyboard />
       </NavLink>
       <NavLink text="Tools" link="/tools" location={location}>

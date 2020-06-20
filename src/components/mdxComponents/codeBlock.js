@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import prismTheme from 'prism-react-renderer/themes/vsDark';
+import styled from '@emotion/styled';
 
 /** Removes the last token from a code example if it's empty. */
 function cleanTokens(tokens) {
@@ -17,12 +18,19 @@ function cleanTokens(tokens) {
   return tokens;
 }
 
+const Code = styled('pre')`
+  font-size: 14px;
+  margin: 0px;
+  padding: 16px;
+  overflow: auto;
+`;
+
 /* eslint-disable react/jsx-key */
 const CodeBlock = ({ children: exampleCode }) => {
   return (
     <Highlight {...defaultProps} code={exampleCode} language="javascript" theme={prismTheme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className + ' pre'} style={style} p={3}>
+        <Code style={style} p={3}>
           {cleanTokens(tokens).map((line, i) => {
             let lineClass = {};
 
@@ -86,7 +94,7 @@ const CodeBlock = ({ children: exampleCode }) => {
               </div>
             );
           })}
-        </pre>
+        </Code>
       )}
     </Highlight>
   );

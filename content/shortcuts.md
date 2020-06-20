@@ -2,6 +2,7 @@
 title: 'Shortcuts'
 metaTitle: '/useful - Shortcuts'
 metaDescription: 'Shortcuts for different applications'
+type: 'cheatsheet'
 ---
 
 ## IntelliJ
@@ -10,16 +11,25 @@ metaDescription: 'Shortcuts for different applications'
 
 ## Visual Studio Code
 
-- [VSCode Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+[VSCode Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
-| Description     | Shortcut                                                          |
+### General
+
+| Shortcut             | Description                                                       |
+| -------------------- | ----------------------------------------------------------------- |
+| Show Command Palette | <kbd>F1</kbd> / <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> |
+| User Settings        | <kbd>Ctrl</kbd> + <kbd>,</kbd>                                    |
+
+### Basic editing
+
+| Shortcut        | Description                                                       |
 | --------------- | ----------------------------------------------------------------- |
 | Command Palette | <kbd>F1</kbd> / <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> |
 | Quick Open      | <kbd>Ctrl</kbd> + <kbd>P</kbd>                                    |
 
 ## Windows
 
-## Windows Explorer
+### Windows Explorer
 
 | Description                | Shortcut                                          |
 | -------------------------- | ------------------------------------------------- |

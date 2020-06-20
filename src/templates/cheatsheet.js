@@ -65,11 +65,12 @@ const TitleWrapper = styled('div')`
   }
 `;
 
-const DocsTemplate = ({ data }) => {
+const CheatsheetTemplate = ({ data }) => {
   if (!data) {
     return null;
   }
   const { mdx } = data;
+  console.log(mdx.body);
   return (
     <div>
       <TitleWrapper>
@@ -82,4 +83,4 @@ const DocsTemplate = ({ data }) => {
   );
 };
 
-export default DocsTemplate;
+export default CheatsheetTemplate;

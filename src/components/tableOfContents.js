@@ -213,29 +213,15 @@ const SidebarLayout = ({ location }) => {
               ) {
                 if (item.node.tableOfContents.items) {
                   innerInnerItems = item.node.tableOfContents.items.map((innerItem, index) => {
-                    if (innerItem.items) {
-                      innerInnerItems = innerItem.items.map((innerInnerItem, index) => {
-                        const itemId = innerInnerItem.title
-                          ? innerInnerItem.title.replace(/\s+/g, '').toLowerCase()
-                          : '#';
+                    const itemId = innerItem.title
+                      ? innerItem.title.replace(/\s+/g, '').toLowerCase()
+                      : '#';
 
-                        return (
-                          <ListItem key={index} to={`#${itemId}`} level={1}>
-                            {innerInnerItem.title}
-                          </ListItem>
-                        );
-                      });
-                    } else {
-                      const itemId = innerItem.title
-                        ? innerItem.title.replace(/\s+/g, '').toLowerCase()
-                        : '#';
-
-                      return (
-                        <ListItem key={index} to={`#${itemId}`} level={1}>
-                          {innerItem.title}
-                        </ListItem>
-                      );
-                    }
+                    return (
+                      <ListItem key={index} to={`#${itemId}`} level={1}>
+                        {innerItem.title}
+                      </ListItem>
+                    );
                   });
                 }
               }
