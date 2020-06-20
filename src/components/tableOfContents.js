@@ -44,9 +44,7 @@ const TOCTitle = styled('li')`
   text-transform: uppercase;
   letter-spacing: 1.2px;
   padding: 7px 24px 7px 16px;
-  //border-left: 1px solid #e6ecf1;
-  //border-left-color: rgb(230, 236, 241);
-  //border-left-color: rgb(0, 0, 0);
+  margin: 0;
 
   color: ${props => props.theme.colors.text};
 `;
@@ -60,6 +58,7 @@ const MarkdownModItem = styled('p')`
   line-height: 1;
   font-weight: 500;
   padding: 7px 24px 7px 16px;
+  margin: 0;
   color: ${props => props.theme.colors.text};
 `;
 
@@ -84,6 +83,7 @@ const StyledLink = styled(Link)`
 
 const StyledLi = styled('li')`
   list-style: none;
+  margin: 0;
 
   a {
     color: #5c6975;

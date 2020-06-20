@@ -15,6 +15,7 @@ const Nav = styled('nav')`
   li {
     list-style-type: none;
     width: auto;
+    margin: 0;
   }
 `;
 

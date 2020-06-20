@@ -33,6 +33,7 @@ const Divider = styled('hr')`
   margin-bottom: 1rem;
   border: 0;
   border-bottom: 1px solid #ede7f3;
+  background: none;
 `;
 
 const HeaderLayout = ({ location }) => {

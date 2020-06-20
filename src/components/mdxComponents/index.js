@@ -134,6 +134,7 @@ const Table = styled('table')`
 
 const Ul = styled('ul')`
   padding: 0;
+  margin: 0;
 `;
 
 const Li = styled('li')`
@@ -155,7 +156,8 @@ const Kbd = styled('kbd')`
 `;
 
 const P = styled('p')`
-  margin: 16px 0px 16px;
+  margin-top: 1rem;
+  margin-bottom: 1rem !important;
   line-height: 1.625;
 `;
 
