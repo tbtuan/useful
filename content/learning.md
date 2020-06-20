@@ -4,9 +4,7 @@ metaTitle: '/useful - Learning'
 metaDescription: 'Learning resources'
 ---
 
-# Free Learning Resources
-
-## EBooks
+## E-Books
 
 - [List of Free Learning Resources](https://github.com/EbookFoundation/free-programming-books/blob/master/README.md)
 

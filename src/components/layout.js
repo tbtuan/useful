@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
 import mdxComponents from './mdxComponents';
-import Sidebar from './sidebar';
+import Sidebar from './Sidebar';
 import Header from './Header';
 import TableOfContents from './tableOfContents';
 
@@ -22,13 +22,14 @@ const Wrapper = styled('div')`
 `;
 
 const Content = styled('main')`
+  min-width: 0;
   width: 100%;
+  padding: 3rem;
 `;
 
 const ContentWrapper = styled('div')`
   display: flex;
   margin-left: 18rem;
-  padding-left: 3rem;
   position: relative;
   padding-top: calc(4rem);
 
@@ -39,13 +40,6 @@ const ContentWrapper = styled('div')`
   }
 
   @media only screen and (max-width: 1023px) {
-    padding-left: 0;
-    margin: 0 10px;
-    padding-top: 3rem;
-  }
-  @media only screen and (max-width: 50rem) {
-    width: 100%;
-    position: relative;
   }
 `;
 

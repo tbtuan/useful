@@ -8,7 +8,7 @@ import { Edit, Clock, ThList } from 'emotion-icons/fa-solid';
 import styled from '@emotion/styled';
 
 const SidebarWrapper = styled('div')`
-  flex: 0 0 16rem;
+  flex: 0 0 14rem;
   order: 2;
   margin-left: auto;
   margin-top: -4rem;
@@ -20,7 +20,6 @@ const Sidebar = styled('nav')`
   top: calc(2rem + 2.5rem + 3rem);
   max-height: calc(100vh - 4rem - 2.5rem - 3rem - 3rem);
   right: 0;
-  margin-left: 3rem;
   overflow: auto;
 
   li {

@@ -5,6 +5,11 @@ import CodeBlock from './codeBlock';
 import AnchorTag from './anchor';
 import { Link } from 'emotion-icons/fa-solid';
 
+const StyledLink = styled(Link)`
+  width: 20px;
+  height: 20px;
+`;
+
 const Pre = styled('pre')`
   padding: 0.5rem;
   z-index: 1;
@@ -32,12 +37,19 @@ const Heading2 = styled('h2')`
   line-height: 1.5;
   margin-bottom: 16px;
   /* Anchor link */
-  padding-top: 5rem;
-  margin-top: calc(-4rem + 32px);
+  padding-top: calc(2rem + 2.5rem + 3rem);
+  margin-top: calc(-2rem - 2.5rem - 3rem + 26px);
+
+  :hover a {
+    opacity: 1;
+  }
 
   a {
     position: absolute;
-    margin-left: -1.25rem;
+    margin-top: -3px;
+    margin-left: calc(-20px - 0.5rem);
+    padding-right: calc(0.5rem);
+    opacity: 0;
   }
 `;
 
@@ -121,6 +133,15 @@ const Table = styled('table')`
   }
 `;
 
+const Ul = styled('ul')`
+  padding: 0;
+`;
+
+const Li = styled('li')`
+  list-style: none;
+  padding: 0;
+`;
+
 const removeWhitespace = input => {
   return input.replace(/\s+/g, '').toLowerCase();
 };
@@ -132,7 +153,10 @@ export default {
 
     return (
       <Heading2 id={removeWhitespace(heading)}>
-        <a href={`#${removeWhitespace(heading)}`}>#{/* <Link /> */}</a> {heading}
+        <a href={`#${removeWhitespace(heading)}`}>
+          <StyledLink />
+        </a>
+        {heading}
       </Heading2>
     );
   },
@@ -147,6 +171,12 @@ export default {
   table: props => {
     return <Table {...props} />;
   },
+  ul: props => {
+    return <Ul {...props} />;
+  },
+  li: props => {
+    return <Li {...props} />;
+  },
   /*ul: props => {
     const unorderedlist = props.children;
     return <ul style={{ padding: '0' }}>{unorderedlist}</ul>;
@@ -157,9 +187,5 @@ export default {
     return <li style={{ listStyle: 'none' }}>{listitem}</li>;
   },*/
 
-  // TODO add `img`
   // TODO add `blockquote`
-  // TODO add `ul`
-  // TODO add `li`
-  // TODO add `table`
 };

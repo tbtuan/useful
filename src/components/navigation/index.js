@@ -69,50 +69,29 @@ const StyledBookmark = styled(Bookmark)`
 
 const NavigationLayout = ({ location }) => {
   return (
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              headerTitle
-            }
-          }
-        }
-      `}
-      render={data => {
-        const {
-          site: {
-            siteMetadata: { headerTitle },
-          },
-        } = data;
-
-        return (
-          <Nav>
-            <NavLink text="Commands" link="/command" location={location}>
-              <StyledTerminal />
-            </NavLink>
-            <NavLink text="Languages" link="/lang" location={location}>
-              <StyledCode />
-            </NavLink>
-            <NavLink text="Learning" link="/learning" location={location}>
-              <StyledBook />
-            </NavLink>
-            <NavLink text="References" link="/reference" location={location}>
-              <StyledBookmark />
-            </NavLink>
-            <NavLink text="Setups" link="/setup" location={location}>
-              <StyledCogs />
-            </NavLink>
-            <NavLink text="Shortcuts" link="/shortcut" location={location}>
-              <StyledKeyboard />
-            </NavLink>
-            <NavLink text="Tools" link="/tools" location={location}>
-              <StyledPaperclip />
-            </NavLink>
-          </Nav>
-        );
-      }}
-    />
+    <Nav>
+      <NavLink text="Commands" link="/command" location={location}>
+        <StyledTerminal />
+      </NavLink>
+      <NavLink text="Languages" link="/lang" location={location}>
+        <StyledCode />
+      </NavLink>
+      <NavLink text="Learning" link="/learning" location={location}>
+        <StyledBook />
+      </NavLink>
+      <NavLink text="References" link="/reference" location={location}>
+        <StyledBookmark />
+      </NavLink>
+      <NavLink text="Setups" link="/setup" location={location}>
+        <StyledCogs />
+      </NavLink>
+      <NavLink text="Shortcuts" link="/shortcut" location={location}>
+        <StyledKeyboard />
+      </NavLink>
+      <NavLink text="Tools" link="/tools" location={location}>
+        <StyledPaperclip />
+      </NavLink>
+    </Nav>
   );
 };
 

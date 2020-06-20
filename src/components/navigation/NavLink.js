@@ -47,8 +47,9 @@ const NavlinkLayout = ({ text, link, children, location }) => {
     location &&
     (location.pathname === link ||
       location.pathname === link + '/' ||
-      location.pathname === config.gatsby.pathPrefix + link);
-
+      location.pathname === config.gatsby.pathPrefix + link ||
+      location.pathname === config.gatsby.pathPrefix + link + '/');
+  console.log(location.pathname);
   return (
     <StyledLi>
       {isActive(link) ? (

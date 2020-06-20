@@ -29,12 +29,6 @@ const StyledMainWrapper = styled('div')`
 
   ul,
   ol {
-    -webkit-padding-start: 40px;
-    -moz-padding-start: 40px;
-    -o-padding-start: 40px;
-    margin: 24px 0px;
-    padding: 0px 0px 0px 2em;
-
     li {
       font-size: 16px;
       line-height: 1.8;

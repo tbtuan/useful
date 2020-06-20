@@ -4,7 +4,7 @@ const lightTheme = {
     heading: '#000',
     text: '#3B454E',
     preFormattedText: '#282a33',
-    link: '#F78A42',
+    link: '#f77723',
     sidebar: '#FBFAF9',
     seperator: '#e6ecf1',
     switch: '#f78a48',
