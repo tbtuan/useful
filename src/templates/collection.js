@@ -80,10 +80,6 @@ const TitleWrapper = styled('div')`
   }
 `;
 
-const Padding = styled('div')`
-  padding: 50px 0;
-`;
-
 const Container = styled('div')`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 20rem));

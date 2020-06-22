@@ -7,7 +7,6 @@ import Header from './Header';
 import TableOfContents from './tableOfContents';
 
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
-import { Global } from '@emotion/core';
 
 import { lightTheme, darkTheme } from './theme';
 
@@ -30,7 +29,7 @@ const ContentWrapper = styled('div')`
   display: flex;
   margin-left: 18rem;
   position: relative;
-  padding-top: calc(4rem);
+  top: 6rem;
 
   background: ${({ theme }) => theme.colors.background};
 
@@ -42,7 +41,9 @@ const ContentWrapper = styled('div')`
   }
 `;
 
-const Layout = props => {
+const Layout = ({ children, location, data }) => {
+  const { allMdx, mdx, site } = data;
+
   const [isDarkThemeActive, setDarkThemeActive] = useState(false);
 
   useEffect(() => {
@@ -57,19 +58,19 @@ const Layout = props => {
     window.localStorage.setItem('isDarkThemeActive', JSON.stringify(!isDarkThemeActive));
   };
 
-  const { children, location } = props;
-
   return (
     <EmotionThemeProvider theme={isDarkThemeActive ? darkTheme : lightTheme}>
       <MDXProvider components={mdxComponents}>
         <Wrapper>
-          <Sidebar
-            location={location}
+          <Header
+            title={site.siteMetadata.title}
+            docsLocation={site.siteMetadata.docsLocation + '/' + mdx.parent.relativePath}
             isDarkThemeActive={isDarkThemeActive}
             toggleActiveTheme={toggleActiveTheme}
           />
+          <Sidebar location={location} />
           <ContentWrapper>
-            <TableOfContents location={location} />
+            <TableOfContents location={location} allMdx={allMdx} />
             <Content>{children}</Content>
           </ContentWrapper>
         </Wrapper>

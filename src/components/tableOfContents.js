@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { StaticQuery, graphql } from 'gatsby';
 
 import Link from './link';
 import config from '../../config';
-import { Edit, Clock, ThList } from 'emotion-icons/fa-solid';
 
 import styled from '@emotion/styled';
 
@@ -46,38 +44,6 @@ const TOCTitle = styled('li')`
   padding: 7px 24px 7px 16px;
   margin: 0;
 
-  color: ${props => props.theme.colors.text};
-`;
-
-const MarkdownMod = styled('div')`
-  margin-bottom: 2rem;
-`;
-
-const MarkdownModItem = styled('p')`
-  font-size: 0.8rem;
-  line-height: 1;
-  font-weight: 500;
-  padding: 7px 24px 7px 16px;
-  margin: 0;
-  color: ${props => props.theme.colors.text};
-`;
-
-const StyledClock = styled(Clock)`
-  width: 18px;
-  margin-right: 0.5rem;
-`;
-
-const StyledThList = styled(ThList)`
-  width: 18px;
-  margin-right: 0.5rem;
-`;
-
-const StyledEdit = styled(Edit)`
-  width: 18px;
-  margin-right: 0.5rem;
-`;
-
-const StyledLink = styled(Link)`
   color: ${props => props.theme.colors.text};
 `;
 
@@ -160,116 +126,60 @@ const useActiveHash = () => {
   //return props.children;
 };
 
-const SidebarLayout = ({ location }) => {
+const SidebarLayout = ({ location, allMdx }) => {
   useActiveHash();
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-              docsLocation
-            }
+
+  let finalNavItems;
+
+  let relativePath;
+
+  if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
+    allMdx.edges.map((item, index) => {
+      let innerInnerItems;
+      if (item !== undefined) {
+        if (
+          item.node.fields.slug === location.pathname ||
+          // trailing slash
+          item.node.fields.slug + '/' === location.pathname ||
+          config.gatsby.pathPrefix + item.node.fields.slug === location.pathname
+        ) {
+          if (item.node.tableOfContents.items) {
+            innerInnerItems = item.node.tableOfContents.items.map((innerItem, index) => {
+              const itemId = innerItem.title
+                ? innerItem.title.replace(/\s+/g, '').toLowerCase()
+                : '#';
+
+              return (
+                <ListItem key={index} to={`#${itemId}`} level={1}>
+                  {innerItem.title}
+                </ListItem>
+              );
+            });
           }
-          allMdx {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-                parent {
-                  ... on File {
-                    relativePath
-                    modifiedTime
-                  }
-                }
-                tableOfContents
-              }
-            }
-          }
         }
-      `}
-      render={({ allMdx, site }) => {
-        const docsLocation = site.siteMetadata.docsLocation;
-
-        let navItems = [];
-
-        let finalNavItems;
-
-        let relativePath;
-
-        let modifiedTime;
-
-        if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
-          const navItems = allMdx.edges.map((item, index) => {
-            let innerInnerItems;
-            if (item !== undefined) {
-              if (
-                item.node.fields.slug === location.pathname ||
-                // trailing slash
-                item.node.fields.slug + '/' === location.pathname ||
-                config.gatsby.pathPrefix + item.node.fields.slug === location.pathname
-              ) {
-                if (item.node.tableOfContents.items) {
-                  innerInnerItems = item.node.tableOfContents.items.map((innerItem, index) => {
-                    const itemId = innerItem.title
-                      ? innerItem.title.replace(/\s+/g, '').toLowerCase()
-                      : '#';
-
-                    return (
-                      <ListItem key={index} to={`#${itemId}`} level={1}>
-                        {innerItem.title}
-                      </ListItem>
-                    );
-                  });
-                }
-              }
-            }
-            if (innerInnerItems) {
-              relativePath = item.node.parent.relativePath;
-              modifiedTime = new Date(
-                Date.parse(item.node.parent.modifiedTime)
-              ).toLocaleDateString();
-              finalNavItems = innerInnerItems;
-            }
-          });
-        }
-        if (finalNavItems && finalNavItems.length) {
-          return (
-            <SidebarWrapper>
-              <Sidebar>
-                <MarkdownMod>
-                  <MarkdownModItem>
-                    <StyledClock />
-                    {modifiedTime}
-                  </MarkdownModItem>
-                  <MarkdownModItem>
-                    <StyledThList />
-                    Change view
-                  </MarkdownModItem>
-                  <MarkdownModItem>
-                    <StyledLink to={`${docsLocation}/${relativePath}`}>
-                      <StyledEdit />
-                      Edit this page
-                    </StyledLink>
-                  </MarkdownModItem>
-                </MarkdownMod>
-                <TOCTitle>On this page</TOCTitle>
-                {finalNavItems}
-              </Sidebar>
-            </SidebarWrapper>
-          );
-        } else {
-          return (
-            <Sidebar>
-              <ul></ul>
-            </Sidebar>
-          );
-        }
-      }}
-    />
-  );
+      }
+      if (innerInnerItems) {
+        relativePath = item.node.parent.relativePath;
+        finalNavItems = innerInnerItems;
+      }
+    });
+  }
+  if (finalNavItems && finalNavItems.length) {
+    return (
+      <SidebarWrapper>
+        <Sidebar>
+          <TOCTitle>On this page</TOCTitle>
+          {finalNavItems}
+        </Sidebar>
+      </SidebarWrapper>
+    );
+  } else {
+    return (
+      <Sidebar>
+        <ul></ul>
+      </Sidebar>
+    );
+  }
 };
 
 export default SidebarLayout;

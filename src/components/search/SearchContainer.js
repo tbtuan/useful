@@ -1,194 +1,104 @@
-import React, { Component } from 'react';
-import Axios from 'axios';
-import * as JsSearch from 'js-search';
+import React, { useEffect, useState } from 'react';
+import styled from '@emotion/styled';
+import { Search } from 'emotion-icons/fa-solid';
+import Fuse from 'fuse.js';
+import Link from '../link';
+import config from '../../../config';
 
-class Search extends Component {
-  state = {
-    bookList: [],
-    search: [],
-    searchResults: [],
-    isLoading: true,
-    isError: false,
-    searchQuery: '',
-  };
+const StyledSearch = styled(Search)`
+  position: relative;
+  bottom: 1.7rem;
+  left: 0.5rem;
+  width: 16px;
+  height: 16px;
+`;
+
+const SearchBox = styled('input')`
+  font-size: 0.8rem;
+  line-height: 1.8rem;
+
+  border-width: 0 0 2px;
+  outline: 0;
+  border-color: ${({ theme }) => theme.colors.text};
+  width: 100%;
+  padding-left: 2rem;
+  :focus {
+    border-color: ${({ theme }) => theme.colors.link};
+  }
+`;
+
+const SearchContainer = styled('div')`
+  margin-top: 6px;
+`;
+
+const SearchResult = styled('div')`
+  position: relative;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  border-radius: 4px;
+  overflow: auto;
+  padding: 0 8px 8px;
+  display: none;
+`;
+
+const SearchLayout = () => {
+  const [results, setResults] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [data, setData] = useState([]);
 
   /**
    * React lifecycle method to fetch the data
    */
-  async componentDidMount() {
-    Axios.get('https://bvaughn.github.io/js-search/books.json')
-      .then(result => {
-        const bookData = result.data;
-
-        this.setState({ bookList: bookData.books });
-        this.rebuildIndex();
-      })
-      .catch(err => {
-        this.setState({ isError: true });
-        console.log('====================================');
-        console.log(`Something bad happened while fetching the data\n${err}`);
-        console.log('====================================');
+  useEffect(() => {
+    if (window.__FUSE__) {
+      const fuse = new Fuse(window.__FUSE__, {
+        findAllMatches: true,
+        keys: ['id', 'title', 'url', 'rawBody'],
       });
-  }
-
-  /**
-   * rebuilds the overall index based on the options
-   */
-  rebuildIndex = () => {
-    const { bookList } = this.state;
-
-    const dataToSearch = new JsSearch.Search('isbn');
-
-    /**
-     *  defines a indexing strategy for the data
-     * more about it in here https://github.com/bvaughn/js-search#configuring-the-index-strategy
-     */
-    dataToSearch.indexStrategy = new JsSearch.PrefixIndexStrategy();
-    /**
-     * defines the sanitizer for the search
-     * to prevent some of the words from being excluded
-     *
-     */
-    dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer();
-    /**
-     * defines the search index
-     * read more in here https://github.com/bvaughn/js-search#configuring-the-search-index
-     */
-    dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex('isbn');
-
-    dataToSearch.addIndex('title'); // sets the index attribute for the data
-    dataToSearch.addIndex('author'); // sets the index attribute for the data
-
-    dataToSearch.addDocuments(bookList); // adds the data to be searched
-    this.setState({ search: dataToSearch, isLoading: false });
-  };
+      const results = fuse.search(searchQuery).slice(0, 5);
+      setResults(results);
+    }
+  }, [searchQuery]);
 
   /**
    * handles the input change and perform a search with js-search
    * in which the results will be added to the state
    */
-  searchData = e => {
-    const { search } = this.state;
-
-    const queryResult = search.search(e.target.value);
-
-    this.setState({ searchQuery: e.target.value, searchResults: queryResult });
+  const searchData = e => {
+    setSearchQuery(e.target.value);
   };
 
-  handleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault();
   };
 
-  render() {
-    const { bookList, searchResults, searchQuery } = this.state;
-
-    const queryResults = searchQuery === '' ? bookList : searchResults;
-
-    return (
+  return (
+    <div>
       <div>
-        <div>
-          <form onSubmit={this.handleSubmit}>
-            <div>
-              <label htmlFor="Search" style={{ paddingRight: '10px' }}>
-                Enter your search here
-              </label>
-              <input
-                id="Search"
-                value={searchQuery}
-                onChange={this.searchData}
-                placeholder="Enter your search here"
-                style={{ margin: '0 auto', width: '400px' }}
-              />
-            </div>
-          </form>
-          <div>
-            Number of items:
-            {queryResults.length}
-            <table
-              style={{
-                width: '100%',
-                borderCollapse: 'collapse',
-                borderRadius: '4px',
-                border: '1px solid #d3d3d3',
-              }}
-            >
-              <thead style={{ border: '1px solid #808080' }}>
-                <tr>
-                  <th
-                    style={{
-                      textAlign: 'left',
-                      padding: '5px',
-                      fontSize: '14px',
-                      fontWeight: 600,
-                      borderBottom: '2px solid #d3d3d3',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    Book ISBN
-                  </th>
-                  <th
-                    style={{
-                      textAlign: 'left',
-                      padding: '5px',
-                      fontSize: '14px',
-                      fontWeight: 600,
-                      borderBottom: '2px solid #d3d3d3',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    Book Title
-                  </th>
-                  <th
-                    style={{
-                      textAlign: 'left',
-                      padding: '5px',
-                      fontSize: '14px',
-                      fontWeight: 600,
-                      borderBottom: '2px solid #d3d3d3',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    Book Author
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {/* {queryResults.map(item => {
-                  return (
-                    <tr key={`row_${item.isbn}`}>
-                      <td
-                        style={{
-                          fontSize: '14px',
-                          border: '1px solid #d3d3d3',
-                        }}
-                      >
-                        {item.isbn}
-                      </td>
-                      <td
-                        style={{
-                          fontSize: '14px',
-                          border: '1px solid #d3d3d3',
-                        }}
-                      >
-                        {item.title}
-                      </td>
-                      <td
-                        style={{
-                          fontSize: '14px',
-                          border: '1px solid #d3d3d3',
-                        }}
-                      >
-                        {item.author}
-                      </td>
-                    </tr>
-                  );
-                })} */}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <SearchContainer>
+          <span>
+            <SearchBox
+              type="Search"
+              value={searchQuery}
+              onChange={searchData}
+              placeholder="Search..."
+              autocomplete="off"
+            />
+            <StyledSearch />
+          </span>
+          <SearchResult>
+            {results.map(({ item }) => {
+              return (
+                <div key={item.id}>
+                  <p>{item.title}</p>
+                  <Link to={`${item.url}`}>{item.title}</Link>
+                </div>
+              );
+            })}
+          </SearchResult>
+        </SearchContainer>
       </div>
-    );
-  }
-}
-export default Search;
+    </div>
+  );
+};
+export default SearchLayout;

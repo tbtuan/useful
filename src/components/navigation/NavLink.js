@@ -19,12 +19,19 @@ const StyledLi = styled('li')`
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
+    height: 3.5rem;
     padding: 7px 24px 7px 16px;
     padding-right: 35px;
     padding-left: 2.5rem;
     border-style: solid none solid solid;
     border-width: 1px 0px 1px 1px;
     border-color: transparent currentcolor transparent transparent;
+
+    svg {
+      margin: auto;
+      vertical-align: middle; 
+      display: inline-block;
+   } 
   }
 
   a:hover {
@@ -54,13 +61,13 @@ const NavlinkLayout = ({ text, link, children, location }) => {
     <StyledLi>
       {isActive(link) ? (
         <ActiveLink to={link}>
-          {children}
           {text}
+          {children}
         </ActiveLink>
       ) : (
         <Link to={link}>
-          {children}
           {text}
+          {children}
         </Link>
       )}
     </StyledLi>

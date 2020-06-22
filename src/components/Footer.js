@@ -1,7 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
-import { DarkModeSwitch } from './DarkModeSwitch';
 import { Github } from 'emotion-icons/fa-brands';
 
 const Footer = styled('footer')`
@@ -32,50 +30,13 @@ const StyledLink = styled('a')`
 `;
 
 const FooterLayout = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            headerTitle
-            headerLinks {
-              link
-              text
-            }
-          }
-        }
-        allMdx {
-          edges {
-            node {
-              fields {
-                slug
-                title
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={({
-      site: {
-        siteMetadata: { headerTitle, title },
-      },
-      allMdx,
-    }) => {
-      return (
-        <Footer>
-          <StyledLink href="https://github.com/tbtuan/useful" target="_blank">
-            <StyledGithub />
-            Github
-          </StyledLink>
-          <DarkModeSwitch
-            isDarkThemeActive={isDarkThemeActive}
-            toggleActiveTheme={toggleActiveTheme}
-          />
-        </Footer>
-      );
-    }}
-  />
+  <Footer>
+    <StyledLink href="https://github.com/tbtuan/useful" target="_blank">
+      <StyledGithub />
+      Github
+    </StyledLink>
+    {/* <DarkModeSwitch isDarkThemeActive={isDarkThemeActive} toggleActiveTheme={toggleActiveTheme} /> */}
+  </Footer>
 );
 
 export default FooterLayout;

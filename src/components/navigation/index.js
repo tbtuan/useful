@@ -1,16 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { StaticQuery, graphql } from 'gatsby';
 
 import NavLink from './NavLink';
 import { Paperclip, Code, Cogs, Terminal, Book, Keyboard, Bookmark } from 'emotion-icons/fa-solid';
-import Search from '../search/SearchContainer';
-
-import { Github } from 'emotion-icons/fa-brands';
 
 const Nav = styled('nav')`
   flex: 1 1 0%;
   width: 100%;
+  padding-top: 3rem;
 
   li {
     list-style-type: none;

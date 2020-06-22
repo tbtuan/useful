@@ -6,6 +6,8 @@ const startCase = require('lodash.startcase');
 
 const config = require('./config');
 
+const fs = require('fs');
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
@@ -17,7 +19,9 @@ exports.createPages = ({ graphql, actions }) => {
             allMdx {
               edges {
                 node {
+                  rawBody
                   fields {
+                    title
                     id
                   }
                   tableOfContents
@@ -35,8 +39,19 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors);
         }
 
+        const filename = 'searchIndex.json';
+
+        // Create search index
+        let searchIndex = [];
+
         // Create blog posts pages.
         result.data.allMdx.edges.forEach(({ node }) => {
+          searchIndex.push({
+            id: node.fields.id,
+            title: node.fields.title,
+            url: node.fields.slug,
+            rawBody: node.rawBody,
+          });
           createPage({
             path: node.fields.slug ? node.fields.slug : '/',
             component: path.resolve('./src/templates/index.js'),
@@ -45,6 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
             },
           });
         });
+        fs.writeFileSync(`public/${filename}`, JSON.stringify(searchIndex));
       })
     );
   });

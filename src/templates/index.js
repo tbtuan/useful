@@ -58,7 +58,6 @@ export default class MDXRuntimeTest extends Component {
           return <Docs data={data} />;
       }
     };
-
     return (
       <Layout {...this.props}>
         {metaTitle ? <title>{metaTitle}</title> : null}
@@ -93,6 +92,7 @@ export const pageQuery = graphql`
       parent {
         ... on File {
           relativePath
+          modifiedTime
         }
       }
       frontmatter {
@@ -107,6 +107,11 @@ export const pageQuery = graphql`
           fields {
             slug
             title
+          }
+          parent {
+            ... on File {
+              relativePath
+            }
           }
           tableOfContents
         }

@@ -70,7 +70,6 @@ const CheatsheetTemplate = ({ data }) => {
     return null;
   }
   const { mdx } = data;
-  console.log(mdx.body);
   return (
     <div>
       <TitleWrapper>

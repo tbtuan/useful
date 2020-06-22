@@ -1,70 +1,121 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { StaticQuery, graphql } from 'gatsby';
+import { DarkModeSwitch } from './DarkModeSwitch';
+
+import { Edit, Adjust, ThList } from 'emotion-icons/fa-solid';
 
 import Link from './link';
 
 import Search from './search/SearchContainer';
 
 const Header = styled('header')`
-  padding-top: 1.5rem;
   width: 100%;
+  height: 6rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  z-index: 1;
+`;
+
+const TitleWrapper = styled('div')`
+  flex: 0 0 18em;
+  background-color: ${({ theme }) => theme.colors.sidebar};
+  text-align: center;
+  padding-top: 3rem;
+`;
+
+const SearchWrapper = styled('div')`
+  background-color: ${({ theme }) => theme.colors.background};
+  padding-top: 3rem;
+  padding-left: 3rem;
+  flex: 0 0 20em;
+`;
+
+const OptionsWrapper = styled('div')`
+  background-color: ${({ theme }) => theme.colors.background};
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
 `;
 
 const Title = styled(Link)`
-  margin-left: 2.5rem;
+  margin-top: 4rem;
+  font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.text};
 `;
 
-const SearchBox = styled('input')`
-  margin-left: 2.5rem;
-  margin-right: auto;
-  line-height: 1.8rem;
-  font-size: 1rem;
-  border-style: solid;
-  background-color: ${({ theme }) => theme.colors.textbox};
-  border-color: ${({ theme }) => theme.colors.textbox};
-  border-radius: 0.5rem;
+const StyledThList = styled(ThList)`
+  width: 1.25rem;
+  height: 1.25rem;
+  filter: drop-shadow(0px 4px 5px rgba(59, 69, 78, 0.5));
 `;
 
-const Divider = styled('hr')`
-  width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+const StyledAdjust = styled(Adjust)`
+  width: 1.25rem;
+  height: 1.25rem;
+  filter: drop-shadow(0px 4px 5px rgba(59, 69, 78, 0.5));
+`;
+
+const EditButton = styled(Link)`
+  outline: 0;
   border: 0;
-  border-bottom: 1px solid #ede7f3;
-  background: none;
+  color: ${({ theme }) => theme.colors.background};
+  font-size: 0.85rem;
+  background-color: ${({ theme }) => theme.colors.link};
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  filter: drop-shadow(0px 4px 5px rgba(247, 119, 35, 0.5));
 `;
 
-const HeaderLayout = ({ location }) => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              headerTitle
-            }
-          }
-        }
-      `}
-      render={data => {
-        const {
-          site: {
-            siteMetadata: { headerTitle },
-          },
-        } = data;
+const StyledEdit = styled(Edit)`
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-left: auto;
+  color: ${({ theme }) => theme.colors.background};
+`;
 
-        return (
-          <Header>
-            <Title to="/">{headerTitle}</Title>
-            <Divider />
-            <SearchBox />
-            <Divider />
-          </Header>
-        );
-      }}
-    />
+const IconContainer = styled('span')`
+  height: 20px;
+  padding-right: 1rem;
+`;
+
+const Container = styled('div')`
+  margin-left: auto;
+  width: 14rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 4rem;
+`;
+
+const HeaderLayout = ({ title, docsLocation, isDarkThemeActive, toggleActiveTheme }) => {
+  return (
+    <Header>
+      <TitleWrapper>
+        <Title to="/">{title}</Title>
+      </TitleWrapper>
+      <SearchWrapper>
+        <Search />
+      </SearchWrapper>
+      <OptionsWrapper>
+        <Container>
+          <IconContainer>
+            <StyledThList />
+          </IconContainer>
+          <IconContainer>
+            <DarkModeSwitch
+              isDarkThemeActive={isDarkThemeActive}
+              toggleActiveTheme={toggleActiveTheme}
+            />
+          </IconContainer>
+          <EditButton to={docsLocation}>
+            <StyledEdit />
+            Edit
+          </EditButton>
+        </Container>
+      </OptionsWrapper>
+    </Header>
   );
 };
 
