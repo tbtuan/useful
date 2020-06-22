@@ -131,8 +131,6 @@ const SidebarLayout = ({ location, allMdx }) => {
 
   let finalNavItems;
 
-  let relativePath;
-
   if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
     allMdx.edges.map((item, index) => {
       let innerInnerItems;
@@ -159,7 +157,6 @@ const SidebarLayout = ({ location, allMdx }) => {
         }
       }
       if (innerInnerItems) {
-        relativePath = item.node.parent.relativePath;
         finalNavItems = innerInnerItems;
       }
     });
