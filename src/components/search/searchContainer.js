@@ -11,6 +11,7 @@ const StyledSearch = styled(Search)`
   left: 0.5rem;
   width: 16px;
   height: 16px;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const SearchBox = styled("input")`
@@ -18,12 +19,25 @@ const SearchBox = styled("input")`
   line-height: 1.8rem;
 
   border-width: 0 0 2px;
-  outline: 0;
   border-color: ${({ theme }) => theme.colors.text};
+  outline: 0;
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
+  placeborder-color: ${({ theme }) => theme.colors.text};
   width: 100%;
   padding-left: 2rem;
   :focus {
     border-color: ${({ theme }) => theme.colors.link};
+  }
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: ${({ theme }) => theme.colors.text};
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: ${({ theme }) => theme.colors.text};
   }
 `;
 
@@ -149,7 +163,15 @@ const SearchLayout = () => {
               <ul key={item.id}>
                 <li>{item.title}</li>
                 <li>
-                  <Link to={`${item.url}`}>{item.url}</Link>
+                  <Link
+                    onClick={() => {
+                      setQuery("");
+                      setFocus(false);
+                    }}
+                    to={`${item.url}`}
+                  >
+                    {item.url}
+                  </Link>
                 </li>
               </ul>
             );

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { DarkModeSwitch } from "./darkModeSwitch";
+import { ThemeSwitch } from "./themeSwitch";
 
 import { Edit, Adjust, ThList } from "emotion-icons/fa-solid";
 
@@ -48,10 +48,8 @@ const Title = styled(Link)`
 const StyledThList = styled(ThList)`
   width: 1.25rem;
   height: 1.25rem;
-  color: ${(props) => props.theme.colors.switch};
-  filter: drop-shadow(
-    0px 4px 5px ${(props) => props.theme.colors.switchShadow}
-  );
+  color: ${({ theme }) => theme.colors.switch};
+  filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
   cursor: pointer;
 `;
 
@@ -64,7 +62,7 @@ const EditButton = styled(Link)`
   border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   filter: drop-shadow(
-    0px 4px 5px ${(props) => props.theme.colors.editButtonShadow}
+    0px 4px 5px ${({ theme }) => theme.colors.editButtonShadow}
   );
   // filter: drop-shadow(0px 4px 5px rgba(247, 119, 35, 0.5));
 `;
@@ -111,7 +109,7 @@ const HeaderLayout = ({
             <StyledThList />
           </IconContainer>
           <IconContainer>
-            <DarkModeSwitch
+            <ThemeSwitch
               isDarkThemeActive={isDarkThemeActive}
               toggleActiveTheme={toggleActiveTheme}
             />

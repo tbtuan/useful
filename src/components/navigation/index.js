@@ -16,6 +16,7 @@ const Nav = styled("nav")`
   flex: 1 1 0%;
   width: 100%;
   padding-top: 3rem;
+  text-align: justify;
 
   li {
     list-style-type: none;
@@ -29,6 +30,8 @@ const StyledPaperclip = styled(Paperclip)`
   height: 1rem;
   margin-left: 0;
   margin-right: 0.75rem;
+  display: inline-block;
+  vertical-align: middle;
 `;
 
 const StyledCode = styled(Code)`

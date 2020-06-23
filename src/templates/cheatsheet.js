@@ -1,7 +1,6 @@
 import React from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
-import { Clock } from "emotion-icons/fa-solid";
-
+import ModifiedText from "../components/modifiedText";
 import styled from "@emotion/styled";
 
 const StyledHeading = styled("h1")`
@@ -16,12 +15,6 @@ const StyledHeading = styled("h1")`
   margin: 0;
   padding: 0;
   color: ${(props) => props.theme.colors.heading};
-`;
-
-const StyledClock = styled(Clock)`
-  width: 12px;
-  height: 12px;
-  margin-right: 0.5rem;
 `;
 
 const StyledMainWrapper = styled("div")`
@@ -65,18 +58,13 @@ const CheatsheetTemplate = ({ data }) => {
     return null;
   }
   const { mdx } = data;
+
   return (
     <div>
       <TitleWrapper>
         <StyledHeading>{mdx.fields.title}</StyledHeading>
       </TitleWrapper>
-      <div>
-        <StyledClock />
-        <small>
-          Last update:{" "}
-          {new Date(Date.parse(mdx.parent.modifiedTime)).toLocaleDateString()}
-        </small>
-      </div>
+      <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
       <StyledMainWrapper>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </StyledMainWrapper>

@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import config from '../../../config';
-import Link from '../link';
+import React from "react";
+import styled from "@emotion/styled";
+import config from "../../../config";
+import Link from "../link";
 
-const StyledLi = styled('li')`
+const StyledLi = styled("li")`
   list-style: none;
   padding: 0;
 
@@ -20,15 +20,14 @@ const StyledLi = styled('li')`
     font-weight: 500;
     line-height: 1.5;
     height: 3.5rem;
-    padding: 7px 24px 7px 16px;
-    padding-right: 35px;
-    padding-left: 2.5rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
     border-style: solid none solid solid;
     border-width: 1px 0px 1px 1px;
     border-color: transparent currentcolor transparent transparent;
 
     svg {
-      margin: auto;
+      margin-left: auto;
       vertical-align: middle; 
       display: inline-block;
    } 
@@ -49,25 +48,31 @@ const ActiveLink = styled(Link)`
   color: #fff !important;
 `;
 
+const IconWrapper = styled("div")`
+  display: inline-block;
+  vertical-align: "middle";
+  margin-left: auto;
+`;
+
 const NavlinkLayout = ({ text, link, children, location }) => {
-  const isActive = link =>
+  const isActive = (link) =>
     location &&
     (location.pathname === link ||
-      location.pathname === link + '/' ||
+      location.pathname === link + "/" ||
       location.pathname === config.gatsby.pathPrefix + link ||
-      location.pathname === config.gatsby.pathPrefix + link + '/');
+      location.pathname === config.gatsby.pathPrefix + link + "/");
 
   return (
     <StyledLi>
       {isActive(link) ? (
         <ActiveLink to={link}>
           {text}
-          {children}
+          <IconWrapper>{children}</IconWrapper>
         </ActiveLink>
       ) : (
         <Link to={link}>
           {text}
-          {children}
+          <IconWrapper>{children}</IconWrapper>
         </Link>
       )}
     </StyledLi>

@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const Table = styled("table")`
   padding: 0;
   border: solid 1px;
-  border-color: ${(props) => props.theme.colors.tableHeader};
+  border-color: ${({ theme }) => theme.colors.tableHeader};
   border-spacing: 0;
   border-radius: 2px;
   border-spacing: 0;
@@ -18,7 +18,7 @@ const Table = styled("table")`
   tr th {
     font-weight: bold;
     font-size: 13px;
-    background-color: ${(props) => props.theme.colors.tableHeader};
+    background-color: ${({ theme }) => theme.colors.tableHeader};
     text-align: left;
     margin: 0;
     padding: 6px 13px;

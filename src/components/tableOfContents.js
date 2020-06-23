@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-
-import Link from "./link";
 import config from "../../config";
 
 import styled from "@emotion/styled";
@@ -10,12 +8,12 @@ const SidebarWrapper = styled("div")`
   order: 2;
   margin-left: auto;
   margin-top: -4rem;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background};
 `;
 
 const Sidebar = styled("nav")`
   position: sticky;
-  top: calc(2rem + 2.5rem + 3rem);
+  top: 9rem;
   max-height: calc(100vh - 4rem - 2.5rem - 3rem - 3rem);
   right: 0;
   overflow: auto;
@@ -31,7 +29,7 @@ const Sidebar = styled("nav")`
     font-weight: 500;
     padding: 7px 24px 7px 16px;
 
-    color: ${(props) => props.theme.colors.text};
+    color: ${({ theme }) => theme.colors.text};
   }
 `;
 
@@ -44,7 +42,7 @@ const TOCTitle = styled("li")`
   padding: 7px 24px 7px 16px;
   margin: 0;
 
-  color: ${(props) => props.theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const StyledLi = styled("li")`

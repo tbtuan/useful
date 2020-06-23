@@ -22,14 +22,14 @@ const StyledLink = styled(Link)`
 const Pre = styled("pre")`
   padding: 0.5rem;
   z-index: 1;
-  background: ${(props) => props.theme.colors.preFormattedText};
+  background: ${({ theme }) => theme.colors.preFormattedText};
   border-radius: 1em;
 
   border-radius: 0.4rem;
 
   pre {
-    background-color: ${(props) =>
-      props.theme.colors.preFormattedText} !important;
+    background-color: ${({ theme }) =>
+      theme.colors.preFormattedText} !important;
   }
 `;
 
