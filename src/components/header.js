@@ -28,7 +28,7 @@ const TitleWrapper = styled("div")`
 const SearchWrapper = styled("div")`
   background-color: ${({ theme }) => theme.colors.background};
   padding-top: 3rem;
-  padding-left: 3rem;
+  padding-left: 4rem;
   flex: 0 0 20em;
 `;
 

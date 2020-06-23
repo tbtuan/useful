@@ -49,8 +49,7 @@ const StyledMainWrapper = styled("div")`
 `;
 
 const TitleWrapper = styled("div")`
-  display: flex;
-  align-items: center;
+  padding-bottom: 4rem;
 `;
 
 const CheatsheetTemplate = ({ data }) => {
@@ -63,8 +62,8 @@ const CheatsheetTemplate = ({ data }) => {
     <div>
       <TitleWrapper>
         <StyledHeading>{mdx.fields.title}</StyledHeading>
+        <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
       </TitleWrapper>
-      <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
       <StyledMainWrapper>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </StyledMainWrapper>

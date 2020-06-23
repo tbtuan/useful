@@ -23,6 +23,7 @@ const Content = styled("main")`
   min-width: 0;
   width: 100%;
   padding: 3rem;
+  padding-left: 4rem;
 `;
 
 const ContentWrapper = styled("div")`
@@ -39,6 +40,18 @@ const ContentWrapper = styled("div")`
 
   @media only screen and (max-width: 1023px) {
   }
+`;
+
+const ViewDiv = styled("div")`
+  width: 18rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 4px 4px 18px #d9d9d9;
+  background: transparent;
+  z-index: 2;
+  pointer-events: none;
 `;
 
 const Layout = ({ children, location, data }) => {
@@ -67,6 +80,7 @@ const Layout = ({ children, location, data }) => {
     <EmotionThemeProvider theme={isDarkThemeActive ? darkTheme : lightTheme}>
       <MDXProvider components={mdxComponents}>
         <Wrapper>
+          <ViewDiv />
           <Header
             title={site.siteMetadata.title}
             docsLocation={

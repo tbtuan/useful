@@ -59,7 +59,7 @@ const StyledMainWrapper = styled("div")`
 const CollectionTitleWrapper = styled("div")`
   display: flex;
   align-items: center;
-  padding-bottom: 40px;
+  padding-bottom: 4rem;
   margin-bottom: 32px;
 
   @media (max-width: 767px) {

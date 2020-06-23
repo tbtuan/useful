@@ -50,16 +50,7 @@ const StyledMainWrapper = styled("div")`
 `;
 
 const TitleWrapper = styled("div")`
-  display: flex;
-  align-items: center;
-  //padding-bottom: 40px;
-  // border-bottom: 1px solid rgb(230, 236, 241);
-  // margin-bottom: 32px;
-
-  // @media (max-width: 767px) {
-  //   padding: 0 15px;
-  //   display: block;
-  // }
+  padding-bottom: 4rem;
 `;
 
 const DocsTemplate = ({ data }) => {
@@ -72,8 +63,8 @@ const DocsTemplate = ({ data }) => {
     <div>
       <TitleWrapper>
         <StyledHeading>{mdx.fields.title}</StyledHeading>
+        <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
       </TitleWrapper>
-      <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
       <StyledMainWrapper>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </StyledMainWrapper>
