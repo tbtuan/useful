@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import Link from './link';
-import config from '../../config';
+import Link from "./link";
+import config from "../../config";
 
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-const SidebarWrapper = styled('div')`
+const SidebarWrapper = styled("div")`
   flex: 0 0 14rem;
   order: 2;
   margin-left: auto;
   margin-top: -4rem;
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
 `;
 
-const Sidebar = styled('nav')`
+const Sidebar = styled("nav")`
   position: sticky;
   top: calc(2rem + 2.5rem + 3rem);
   max-height: calc(100vh - 4rem - 2.5rem - 3rem - 3rem);
@@ -31,11 +31,11 @@ const Sidebar = styled('nav')`
     font-weight: 500;
     padding: 7px 24px 7px 16px;
 
-    color: ${props => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text};
   }
 `;
 
-const TOCTitle = styled('li')`
+const TOCTitle = styled("li")`
   font-size: 0.8rem;
   line-height: 1;
   font-weight: 700;
@@ -44,10 +44,10 @@ const TOCTitle = styled('li')`
   padding: 7px 24px 7px 16px;
   margin: 0;
 
-  color: ${props => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
 `;
 
-const StyledLi = styled('li')`
+const StyledLi = styled("li")`
   list-style: none;
   margin: 0;
 
@@ -55,7 +55,7 @@ const StyledLi = styled('li')`
     color: #5c6975;
     text-decoration: none;
     font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
-    padding: 0.45rem 0 0.45rem ${props => 2 + (props.level || 0) * 1}rem;
+    padding: 0.45rem 0 0.45rem ${(props) => 2 + (props.level || 0) * 1}rem;
     display: block;
     position: relative;
 
@@ -67,7 +67,7 @@ const StyledLi = styled('li')`
       color: ${({ theme }) => theme.colors.link};
     }
 
-    ${props =>
+    ${(props) =>
       props.active &&
       `
     color: #1ED3C6;
@@ -99,16 +99,18 @@ const useActiveHash = () => {
 
   useEffect(() => {
     // [class*='Heading2']
-    const links = document.querySelectorAll('main div h2');
+    const links = document.querySelectorAll("main div h2");
 
-    const handleObserver = entries => {
-      entries.forEach(entry => {
-        let tocLink = document.querySelector(`[href='#${entry.target.getAttribute('id')}']`);
+    const handleObserver = (entries) => {
+      entries.forEach((entry) => {
+        let tocLink = document.querySelector(
+          `[href='#${entry.target.getAttribute("id")}']`
+        );
 
         if (entry.isIntersecting) {
-          tocLink.classList.add('active');
+          tocLink.classList.add("active");
           if (prev != null && prev != tocLink) {
-            prev.classList.remove('active');
+            prev.classList.remove("active");
           }
           prev = tocLink;
         }
@@ -116,10 +118,10 @@ const useActiveHash = () => {
     };
 
     const observer = new IntersectionObserver(handleObserver, {
-      rootMargin: '0% 0% -30% 0%',
+      rootMargin: "0% 0% -30% 0%",
     });
 
-    links.forEach(item => {
+    links.forEach((item) => {
       observer.observe(item);
     });
   });
@@ -138,21 +140,23 @@ const SidebarLayout = ({ location, allMdx }) => {
         if (
           item.node.fields.slug === location.pathname ||
           // trailing slash
-          item.node.fields.slug + '/' === location.pathname ||
+          item.node.fields.slug + "/" === location.pathname ||
           config.gatsby.pathPrefix + item.node.fields.slug === location.pathname
         ) {
           if (item.node.tableOfContents.items) {
-            innerInnerItems = item.node.tableOfContents.items.map((innerItem, index) => {
-              const itemId = innerItem.title
-                ? innerItem.title.replace(/\s+/g, '').toLowerCase()
-                : '#';
+            innerInnerItems = item.node.tableOfContents.items.map(
+              (innerItem, index) => {
+                const itemId = innerItem.title
+                  ? innerItem.title.replace(/\s+/g, "").toLowerCase()
+                  : "#";
 
-              return (
-                <ListItem key={index} to={`#${itemId}`} level={1}>
-                  {innerItem.title}
-                </ListItem>
-              );
-            });
+                return (
+                  <ListItem key={index} to={`#${itemId}`} level={1}>
+                    {innerItem.title}
+                  </ListItem>
+                );
+              }
+            );
           }
         }
       }
@@ -171,11 +175,7 @@ const SidebarLayout = ({ location, allMdx }) => {
       </SidebarWrapper>
     );
   } else {
-    return (
-      <Sidebar>
-        <ul></ul>
-      </Sidebar>
-    );
+    return null;
   }
 };
 

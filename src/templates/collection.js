@@ -8,13 +8,15 @@ import styled from "@emotion/styled";
 
 const StyledHeading = styled("h1")`
   font-size: 32px;
+  //font-size: 32px;
   line-height: 1.5;
-  font-weight: 500;
-  border-left: 2px solid ${({ theme }) => theme.colors.link};
-  padding: 0 16px;
+  font-weight: 800;
+  //font-weight: 500;
+  //border-left: 2px solid ${({ theme }) => theme.colors.link};
+  //padding: 0 16px;
   flex: 1;
-  margin-top: 0;
-  padding-top: 0;
+  margin: 0;
+  padding: 0;
   color: ${(props) => props.theme.colors.heading};
 `;
 

@@ -1,21 +1,22 @@
 require("dotenv").config();
 const config = require("./config");
 const plugins = [
+  "gatsby-plugin-csp",
   "gatsby-plugin-react-helmet",
   {
     resolve: `gatsby-plugin-emotion`,
   },
   {
-    resolve: `gatsby-plugin-typography`,
+    resolve: "gatsby-plugin-typography",
     options: {
-      pathToConfigModule: `./src/utils/typography`,
+      pathToConfigModule: "./src/utils/typography",
     },
   },
   "gatsby-plugin-sitemap",
   {
-    resolve: `gatsby-plugin-layout`,
+    resolve: "gatsby-plugin-layout",
     options: {
-      component: require.resolve(`./src/templates/index.js`),
+      component: require.resolve("./src/templates/index.js"),
     },
   },
   "gatsby-plugin-catch-links",

@@ -2,6 +2,15 @@ import React from "react";
 import styled from "@emotion/styled";
 
 import CodeBlock from "./code";
+import {
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  Heading5,
+  Heading6,
+} from "./heading";
+import Table from "./table";
 import AnchorTag from "./anchor";
 import { Link, Paragraph } from "emotion-icons/fa-solid";
 
@@ -21,115 +30,6 @@ const Pre = styled("pre")`
   pre {
     background-color: ${(props) =>
       props.theme.colors.preFormattedText} !important;
-  }
-`;
-
-const Heading1 = styled("h1")`
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  margin-top: 32px;
-`;
-
-const Heading2 = styled("h2")`
-  font-size: 26px;
-  font-weight: 800;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  /* Anchor link */
-  padding-top: calc(6rem + 3rem);
-  margin-top: calc(-6rem - 3rem + 26px);
-
-  :hover a {
-    opacity: 1;
-  }
-
-  a {
-    position: absolute;
-    margin-top: -3px;
-    margin-left: calc(-20px - 0.5rem);
-    padding-right: calc(0.5rem);
-    opacity: 0;
-  }
-`;
-
-const Heading3 = styled("h3")`
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  margin-top: 32px;
-`;
-
-const Heading4 = styled("h4")`
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  margin-top: 32px;
-`;
-
-const Heading5 = styled("h5")`
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  margin-top: 32px;
-`;
-
-const Heading6 = styled("h6")`
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  margin-top: 32px;
-`;
-
-const Table = styled("table")`
-  padding: 0;
-  border: solid 1px;
-  border-color: ${(props) => props.theme.colors.tableHeader};
-  border-spacing: 0;
-  border-radius: 2px;
-  border-spacing: 0;
-
-  border-radius: 2px;
-
-  tr {
-    margin: 0;
-    padding: 0;
-  }
-
-  tr th {
-    font-weight: bold;
-    font-size: 13px;
-    background-color: ${(props) => props.theme.colors.tableHeader};
-    text-align: left;
-    margin: 0;
-    padding: 6px 13px;
-  }
-
-  tr td {
-    text-align: left;
-    font-size: 13px;
-    margin: 0;
-    padding: 6px 13px;
-  }
-
-  tr th :first-of-type,
-  tr td :first-of-type {
-    margin-top: 0;
-  }
-
-  tr th :last-child,
-  tr td :last-child {
-    margin-bottom: 0;
-  }
-
-  tr:nth-of-type(2n) {
-    padding: 5px;
-    background-color: ${(props) => props.theme.colors.trSecondth};
   }
 `;
 

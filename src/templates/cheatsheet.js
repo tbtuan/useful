@@ -1,18 +1,27 @@
 import React from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
+import { Clock } from "emotion-icons/fa-solid";
 
 import styled from "@emotion/styled";
 
 const StyledHeading = styled("h1")`
   font-size: 32px;
+  //font-size: 32px;
   line-height: 1.5;
-  font-weight: 500;
-  border-left: 2px solid ${({ theme }) => theme.colors.link};
-  padding: 0 16px;
+  font-weight: 800;
+  //font-weight: 500;
+  //border-left: 2px solid ${({ theme }) => theme.colors.link};
+  //padding: 0 16px;
   flex: 1;
-  margin-top: 0;
-  padding-top: 0;
+  margin: 0;
+  padding: 0;
   color: ${(props) => props.theme.colors.heading};
+`;
+
+const StyledClock = styled(Clock)`
+  width: 12px;
+  height: 12px;
+  margin-right: 0.5rem;
 `;
 
 const StyledMainWrapper = styled("div")`
@@ -49,14 +58,6 @@ const StyledMainWrapper = styled("div")`
 const TitleWrapper = styled("div")`
   display: flex;
   align-items: center;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgb(230, 236, 241);
-  margin-bottom: 32px;
-
-  @media (max-width: 767px) {
-    padding: 0 15px;
-    display: block;
-  }
 `;
 
 const CheatsheetTemplate = ({ data }) => {
@@ -69,6 +70,13 @@ const CheatsheetTemplate = ({ data }) => {
       <TitleWrapper>
         <StyledHeading>{mdx.fields.title}</StyledHeading>
       </TitleWrapper>
+      <div>
+        <StyledClock />
+        <small>
+          Last update:{" "}
+          {new Date(Date.parse(mdx.parent.modifiedTime)).toLocaleDateString()}
+        </small>
+      </div>
       <StyledMainWrapper>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </StyledMainWrapper>

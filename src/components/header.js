@@ -48,13 +48,11 @@ const Title = styled(Link)`
 const StyledThList = styled(ThList)`
   width: 1.25rem;
   height: 1.25rem;
-  filter: drop-shadow(0px 4px 5px rgba(59, 69, 78, 0.5));
-`;
-
-const StyledAdjust = styled(Adjust)`
-  width: 1.25rem;
-  height: 1.25rem;
-  filter: drop-shadow(0px 4px 5px rgba(59, 69, 78, 0.5));
+  color: ${(props) => props.theme.colors.switch};
+  filter: drop-shadow(
+    0px 4px 5px ${(props) => props.theme.colors.switchShadow}
+  );
+  cursor: pointer;
 `;
 
 const EditButton = styled(Link)`
@@ -62,16 +60,20 @@ const EditButton = styled(Link)`
   border: 0;
   color: ${({ theme }) => theme.colors.background};
   font-size: 0.85rem;
-  background-color: ${({ theme }) => theme.colors.link};
+  background-color: ${({ theme }) => theme.colors.editButton};
   border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  filter: drop-shadow(0px 4px 5px rgba(247, 119, 35, 0.5));
+  filter: drop-shadow(
+    0px 4px 5px ${(props) => props.theme.colors.editButtonShadow}
+  );
+  // filter: drop-shadow(0px 4px 5px rgba(247, 119, 35, 0.5));
 `;
 
 const StyledEdit = styled(Edit)`
   width: 0.9rem;
   height: 0.9rem;
   margin-left: auto;
+  margin-right: 0.5rem;
   color: ${({ theme }) => theme.colors.background};
 `;
 

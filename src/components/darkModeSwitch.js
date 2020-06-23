@@ -1,23 +1,27 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 
-import { Adjust } from 'emotion-icons/fa-solid';
+import { Adjust } from "emotion-icons/fa-solid";
 
 const StyledAdjust = styled(Adjust)`
   cursor: pointer;
   width: 1.25rem;
   height: 1.25rem;
-  filter: drop-shadow(0px 4px 5px rgba(59, 69, 78, 0.5));
+  // rgba(59, 69, 78, 0.5)
+  color: ${(props) => props.theme.colors.switch};
+  filter: drop-shadow(
+    0px 4px 5px ${(props) => props.theme.colors.switchShadow}
+  );
 `;
 
-const StyledSwitch = styled('div')`
+const StyledSwitch = styled("div")`
   display: flex;
   justify-content: flex-end;
   width: 100%;
   //padding: 0 20px 0 25px;
 `;
 
-const Switch = styled('label')`
+const Switch = styled("label")`
   /* The switch - the box around the slider */
   position: relative;
   display: inline-block;
@@ -25,7 +29,7 @@ const Switch = styled('label')`
   height: 1.25rem;
 `;
 
-const Slider = styled('span')`
+const Slider = styled("span")`
   /* The slider */
   position: absolute;
   cursor: pointer;
@@ -33,7 +37,7 @@ const Slider = styled('span')`
   left: 0;
   right: 0;
   bottom: 0;
-  //background-color: ${props => props.theme.colors.switchbg};
+  //background-color: ${(props) => props.theme.colors.switchbg};
   //background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -50,7 +54,7 @@ const Slider = styled('span')`
   //   margin: auto 0;
   //   -webkit-transition: 0.4s;
   //   transition: 0.4s;
-  //   background-color: ${props => props.theme.colors.switch};
+  //   background-color: ${(props) => props.theme.colors.switch};
   // }
 
   // /* Rounded sliders */
@@ -60,7 +64,7 @@ const Slider = styled('span')`
   // }
 `;
 
-const Input = styled('input')`
+const Input = styled("input")`
   /* Hide default HTML checkbox */
   opacity: 0;
   width: 0;
@@ -68,14 +72,14 @@ const Input = styled('input')`
 
   // /* The slider */
   // :checked + ${Slider} {
-  //   background-color: ${props => props.theme.colors.switchbg};
+  //   background-color: ${(props) => props.theme.colors.switchbg};
   // }
 
   // :checked + ${Slider}:before {
   //   -webkit-transform: translateX(27px);
   //   -ms-transform: translateX(27px);
   //   transform: translateX(27px);
-  //   background-color: ${props => props.theme.colors.switch};
+  //   background-color: ${(props) => props.theme.colors.switch};
   // }
 `;
 
