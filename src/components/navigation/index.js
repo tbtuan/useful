@@ -1,10 +1,18 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 
-import NavLink from './NavLink';
-import { Paperclip, Code, Cogs, Terminal, Book, Keyboard, Bookmark } from 'emotion-icons/fa-solid';
+import NavLink from "./navLink";
+import {
+  Paperclip,
+  Code,
+  Cogs,
+  Terminal,
+  Book,
+  Keyboard,
+  Bookmark,
+} from "emotion-icons/fa-solid";
 
-const Nav = styled('nav')`
+const Nav = styled("nav")`
   flex: 1 1 0%;
   width: 100%;
   padding-top: 3rem;
