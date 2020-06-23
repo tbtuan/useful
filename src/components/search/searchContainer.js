@@ -23,7 +23,6 @@ const SearchBox = styled("input")`
   outline: 0;
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
-  placeborder-color: ${({ theme }) => theme.colors.text};
   width: 100%;
   padding-left: 2rem;
   :focus {
@@ -101,10 +100,26 @@ const HitsWrapper = styled.div`
   }
 `;
 
+function useFocus(ref, handler) {
+  useEffect(() => {
+    const handleKeyOutside = (e) => {
+      if (ref.current && !ref.current.contains(e.target) && e.key === "f") {
+        handler();
+      }
+    };
+    // Bind the event listener
+    document.addEventListener("keyup", handleKeyOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("keyup", handleKeyOutside);
+    };
+  }, [ref]);
+}
+
 function useClickOutside(ref, handler) {
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (ref.current && !ref.current.contains(event.target)) {
+    const handleClickOutside = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) {
         handler();
       }
     };
@@ -117,7 +132,7 @@ function useClickOutside(ref, handler) {
   }, [ref]);
 }
 
-function useDatafetch(query, [results, setResults]) {
+function useDatafetch(query, setResults) {
   useEffect(() => {
     if (window.__FUSE__) {
       const fuse = new Fuse(window.__FUSE__, {
@@ -132,53 +147,60 @@ function useDatafetch(query, [results, setResults]) {
 
 const SearchLayout = () => {
   const ref = useRef(null);
-  //const ref = createRef();
 
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
   const [focus, setFocus] = useState(false);
 
+  useFocus(ref, () => document.getElementById("searchbox").focus());
   useClickOutside(ref, () => setFocus(false));
-  useDatafetch(query, [results, setResults]);
+  useDatafetch(query, setResults);
 
   const searchData = (e) => {
     setQuery(e.target.value);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      console.log(e.key);
+    }
+  };
+
   return (
-    <div ref={ref}>
-      <SearchContainer>
-        <SearchBox
-          type="Search"
-          value={query}
-          onChange={searchData}
-          onFocus={() => setFocus(true)}
-          placeholder="Search..."
-        />
-        <StyledSearch />
-        <HitsWrapper show={results.length > 0 && focus}>
-          {results.map(({ item }) => {
-            return (
-              <ul key={item.id}>
-                <li>{item.title}</li>
-                <li>
-                  <Link
-                    onClick={() => {
-                      setQuery("");
-                      setFocus(false);
-                    }}
-                    to={`${item.url}`}
-                  >
-                    {item.url}
-                  </Link>
-                </li>
-              </ul>
-            );
-          })}
-        </HitsWrapper>
-      </SearchContainer>
-    </div>
+    <SearchContainer ref={ref}>
+      <SearchBox
+        id="searchbox"
+        type="Search"
+        value={query}
+        onChange={searchData}
+        onFocus={() => setFocus(true)}
+        onKeyUp={handleKeyPress}
+        placeholder="Search..."
+        autoComplete="false"
+      />
+      <StyledSearch />
+      <HitsWrapper show={results.length > 0 && focus}>
+        {results.map(({ item }) => {
+          return (
+            <ul key={item.id}>
+              <li>{item.title}</li>
+              <li>
+                <Link
+                  onClick={() => {
+                    setQuery("");
+                    setFocus(false);
+                  }}
+                  to={`${item.url}`}
+                >
+                  {item.url}
+                </Link>
+              </li>
+            </ul>
+          );
+        })}
+      </HitsWrapper>
+    </SearchContainer>
   );
 };
 export default SearchLayout;
