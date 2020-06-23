@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { DarkModeSwitch } from './DarkModeSwitch';
+import React from "react";
+import styled from "@emotion/styled";
+import { DarkModeSwitch } from "./darkModeSwitch";
 
-import { Edit, Adjust, ThList } from 'emotion-icons/fa-solid';
+import { Edit, Adjust, ThList } from "emotion-icons/fa-solid";
 
-import Link from './link';
+import Link from "./link";
 
-import Search from './search/SearchContainer';
+import Search from "./search/searchContainer";
 
-const Header = styled('header')`
+const Header = styled("header")`
   width: 100%;
   height: 6rem;
   position: fixed;
@@ -18,21 +18,21 @@ const Header = styled('header')`
   z-index: 1;
 `;
 
-const TitleWrapper = styled('div')`
+const TitleWrapper = styled("div")`
   flex: 0 0 18em;
   background-color: ${({ theme }) => theme.colors.sidebar};
   text-align: center;
   padding-top: 3rem;
 `;
 
-const SearchWrapper = styled('div')`
+const SearchWrapper = styled("div")`
   background-color: ${({ theme }) => theme.colors.background};
   padding-top: 3rem;
   padding-left: 3rem;
   flex: 0 0 20em;
 `;
 
-const OptionsWrapper = styled('div')`
+const OptionsWrapper = styled("div")`
   background-color: ${({ theme }) => theme.colors.background};
   padding-top: 3rem;
   width: 100%;
@@ -75,12 +75,12 @@ const StyledEdit = styled(Edit)`
   color: ${({ theme }) => theme.colors.background};
 `;
 
-const IconContainer = styled('span')`
+const IconContainer = styled("span")`
   height: 20px;
   padding-right: 1rem;
 `;
 
-const Container = styled('div')`
+const Container = styled("div")`
   margin-left: auto;
   width: 14rem;
   display: flex;
@@ -89,7 +89,12 @@ const Container = styled('div')`
   padding-right: 4rem;
 `;
 
-const HeaderLayout = ({ title, docsLocation, isDarkThemeActive, toggleActiveTheme }) => {
+const HeaderLayout = ({
+  title,
+  docsLocation,
+  isDarkThemeActive,
+  toggleActiveTheme,
+}) => {
   return (
     <Header>
       <TitleWrapper>

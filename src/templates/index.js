@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 
+import Helmet from 'react-helmet';
+
 import Cheatsheet from './cheatsheet';
 import Collection from './collection';
 import Docs from './docs';
@@ -9,18 +11,6 @@ import { Layout } from '../components';
 import config from '../../config';
 
 import styled from '@emotion/styled';
-
-const StyledHeading = styled('h1')`
-  font-size: 32px;
-  line-height: 1.5;
-  font-weight: 500;
-  border-left: 2px solid ${({ theme }) => theme.colors.link};
-  padding: 0 16px;
-  flex: 1;
-  margin-top: 0;
-  padding-top: 0;
-  color: ${props => props.theme.colors.heading};
-`;
 
 const Padding = styled('div')`
   padding: 50px 0;
@@ -60,12 +50,14 @@ export default class MDXRuntimeTest extends Component {
     };
     return (
       <Layout {...this.props}>
-        {metaTitle ? <title>{metaTitle}</title> : null}
-        {metaTitle ? <meta name="title" content={metaTitle} /> : null}
-        {metaDescription ? <meta name="description" content={metaDescription} /> : null}
-        {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
-        {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
-        <link rel="canonical" href={canonicalUrl} />
+        <Helmet defer={false} title={metaTitle}>
+          {metaTitle ? <title>{metaTitle}</title> : null}
+          {metaTitle ? <meta name="title" content={metaTitle} /> : null}
+          {metaDescription ? <meta name="description" content={metaDescription} /> : null}
+          {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
+          {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
+          <link rel="canonical" href={canonicalUrl} />
+        </Helmet>
         <MarkdownFormat data={data} type={type} />
         <Padding />
       </Layout>

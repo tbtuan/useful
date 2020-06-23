@@ -1,10 +1,10 @@
-import React from 'react';
-import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
-import { Clock } from 'emotion-icons/fa-solid';
+import React from "react";
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
+import { Clock } from "emotion-icons/fa-solid";
 
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-const StyledHeading = styled('h1')`
+const StyledHeading = styled("h1")`
   font-size: 32px;
   //font-size: 32px;
   line-height: 1.5;
@@ -15,7 +15,7 @@ const StyledHeading = styled('h1')`
   flex: 1;
   margin: 0;
   padding: 0;
-  color: ${props => props.theme.colors.heading};
+  color: ${(props) => props.theme.colors.heading};
 `;
 
 const StyledClock = styled(Clock)`
@@ -24,8 +24,8 @@ const StyledClock = styled(Clock)`
   margin-right: 0.5rem;
 `;
 
-const StyledMainWrapper = styled('div')`
-  color: ${props => props.theme.colors.text};
+const StyledMainWrapper = styled("div")`
+  color: ${(props) => props.theme.colors.text};
 
   ul,
   ol {
@@ -38,7 +38,7 @@ const StyledMainWrapper = styled('div')`
 
   a {
     transition: color 0.15s;
-    color: ${props => props.theme.colors.link};
+    color: ${(props) => props.theme.colors.link};
   }
 
   code {
@@ -47,7 +47,7 @@ const StyledMainWrapper = styled('div')`
     padding: 2px 6px;
     font-size: 0.9375em;
 
-    background: ${props => props.theme.colors.background};
+    background: ${(props) => props.theme.colors.background};
   }
 
   @media (max-width: 767px) {
@@ -55,7 +55,7 @@ const StyledMainWrapper = styled('div')`
   }
 `;
 
-const TitleWrapper = styled('div')`
+const TitleWrapper = styled("div")`
   display: flex;
   align-items: center;
   //padding-bottom: 40px;
@@ -82,7 +82,8 @@ const DocsTemplate = ({ data }) => {
       <div>
         <StyledClock />
         <small>
-          Last update: {new Date(Date.parse(mdx.parent.modifiedTime)).toLocaleDateString()}
+          Last update:{" "}
+          {new Date(Date.parse(mdx.parent.modifiedTime)).toLocaleDateString()}
         </small>
       </div>
       <StyledMainWrapper>

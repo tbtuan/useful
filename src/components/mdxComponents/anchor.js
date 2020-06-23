@@ -1,5 +1,5 @@
-import * as React from 'react';
-import styled from '@emotion/styled';
+import * as React from "react";
+import styled from "@emotion/styled";
 
 // Links with favicon
 /*const AnchorTag = ({ children: link, ...props }) => {
@@ -18,16 +18,16 @@ import styled from '@emotion/styled';
   }
 };*/
 
-const A = styled('a')`
+const Anchor = styled("a")`
   text-decoration: none;
 `;
 
 const AnchorTag = ({ children: link, ...props }) => {
   if (link) {
     return (
-      <A href={props.href} target="_blank" rel="noopener noreferrer">
+      <Anchor href={props.href} target="_blank" rel="noopener noreferrer">
         {link}
-      </A>
+      </Anchor>
     );
   } else {
     return null;

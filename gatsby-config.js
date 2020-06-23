@@ -1,6 +1,7 @@
-require('dotenv').config();
-const config = require('./config');
+require("dotenv").config();
+const config = require("./config");
 const plugins = [
+  "gatsby-plugin-react-helmet",
   {
     resolve: `gatsby-plugin-emotion`,
   },
@@ -10,30 +11,30 @@ const plugins = [
       pathToConfigModule: `./src/utils/typography`,
     },
   },
-  'gatsby-plugin-sitemap',
+  "gatsby-plugin-sitemap",
   {
     resolve: `gatsby-plugin-layout`,
     options: {
       component: require.resolve(`./src/templates/index.js`),
     },
   },
-  'gatsby-plugin-catch-links',
+  "gatsby-plugin-catch-links",
   {
-    resolve: 'gatsby-source-filesystem',
+    resolve: "gatsby-source-filesystem",
     options: {
-      name: 'docs',
+      name: "docs",
       path: `${__dirname}/content/`,
     },
   },
   {
-    resolve: 'gatsby-plugin-mdx',
+    resolve: "gatsby-plugin-mdx",
     options: {
       gatsbyRemarkPlugins: [
         {
-          resolve: 'gatsby-remark-copy-linked-files',
+          resolve: "gatsby-remark-copy-linked-files",
         },
       ],
-      extensions: ['.mdx', '.md'],
+      extensions: [".mdx", ".md"],
     },
   },
 ];
@@ -44,18 +45,18 @@ if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
     options: { ...config.pwa.manifest },
   });
   plugins.push({
-    resolve: 'gatsby-plugin-offline',
+    resolve: "gatsby-plugin-offline",
     options: {
       appendScript: require.resolve(`./src/custom-sw-code.js`),
     },
   });
 } else {
-  plugins.push('gatsby-plugin-remove-serviceworker');
+  plugins.push("gatsby-plugin-remove-serviceworker");
 }
 
 // check and remove trailing slash
 if (config.gatsby && !config.gatsby.trailingSlash) {
-  plugins.push('gatsby-plugin-remove-trailing-slashes');
+  plugins.push("gatsby-plugin-remove-trailing-slashes");
 }
 
 module.exports = {
@@ -64,11 +65,6 @@ module.exports = {
     title: config.siteMetadata.title,
     description: config.siteMetadata.description,
     docsLocation: config.siteMetadata.docsLocation,
-    favicon: config.siteMetadata.favicon,
-    logo: {
-      link: config.header.logoLink ? config.header.logoLink : '/',
-      image: config.header.logo,
-    }, // backwards compatible
     headerTitle: config.header.title,
     githubUrl: config.header.githubUrl,
     headerLinks: config.header.links,

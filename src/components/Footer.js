@@ -10,32 +10,27 @@ const Footer = styled('footer')`
 `;
 
 const StyledGithub = styled(Github)`
-  width: 25px;
+  width: 2rem;
   fill: ${({ theme }) => theme.colors.link};
 `;
 
 const StyledLink = styled('a')`
   width: 10rem;
-  height: 21px;
   //background-color: ${({ theme }) => theme.colors.navbarLink};
 
   svg {
-    min-width: 21px;
-    min-height: 21px;
-    max-width: 21px;
-    max-height: 21px;
     color: ${({ theme }) => theme.colors.navbarLink};
     margin-right: 0.5rem;
   }
 `;
 
-const FooterLayout = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
+const FooterLayout = () => (
   <Footer>
     <StyledLink href="https://github.com/tbtuan/useful" target="_blank">
       <StyledGithub />
-      Github
+      <p>VIEW ON</p>
+      <p>Github</p>
     </StyledLink>
-    {/* <DarkModeSwitch isDarkThemeActive={isDarkThemeActive} toggleActiveTheme={toggleActiveTheme} /> */}
   </Footer>
 );
 

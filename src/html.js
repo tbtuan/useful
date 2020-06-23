@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import config from '../config';
+import React from "react";
+import PropTypes from "prop-types";
+import favicon from "./images/icon-512.png";
 
 export default class HTML extends React.Component {
   render() {
@@ -9,14 +9,21 @@ export default class HTML extends React.Component {
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          <link rel="shortcut icon" type="image/svg" href={config.siteMetadata.favicon} />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+          <link rel="icon" type="image/png" href={favicon} />
           <noscript key="noscript"></noscript>
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
-          <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+          <div
+            key={`body`}
+            id="___gatsby"
+            dangerouslySetInnerHTML={{ __html: this.props.body }}
+          />
           {this.props.postBodyComponents}
         </body>
       </html>

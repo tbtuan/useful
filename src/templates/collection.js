@@ -1,13 +1,12 @@
-import React, { Component, useState } from 'react';
-import { graphql } from 'gatsby';
-import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
+import React, { useState } from "react";
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
-import { Layout, Link } from '../components';
-import config from '../../config';
+import { Link } from "../components";
+import config from "../../config";
 
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-const StyledHeading = styled('h1')`
+const StyledHeading = styled("h1")`
   font-size: 32px;
   line-height: 1.5;
   font-weight: 500;
@@ -16,16 +15,16 @@ const StyledHeading = styled('h1')`
   flex: 1;
   margin-top: 0;
   padding-top: 0;
-  color: ${props => props.theme.colors.heading};
+  color: ${(props) => props.theme.colors.heading};
 `;
 
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.colors.text} !important;
+  color: ${(props) => props.theme.colors.text} !important;
   font-size: 0.75rem;
 `;
 
-const StyledMainWrapper = styled('div')`
-  color: ${props => props.theme.colors.text};
+const StyledMainWrapper = styled("div")`
+  color: ${(props) => props.theme.colors.text};
 
   ul,
   ol {
@@ -38,7 +37,7 @@ const StyledMainWrapper = styled('div')`
 
   a {
     transition: color 0.15s;
-    color: ${props => props.theme.colors.link};
+    color: ${(props) => props.theme.colors.link};
   }
 
   code {
@@ -47,7 +46,7 @@ const StyledMainWrapper = styled('div')`
     padding: 2px 6px;
     font-size: 0.9375em;
 
-    background: ${props => props.theme.colors.background};
+    background: ${(props) => props.theme.colors.background};
   }
 
   @media (max-width: 767px) {
@@ -55,7 +54,7 @@ const StyledMainWrapper = styled('div')`
   }
 `;
 
-const CollectionTitleWrapper = styled('div')`
+const CollectionTitleWrapper = styled("div")`
   display: flex;
   align-items: center;
   padding-bottom: 40px;
@@ -67,7 +66,7 @@ const CollectionTitleWrapper = styled('div')`
   }
 `;
 
-const TitleWrapper = styled('div')`
+const TitleWrapper = styled("div")`
   display: flex;
   align-items: center;
   padding-bottom: 40px;
@@ -80,13 +79,13 @@ const TitleWrapper = styled('div')`
   }
 `;
 
-const Container = styled('div')`
+const Container = styled("div")`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 20rem));
   grid-gap: 2rem;
 `;
 
-const Divider = styled(props => (
+const Divider = styled((props) => (
   <li {...props}>
     <hr />
   </li>
@@ -113,7 +112,11 @@ const TreeNode = styled(({ url, title, layer, items, ...rest }) => {
     return (
       <Container>
         {items.map((item, index) => (
-          <TreeNode key={item.url + index.toString()} layer={layer + 1} {...item} />
+          <TreeNode
+            key={item.url + index.toString()}
+            layer={layer + 1}
+            {...item}
+          />
         ))}
       </Container>
     );
@@ -125,7 +128,11 @@ const TreeNode = styled(({ url, title, layer, items, ...rest }) => {
         {hasChildren ? (
           <div>
             {items.map((item, index) => (
-              <TreeNode key={item.url + index.toString()} layer={layer + 1} {...item} />
+              <TreeNode
+                key={item.url + index.toString()}
+                layer={layer + 1}
+                {...item}
+              />
             ))}
           </div>
         ) : null}
@@ -159,12 +166,14 @@ const calculateTreeData = (edges, subpath) => {
         },
       }
     ) => {
-      const parts = slug.split('/');
+      const parts = slug.split("/");
 
       let { items: prevItems } = accu;
 
       const slicedParts =
-        config.gatsby && config.gatsby.trailingSlash ? parts.slice(1, -2) : parts.slice(1, -1);
+        config.gatsby && config.gatsby.trailingSlash
+          ? parts.slice(1, -2)
+          : parts.slice(1, -1);
 
       for (const part of slicedParts) {
         let tmp = prevItems && prevItems.find(({ label }) => label == part);
@@ -180,9 +189,13 @@ const calculateTreeData = (edges, subpath) => {
         prevItems = tmp.items;
       }
       const slicedLength =
-        config.gatsby && config.gatsby.trailingSlash ? parts.length - 2 : parts.length - 1;
+        config.gatsby && config.gatsby.trailingSlash
+          ? parts.length - 2
+          : parts.length - 1;
 
-      const existingItem = prevItems.find(({ label }) => label === parts[slicedLength]);
+      const existingItem = prevItems.find(
+        ({ label }) => label === parts[slicedLength]
+      );
 
       if (existingItem) {
         existingItem.url = slug;
@@ -200,18 +213,20 @@ const calculateTreeData = (edges, subpath) => {
     { items: [] }
   );
 
-  const tmp = [''];
+  const tmp = [""];
   tmp.reverse();
   const tmp2 = tmp.reduce((accu, slug) => {
-    const parts = slug.split('/');
+    const parts = slug.split("/");
 
     let { items: prevItems } = accu;
 
     const slicedParts =
-      config.gatsby && config.gatsby.trailingSlash ? parts.slice(1, -2) : parts.slice(1, -1);
+      config.gatsby && config.gatsby.trailingSlash
+        ? parts.slice(1, -2)
+        : parts.slice(1, -1);
 
     for (const part of slicedParts) {
-      let tmp = prevItems.find(item => item && item.label == part);
+      let tmp = prevItems.find((item) => item && item.label == part);
 
       if (tmp) {
         if (!tmp.items) {
@@ -226,7 +241,7 @@ const calculateTreeData = (edges, subpath) => {
       }
     }
     // sort items alphabetically.
-    prevItems.map(item => {
+    prevItems.map((item) => {
       item.items = item.items.sort(function(a, b) {
         if (a.label < b.label) return -1;
         if (a.label > b.label) return 1;
@@ -234,9 +249,13 @@ const calculateTreeData = (edges, subpath) => {
       });
     });
     const slicedLength =
-      config.gatsby && config.gatsby.trailingSlash ? parts.length - 2 : parts.length - 1;
+      config.gatsby && config.gatsby.trailingSlash
+        ? parts.length - 2
+        : parts.length - 1;
 
-    const index = prevItems.findIndex(({ label }) => label === parts[slicedLength]);
+    const index = prevItems.findIndex(
+      ({ label }) => label === parts[slicedLength]
+    );
 
     if (prevItems.length) {
       accu.items.unshift(prevItems.splice(index, 1)[0]);
@@ -262,7 +281,9 @@ const CollectionTemplate = ({ data }) => {
   let canonicalUrl = config.gatsby.siteUrl;
 
   canonicalUrl =
-    config.gatsby.pathPrefix !== '/' ? canonicalUrl + config.gatsby.pathPrefix : canonicalUrl;
+    config.gatsby.pathPrefix !== "/"
+      ? canonicalUrl + config.gatsby.pathPrefix
+      : canonicalUrl;
   canonicalUrl = canonicalUrl + mdx.fields.slug;
 
   return (
@@ -272,7 +293,7 @@ const CollectionTemplate = ({ data }) => {
       </CollectionTitleWrapper>
       <StyledMainWrapper>
         <MDXRenderer>{mdx.body}</MDXRenderer>
-        {typeof window === 'undefined' ? null : (
+        {typeof window === "undefined" ? null : (
           <Tree edges={allMdx.edges} subpath={location.pathname} />
         )}
       </StyledMainWrapper>

@@ -1,15 +1,9 @@
-import React, { Component, useState } from 'react';
-import { graphql } from 'gatsby';
-import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
+import React from "react";
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
-import Collection from './collection';
+import styled from "@emotion/styled";
 
-import { Layout, Link } from '../components';
-import config from '../../config';
-
-import styled from '@emotion/styled';
-
-const StyledHeading = styled('h1')`
+const StyledHeading = styled("h1")`
   font-size: 32px;
   line-height: 1.5;
   font-weight: 500;
@@ -18,11 +12,11 @@ const StyledHeading = styled('h1')`
   flex: 1;
   margin-top: 0;
   padding-top: 0;
-  color: ${props => props.theme.colors.heading};
+  color: ${(props) => props.theme.colors.heading};
 `;
 
-const StyledMainWrapper = styled('div')`
-  color: ${props => props.theme.colors.text};
+const StyledMainWrapper = styled("div")`
+  color: ${(props) => props.theme.colors.text};
 
   ul,
   ol {
@@ -35,7 +29,7 @@ const StyledMainWrapper = styled('div')`
 
   a {
     transition: color 0.15s;
-    color: ${props => props.theme.colors.link};
+    color: ${(props) => props.theme.colors.link};
   }
 
   code {
@@ -44,7 +38,7 @@ const StyledMainWrapper = styled('div')`
     padding: 2px 6px;
     font-size: 0.9375em;
 
-    background: ${props => props.theme.colors.background};
+    background: ${(props) => props.theme.colors.background};
   }
 
   @media (max-width: 767px) {
@@ -52,7 +46,7 @@ const StyledMainWrapper = styled('div')`
   }
 `;
 
-const TitleWrapper = styled('div')`
+const TitleWrapper = styled("div")`
   display: flex;
   align-items: center;
   padding-bottom: 40px;

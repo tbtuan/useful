@@ -1,29 +1,30 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 
-import CodeBlock from './codeBlock';
-import AnchorTag from './anchor';
-import { Link, Paragraph } from 'emotion-icons/fa-solid';
+import CodeBlock from "./code";
+import AnchorTag from "./anchor";
+import { Link, Paragraph } from "emotion-icons/fa-solid";
 
 const StyledLink = styled(Link)`
   width: 20px;
   height: 20px;
 `;
 
-const Pre = styled('pre')`
+const Pre = styled("pre")`
   padding: 0.5rem;
   z-index: 1;
-  background: ${props => props.theme.colors.preFormattedText};
+  background: ${(props) => props.theme.colors.preFormattedText};
   border-radius: 1em;
 
   border-radius: 0.4rem;
 
   pre {
-    background-color: ${props => props.theme.colors.preFormattedText} !important;
+    background-color: ${(props) =>
+      props.theme.colors.preFormattedText} !important;
   }
 `;
 
-const Heading1 = styled('h1')`
+const Heading1 = styled("h1")`
   font-size: 32px;
   font-weight: 800;
   line-height: 1.5;
@@ -31,7 +32,7 @@ const Heading1 = styled('h1')`
   margin-top: 32px;
 `;
 
-const Heading2 = styled('h2')`
+const Heading2 = styled("h2")`
   font-size: 26px;
   font-weight: 800;
   line-height: 1.5;
@@ -53,7 +54,7 @@ const Heading2 = styled('h2')`
   }
 `;
 
-const Heading3 = styled('h3')`
+const Heading3 = styled("h3")`
   font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
@@ -61,7 +62,7 @@ const Heading3 = styled('h3')`
   margin-top: 32px;
 `;
 
-const Heading4 = styled('h4')`
+const Heading4 = styled("h4")`
   font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
@@ -69,7 +70,7 @@ const Heading4 = styled('h4')`
   margin-top: 32px;
 `;
 
-const Heading5 = styled('h5')`
+const Heading5 = styled("h5")`
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -77,7 +78,7 @@ const Heading5 = styled('h5')`
   margin-top: 32px;
 `;
 
-const Heading6 = styled('h6')`
+const Heading6 = styled("h6")`
   font-size: 14px;
   font-weight: 300;
   line-height: 1.5;
@@ -85,10 +86,10 @@ const Heading6 = styled('h6')`
   margin-top: 32px;
 `;
 
-const Table = styled('table')`
+const Table = styled("table")`
   padding: 0;
   border: solid 1px;
-  border-color: ${props => props.theme.colors.tableHeader};
+  border-color: ${(props) => props.theme.colors.tableHeader};
   border-spacing: 0;
   border-radius: 2px;
   border-spacing: 0;
@@ -103,7 +104,7 @@ const Table = styled('table')`
   tr th {
     font-weight: bold;
     font-size: 13px;
-    background-color: ${props => props.theme.colors.tableHeader};
+    background-color: ${(props) => props.theme.colors.tableHeader};
     text-align: left;
     margin: 0;
     padding: 6px 13px;
@@ -128,21 +129,21 @@ const Table = styled('table')`
 
   tr:nth-of-type(2n) {
     padding: 5px;
-    background-color: ${props => props.theme.colors.trSecondth};
+    background-color: ${(props) => props.theme.colors.trSecondth};
   }
 `;
 
-const Ul = styled('ul')`
+const Ul = styled("ul")`
   padding: 0;
   margin: 0;
 `;
 
-const Li = styled('li')`
+const Li = styled("li")`
   list-style: none;
   padding: 0;
 `;
 
-const Kbd = styled('kbd')`
+const Kbd = styled("kbd")`
   display: inline-block;
   padding: 2px 5px;
   font: 11px Open Sans;
@@ -155,19 +156,24 @@ const Kbd = styled('kbd')`
   box-shadow: inset 0 -1px 0 #d1d5da;
 `;
 
-const P = styled('p')`
+const P = styled("p")`
   margin-top: 1rem;
   margin-bottom: 1rem !important;
   line-height: 1.625;
 `;
 
-const removeWhitespace = input => {
-  return input.replace(/\s+/g, '').toLowerCase();
+const removeWhitespace = (input) => {
+  return input.replace(/\s+/g, "").toLowerCase();
 };
 
 export default {
-  h1: props => <Heading1 id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
-  h2: props => {
+  h1: (props) => (
+    <Heading1
+      id={props.children.replace(/\s+/g, "").toLowerCase()}
+      {...props}
+    />
+  ),
+  h2: (props) => {
     const heading = props.children;
 
     return (
@@ -179,18 +185,38 @@ export default {
       </Heading2>
     );
   },
-  h3: props => <Heading3 id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
-  h4: props => <Heading4 id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
-  h5: props => <Heading5 id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
-  h6: props => <Heading6 id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
-  p: props => <P {...props} />,
-  pre: props => <Pre {...props} />,
+  h3: (props) => (
+    <Heading3
+      id={props.children.replace(/\s+/g, "").toLowerCase()}
+      {...props}
+    />
+  ),
+  h4: (props) => (
+    <Heading4
+      id={props.children.replace(/\s+/g, "").toLowerCase()}
+      {...props}
+    />
+  ),
+  h5: (props) => (
+    <Heading5
+      id={props.children.replace(/\s+/g, "").toLowerCase()}
+      {...props}
+    />
+  ),
+  h6: (props) => (
+    <Heading6
+      id={props.children.replace(/\s+/g, "").toLowerCase()}
+      {...props}
+    />
+  ),
+  p: (props) => <P {...props} />,
+  pre: (props) => <Pre {...props} />,
   code: CodeBlock,
   a: AnchorTag,
-  table: props => <Table {...props} />,
-  ul: props => <Ul {...props} />,
-  li: props => <Li {...props} />,
-  kbd: props => <Kbd {...props} />,
+  table: (props) => <Table {...props} />,
+  ul: (props) => <Ul {...props} />,
+  li: (props) => <Li {...props} />,
+  kbd: (props) => <Kbd {...props} />,
 
   // TODO add `blockquote`
 };

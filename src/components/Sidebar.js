@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import Footer from './Footer';
-import Navigation from './navigation';
+import Footer from "./footer";
+import Navigation from "./navigation";
 
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-const Sidebar = styled('aside')`
+const Sidebar = styled("aside")`
   position: fixed;
   top: 6rem;
   bottom: 0;
@@ -37,7 +37,10 @@ const Sidebar = styled('aside')`
 const SidebarLayout = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
   <Sidebar>
     <Navigation location={location} />
-    <Footer isDarkThemeActive={isDarkThemeActive} toggleActiveTheme={toggleActiveTheme} />
+    <Footer
+      isDarkThemeActive={isDarkThemeActive}
+      toggleActiveTheme={toggleActiveTheme}
+    />
   </Sidebar>
 );
 

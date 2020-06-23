@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import styled from '@emotion/styled';
-import { MDXProvider } from '@mdx-js/react';
-import mdxComponents from './mdxComponents';
-import Sidebar from './Sidebar';
-import Header from './Header';
-import TableOfContents from './tableOfContents';
+import React, { useState, useEffect } from "react";
+import styled from "@emotion/styled";
+import { MDXProvider } from "@mdx-js/react";
+import mdxComponents from "./mdxComponents";
+import Sidebar from "./sidebar";
+import Header from "./header";
+import TableOfContents from "./tableOfContents";
 
-import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
+import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
 
-import { lightTheme, darkTheme } from './theme';
+import { lightTheme, darkTheme } from "./theme";
 
-const Wrapper = styled('div')`
+const Wrapper = styled("div")`
   background: ${({ theme }) => theme.colors.background};
   height: 100vh;
 
@@ -19,13 +19,13 @@ const Wrapper = styled('div')`
   }
 `;
 
-const Content = styled('main')`
+const Content = styled("main")`
   min-width: 0;
   width: 100%;
   padding: 3rem;
 `;
 
-const ContentWrapper = styled('div')`
+const ContentWrapper = styled("div")`
   display: flex;
   margin-left: 18rem;
   position: relative;
@@ -48,14 +48,19 @@ const Layout = ({ children, location, data }) => {
 
   useEffect(() => {
     setDarkThemeActive(
-      JSON.parse(window.localStorage.getItem('isDarkThemeActive')) === true ? true : false
+      JSON.parse(window.localStorage.getItem("isDarkThemeActive")) === true
+        ? true
+        : false
     );
   });
 
   const toggleActiveTheme = () => {
-    setDarkThemeActive(prevState => !prevState);
+    setDarkThemeActive((prevState) => !prevState);
 
-    window.localStorage.setItem('isDarkThemeActive', JSON.stringify(!isDarkThemeActive));
+    window.localStorage.setItem(
+      "isDarkThemeActive",
+      JSON.stringify(!isDarkThemeActive)
+    );
   };
 
   return (
@@ -64,7 +69,9 @@ const Layout = ({ children, location, data }) => {
         <Wrapper>
           <Header
             title={site.siteMetadata.title}
-            docsLocation={site.siteMetadata.docsLocation + '/' + mdx.parent.relativePath}
+            docsLocation={
+              site.siteMetadata.docsLocation + "/" + mdx.parent.relativePath
+            }
             isDarkThemeActive={isDarkThemeActive}
             toggleActiveTheme={toggleActiveTheme}
           />
