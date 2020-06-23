@@ -1,7 +1,14 @@
 require("dotenv").config();
 const config = require("./config");
 const plugins = [
-  "gatsby-plugin-csp",
+  {
+    resolve: `gatsby-plugin-csp`,
+    options: {
+      directives: {
+        "style-src": `'self' 'unsafe-inline' fonts.googleapis.com`,
+      },
+    },
+  },
   "gatsby-plugin-react-helmet",
   {
     resolve: `gatsby-plugin-emotion`,
