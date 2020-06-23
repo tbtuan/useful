@@ -5,7 +5,8 @@ const plugins = [
     resolve: `gatsby-plugin-csp`,
     options: {
       directives: {
-        "style-src": `'self' 'unsafe-inline' fonts.googleapis.com`,
+        "style-src": `'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com`,
+        "font-src": `'self' data: fonts.gstatic.com`,
       },
     },
   },
