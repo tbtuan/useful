@@ -1,6 +1,6 @@
 ---
 title: 'NodeJS'
-metaTitle: 'Syntax Highlighting is the meta title tag for this page'
+metaTitle: 'NodeJS - /useful'
 metaDescription: 'This is the meta description for this page'
 ---
 

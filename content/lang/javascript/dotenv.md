@@ -1,6 +1,6 @@
 ---
 title: 'dotenv'
-metaTitle: '/useful - javascript/dotenv'
+metaTitle: 'dotenv - /useful'
 metaDescription: 'Javascript - dotenv'
 ---
 

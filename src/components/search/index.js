@@ -1,9 +1,9 @@
-import React, { useEffect, useState, createRef, useRef } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import styled from "@emotion/styled";
 import { Search } from "emotion-icons/fa-solid";
 import Fuse from "fuse.js";
 import Link from "../link";
-import config from "../../../config";
+import GatsbyLink from "gatsby-link";
 
 const StyledSearch = styled(Search)`
   position: relative;
@@ -25,6 +25,7 @@ const SearchBox = styled("input")`
   color: ${({ theme }) => theme.colors.text};
   width: 100%;
   padding-left: 2rem;
+
   :focus {
     border-color: ${({ theme }) => theme.colors.link};
   }
@@ -46,58 +47,42 @@ const SearchContainer = styled("div")`
 
 const HitsWrapper = styled.div`
   display: ${(props) => (props.show ? `grid` : `none`)};
+  // grid-template-columns: 1fr 1fr;
   max-height: 80vh;
   z-index: 2;
   right: 0;
   top: calc(100% + 0.5em);
   width: 40vw;
   max-width: 30em;
-  box-shadow: 0 0 5px 0;
-  padding: 0.7em 1em 0.4em;
+  filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.searchShadow});
+  padding: 0.5rem;
   background: white;
 
-  border-radius: ${(props) => props.theme.smallBorderRadius};
+  border-radius: 4px;
   > * + * {
-    padding-top: 1em !important;
-    border-top: 1px solid ${(props) => props.theme.darkGray};
-  }
-  li + li {
-    margin-top: 0.7em;
-    padding-top: 0.7em;
-    border-top: 1px solid ${(props) => props.theme.lightGray};
+    padding-top: 1rem !important;
+    border-top: 1px solid ${({ theme }) => theme.darkGray};
   }
   * {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
   }
-  ul {
-    list-style: none;
-    margin: 0;
-  }
-  mark {
-    color: ${(props) => props.theme.lightBlue};
-    background: ${(props) => props.theme.darkBlue};
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.3em;
-    h3 {
-      color: black;
-      background: ${(props) => props.theme.gray};
-      padding: 0.1em 0.4em;
-      border-radius: ${(props) => props.theme.smallBorderRadius};
-    }
-  }
-  h3 {
-    color: black;
-    margin: 0 0 0.5em;
-  }
-  h4 {
-    color: black;
-    margin-bottom: 0.3em;
-  }
+`;
+
+const Hits = styled("li")`
+  font-weight: 700;
+`;
+
+const SearchLink = styled(GatsbyLink)`
+  color: ${({ theme }) => theme.colors.text};
+  list-style: none;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0;
+
+  background-color: ${({ selected, theme }) =>
+    selected ? theme.colors.searchHover : `transparent`};
 `;
 
 function useFocus(ref, handler) {
@@ -132,7 +117,7 @@ function useClickOutside(ref, handler) {
   }, [ref]);
 }
 
-function useDatafetch(query, setResults) {
+function useDatafetch(query, setResults, [itemIndex, setItemIndex]) {
   useEffect(() => {
     if (window.__FUSE__) {
       const fuse = new Fuse(window.__FUSE__, {
@@ -141,6 +126,10 @@ function useDatafetch(query, setResults) {
       });
       const results = fuse.search(query).slice(0, 5);
       setResults(results);
+      // To keep the selection inside the bounds while typing
+      if (results && itemIndex > results.length - 1) {
+        setItemIndex(0);
+      }
     }
   }, [query]);
 }
@@ -150,22 +139,64 @@ const SearchLayout = () => {
 
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState("");
-  const [data, setData] = useState([]);
   const [focus, setFocus] = useState(false);
+  const [itemIndex, setItemIndex] = useState(0);
 
   useFocus(ref, () => document.getElementById("searchbox").focus());
   useClickOutside(ref, () => setFocus(false));
-  useDatafetch(query, setResults);
+  useDatafetch(query, setResults, [itemIndex, setItemIndex]);
 
   const searchData = (e) => {
     setQuery(e.target.value);
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      console.log(e.key);
+    if (results.length > 0 && e.key === "Enter") {
+      if (document.getElementById(itemIndex)) {
+        document.getElementById(itemIndex).click();
+      }
+      document.getElementById("searchbox").blur();
     }
   };
+
+  const handleKeyDownPress = (e) => {
+    if (e.key === "ArrowDown") {
+      if (results.length > 0) {
+        e.preventDefault();
+        setItemIndex((prevIndex) =>
+          prevIndex < results.length - 1 ? prevIndex + 1 : 0
+        );
+      }
+    } else if (e.key === "ArrowUp") {
+      if (results.length > 0) {
+        e.preventDefault();
+        setItemIndex((prevIndex) =>
+          prevIndex > 0 ? prevIndex - 1 : results.length - 1
+        );
+      }
+    }
+    return;
+  };
+
+  const searchResults = results.map((element, index) => {
+    const { item } = element;
+    return (
+      <SearchLink
+        key={item.id}
+        id={index}
+        selected={itemIndex === index ? true : false}
+        onClick={() => {
+          setQuery("");
+          setFocus(false);
+        }}
+        onMouseOver={() => setItemIndex(index)}
+        to={`${item.url}`}
+      >
+        <li>{`${item.title} (${item.url})`}</li>
+        <Hits>{item.title}</Hits>
+      </SearchLink>
+    );
+  });
 
   return (
     <SearchContainer ref={ref}>
@@ -176,29 +207,13 @@ const SearchLayout = () => {
         onChange={searchData}
         onFocus={() => setFocus(true)}
         onKeyUp={handleKeyPress}
+        onKeyDown={handleKeyDownPress}
         placeholder="Search..."
         autoComplete="false"
       />
       <StyledSearch />
       <HitsWrapper show={results.length > 0 && focus}>
-        {results.map(({ item }) => {
-          return (
-            <ul key={item.id}>
-              <li>{item.title}</li>
-              <li>
-                <Link
-                  onClick={() => {
-                    setQuery("");
-                    setFocus(false);
-                  }}
-                  to={`${item.url}`}
-                >
-                  {item.url}
-                </Link>
-              </li>
-            </ul>
-          );
-        })}
+        {searchResults}
       </HitsWrapper>
     </SearchContainer>
   );

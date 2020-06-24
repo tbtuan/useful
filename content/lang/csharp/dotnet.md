@@ -1,6 +1,6 @@
 ---
 title: '.NET'
-metaTitle: '/useful - csharp/dotnet'
+metaTitle: '.NET - /useful'
 metaDescription: 'C# - .NET'
 ---
 

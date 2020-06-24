@@ -1,6 +1,6 @@
 ---
 title: 'Shortcuts'
-metaTitle: '/useful - Shortcuts'
+metaTitle: 'Shortcuts - /useful'
 metaDescription: 'Shortcuts for different applications'
 type: 'cheatsheet'
 ---

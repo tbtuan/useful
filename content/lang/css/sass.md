@@ -1,6 +1,6 @@
 ---
 title: 'Sass'
-metaTitle: '/useful - css/sass'
+metaTitle: 'Sass - /useful'
 metaDescription: 'CSS - Sass'
 ---
 

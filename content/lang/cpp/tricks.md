@@ -1,6 +1,6 @@
 ---
 title: 'Tricks'
-metaTitle: '/useful - cpp/tricks'
+metaTitle: 'cpp/tricks - /useful'
 metaDescription: 'C++ - Tricks'
 ---
 

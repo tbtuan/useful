@@ -1,6 +1,6 @@
 ---
 title: 'Tools'
-metaTitle: '/useful - Tools'
+metaTitle: 'Tools - /useful'
 metaDescription: 'Tools to use'
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Tricks'
-metaTitle: '/useful - csharp/tricks'
+metaTitle: 'csharp/tricks - /useful'
 metaDescription: 'C# - Tricks'
 ---
 

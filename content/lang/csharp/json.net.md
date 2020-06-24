@@ -1,6 +1,6 @@
 ---
 title: 'Json.NET'
-metaTitle: '/useful - csharp/json.net'
+metaTitle: 'Json.NET - /useful'
 metaDescription: 'C# - Json.NET'
 ---
 

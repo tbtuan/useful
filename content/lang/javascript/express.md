@@ -1,6 +1,6 @@
 ---
 title: 'Express'
-metaTitle: '/useful - javascript/express'
+metaTitle: 'javascript/express - /useful'
 metaDescription: 'Javascript - Express'
 ---
 

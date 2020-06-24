@@ -1,6 +1,6 @@
 ---
 title: 'Commands'
-metaTitle: '/useful - Commands'
+metaTitle: 'Commands - /useful'
 metaDescription: 'Commands for CLIs'
 ---
 

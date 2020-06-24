@@ -1,6 +1,6 @@
 ---
 title: 'Bash'
-metaTitle: 'Syntax Highlighting is the meta title tag for this page'
+metaTitle: 'Bash - /useful'
 metaDescription: 'This is the meta description for this page'
 ---
 

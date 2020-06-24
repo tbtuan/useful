@@ -12,7 +12,10 @@ const lightTheme = {
     switchShadow: "rgba(43, 44, 44, 0.5)",
     editButton: "#f77723",
     editButtonShadow: "rgba(247, 119, 35, 0.5)",
+    // Search
     textbox: "#eae4dd",
+    searchShadow: "rgba(43, 44, 44, 0.5)",
+    searchHover: "rgba(247, 119, 55, 0.08)",
     tableHeader: "#CFCFCF",
     trSecondth: "#f8f8f8",
     // Footer
@@ -33,7 +36,10 @@ const darkTheme = {
     switchShadow: "rgba(219, 221, 222, 0.5)",
     editButton: "#3DD8E0",
     editButtonShadow: "rgba(61, 216, 224, 0.5)",
+    // Search
     textbox: "#20232f",
+    searchShadow: "rgba(219, 221, 222, 0.5)",
+    searchHover: "rgba(219, 221, 222, 0.5)",
     tableHeader: "#191C26",
     trSecondth: "#202330",
     // Footer

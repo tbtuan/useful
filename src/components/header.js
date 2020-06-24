@@ -6,7 +6,7 @@ import { Edit, Adjust, ThList } from "emotion-icons/fa-solid";
 
 import Link from "./link";
 
-import Search from "./search/searchContainer";
+import Search from "./search";
 
 const Header = styled("header")`
   width: 100%;

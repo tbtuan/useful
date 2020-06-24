@@ -1,6 +1,6 @@
 ---
 title: 'Setups'
-metaTitle: '/useful - Setups'
+metaTitle: 'Setups - /useful'
 metaDescription: 'Setting up things such as config files'
 ---
 

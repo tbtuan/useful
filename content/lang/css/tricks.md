@@ -1,6 +1,6 @@
 ---
 title: 'Tricks'
-metaTitle: '/useful - css/tricks'
+metaTitle: 'css/tricks - /useful'
 metaDescription: 'CSS - Tricks'
 ---
 

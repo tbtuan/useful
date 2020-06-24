@@ -1,6 +1,6 @@
 ---
 title: 'Joi'
-metaTitle: '/useful - javascript/joi'
+metaTitle: 'javascript/joi - /useful'
 metaDescription: 'Javascript - Joi'
 ---
 

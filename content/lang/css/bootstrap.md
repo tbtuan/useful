@@ -1,6 +1,6 @@
 ---
 title: 'Bootstrap'
-metaTitle: '/useful - css/bootstrap'
+metaTitle: 'Bootstrap - /useful'
 metaDescription: 'CSS - Bootstrap'
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'References'
-metaTitle: '/useful - References'
+metaTitle: 'References - /useful'
 metaDescription: 'Websites you would bookmark'
 ---
 

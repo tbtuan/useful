@@ -1,6 +1,6 @@
 ---
 title: 'Learning'
-metaTitle: '/useful - Learning'
+metaTitle: 'Learning - /useful'
 metaDescription: 'Learning resources'
 ---
 

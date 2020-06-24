@@ -1,6 +1,6 @@
 ---
 title: 'CSS'
-metaTitle: 'Syntax Highlighting is the meta title tag for this page'
+metaTitle: 'CSS - /useful'
 metaDescription: 'This is the meta description for this page'
 ---
 

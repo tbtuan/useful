@@ -1,6 +1,6 @@
 ---
 title: 'Grpc'
-metaTitle: '/useful - java/grpc'
+metaTitle: 'java/grpc - /useful'
 metaDescription: 'Java - Grpc'
 ---
 

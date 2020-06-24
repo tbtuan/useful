@@ -1,6 +1,6 @@
 ---
 title: 'ReactJS'
-metaTitle: '/useful - javascript/reactjs'
+metaTitle: 'Reactjs - /useful'
 metaDescription: 'Javascript - ReactJS'
 ---
 
