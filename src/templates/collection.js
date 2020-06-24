@@ -50,10 +50,6 @@ const StyledMainWrapper = styled("div")`
 
     background: ${(props) => props.theme.colors.background};
   }
-
-  @media (max-width: 767px) {
-    padding: 0 15px;
-  }
 `;
 
 const CollectionTitleWrapper = styled("div")`
@@ -61,11 +57,6 @@ const CollectionTitleWrapper = styled("div")`
   align-items: center;
   padding-bottom: 4rem;
   margin-bottom: 32px;
-
-  @media (max-width: 767px) {
-    padding: 0 15px;
-    display: block;
-  }
 `;
 
 const TitleWrapper = styled("div")`
@@ -74,11 +65,6 @@ const TitleWrapper = styled("div")`
   padding-bottom: 40px;
   border-bottom: 1px solid rgb(230, 236, 241);
   margin-bottom: 32px;
-
-  @media (max-width: 767px) {
-    padding: 0 15px;
-    display: block;
-  }
 `;
 
 const Container = styled("div")`

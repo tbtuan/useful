@@ -23,6 +23,10 @@ const TitleWrapper = styled("div")`
   background-color: ${({ theme }) => theme.colors.sidebar};
   text-align: center;
   padding-top: 3rem;
+
+  @media only screen and (max-width: 1023px) {
+    flex: 0 0 4em;
+  }
 `;
 
 const SearchWrapper = styled("div")`
@@ -45,6 +49,19 @@ const Title = styled(Link)`
   color: ${({ theme }) => theme.colors.text};
 `;
 
+const TitleSpan = styled("span")`
+  @media only screen and (max-width: 1023px) {
+    display: none;
+  }
+`;
+
+const TitleSpan2 = styled("span")`
+  display: none;
+  @media only screen and (max-width: 1023px) {
+    display: block;
+  }
+`;
+
 const StyledThList = styled(ThList)`
   width: 1.25rem;
   height: 1.25rem;
@@ -57,10 +74,10 @@ const EditButton = styled(Link)`
   outline: 0;
   border: 0;
   color: ${({ theme }) => theme.colors.background};
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   background-color: ${({ theme }) => theme.colors.editButton};
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1.25rem 0.5rem 1.25rem;
   filter: drop-shadow(
     0px 4px 5px ${({ theme }) => theme.colors.editButtonShadow}
   );
@@ -68,10 +85,10 @@ const EditButton = styled(Link)`
 `;
 
 const StyledEdit = styled(Edit)`
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 0.8rem;
+  height: 0.8rem;
   margin-left: auto;
-  margin-right: 0.5rem;
+  margin-right: 0.2rem;
   color: ${({ theme }) => theme.colors.background};
 `;
 
@@ -98,7 +115,10 @@ const HeaderLayout = ({
   return (
     <Header>
       <TitleWrapper>
-        <Title to="/">{title}</Title>
+        <Title to="/">
+          <TitleSpan>{title}</TitleSpan>
+          <TitleSpan2>/</TitleSpan2>
+        </Title>
       </TitleWrapper>
       <SearchWrapper>
         <Search />

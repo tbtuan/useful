@@ -30,8 +30,10 @@ const StyledPaperclip = styled(Paperclip)`
   height: 1rem;
   margin-left: 0;
   margin-right: 0.75rem;
-  display: inline-block;
-  vertical-align: middle;
+
+  @media only screen and (max-width: 1023px) {
+    margin-right: 0;
+  }
 `;
 
 const StyledCode = styled(Code)`
@@ -39,6 +41,10 @@ const StyledCode = styled(Code)`
   height: 1rem;
   margin-left: 0;
   margin-right: 0.75rem;
+
+  @media only screen and (max-width: 1023px) {
+    margin-right: 0;
+  }
 `;
 
 const StyledCogs = styled(Cogs)`
@@ -46,6 +52,10 @@ const StyledCogs = styled(Cogs)`
   height: 1rem;
   margin-left: 0;
   margin-right: 0.75rem;
+
+  @media only screen and (max-width: 1023px) {
+    margin-right: 0;
+  }
 `;
 
 const StyledTerminal = styled(Terminal)`
@@ -53,6 +63,10 @@ const StyledTerminal = styled(Terminal)`
   height: 1rem;
   margin-left: 0;
   margin-right: 0.75rem;
+
+  @media only screen and (max-width: 1023px) {
+    margin-right: 0;
+  }
 `;
 
 const StyledBook = styled(Book)`
@@ -60,6 +74,10 @@ const StyledBook = styled(Book)`
   height: 1rem;
   margin-left: 0;
   margin-right: 0.75rem;
+
+  @media only screen and (max-width: 1023px) {
+    margin-right: 0;
+  }
 `;
 
 const StyledKeyboard = styled(Keyboard)`
@@ -67,6 +85,10 @@ const StyledKeyboard = styled(Keyboard)`
   height: 1rem;
   margin-left: 0;
   margin-right: 0.75rem;
+
+  @media only screen and (max-width: 1023px) {
+    margin-right: 0;
+  }
 `;
 
 const StyledBookmark = styled(Bookmark)`
@@ -74,6 +96,10 @@ const StyledBookmark = styled(Bookmark)`
   height: 1rem;
   margin-left: 0;
   margin-right: 0.75rem;
+
+  @media only screen and (max-width: 1023px) {
+    margin-right: 0;
+  }
 `;
 
 const NavigationLayout = ({ location }) => {

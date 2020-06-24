@@ -15,8 +15,8 @@ const StyledSearch = styled(Search)`
 `;
 
 const SearchBox = styled("input")`
-  font-size: 0.8rem;
-  line-height: 1.8rem;
+  font-size: 1rem;
+  line-height: 2rem;
 
   border-width: 0 0 2px;
   border-color: ${({ theme }) => theme.colors.text};
@@ -55,7 +55,7 @@ const HitsWrapper = styled.div`
   width: 40vw;
   max-width: 30em;
   filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.searchShadow});
-  padding: 0.5rem;
+  padding: 1rem;
   background: white;
 
   border-radius: 4px;

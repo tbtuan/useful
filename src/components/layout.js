@@ -39,6 +39,7 @@ const ContentWrapper = styled("div")`
   }
 
   @media only screen and (max-width: 1023px) {
+    margin-left: 4rem;
   }
 `;
 
@@ -48,10 +49,14 @@ const ViewDiv = styled("div")`
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 4px 4px 18px #d9d9d9;
+  box-shadow: 4px 4px 18px ${({ theme }) => theme.colors.sidebarShadow};
   background: transparent;
   z-index: 2;
   pointer-events: none;
+
+  @media only screen and (max-width: 1023px) {
+    width: 4rem;
+  }
 `;
 
 const Layout = ({ children, location, data }) => {

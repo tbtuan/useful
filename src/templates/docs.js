@@ -43,10 +43,6 @@ const StyledMainWrapper = styled("div")`
 
     background: ${(props) => props.theme.colors.background};
   }
-
-  @media (max-width: 767px) {
-    padding: 0 15px;
-  }
 `;
 
 const TitleWrapper = styled("div")`

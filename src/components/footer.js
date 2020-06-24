@@ -7,6 +7,11 @@ const Footer = styled("footer")`
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
+
+  @media only screen and (max-width: 1023px) {
+    padding: 0;
+    padding-bottom: 2rem;
+  }
 `;
 
 const StyledLink = styled("a")`
@@ -19,6 +24,10 @@ const StyledLink = styled("a")`
   svg {
     color: ${({ theme }) => theme.colors.githubButton};
     margin-right: 0.5rem;
+
+    @media only screen and (max-width: 1023px) {
+      margin: auto;
+    }
   }
 
   :hover {
@@ -37,6 +46,10 @@ const StyledGithub = styled(Github)`
 const TextWrapper = styled("div")`
   display: inline-block;
   vertical-align: "middle";
+
+  @media only screen and (max-width: 1023px) {
+    display: none;
+  }
 `;
 
 const FirstLine = styled("span")`

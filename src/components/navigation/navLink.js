@@ -26,6 +26,10 @@ const StyledLi = styled("li")`
     border-width: 1px 0px 1px 1px;
     border-color: transparent currentcolor transparent transparent;
 
+    @media only screen and (max-width: 1023px) {
+      padding: 0;
+    }
+
     svg {
       margin-left: auto;
       vertical-align: middle; 
@@ -52,6 +56,16 @@ const IconWrapper = styled("div")`
   display: inline-block;
   vertical-align: "middle";
   margin-left: auto;
+
+  @media only screen and (max-width: 1023px) {
+    margin-right: auto;
+  }
+`;
+
+const TextWrapper = styled("span")`
+  @media only screen and (max-width: 1023px) {
+    display: none;
+  }
 `;
 
 const NavlinkLayout = ({ text, link, children, location }) => {
@@ -66,12 +80,12 @@ const NavlinkLayout = ({ text, link, children, location }) => {
     <StyledLi>
       {isActive(link) ? (
         <ActiveLink to={link}>
-          {text}
+          <TextWrapper>{text}</TextWrapper>
           <IconWrapper>{children}</IconWrapper>
         </ActiveLink>
       ) : (
         <Link to={link}>
-          {text}
+          <TextWrapper>{text}</TextWrapper>
           <IconWrapper>{children}</IconWrapper>
         </Link>
       )}
