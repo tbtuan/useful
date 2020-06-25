@@ -63,8 +63,11 @@ const ContentWrapper = styled("div")`
   }
 `;
 
-const CheatsheetTemplate = ({ data }) => {
-  if (!data) {
+const CheatsheetTemplate = ({ data, location }) => {
+  if (typeof window === "undefined") {
+    return null;
+  }
+  if (!data || !location) {
     return null;
   }
   const { mdx, allMdx } = data;
@@ -81,10 +84,6 @@ const CheatsheetTemplate = ({ data }) => {
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </StyledMainWrapper>
       </ContentWrapper>
-
-      {/* <StyledMainWrapper>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
-      </StyledMainWrapper> */}
     </div>
   );
 };

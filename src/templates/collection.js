@@ -260,8 +260,8 @@ const Tree = ({ edges, subpath }) => {
   return <TreeNode {...treeData} />;
 };
 
-const CollectionTemplate = ({ data }) => {
-  if (!data) {
+const CollectionTemplate = ({ data, location }) => {
+  if (!data || !location) {
     return null;
   }
   const { allMdx, mdx } = data;

@@ -18,7 +18,7 @@ const Padding = styled("div")`
 
 export default class MDXRuntimeTest extends Component {
   render() {
-    const { data } = this.props;
+    const { data, location } = this.props;
 
     if (!data) {
       return null;

@@ -135,11 +135,13 @@ const SidebarLayout = ({ location, allMdx }) => {
   useActiveHash();
 
   let finalNavItems;
-
+  if (typeof window === "undefined") {
+    return null;
+  }
   if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
     allMdx.edges.map((item, index) => {
       let innerInnerItems;
-      if (item !== undefined) {
+      if (item !== undefined && location !== undefined) {
         if (
           item.node.fields.slug === location.pathname ||
           // trailing slash
