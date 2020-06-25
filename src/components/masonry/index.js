@@ -51,6 +51,8 @@ const fillCols = (children, cols) => {
   children.forEach((child, i) => cols[i % cols.length].push(child));
 };
 
+// TODO Masonry works only for at least 2 <c> </c> inside <r> </r>
+// Fix later
 export default function Masonry({ children, gap, minWidth = 500, ...rest }) {
   const ref = useRef();
   const [numCols, setNumCols] = useState(3);
