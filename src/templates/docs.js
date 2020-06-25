@@ -49,6 +49,10 @@ const StyledMainWrapper = styled("div")`
 
 const TitleWrapper = styled("div")`
   padding-bottom: 4rem;
+
+  @media only screen and (max-width: 1023px) {
+    padding-bottom: 2rem;
+  }
 `;
 
 const ContentWrapper = styled("div")`

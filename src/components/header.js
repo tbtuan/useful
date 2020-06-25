@@ -34,6 +34,12 @@ const SearchWrapper = styled("div")`
   padding-top: 3rem;
   padding-left: 4rem;
   flex: 0 0 20em;
+
+  @media only screen and (max-width: 576px) {
+    flex: none;
+    padding-left: 2rem;
+    width: 40%;
+  }
 `;
 
 const OptionsWrapper = styled("div")`
@@ -103,6 +109,10 @@ const Container = styled("div")`
   justify-content: flex-end;
   align-items: center;
   padding-right: 4rem;
+
+  @media only screen and (max-width: 576px) {
+    flex: none;
+  }
 `;
 
 const HeaderLayout = ({

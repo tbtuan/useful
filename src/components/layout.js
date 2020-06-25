@@ -20,6 +20,10 @@ const Content = styled("main")`
   width: 100%;
   padding: 3rem;
   padding-left: 4rem;
+
+  @media only screen and (max-width: 576px) {
+    padding: 2rem;
+  }
 `;
 
 const ContentWrapper = styled("div")`

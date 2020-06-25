@@ -11,12 +11,12 @@ const Sidebar = styled("nav")`
   max-height: calc(100vh - 4rem - 2.5rem - 3rem - 3rem);
   overflow: auto;
   overflow-x: hidden;
+  padding-bottom: 2rem;
   order: 2;
 
   @media only screen and (max-width: 1023px) {
     max-width: 18rem;
     position: static;
-    max-height: calc((((100vh - 4rem) - 2.5rem) - 3rem) - 3rem);
     overflow: auto;
     order: 1;
   }
