@@ -22,15 +22,6 @@ const Sidebar = styled("aside")`
   @media only screen and (max-width: 1023px) {
     width: 4rem;
   }
-
-  @media (min-width: 767px) and (max-width: 1023px) {
-    padding-left: 0;
-  }
-
-  @media only screen and (max-width: 767px) {
-    padding-left: 0px;
-    height: auto;
-  }
 `;
 
 const SidebarLayout = ({ location, isDarkThemeActive, toggleActiveTheme }) => (

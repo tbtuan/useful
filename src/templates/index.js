@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import { graphql } from 'gatsby';
+import React, { Component } from "react";
+import { graphql } from "gatsby";
 
-import Helmet from 'react-helmet';
+import Helmet from "react-helmet";
 
-import Cheatsheet from './cheatsheet';
-import Collection from './collection';
-import Docs from './docs';
+import Cheatsheet from "./cheatsheet";
+import Collection from "./collection";
+import Docs from "./docs";
 
-import { Layout } from '../components';
-import config from '../../config';
+import { Layout } from "../components";
+import config from "../../config";
 
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-const Padding = styled('div')`
+const Padding = styled("div")`
   padding: 50px 0;
 `;
 
@@ -35,17 +35,19 @@ export default class MDXRuntimeTest extends Component {
     let canonicalUrl = config.gatsby.siteUrl;
 
     canonicalUrl =
-      config.gatsby.pathPrefix !== '/' ? canonicalUrl + config.gatsby.pathPrefix : canonicalUrl;
+      config.gatsby.pathPrefix !== "/"
+        ? canonicalUrl + config.gatsby.pathPrefix
+        : canonicalUrl;
     canonicalUrl = canonicalUrl + mdx.fields.slug;
 
     const MarkdownFormat = ({ data, type }) => {
       switch (type) {
-        case 'collection':
-          return <Collection data={data} />;
-        case 'cheatsheet':
-          return <Cheatsheet data={data} />;
+        case "collection":
+          return <Collection data={data} location={location} />;
+        case "cheatsheet":
+          return <Cheatsheet data={data} location={location} />;
         default:
-          return <Docs data={data} />;
+          return <Docs data={data} location={location} />;
       }
     };
     return (
@@ -53,9 +55,13 @@ export default class MDXRuntimeTest extends Component {
         <Helmet defer={false} title={metaTitle}>
           {metaTitle ? <title>{metaTitle}</title> : null}
           {metaTitle ? <meta name="title" content={metaTitle} /> : null}
-          {metaDescription ? <meta name="description" content={metaDescription} /> : null}
+          {metaDescription ? (
+            <meta name="description" content={metaDescription} />
+          ) : null}
           {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
-          {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
+          {metaDescription ? (
+            <meta property="og:description" content={metaDescription} />
+          ) : null}
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
         <MarkdownFormat data={data} type={type} />

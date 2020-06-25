@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 
+import Masonry from "../masonry";
+
 import CodeBlock from "./code";
 import {
   Heading1,
@@ -66,6 +68,25 @@ const removeWhitespace = (input) => {
   return input.replace(/\s+/g, "").toLowerCase();
 };
 
+const RowContainer = styled("div")`
+  column-count: 3;
+  column-gap: 0.5rem;
+`;
+
+const ColumnContainer = styled("div")`
+  display: inline-block;
+  width: 100%;
+
+  h3 {
+    font-weight: bold;
+    font-size: 13px;
+    background-color: ${({ theme }) => theme.colors.tableHeader};
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+`;
+
 export default {
   h1: (props) => (
     <Heading1
@@ -109,7 +130,10 @@ export default {
       {...props}
     />
   ),
-  p: (props) => <P {...props} />,
+  p: (props) => {
+    //console.log(props.children._owner.memoizedProps.asdf);
+    return <P {...props} />;
+  },
   pre: (props) => <Pre {...props} />,
   code: CodeBlock,
   a: AnchorTag,
@@ -118,5 +142,11 @@ export default {
   li: (props) => <Li {...props} />,
   kbd: (props) => <Kbd {...props} />,
 
+  thead: () => null,
+
+  // Row
+  r: (props) => <Masonry {...props} />,
+  // Column
+  c: (props) => <ColumnContainer {...props} />,
   // TODO add `blockquote`
 };

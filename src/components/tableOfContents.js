@@ -3,20 +3,23 @@ import config from "../../config";
 
 import styled from "@emotion/styled";
 
-const SidebarWrapper = styled("div")`
-  flex: 0 0 14rem;
-  order: 2;
-  margin-left: auto;
-  margin-top: -4rem;
-  background-color: ${({ theme }) => theme.colors.background};
-`;
-
 const Sidebar = styled("nav")`
-  position: sticky;
-  top: 9rem;
+  max-width: 18rem;
+  position: fixed;
+  top: calc(8rem);
+  left: calc(100% - 14rem);
   max-height: calc(100vh - 4rem - 2.5rem - 3rem - 3rem);
-  right: 0;
   overflow: auto;
+  overflow-x: hidden;
+  order: 2;
+
+  @media only screen and (max-width: 1023px) {
+    max-width: 18rem;
+    position: static;
+    max-height: calc((((100vh - 4rem) - 2.5rem) - 3rem) - 3rem);
+    overflow: auto;
+    order: 1;
+  }
 
   li {
     list-style-type: none;
@@ -28,6 +31,7 @@ const Sidebar = styled("nav")`
     font-size: 12px;
     font-weight: 500;
     padding: 7px 24px 7px 16px;
+    padding-left: 0;
 
     color: ${({ theme }) => theme.colors.text};
   }
@@ -40,6 +44,7 @@ const TOCTitle = styled("li")`
   text-transform: uppercase;
   letter-spacing: 1.2px;
   padding: 7px 24px 7px 16px;
+  padding-left: 0;
   margin: 0;
 
   color: ${({ theme }) => theme.colors.text};
@@ -165,12 +170,10 @@ const SidebarLayout = ({ location, allMdx }) => {
   }
   if (finalNavItems && finalNavItems.length) {
     return (
-      <SidebarWrapper>
-        <Sidebar>
-          <TOCTitle>On this page</TOCTitle>
-          {finalNavItems}
-        </Sidebar>
-      </SidebarWrapper>
+      <Sidebar>
+        <TOCTitle>On this page</TOCTitle>
+        {finalNavItems}
+      </Sidebar>
     );
   } else {
     return null;

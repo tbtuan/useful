@@ -122,7 +122,7 @@ function useDatafetch(query, setResults, [itemIndex, setItemIndex]) {
     if (window.__FUSE__) {
       const fuse = new Fuse(window.__FUSE__, {
         findAllMatches: true,
-        keys: ["id", "title", "url", "rawBody"],
+        keys: ["id", "title", "url", "toc"],
       });
       const results = fuse.search(query).slice(0, 5);
       setResults(results);

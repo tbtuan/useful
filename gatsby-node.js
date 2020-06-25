@@ -19,7 +19,6 @@ exports.createPages = ({ graphql, actions }) => {
             allMdx {
               edges {
                 node {
-                  rawBody
                   fields {
                     title
                     id
@@ -46,11 +45,18 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog posts pages.
         result.data.allMdx.edges.forEach(({ node }) => {
+          let tocConcat = "";
+          if (node.tableOfContents.items) {
+            tocConcat = node.tableOfContents.items
+              .map((item) => item.title)
+              .join(" ");
+          }
+
           searchIndex.push({
             id: node.fields.id,
             title: node.fields.title,
             url: node.fields.slug,
-            rawBody: node.rawBody,
+            toc: tocConcat,
           });
           createPage({
             path: node.fields.slug ? node.fields.slug : "/",

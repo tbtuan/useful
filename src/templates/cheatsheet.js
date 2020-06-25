@@ -2,6 +2,7 @@ import React from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import ModifiedText from "../components/modifiedText";
 import styled from "@emotion/styled";
+import TableOfContents from "../components/tableOfContents";
 
 const StyledHeading = styled("h1")`
   font-size: 32px;
@@ -19,6 +20,7 @@ const StyledHeading = styled("h1")`
 
 const StyledMainWrapper = styled("div")`
   color: ${(props) => props.theme.colors.text};
+  max-width: calc(100% - 14rem);
 
   ul,
   ol {
@@ -42,17 +44,30 @@ const StyledMainWrapper = styled("div")`
 
     background: ${(props) => props.theme.colors.background};
   }
+
+  @media only screen and (max-width: 1023px) {
+    max-width: 100%;
+  }
 `;
 
 const TitleWrapper = styled("div")`
   padding-bottom: 4rem;
 `;
 
+const ContentWrapper = styled("div")`
+  display: flex;
+  align-items: flex-start;
+
+  @media only screen and (max-width: 1023px) {
+    display: block;
+  }
+`;
+
 const CheatsheetTemplate = ({ data }) => {
   if (!data) {
     return null;
   }
-  const { mdx } = data;
+  const { mdx, allMdx } = data;
 
   return (
     <div>
@@ -60,9 +75,16 @@ const CheatsheetTemplate = ({ data }) => {
         <StyledHeading>{mdx.fields.title}</StyledHeading>
         <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
       </TitleWrapper>
-      <StyledMainWrapper>
+      <ContentWrapper>
+        <TableOfContents location={location} allMdx={allMdx} />
+        <StyledMainWrapper>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </StyledMainWrapper>
+      </ContentWrapper>
+
+      {/* <StyledMainWrapper>
         <MDXRenderer>{mdx.body}</MDXRenderer>
-      </StyledMainWrapper>
+      </StyledMainWrapper> */}
     </div>
   );
 };

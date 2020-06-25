@@ -13,10 +13,6 @@ import { lightTheme, darkTheme } from "./theme";
 const Wrapper = styled("div")`
   background: ${({ theme }) => theme.colors.background};
   height: 100vh;
-
-  @media only screen and (max-width: 767px) {
-    display: block;
-  }
 `;
 
 const Content = styled("main")`
@@ -96,7 +92,6 @@ const Layout = ({ children, location, data }) => {
           />
           <Sidebar location={location} />
           <ContentWrapper>
-            <TableOfContents location={location} allMdx={allMdx} />
             <Content>{children}</Content>
           </ContentWrapper>
         </Wrapper>

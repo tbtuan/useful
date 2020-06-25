@@ -81,7 +81,6 @@ const EditButton = styled(Link)`
   filter: drop-shadow(
     0px 4px 5px ${({ theme }) => theme.colors.editButtonShadow}
   );
-  // filter: drop-shadow(0px 4px 5px rgba(247, 119, 35, 0.5));
 `;
 
 const StyledEdit = styled(Edit)`
