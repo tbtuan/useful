@@ -30,6 +30,10 @@ const SearchBox = styled("input")`
     border-color: ${({ theme }) => theme.colors.link};
   }
 
+  :hover {
+    border-color: ${({ theme }) => theme.colors.link};
+  }
+
   ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: ${({ theme }) => theme.colors.text};
