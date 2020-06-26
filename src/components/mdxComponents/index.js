@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import Masonry from "../masonry";
+import Masonry from "./masonry";
 
 import CodeBlock from "./code";
 import {
@@ -14,7 +14,7 @@ import {
 } from "./heading";
 import Table from "./table";
 import AnchorTag from "./anchor";
-import { Link, Paragraph } from "emotion-icons/fa-solid";
+import { Link } from "emotion-icons/fa-solid";
 
 const StyledLink = styled(Link)`
   width: 20px;

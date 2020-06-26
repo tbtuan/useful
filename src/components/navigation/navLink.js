@@ -71,10 +71,7 @@ const TextWrapper = styled("span")`
 const NavlinkLayout = ({ text, link, children, location }) => {
   const isActive = (link) =>
     location &&
-    (location.pathname === link ||
-      location.pathname === link + "/" ||
-      location.pathname === config.gatsby.pathPrefix + link ||
-      location.pathname === config.gatsby.pathPrefix + link + "/");
+    (location.pathname === link || location.pathname === link + "/");
 
   return (
     <StyledLi>

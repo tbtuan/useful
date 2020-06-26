@@ -266,14 +266,6 @@ const CollectionTemplate = ({ data, location }) => {
   }
   const { allMdx, mdx } = data;
 
-  let canonicalUrl = config.gatsby.siteUrl;
-
-  canonicalUrl =
-    config.gatsby.pathPrefix !== "/"
-      ? canonicalUrl + config.gatsby.pathPrefix
-      : canonicalUrl;
-  canonicalUrl = canonicalUrl + mdx.fields.slug;
-
   return (
     <div>
       <CollectionTitleWrapper>

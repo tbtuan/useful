@@ -1,38 +1,12 @@
-const config = {
-  gatsby: {
-    pathPrefix: "/",
-    siteUrl: "https://github.com/tbtuan/useful",
-    trailingSlash: false,
-  },
-  header: {
-    title: "/useful",
-    githubUrl: "https://github.com/tbtuan/useful",
-    links: [{ text: "", link: "" }],
-  },
-  siteMetadata: {
-    title: "/useful",
-    description: "A site with useful things",
-    docsLocation: "https://github.com/tbtuan/useful/tree/master/content",
-  },
-  pwa: {
-    enabled: false, // disabling this will also remove the existing service worker.
-    manifest: {
-      name: "/useful",
-      short_name: "/useful",
-      start_url: "/",
-      background_color: "#6b37bf",
-      theme_color: "#6b37bf",
-      display: "standalone",
-      crossOrigin: "use-credentials",
-      icons: [
-        {
-          src: "src/images/icon-512.png",
-          sizes: `512x512`,
-          type: `image/png`,
-        },
-      ],
-    },
-  },
-};
+// const config = {
+//   // gatsby: {
+//   //   pathPrefix: "/",
+//   //   siteUrl: "https://github.com/tbtuan/useful",
+//   //   trailingSlash: false,
+//   // },
+//   pwa: {
+//     enabled: true, // disabling this will also remove the existing service worker.
+//   },
+// };
 
-module.exports = config;
+// module.exports = config;

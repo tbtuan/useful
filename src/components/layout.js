@@ -87,9 +87,10 @@ const Layout = ({ children, location, data }) => {
         <Wrapper>
           <ViewDiv />
           <Header
-            title={site.siteMetadata.title}
+            title="/useful"
             docsLocation={
-              site.siteMetadata.docsLocation + "/" + mdx.parent.relativePath
+              "https://github.com/tbtuan/useful/tree/master/content/" +
+              mdx.parent.relativePath
             }
             isDarkThemeActive={isDarkThemeActive}
             toggleActiveTheme={toggleActiveTheme}

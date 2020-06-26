@@ -1,5 +1,4 @@
 require("dotenv").config();
-const config = require("./config");
 const plugins = [
   {
     resolve: `gatsby-plugin-csp`,
@@ -14,6 +13,14 @@ const plugins = [
       },
     },
   },
+  {
+    resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+    options: {
+      analyzerMode: `server`,
+      analyzerPort: `8888`,
+    },
+  },
+  "gatsby-disable-404",
   "gatsby-plugin-react-helmet",
   {
     resolve: `gatsby-plugin-emotion`,
@@ -39,6 +46,14 @@ const plugins = [
       path: `${__dirname}/content/`,
     },
   },
+  "gatsby-plugin-catch-links",
+  {
+    resolve: "gatsby-source-filesystem",
+    options: {
+      name: "images",
+      path: `${__dirname}/images/`,
+    },
+  },
   {
     resolve: "gatsby-plugin-mdx",
     options: {
@@ -50,38 +65,57 @@ const plugins = [
       extensions: [".mdx", ".md"],
     },
   },
-];
-// check and add pwa functionality
-if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
-  plugins.push({
+  {
     resolve: `gatsby-plugin-manifest`,
-    options: { ...config.pwa.manifest },
-  });
-  plugins.push({
+    options: {
+      name: "/useful",
+      short_name: "/useful",
+      start_url: "/",
+      background_color: "#6b37bf",
+      theme_color: "#6b37bf",
+      display: "standalone",
+      crossOrigin: "use-credentials",
+      icon: `images/icon-512.png`,
+      icons: [
+        {
+          src: "images/icon-512.png",
+          sizes: `512x512`,
+          type: `image/png`,
+        },
+      ],
+    },
+  },
+  {
     resolve: "gatsby-plugin-offline",
     options: {
       appendScript: require.resolve(`./src/custom-sw-code.js`),
     },
-  });
-} else {
-  plugins.push("gatsby-plugin-remove-serviceworker");
-}
+  },
+  "gatsby-plugin-remove-trailing-slashes",
+];
+// // check and add pwa functionality
+// if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
+//   plugins.push({});
+//   plugins.push({});
+// } else {
+//   plugins.push("gatsby-plugin-remove-serviceworker");
+// }
 
 // check and remove trailing slash
-if (config.gatsby && !config.gatsby.trailingSlash) {
-  plugins.push("gatsby-plugin-remove-trailing-slashes");
-}
+//plugins.push("gatsby-plugin-remove-trailing-slashes");
+// if (config.gatsby && !config.gatsby.trailingSlash) {
+
+// }
 
 module.exports = {
-  pathPrefix: config.gatsby.pathPrefix,
+  pathPrefix: "/",
   siteMetadata: {
-    title: config.siteMetadata.title,
-    description: config.siteMetadata.description,
-    docsLocation: config.siteMetadata.docsLocation,
-    headerTitle: config.header.title,
-    githubUrl: config.header.githubUrl,
-    headerLinks: config.header.links,
-    siteUrl: config.gatsby.siteUrl,
+    title: "/useful",
+    description: "A site with useful things",
+    docsLocation: "https://github.com/tbtuan/useful/tree/master/content",
+    headerTitle: "/useful",
+    githubUrl: "https://github.com/tbtuan/useful",
+    siteUrl: "https://github.com/tbtuan/useful",
   },
   plugins: plugins,
 };

@@ -32,14 +32,6 @@ export default class MDXRuntimeTest extends Component {
 
     const type = mdx.frontmatter.type;
 
-    let canonicalUrl = config.gatsby.siteUrl;
-
-    canonicalUrl =
-      config.gatsby.pathPrefix !== "/"
-        ? canonicalUrl + config.gatsby.pathPrefix
-        : canonicalUrl;
-    canonicalUrl = canonicalUrl + mdx.fields.slug;
-
     const MarkdownFormat = ({ data, type }) => {
       switch (type) {
         case "collection":
@@ -62,7 +54,6 @@ export default class MDXRuntimeTest extends Component {
           {metaDescription ? (
             <meta property="og:description" content={metaDescription} />
           ) : null}
-          <link rel="canonical" href={canonicalUrl} />
         </Helmet>
         <MarkdownFormat data={data} type={type} />
         <Padding />

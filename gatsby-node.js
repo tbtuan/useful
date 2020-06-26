@@ -1,5 +1,3 @@
-const componentWithMDXScope = require("gatsby-plugin-mdx/component-with-mdx-scope");
-
 const path = require("path");
 
 const startCase = require("lodash.startcase");
@@ -91,16 +89,19 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, "src"), "node_modules"],
-      alias: {
-        $components: path.resolve(__dirname, "src/components"),
-      },
     },
   });
 };
 
 exports.onCreateBabelConfig = ({ actions }) => {
   actions.setBabelPlugin({
-    name: "@babel/plugin-proposal-export-default-from",
+    name: "@babel/plugin-proposal-class-properties",
+  });
+  actions.setBabelPlugin({
+    name: `babel-plugin-emotion`,
+    options: {
+      sourceMap: true,
+    },
   });
 };
 
