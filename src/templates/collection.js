@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
-import { Link } from "../components";
+import Link from "../components/link";
 import config from "../../config";
 
 import styled from "@emotion/styled";

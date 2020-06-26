@@ -57,7 +57,7 @@ exports.createPages = ({ graphql, actions }) => {
           });
           createPage({
             path: node.fields.slug ? node.fields.slug : "/",
-            component: path.resolve("./src/templates/index.js"),
+            component: path.resolve("./src/components/index.js"),
             context: {
               id: node.fields.id,
             },
@@ -87,7 +87,7 @@ exports.onCreatePage = async ({ page, actions }) => {
   }
 };
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, "src"), "node_modules"],
