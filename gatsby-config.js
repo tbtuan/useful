@@ -93,19 +93,6 @@ const plugins = [
   },
   "gatsby-plugin-remove-trailing-slashes",
 ];
-// // check and add pwa functionality
-// if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
-//   plugins.push({});
-//   plugins.push({});
-// } else {
-//   plugins.push("gatsby-plugin-remove-serviceworker");
-// }
-
-// check and remove trailing slash
-//plugins.push("gatsby-plugin-remove-trailing-slashes");
-// if (config.gatsby && !config.gatsby.trailingSlash) {
-
-// }
 
 module.exports = {
   pathPrefix: "/",

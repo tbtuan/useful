@@ -36,13 +36,13 @@ function useEventListener(eventName, handler, element = window) {
   );
 }
 
-const MasonryDiv = styled.div`
+const MasonryDiv = styled("div")`
   display: grid;
   grid-auto-flow: column;
   grid-gap: ${(props) => props.gap || `1rem`};
 `;
 
-const Col = styled.div`
+const Col = styled("div")`
   display: flex;
   flex-direction: column;
 `;
