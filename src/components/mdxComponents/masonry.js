@@ -19,6 +19,7 @@ function useEventListener(eventName, handler, element = window) {
     () => {
       // Make sure element supports addEventListener
       const isSupported = element && element.addEventListener;
+
       if (!isSupported) return;
 
       // Create event listener that calls handler function stored in ref
@@ -55,12 +56,16 @@ const fillCols = (children, cols) => {
 // Fix later
 export default function Masonry({ children, gap, minWidth = 500, ...rest }) {
   const ref = useRef();
+
   const [numCols, setNumCols] = useState(3);
+
   const cols = [...Array(numCols)].map(() => []);
+
   fillCols(children, cols);
 
   const resizeHandler = () =>
     setNumCols(Math.ceil(ref.current.offsetWidth / minWidth));
+
   useEffect(resizeHandler, []);
   useEventListener(`resize`, resizeHandler);
 

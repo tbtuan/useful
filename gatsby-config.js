@@ -71,8 +71,8 @@ const plugins = [
       name: "/useful",
       short_name: "/useful",
       start_url: "/",
-      background_color: "#6b37bf",
-      theme_color: "#6b37bf",
+      background_color: "#F77723",
+      theme_color: "#F77723",
       display: "standalone",
       crossOrigin: "use-credentials",
       icon: `images/icon-512.png`,
@@ -88,7 +88,7 @@ const plugins = [
   {
     resolve: "gatsby-plugin-offline",
     options: {
-      appendScript: require.resolve(`./src/custom-sw-code.js`),
+      appendScript: require.resolve(`./src/sw.js`),
     },
   },
   "gatsby-plugin-remove-trailing-slashes",

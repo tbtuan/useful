@@ -8,6 +8,7 @@ const StyledSmall = styled("small")`
 
 const ModifiedText = ({ modifiedTime }) => {
   const modifiedDate = new Date(Date.parse(modifiedTime)).toLocaleDateString();
+
   return (
     <div>
       <Icon tag={Clock} size="12px" gap="0.5rem" />

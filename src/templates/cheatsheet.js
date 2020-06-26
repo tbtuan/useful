@@ -6,12 +6,8 @@ import TableOfContents from "../components/tableOfContents";
 
 const StyledHeading = styled("h1")`
   font-size: 32px;
-  //font-size: 32px;
   line-height: 1.5;
   font-weight: 800;
-  //font-weight: 500;
-  //border-left: 2px solid ${({ theme }) => theme.colors.link};
-  //padding: 0 16px;
   flex: 1;
   margin: 0;
   padding: 0;

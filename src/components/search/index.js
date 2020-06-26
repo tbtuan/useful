@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import styled from "@emotion/styled";
 import { Search } from "emotion-icons/fa-solid";
 import Fuse from "fuse.js";
-import Link from "../link";
 import GatsbyLink from "gatsby-link";
 
 const StyledSearch = styled(Search)`
@@ -46,7 +45,6 @@ const SearchBox = styled("input")`
 `;
 
 const SearchContainer = styled("div")`
-  //margin-top: 6px;
   background-color: ${({ theme }) => theme.colors.background};
   padding-left: 4rem;
   flex: 0 0 20em;
@@ -69,7 +67,6 @@ const HitsWrapper = styled("div")`
   z-index: 2;
   top: calc(100% + 0.5em);
   width: 40vw;
-  //max-width: 30em;
   filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.searchShadow});
   padding: 1rem;
   background: white;
@@ -82,9 +79,7 @@ const HitsWrapper = styled("div")`
   }
 `;
 
-const Hits = styled("li")`
-  //font-weight: 700;
-`;
+const Hits = styled("li")``;
 
 const SearchLink = styled(GatsbyLink)`
   color: ${({ theme }) => theme.colors.text};
@@ -108,6 +103,7 @@ function useFocus(ref, handler) {
         handler();
       }
     };
+
     // Bind the event listener
     document.addEventListener("keyup", handleKeyOutside);
     return () => {
@@ -124,6 +120,7 @@ function useClickOutside(ref, handler) {
         handler();
       }
     };
+
     // Bind the event listener
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -142,7 +139,9 @@ function useDatafetch(query, setResults, [itemIndex, setItemIndex]) {
         includeScore: true,
         keys: ["id", "title", "url", "toc"],
       });
+
       const results = fuse.search(query).slice(0, 5);
+
       setResults(results);
       // To keep the selection inside the bounds while typing
       if (results && itemIndex > results.length - 1) {
@@ -156,8 +155,11 @@ const SearchLayout = () => {
   const ref = useRef(null);
 
   const [results, setResults] = useState([]);
+
   const [query, setQuery] = useState("");
+
   const [focus, setFocus] = useState(false);
+
   const [itemIndex, setItemIndex] = useState(0);
 
   useFocus(ref, () => document.getElementById("searchbox").focus());
@@ -198,6 +200,7 @@ const SearchLayout = () => {
 
   const searchResults = results.map((element, index) => {
     const { item } = element;
+
     return (
       <SearchLink
         key={item.id}
@@ -239,4 +242,5 @@ const SearchLayout = () => {
     </SearchContainer>
   );
 };
+
 export default SearchLayout;

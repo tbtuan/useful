@@ -2,8 +2,6 @@ const path = require("path");
 
 const startCase = require("lodash.startcase");
 
-const config = require("./config");
-
 const fs = require("fs");
 
 exports.createPages = ({ graphql, actions }) => {
@@ -117,19 +115,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value = "";
     }
 
-    if (config.gatsby && config.gatsby.trailingSlash) {
-      createNodeField({
-        name: `slug`,
-        node,
-        value: value === "" ? `/` : `/${value}/`,
-      });
-    } else {
-      createNodeField({
-        name: `slug`,
-        node,
-        value: `/${value}`,
-      });
-    }
+    createNodeField({
+      name: `slug`,
+      node,
+      value: `/${value}`,
+    });
 
     createNodeField({
       name: "id",

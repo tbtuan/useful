@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { ThemeSwitch } from "./themeSwitch";
 
-import { Edit, Adjust, ThList } from "emotion-icons/fa-solid";
+import { Edit, ThList } from "emotion-icons/fa-solid";
 
 import Link from "./link";
 
@@ -114,40 +114,36 @@ const Container = styled("div")`
 `;
 
 const HeaderLayout = ({
-  title,
   docsLocation,
   isDarkThemeActive,
   toggleActiveTheme,
-}) => {
-  return (
-    <Header>
-      <TitleWrapper>
-        <Title to="/">
-          <TitleSpan>{title}</TitleSpan>
-          <TitleSpan2>/</TitleSpan2>
-        </Title>
-      </TitleWrapper>
-      <Search />
-      {/* <SearchWrapper></SearchWrapper> */}
-      <OptionsWrapper>
-        <Container>
-          <IconContainer>
-            <StyledThList />
-          </IconContainer>
-          <IconContainer>
-            <ThemeSwitch
-              isDarkThemeActive={isDarkThemeActive}
-              toggleActiveTheme={toggleActiveTheme}
-            />
-          </IconContainer>
-          <EditButton to={docsLocation}>
-            <StyledEdit />
-            Edit
-          </EditButton>
-        </Container>
-      </OptionsWrapper>
-    </Header>
-  );
-};
+}) => (
+  <Header>
+    <TitleWrapper>
+      <Title to="/">
+        <TitleSpan>/useful</TitleSpan>
+        <TitleSpan2>/</TitleSpan2>
+      </Title>
+    </TitleWrapper>
+    <Search />
+    <OptionsWrapper>
+      <Container>
+        <IconContainer>
+          <StyledThList />
+        </IconContainer>
+        <IconContainer>
+          <ThemeSwitch
+            isDarkThemeActive={isDarkThemeActive}
+            toggleActiveTheme={toggleActiveTheme}
+          />
+        </IconContainer>
+        <EditButton to={docsLocation}>
+          <StyledEdit />
+          Edit
+        </EditButton>
+      </Container>
+    </OptionsWrapper>
+  </Header>
+);
 
 export default HeaderLayout;

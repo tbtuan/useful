@@ -3,6 +3,13 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 import prismTheme from "prism-react-renderer/themes/vsDark";
 import styled from "@emotion/styled";
 
+const Code = styled("pre")`
+  font-size: 14px;
+  margin: 0px;
+  padding: 16px;
+  overflow: auto;
+`;
+
 /** Removes the last token from a code example if it's empty. */
 function cleanTokens(tokens) {
   const tokensLength = tokens.length;
@@ -17,13 +24,6 @@ function cleanTokens(tokens) {
   }
   return tokens;
 }
-
-const Code = styled("pre")`
-  font-size: 14px;
-  margin: 0px;
-  padding: 16px;
-  overflow: auto;
-`;
 
 /* eslint-disable react/jsx-key */
 const CodeBlock = ({ children: exampleCode }) => {

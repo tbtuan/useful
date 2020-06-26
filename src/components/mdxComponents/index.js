@@ -68,11 +68,6 @@ const removeWhitespace = (input) => {
   return input.replace(/\s+/g, "").toLowerCase();
 };
 
-const RowContainer = styled("div")`
-  column-count: 3;
-  column-gap: 0.5rem;
-`;
-
 const ColumnContainer = styled("div")`
   display: inline-block;
   width: 100%;
@@ -131,7 +126,6 @@ export default {
     />
   ),
   p: (props) => {
-    //console.log(props.children._owner.memoizedProps.asdf);
     return <P {...props} />;
   },
   pre: (props) => <Pre {...props} />,

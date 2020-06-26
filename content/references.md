@@ -1,7 +1,7 @@
 ---
-title: 'References'
-metaTitle: 'References - /useful'
-metaDescription: 'Websites you would bookmark'
+title: "References"
+metaTitle: "References - /useful"
+metaDescription: "Websites you would bookmark"
 ---
 
 ## General
@@ -14,6 +14,7 @@ metaDescription: 'Websites you would bookmark'
 
 - [Public APIs](https://github.com/public-apis/public-apis#books)
 - [High Performance Browser Networking](https://hpbn.co/)
+- [web.dev](https://web.dev/)
 - [DevDocs](https://devdocs.io/)
 - [Can I use](https://caniuse.com/)
 - [w3.org](https://www.w3.org/TR/html52/)

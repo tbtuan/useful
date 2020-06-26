@@ -29,7 +29,6 @@ const darkTheme = {
     background: "#23263D",
     heading: "#dbddde",
     text: "#D2D2D4",
-    //text: "#dbddde",
     preFormattedText: "#1B1E2B",
     link: "#73A3F5",
     // Sidebar

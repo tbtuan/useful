@@ -4,7 +4,6 @@ import { MDXProvider } from "@mdx-js/react";
 import mdxComponents from "./mdxComponents";
 import Sidebar from "./sidebar";
 import Header from "./header";
-import TableOfContents from "./tableOfContents";
 
 import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
 
@@ -60,7 +59,7 @@ const ViewDiv = styled("div")`
 `;
 
 const Layout = ({ children, location, data }) => {
-  const { allMdx, mdx, site } = data;
+  const { mdx } = data;
 
   const [isDarkThemeActive, setDarkThemeActive] = useState(false);
 
@@ -87,7 +86,6 @@ const Layout = ({ children, location, data }) => {
         <Wrapper>
           <ViewDiv />
           <Header
-            title="/useful"
             docsLocation={
               "https://github.com/tbtuan/useful/tree/master/content/" +
               mdx.parent.relativePath

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import config from "../../../config";
 import Link from "../link";
 
 const StyledLi = styled("li")`
@@ -13,7 +12,6 @@ const StyledLi = styled("li")`
     align-items: center;
     position: relative;
     width: 100%;
-
 
     color: ${({ theme }) => theme.colors.text};
     font-size: 14px;
@@ -32,18 +30,14 @@ const StyledLi = styled("li")`
 
     svg {
       margin-left: auto;
-      vertical-align: middle; 
+      vertical-align: middle;
       display: inline-block;
-   } 
+    }
   }
 
   a:hover {
-    //background: ${({ theme }) => theme.colors.nav};
     background-color: ${({ theme }) => theme.colors.link};
-    //background-color: #1ed3c6;
     color: #fff !important;
-
-    /* background: #F8F8F8 */
   }
 `;
 

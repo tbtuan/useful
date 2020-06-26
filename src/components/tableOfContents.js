@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import config from "../../config";
 
 import styled from "@emotion/styled";
 
@@ -23,8 +22,6 @@ const Sidebar = styled("nav")`
 
   li {
     list-style-type: none;
-    //border-left: 1px solid #e6ecf1;
-    //border-left-color: rgb(230, 236, 241);
   }
 
   li a {
@@ -75,19 +72,18 @@ const StyledLi = styled("li")`
       `
     color: #1ED3C6;
     border-color: ${({ theme }) => theme.colors.seperator};
-    //border-color: rgb(230,236,241) !important;
     border-style: solid none solid solid;
     border-width: 1px 0px 1px 1px;
     background-color: #fff;
-  `} // external link icon
-  svg {
+  `}
+    svg {
       float: right;
       margin-right: 1rem;
     }
   }
 `;
 
-const ListItem = styled(({ active, level, ...props }) => {
+const ListItem = styled(({ ...props }) => {
   return (
     <StyledLi>
       <a href={props.to} {...props}>
@@ -101,7 +97,6 @@ const useActiveHash = () => {
   let [prev] = useState(null);
 
   useEffect(() => {
-    // [class*='Heading2']
     const links = document.querySelectorAll("main div h2");
 
     const handleObserver = (entries) => {
@@ -128,19 +123,20 @@ const useActiveHash = () => {
       observer.observe(item);
     });
   });
-  //return props.children;
 };
 
 const SidebarLayout = ({ location, allMdx }) => {
   useActiveHash();
 
   let finalNavItems;
+
   if (typeof window === "undefined") {
     return null;
   }
   if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
-    allMdx.edges.map((item, index) => {
+    allMdx.edges.map((item) => {
       let innerInnerItems;
+
       if (item !== undefined && location !== undefined) {
         if (
           item.node.fields.slug === location.pathname ||

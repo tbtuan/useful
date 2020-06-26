@@ -2,18 +2,13 @@ import React, { useState } from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
 import Link from "../components/link";
-import config from "../../config";
 
 import styled from "@emotion/styled";
 
 const StyledHeading = styled("h1")`
   font-size: 32px;
-  //font-size: 32px;
   line-height: 1.5;
   font-weight: 800;
-  //font-weight: 500;
-  //border-left: 2px solid ${({ theme }) => theme.colors.link};
-  //padding: 0 16px;
   flex: 1;
   margin: 0;
   padding: 0;
@@ -59,14 +54,6 @@ const CollectionTitleWrapper = styled("div")`
   margin-bottom: 32px;
 `;
 
-const TitleWrapper = styled("div")`
-  display: flex;
-  align-items: center;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgb(230, 236, 241);
-  margin-bottom: 32px;
-`;
-
 const Container = styled("div")`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 20rem));
@@ -91,8 +78,9 @@ const Divider = styled((props) => (
   }
 `;
 
-const TreeNode = styled(({ url, title, layer, items, ...rest }) => {
+const TreeNode = styled(({ url, title, layer, items }) => {
   const hasChildren = items.length !== 0;
+
   if (!layer) {
     layer = 0;
   }
@@ -158,10 +146,7 @@ const calculateTreeData = (edges, subpath) => {
 
       let { items: prevItems } = accu;
 
-      const slicedParts =
-        config.gatsby && config.gatsby.trailingSlash
-          ? parts.slice(1, -2)
-          : parts.slice(1, -1);
+      const slicedParts = parts.slice(1, -1);
 
       for (const part of slicedParts) {
         let tmp = prevItems && prevItems.find(({ label }) => label == part);
@@ -176,10 +161,7 @@ const calculateTreeData = (edges, subpath) => {
         }
         prevItems = tmp.items;
       }
-      const slicedLength =
-        config.gatsby && config.gatsby.trailingSlash
-          ? parts.length - 2
-          : parts.length - 1;
+      const slicedLength = parts.length - 1;
 
       const existingItem = prevItems.find(
         ({ label }) => label === parts[slicedLength]
@@ -202,16 +184,14 @@ const calculateTreeData = (edges, subpath) => {
   );
 
   const tmp = [""];
+
   tmp.reverse();
   const tmp2 = tmp.reduce((accu, slug) => {
     const parts = slug.split("/");
 
     let { items: prevItems } = accu;
 
-    const slicedParts =
-      config.gatsby && config.gatsby.trailingSlash
-        ? parts.slice(1, -2)
-        : parts.slice(1, -1);
+    const slicedParts = parts.slice(1, -1);
 
     for (const part of slicedParts) {
       let tmp = prevItems.find((item) => item && item.label == part);
@@ -236,10 +216,7 @@ const calculateTreeData = (edges, subpath) => {
         return 0;
       });
     });
-    const slicedLength =
-      config.gatsby && config.gatsby.trailingSlash
-        ? parts.length - 2
-        : parts.length - 1;
+    const slicedLength = parts.length - 1;
 
     const index = prevItems.findIndex(
       ({ label }) => label === parts[slicedLength]
@@ -250,6 +227,7 @@ const calculateTreeData = (edges, subpath) => {
     }
     return accu;
   }, tree);
+
   return tmp2.items[0];
 };
 
@@ -257,6 +235,7 @@ const Tree = ({ edges, subpath }) => {
   let [treeData] = useState(() => {
     return calculateTreeData(edges, subpath);
   });
+
   return <TreeNode {...treeData} />;
 };
 
