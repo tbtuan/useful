@@ -10,17 +10,22 @@ import Search from "./search";
 
 const Header = styled("header")`
   width: 100%;
-  height: 6rem;
+  height: 5rem;
   padding-top: 2rem;
   position: fixed;
-  left: 0;
-  top: 0;
+
   display: flex;
   z-index: 1;
+  background-color: ${({ theme }) => theme.colors.background};
+
+  @media only screen and (max-width: 576px) {
+    height: 3rem;
+    padding-top: 1rem;
+  }
 `;
 
 const TitleWrapper = styled("div")`
-  padding: 5rem;
+  padding: 4rem;
   flex: 0 0 18em;
   background-color: ${({ theme }) => theme.colors.sidebar};
   text-align: center;
@@ -28,10 +33,13 @@ const TitleWrapper = styled("div")`
 
   @media only screen and (max-width: 1023px) {
     flex: 0 0 4em;
+    padding: 3rem 0;
+  }
+
+  @media only screen and (max-width: 576px) {
+    padding: 2rem;
   }
 `;
-
-const SearchWrapper = styled("div")``;
 
 const OptionsWrapper = styled("div")`
   background-color: ${({ theme }) => theme.colors.background};

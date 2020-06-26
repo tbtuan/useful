@@ -10,7 +10,7 @@ const Footer = styled("footer")`
 
   @media only screen and (max-width: 1023px) {
     padding: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
   }
 `;
 
