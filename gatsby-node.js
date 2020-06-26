@@ -45,13 +45,10 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog posts pages.
         result.data.allMdx.edges.forEach(({ node }) => {
-          let tocConcat = "";
+          let tocConcat = [];
           if (node.tableOfContents.items) {
-            tocConcat = node.tableOfContents.items
-              .map((item) => item.title)
-              .join(" ");
+            tocConcat = node.tableOfContents.items.map((item) => item.title);
           }
-
           searchIndex.push({
             id: node.fields.id,
             title: node.fields.title,

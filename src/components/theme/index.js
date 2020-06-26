@@ -16,7 +16,7 @@ const lightTheme = {
     // Search
     textbox: "#eae4dd",
     searchShadow: "rgba(43, 44, 44, 0.5)",
-    searchHover: "rgba(247, 119, 55, 0.08)",
+    searchHover: "#fef1e8",
     tableHeader: "#CFCFCF",
     trSecondth: "#f8f8f8",
     // Footer

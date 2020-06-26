@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styled from "@emotion/styled";
 import { Search } from "emotion-icons/fa-solid";
 import Fuse from "fuse.js";
@@ -7,8 +7,7 @@ import GatsbyLink from "gatsby-link";
 
 const StyledSearch = styled(Search)`
   position: relative;
-  bottom: 1.7rem;
-  left: 0.5rem;
+  left: 0.25rem;
   width: 16px;
   height: 16px;
   color: ${({ theme }) => theme.colors.text};
@@ -25,6 +24,7 @@ const SearchBox = styled("input")`
   color: ${({ theme }) => theme.colors.text};
   width: 100%;
   padding-left: 2rem;
+  margin-left: -1rem;
 
   :focus {
     border-color: ${({ theme }) => theme.colors.link};
@@ -46,27 +46,35 @@ const SearchBox = styled("input")`
 `;
 
 const SearchContainer = styled("div")`
-  margin-top: 6px;
+  //margin-top: 6px;
+  background-color: ${({ theme }) => theme.colors.background};
+  padding-left: 4rem;
+  flex: 0 0 20em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-content: flex-start;
+
+  @media only screen and (max-width: 576px) {
+    flex: none;
+    padding-left: 2rem;
+    width: 40%;
+  }
 `;
 
-const HitsWrapper = styled.div`
+const HitsWrapper = styled("div")`
   display: ${(props) => (props.show ? `grid` : `none`)};
-  // grid-template-columns: 1fr 1fr;
-  max-height: 80vh;
+  position: absolute;
   z-index: 2;
-  right: 0;
   top: calc(100% + 0.5em);
   width: 40vw;
-  max-width: 30em;
+  //max-width: 30em;
   filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.searchShadow});
   padding: 1rem;
   background: white;
 
   border-radius: 4px;
-  > * + * {
-    padding-top: 1rem !important;
-    border-top: 1px solid ${({ theme }) => theme.darkGray};
-  }
   * {
     margin-top: 0;
     margin-bottom: 0;
@@ -75,7 +83,7 @@ const HitsWrapper = styled.div`
 `;
 
 const Hits = styled("li")`
-  font-weight: 700;
+  //font-weight: 700;
 `;
 
 const SearchLink = styled(GatsbyLink)`
@@ -87,6 +95,10 @@ const SearchLink = styled(GatsbyLink)`
 
   background-color: ${({ selected, theme }) =>
     selected ? theme.colors.searchHover : `transparent`};
+`;
+
+const SearchTitle = styled("span")`
+  font-weight: 700;
 `;
 
 function useFocus(ref, handler) {
@@ -126,6 +138,8 @@ function useDatafetch(query, setResults, [itemIndex, setItemIndex]) {
     if (window.__FUSE__) {
       const fuse = new Fuse(window.__FUSE__, {
         findAllMatches: true,
+        includeMatches: true,
+        includeScore: true,
         keys: ["id", "title", "url", "toc"],
       });
       const results = fuse.search(query).slice(0, 5);
@@ -196,7 +210,10 @@ const SearchLayout = () => {
         onMouseOver={() => setItemIndex(index)}
         to={`${item.url}`}
       >
-        <li>{`${item.title} (${item.url})`}</li>
+        <li>
+          <SearchTitle>{item.title}</SearchTitle>
+          <span> ({item.url})</span>
+        </li>
         <Hits>{item.title}</Hits>
       </SearchLink>
     );
@@ -204,6 +221,7 @@ const SearchLayout = () => {
 
   return (
     <SearchContainer ref={ref}>
+      <StyledSearch />
       <SearchBox
         id="searchbox"
         type="Search"
@@ -215,7 +233,6 @@ const SearchLayout = () => {
         placeholder="Search..."
         autoComplete="false"
       />
-      <StyledSearch />
       <HitsWrapper show={results.length > 0 && focus}>
         {searchResults}
       </HitsWrapper>

@@ -11,6 +11,7 @@ import Search from "./search";
 const Header = styled("header")`
   width: 100%;
   height: 6rem;
+  padding-top: 2rem;
   position: fixed;
   left: 0;
   top: 0;
@@ -19,32 +20,21 @@ const Header = styled("header")`
 `;
 
 const TitleWrapper = styled("div")`
+  padding: 5rem;
   flex: 0 0 18em;
   background-color: ${({ theme }) => theme.colors.sidebar};
   text-align: center;
-  padding-top: 3rem;
+  align-self: center;
 
   @media only screen and (max-width: 1023px) {
     flex: 0 0 4em;
   }
 `;
 
-const SearchWrapper = styled("div")`
-  background-color: ${({ theme }) => theme.colors.background};
-  padding-top: 3rem;
-  padding-left: 4rem;
-  flex: 0 0 20em;
-
-  @media only screen and (max-width: 576px) {
-    flex: none;
-    padding-left: 2rem;
-    width: 40%;
-  }
-`;
+const SearchWrapper = styled("div")``;
 
 const OptionsWrapper = styled("div")`
   background-color: ${({ theme }) => theme.colors.background};
-  padding-top: 3rem;
   width: 100%;
   display: flex;
 `;
@@ -129,9 +119,8 @@ const HeaderLayout = ({
           <TitleSpan2>/</TitleSpan2>
         </Title>
       </TitleWrapper>
-      <SearchWrapper>
-        <Search />
-      </SearchWrapper>
+      <Search />
+      {/* <SearchWrapper></SearchWrapper> */}
       <OptionsWrapper>
         <Container>
           <IconContainer>
