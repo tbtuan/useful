@@ -30,15 +30,20 @@ const Input = styled("input")`
   height: 0;
 `;
 
-export const ThemeSwitch = ({ isDarkThemeActive, toggleActiveTheme }) => (
-  <Switch id="switch">
-    <Input
-      id="slider"
-      type="checkbox"
-      onChange={toggleActiveTheme}
-      checked={isDarkThemeActive ? false : true}
-    />
-    <Slider />
-    <StyledAdjust />
-  </Switch>
+export const ThemeSwitch = React.memo(
+  ({ isDarkThemeActive, toggleActiveTheme }) => {
+    return (
+      <Switch id="switch">
+        <Input
+          id="slider"
+          type="checkbox"
+          onChange={toggleActiveTheme}
+          checked={isDarkThemeActive ? false : true}
+        />
+        <Slider />
+        <StyledAdjust />
+      </Switch>
+    );
+  },
+  (prev, next) => prev.isDarkThemeActive === next.isDarkThemeActive
 );

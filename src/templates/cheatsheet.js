@@ -63,29 +63,19 @@ const ContentWrapper = styled("div")`
   }
 `;
 
-const CheatsheetTemplate = ({ data, location }) => {
-  if (typeof window === "undefined") {
-    return null;
-  }
-  if (!data || !location) {
-    return null;
-  }
-  const { mdx, allMdx } = data;
-
-  return (
-    <div>
-      <TitleWrapper>
-        <StyledHeading>{mdx.fields.title}</StyledHeading>
-        <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
-      </TitleWrapper>
-      <ContentWrapper>
-        <TableOfContents location={location} allMdx={allMdx} />
-        <StyledMainWrapper>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </StyledMainWrapper>
-      </ContentWrapper>
-    </div>
-  );
-};
+const CheatsheetTemplate = ({ mdx }) => (
+  <div>
+    <TitleWrapper>
+      <StyledHeading>{mdx.fields.title}</StyledHeading>
+      <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
+    </TitleWrapper>
+    <ContentWrapper>
+      <TableOfContents tableOfContents={mdx.tableOfContents} />
+      <StyledMainWrapper>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
+      </StyledMainWrapper>
+    </ContentWrapper>
+  </div>
+);
 
 export default CheatsheetTemplate;

@@ -16,7 +16,6 @@ const StyledLi = styled("li")`
     color: ${({ theme }) => theme.colors.text};
     font-size: 14px;
     font-weight: 500;
-    line-height: 1.5;
     height: 3.5rem;
     padding-right: 4rem;
     padding-left: 4rem;

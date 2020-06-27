@@ -17,7 +17,7 @@ const StyledHeading = styled("h1")`
 
 const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.text} !important;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 `;
 
 const StyledMainWrapper = styled("div")`
@@ -56,8 +56,8 @@ const CollectionTitleWrapper = styled("div")`
 
 const Container = styled("div")`
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 20rem));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(0, 20rem));
+  grid-gap: 1rem;
 `;
 
 const Divider = styled((props) => (

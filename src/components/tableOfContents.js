@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import Link from "./link";
+
 import styled from "@emotion/styled";
 
 const Sidebar = styled("nav")`
@@ -25,9 +27,8 @@ const Sidebar = styled("nav")`
   }
 
   li a {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
-    padding: 7px 24px 7px 16px;
     padding-left: 0;
 
     color: ${({ theme }) => theme.colors.text};
@@ -40,7 +41,6 @@ const TOCTitle = styled("li")`
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  padding: 7px 24px 7px 16px;
   padding-left: 0;
   margin: 0;
 
@@ -55,7 +55,7 @@ const StyledLi = styled("li")`
     color: #5c6975;
     text-decoration: none;
     font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
-    padding: 0.45rem 0 0.45rem ${(props) => 2 + (props.level || 0) * 1}rem;
+    padding-top: 1rem;
     display: block;
     position: relative;
 
@@ -76,19 +76,15 @@ const StyledLi = styled("li")`
     border-width: 1px 0px 1px 1px;
     background-color: #fff;
   `}
-    svg {
-      float: right;
-      margin-right: 1rem;
-    }
   }
 `;
 
 const ListItem = styled(({ ...props }) => {
   return (
     <StyledLi>
-      <a href={props.to} {...props}>
+      <Link href={props.to} {...props}>
         {props.children}
-      </a>
+      </Link>
     </StyledLi>
   );
 })``;
@@ -125,56 +121,26 @@ const useActiveHash = () => {
   });
 };
 
-const SidebarLayout = ({ location, allMdx }) => {
+const TableOfContentsLayout = ({ tableOfContents }) => {
   useActiveHash();
 
-  let finalNavItems;
-
-  if (typeof window === "undefined") {
+  if (typeof window === "undefined" || !tableOfContents) {
     return null;
   }
-  if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
-    allMdx.edges.map((item) => {
-      let innerInnerItems;
 
-      if (item !== undefined && location !== undefined) {
-        if (
-          item.node.fields.slug === location.pathname ||
-          // trailing slash
-          item.node.fields.slug + "/" === location.pathname
-        ) {
-          if (item.node.tableOfContents.items) {
-            innerInnerItems = item.node.tableOfContents.items.map(
-              (innerItem, index) => {
-                const itemId = innerItem.title
-                  ? innerItem.title.replace(/\s+/g, "").toLowerCase()
-                  : "#";
-
-                return (
-                  <ListItem key={index} to={`#${itemId}`} level={1}>
-                    {innerItem.title}
-                  </ListItem>
-                );
-              }
-            );
-          }
-        }
-      }
-      if (innerInnerItems) {
-        finalNavItems = innerInnerItems;
-      }
-    });
-  }
-  if (finalNavItems && finalNavItems.length) {
+  const toc = tableOfContents.items.map((item, index) => {
     return (
-      <Sidebar>
-        <TOCTitle>On this page</TOCTitle>
-        {finalNavItems}
-      </Sidebar>
+      <ListItem key={index} to={item.url}>
+        {item.title}
+      </ListItem>
     );
-  } else {
-    return null;
-  }
+  });
+  return (
+    <Sidebar>
+      <TOCTitle>On this page</TOCTitle>
+      {toc}
+    </Sidebar>
+  );
 };
 
-export default SidebarLayout;
+export default TableOfContentsLayout;

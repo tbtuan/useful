@@ -16,7 +16,7 @@
     "emotion-icons": "^1.0.0",
     "emotion-theming": "^10.0.27",
     "fuse.js": "^6.2.1",
-    "gatsby": "^2.23.3",
+    "gatsby": "^2.23.11",
     "gatsby-link": "^2.4.6",
     "gatsby-plugin-catch-links": "^2.3.5",
     "gatsby-plugin-csp": "^1.1.3",

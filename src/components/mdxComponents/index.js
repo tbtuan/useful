@@ -64,8 +64,11 @@ const P = styled("p")`
   line-height: 1.625;
 `;
 
-const removeWhitespace = (input) => {
-  return input.replace(/\s+/g, "").toLowerCase();
+const tocId = (input) => {
+  return input
+    .replace(/[\s+]/g, "-")
+    .replace("/", "")
+    .toLowerCase();
 };
 
 const ColumnContainer = styled("div")`
@@ -83,48 +86,23 @@ const ColumnContainer = styled("div")`
 `;
 
 export default {
-  h1: (props) => (
-    <Heading1
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-    />
-  ),
+  h1: (props) => <Heading1 {...props} />,
   h2: (props) => {
     const heading = props.children;
 
     return (
-      <Heading2 id={removeWhitespace(heading)}>
-        <a href={`#${removeWhitespace(heading)}`}>
+      <Heading2 id={tocId(heading)}>
+        <a href={`#${tocId(heading)}`}>
           <StyledLink />
         </a>
         {heading}
       </Heading2>
     );
   },
-  h3: (props) => (
-    <Heading3
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-    />
-  ),
-  h4: (props) => (
-    <Heading4
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-    />
-  ),
-  h5: (props) => (
-    <Heading5
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-    />
-  ),
-  h6: (props) => (
-    <Heading6
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-    />
-  ),
+  h3: (props) => <Heading3 {...props} />,
+  h4: (props) => <Heading4 {...props} />,
+  h5: (props) => <Heading5 {...props} />,
+  h6: (props) => <Heading6 {...props} />,
   p: (props) => {
     return <P {...props} />;
   },

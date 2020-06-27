@@ -19,29 +19,6 @@ const StyledMainWrapper = styled("div")`
   color: ${(props) => props.theme.colors.text};
   max-width: calc(100% - 14rem);
 
-  ul,
-  ol {
-    li {
-      font-size: 16px;
-      line-height: 1.8;
-      font-weight: 400;
-    }
-  }
-
-  a {
-    transition: color 0.15s;
-    color: ${(props) => props.theme.colors.link};
-  }
-
-  code {
-    border: 1px solid #ede7f3;
-    border-radius: 4px;
-    padding: 2px 6px;
-    font-size: 0.9375em;
-
-    background: ${(props) => props.theme.colors.background};
-  }
-
   @media only screen and (max-width: 1023px) {
     max-width: 100%;
   }
@@ -64,26 +41,19 @@ const ContentWrapper = styled("div")`
   }
 `;
 
-const DocsTemplate = ({ data, location }) => {
-  if (!data) {
-    return null;
-  }
-  const { mdx, allMdx } = data;
-
-  return (
-    <div>
-      <TitleWrapper>
-        <StyledHeading>{mdx.fields.title}</StyledHeading>
-        <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
-      </TitleWrapper>
-      <ContentWrapper>
-        <TableOfContents location={location} allMdx={allMdx} />
-        <StyledMainWrapper>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </StyledMainWrapper>
-      </ContentWrapper>
-    </div>
-  );
-};
+const DocsTemplate = ({ mdx }) => (
+  <div>
+    <TitleWrapper>
+      <StyledHeading>{mdx.fields.title}</StyledHeading>
+      <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
+    </TitleWrapper>
+    <ContentWrapper>
+      <TableOfContents tableOfContents={mdx.tableOfContents} />
+      <StyledMainWrapper>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
+      </StyledMainWrapper>
+    </ContentWrapper>
+  </div>
+);
 
 export default DocsTemplate;

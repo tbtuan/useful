@@ -27,6 +27,8 @@ const Heading2 = styled("h2")`
     margin-left: calc(-20px - 0.5rem);
     padding-right: calc(0.5rem);
     opacity: 0;
+    text-decoration: none;
+    color: ${(props) => props.theme.colors.link};
   }
 `;
 
