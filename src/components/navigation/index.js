@@ -3,11 +3,9 @@ import styled from "@emotion/styled";
 
 import NavLink from "./navLink";
 import {
-  Paperclip,
   Code,
   Cogs,
   Terminal,
-  Book,
   Keyboard,
   Bookmark,
 } from "emotion-icons/fa-solid";
@@ -51,10 +49,7 @@ const NavigationLayout = ({ location }) => {
         <NavLink text="Languages" link="/lang" location={location}>
           <Icon tag={Code} />
         </NavLink>
-        <NavLink text="Learning" link="/learning" location={location}>
-          <Icon tag={Book} />
-        </NavLink>
-        <NavLink text="References" link="/references" location={location}>
+        <NavLink text="Bookmarks" link="/bookmarks" location={location}>
           <Icon tag={Bookmark} />
         </NavLink>
         <NavLink text="Setups" link="/setups" location={location}>
@@ -62,9 +57,6 @@ const NavigationLayout = ({ location }) => {
         </NavLink>
         <NavLink text="Shortcuts" link="/shortcuts" location={location}>
           <Icon tag={Keyboard} />
-        </NavLink>
-        <NavLink text="Tools" link="/tools" location={location}>
-          <Icon tag={Paperclip} />
         </NavLink>
       </Ul>
     </Nav>
