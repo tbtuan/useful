@@ -12,19 +12,52 @@ metaDescription: "Websites you would bookmark"
 
 ## Web Development
 
-- [Public APIs](https://github.com/public-apis/public-apis#books)
-- [High Performance Browser Networking](https://hpbn.co/)
-- [web.dev](https://web.dev/)
-- [DevDocs](https://devdocs.io/)
+<cc>
+
+<div>
+
+### General
+
 - [Can I use](https://caniuse.com/)
+- [Public APIs](https://github.com/public-apis/public-apis#books)
+
+</div>
+
+<div>
+
+### Best pratices
+
+- [High Performance Browser Networking](https://hpbn.co/)
+- [The Twelve-Factor App](https://12factor.net/)
+- [web.dev](https://web.dev/)
+- [Serviceworke.rs](https://serviceworke.rs/)
+
+</div>
+
+<div>
+
+### Documentation/Reference
+
+- [DevDocs](https://devdocs.io/)
 - [w3.org](https://www.w3.org/TR/html52/)
 - [MDN - HTTP](https://developer.mozilla.org/docs/Web/HTTP)
 - [MDN - JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 - [MDN - CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 - [w3schools - JS Reference](https://www.w3schools.com/jsref/)
 - [w3schools - CSS Reference](https://www.w3schools.com/cssref/)
+
+</div>
+
+<div>
+
+### Misc
+
 - [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
 - [npm](https://www.npmjs.com/)
+
+</div>
+
+</cc>
 
 ## .NET
 

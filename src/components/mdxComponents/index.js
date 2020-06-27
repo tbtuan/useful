@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import Masonry from "./masonry";
+import MasonryContainer from "./custom/masonry";
 
 import CodeBlock from "./code";
 import {
@@ -37,7 +37,7 @@ const Pre = styled("pre")`
 
 const Ul = styled("ul")`
   padding: 0;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
 `;
 
 const Li = styled("li")`
@@ -72,7 +72,8 @@ const tocId = (input) => {
     .toLowerCase();
 };
 
-const ColumnContainer = styled("div")`
+// <c></c> Merges ### Heading3 with the table below
+const TableContainer = styled("div")`
   display: inline-block;
   width: 100%;
 
@@ -84,6 +85,17 @@ const ColumnContainer = styled("div")`
     margin: 0;
     padding: 6px 13px;
   }
+
+  thead {
+    display: none;
+  }
+`;
+
+const ColumnContainer = styled("div")`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 20rem));
+  grid-gap: 1rem;
+  margin-bottom: 1.5rem;
 `;
 
 export default {
@@ -115,11 +127,13 @@ export default {
   li: (props) => <Li {...props} />,
   kbd: (props) => <Kbd {...props} />,
 
-  thead: () => null,
+  //thead: (props) => <Table {...props} />,
 
-  // Row
-  r: (props) => <Masonry {...props} />,
-  // Column
-  c: (props) => <ColumnContainer {...props} />,
+  // MasonryContainer
+  r: (props) => <MasonryContainer {...props} />,
+  // TableContainer
+  tc: (props) => <TableContainer {...props} />,
+  // ColumnContainer
+  cc: (props) => <ColumnContainer {...props} />,
   // TODO add `blockquote`
 };

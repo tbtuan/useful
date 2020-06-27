@@ -1,7 +1,7 @@
 ---
-title: 'Tools'
-metaTitle: 'Tools - /useful'
-metaDescription: 'Tools to use'
+title: "Tools"
+metaTitle: "Tools - /useful"
+metaDescription: "Tools to use"
 ---
 
 ## File sharing
@@ -33,6 +33,7 @@ metaDescription: 'Tools to use'
 ## Type
 
 - [Google Fonts](https://fonts.google.com/)
+- [Fontjoy](https://fontjoy.com/)
 
 ## Color
 
