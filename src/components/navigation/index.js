@@ -13,7 +13,6 @@ import {
 } from "emotion-icons/fa-solid";
 
 const Nav = styled("nav")`
-  flex: 1 1 0%;
   width: 100%;
   padding-top: 3rem;
   text-align: justify;
@@ -23,6 +22,10 @@ const Nav = styled("nav")`
     width: auto;
     margin: 0;
   }
+`;
+
+const Ul = styled("ul")`
+  margin-left: 0;
 `;
 
 const Icon = styled(({ tag, children, ...props }) =>
@@ -41,27 +44,29 @@ const Icon = styled(({ tag, children, ...props }) =>
 const NavigationLayout = ({ location }) => {
   return (
     <Nav>
-      <NavLink text="Commands" link="/command" location={location}>
-        <Icon tag={Terminal} />
-      </NavLink>
-      <NavLink text="Languages" link="/lang" location={location}>
-        <Icon tag={Code} />
-      </NavLink>
-      <NavLink text="Learning" link="/learning" location={location}>
-        <Icon tag={Book} />
-      </NavLink>
-      <NavLink text="References" link="/references" location={location}>
-        <Icon tag={Bookmark} />
-      </NavLink>
-      <NavLink text="Setups" link="/setups" location={location}>
-        <Icon tag={Cogs} />
-      </NavLink>
-      <NavLink text="Shortcuts" link="/shortcuts" location={location}>
-        <Icon tag={Keyboard} />
-      </NavLink>
-      <NavLink text="Tools" link="/tools" location={location}>
-        <Icon tag={Paperclip} />
-      </NavLink>
+      <Ul>
+        <NavLink text="Commands" link="/command" location={location}>
+          <Icon tag={Terminal} />
+        </NavLink>
+        <NavLink text="Languages" link="/lang" location={location}>
+          <Icon tag={Code} />
+        </NavLink>
+        <NavLink text="Learning" link="/learning" location={location}>
+          <Icon tag={Book} />
+        </NavLink>
+        <NavLink text="References" link="/references" location={location}>
+          <Icon tag={Bookmark} />
+        </NavLink>
+        <NavLink text="Setups" link="/setups" location={location}>
+          <Icon tag={Cogs} />
+        </NavLink>
+        <NavLink text="Shortcuts" link="/shortcuts" location={location}>
+          <Icon tag={Keyboard} />
+        </NavLink>
+        <NavLink text="Tools" link="/tools" location={location}>
+          <Icon tag={Paperclip} />
+        </NavLink>
+      </Ul>
     </Nav>
   );
 };

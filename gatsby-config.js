@@ -1,4 +1,3 @@
-require("dotenv").config();
 const plugins = [
   {
     resolve: `gatsby-plugin-csp`,
@@ -9,17 +8,11 @@ const plugins = [
         "script-src": `'self' 'unsafe-inline' 'unsafe-eval'`,
         "style-src": `'self' 'unsafe-inline'`,
         "style-src": `'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com`,
+        "prefetch-src": `'self' data: fonts.googleapis.com fonts.gstatic.com`,
         "font-src": `'self' data: fonts.gstatic.com`,
       },
     },
   },
-  // {
-  //   resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
-  //   options: {
-  //     analyzerMode: `server`,
-  //     analyzerPort: `8888`,
-  //   },
-  // },
   "gatsby-disable-404",
   "gatsby-plugin-react-helmet",
   {
@@ -71,8 +64,8 @@ const plugins = [
       name: "/useful",
       short_name: "/useful",
       start_url: "/",
-      background_color: "#F77723",
-      theme_color: "#F77723",
+      background_color: "#FFFFFF",
+      theme_color: "#FFFFFF",
       display: "standalone",
       crossOrigin: "use-credentials",
       icon: `images/icon-512.png`,

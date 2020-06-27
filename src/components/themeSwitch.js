@@ -3,6 +3,11 @@ import styled from "@emotion/styled";
 
 import Adjust from "emotion-icons/fa-solid/Adjust";
 
+const Switch = styled("label")`
+  display: flex;
+  margin-right: auto;
+`;
+
 const StyledAdjust = styled(Adjust)`
   cursor: pointer;
   width: 1.25rem;
@@ -22,7 +27,7 @@ const Input = styled("input")`
 export const ThemeSwitch = React.memo(
   ({ isDarkThemeActive, toggleActiveTheme }) => {
     return (
-      <label id="switch">
+      <Switch id="switch">
         <Input
           id="slider"
           type="checkbox"
@@ -30,7 +35,7 @@ export const ThemeSwitch = React.memo(
           checked={isDarkThemeActive ? false : true}
         />
         <StyledAdjust />
-      </label>
+      </Switch>
     );
   },
   (prev, next) => prev.isDarkThemeActive === next.isDarkThemeActive

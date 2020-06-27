@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Link from "../link";
 
-const StyledLi = styled("li")`
+const ListItem = styled("li")`
   list-style: none;
   padding: 0;
 
@@ -17,11 +17,9 @@ const StyledLi = styled("li")`
     font-size: 14px;
     font-weight: 500;
     height: 3.5rem;
+
     padding-right: 4rem;
     padding-left: 4rem;
-    border-style: solid none solid solid;
-    border-width: 1px 0px 1px 1px;
-    border-color: transparent currentcolor transparent transparent;
 
     @media only screen and (max-width: 1023px) {
       padding: 0;
@@ -67,7 +65,7 @@ const NavlinkLayout = ({ text, link, children, location }) => {
     (location.pathname === link || location.pathname === link + "/");
 
   return (
-    <StyledLi>
+    <ListItem>
       {isActive(link) ? (
         <ActiveLink to={link}>
           <TextWrapper>{text}</TextWrapper>
@@ -79,7 +77,7 @@ const NavlinkLayout = ({ text, link, children, location }) => {
           <IconWrapper>{children}</IconWrapper>
         </Link>
       )}
-    </StyledLi>
+    </ListItem>
   );
 };
 

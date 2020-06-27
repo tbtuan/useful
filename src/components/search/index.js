@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import styled from "@emotion/styled";
-import { Search } from "emotion-icons/fa-solid";
+import Search from "emotion-icons/fa-solid/Search";
 import Fuse from "fuse.js";
-import GatsbyLink from "gatsby-link";
+import Link from "../link";
 
 const StyledSearch = styled(Search)`
   position: relative;
@@ -75,13 +75,12 @@ const HitsWrapper = styled("div")`
   * {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 0;
   }
 `;
 
 const Hits = styled("li")``;
 
-const SearchLink = styled(GatsbyLink)`
+const SearchLink = styled(Link)`
   color: ${({ theme }) => theme.colors.text};
   list-style: none;
   text-decoration: none;

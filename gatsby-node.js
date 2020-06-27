@@ -1,7 +1,5 @@
 const path = require("path");
 
-const startCase = require("lodash.startcase");
-
 const fs = require("fs");
 
 exports.createPages = ({ graphql, actions }) => {
@@ -130,7 +128,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       name: "title",
       node,
-      value: node.frontmatter.title || startCase(parent.name),
+      value: node.frontmatter.title,
     });
   }
 };

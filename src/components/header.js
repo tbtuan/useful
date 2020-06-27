@@ -95,16 +95,10 @@ const StyledEdit = styled(Edit)`
   color: ${({ theme }) => theme.colors.background};
 `;
 
-const IconContainer = styled("span")`
-  height: 20px;
-  padding-right: 1rem;
-`;
-
 const Container = styled("div")`
   margin-left: auto;
   width: 14rem;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   padding-right: 4rem;
 
@@ -128,15 +122,11 @@ const HeaderLayout = ({
     <Search />
     <OptionsWrapper>
       <Container>
-        <IconContainer>
-          <StyledThList />
-        </IconContainer>
-        <IconContainer>
-          <ThemeSwitch
-            isDarkThemeActive={isDarkThemeActive}
-            toggleActiveTheme={toggleActiveTheme}
-          />
-        </IconContainer>
+        <StyledThList />
+        <ThemeSwitch
+          isDarkThemeActive={isDarkThemeActive}
+          toggleActiveTheme={toggleActiveTheme}
+        />
         <EditButton to={docsLocation}>
           <StyledEdit />
           Edit
