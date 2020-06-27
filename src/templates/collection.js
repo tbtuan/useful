@@ -2,56 +2,20 @@ import React, { useState } from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
 import Link from "../components/link";
-
 import styled from "@emotion/styled";
-
-const StyledHeading = styled("h1")`
-  font-size: 32px;
-  line-height: 1.5;
-  font-weight: 800;
-  flex: 1;
-  margin: 0;
-  padding: 0;
-  color: ${(props) => props.theme.colors.heading};
-`;
+import {
+  StyledHeading,
+  TitleWrapper,
+  StyledMainWrapper,
+} from "../components/templates";
 
 const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.text} !important;
   font-size: 0.85rem;
 `;
 
-const StyledMainWrapper = styled("div")`
-  color: ${(props) => props.theme.colors.text};
-
-  ul,
-  ol {
-    li {
-      font-size: 16px;
-      line-height: 1.8;
-      font-weight: 400;
-    }
-  }
-
-  a {
-    transition: color 0.15s;
-    color: ${(props) => props.theme.colors.link};
-  }
-
-  code {
-    border: 1px solid #ede7f3;
-    border-radius: 4px;
-    padding: 2px 6px;
-    font-size: 0.9375em;
-
-    background: ${(props) => props.theme.colors.background};
-  }
-`;
-
-const CollectionTitleWrapper = styled("div")`
-  display: flex;
-  align-items: center;
-  padding-bottom: 4rem;
-  margin-bottom: 32px;
+const StyledLinkTitle = styled(Link)`
+  color: ${(props) => props.theme.colors.link} !important;
 `;
 
 const Container = styled("div")`
@@ -99,7 +63,7 @@ const TreeNode = styled(({ url, title, layer, items }) => {
   } else if (layer == 1) {
     return (
       <div>
-        {title && <Link to={url}>{title}</Link>}
+        {title && <StyledLinkTitle to={url}>{title}</StyledLinkTitle>}
         <Divider />
         {hasChildren ? (
           <div>
@@ -245,16 +209,24 @@ const CollectionTemplate = ({ data, location }) => {
   }
   const { allMdx, mdx } = data;
 
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  // console.log(
+  //   allMdx.edges.filter(({ node }) =>
+  //     node.fields.slug.startsWith(location.pathname)
+  //   )
+  // );
+
   return (
     <div>
-      <CollectionTitleWrapper>
+      <TitleWrapper>
         <StyledHeading>{mdx.fields.title}</StyledHeading>
-      </CollectionTitleWrapper>
+      </TitleWrapper>
       <StyledMainWrapper>
         <MDXRenderer>{mdx.body}</MDXRenderer>
-        {typeof window === "undefined" ? null : (
-          <Tree edges={allMdx.edges} subpath={location.pathname} />
-        )}
+        <Tree edges={allMdx.edges} subpath={location.pathname} />
       </StyledMainWrapper>
     </div>
   );

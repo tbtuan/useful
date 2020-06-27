@@ -67,7 +67,7 @@ const P = styled("p")`
 const tocId = (input) => {
   return input
     .replace(/[\s+]/g, "-")
-    .replace("/", "")
+    .replace(/\/|./g, "")
     .toLowerCase();
 };
 

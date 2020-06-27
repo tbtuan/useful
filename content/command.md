@@ -1,7 +1,7 @@
 ---
-title: 'Commands'
-metaTitle: 'Commands - /useful'
-metaDescription: 'Commands for CLIs'
+title: "Commands"
+metaTitle: "Commands - /useful"
+metaDescription: "Commands for CLIs"
 ---
 
 ## Git
@@ -37,8 +37,6 @@ metaDescription: 'Commands for CLIs'
 
 - [OpenSSH Manual](https://www.openssh.com/manual.html)
 
-| Description                                                                    | Command                         |
-| ------------------------------------------------------------------------------ | ------------------------------- |
-| Remote ssh connection                                                          | `ssh [user]@[hostname]`         |
-| Install "package" and save for development purpose (used for test suites etc.) | `install [PACKAGE] --save-dev"` |
-| Clean cache                                                                    | `npm cache clean --force`       |
+| Description           | Command                 |
+| --------------------- | ----------------------- |
+| Remote ssh connection | `ssh [user]@[hostname]` |

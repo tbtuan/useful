@@ -4,7 +4,7 @@ import Link from "./link";
 
 import styled from "@emotion/styled";
 
-const Sidebar = styled("nav")`
+const TableOfContents = styled("nav")`
   max-width: 18rem;
   position: fixed;
   top: calc(8rem);
@@ -136,10 +136,10 @@ const TableOfContentsLayout = ({ tableOfContents }) => {
     );
   });
   return (
-    <Sidebar>
+    <TableOfContents>
       <TOCTitle>On this page</TOCTitle>
       {toc}
-    </Sidebar>
+    </TableOfContents>
   );
 };
 
