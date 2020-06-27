@@ -152,6 +152,10 @@ function useDatafetch(query, setResults, [itemIndex, setItemIndex]) {
 }
 
 const SearchLayout = () => {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
   const ref = useRef(null);
 
   const [results, setResults] = useState([]);

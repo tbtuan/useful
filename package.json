@@ -58,7 +58,6 @@
     "eslint-plugin-react": "^7.20.0",
     "gatsby-disable-404": "^0.2.1",
     "gatsby-plugin-remove-trailing-slashes": "^2.3.5",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
     "prettier": "^1.19.1",
     "prism-react-renderer": "^1.1.0"
   }

@@ -59,6 +59,9 @@ const ViewDiv = styled("div")`
 `;
 
 const Layout = ({ children, location, data }) => {
+  if (typeof window === "undefined") {
+    return null;
+  }
   const { mdx } = data;
 
   const [isDarkThemeActive, setDarkThemeActive] = useState(false);

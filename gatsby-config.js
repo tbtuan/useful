@@ -13,13 +13,13 @@ const plugins = [
       },
     },
   },
-  {
-    resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
-    options: {
-      analyzerMode: `server`,
-      analyzerPort: `8888`,
-    },
-  },
+  // {
+  //   resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+  //   options: {
+  //     analyzerMode: `server`,
+  //     analyzerPort: `8888`,
+  //   },
+  // },
   "gatsby-disable-404",
   "gatsby-plugin-react-helmet",
   {
