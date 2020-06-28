@@ -134,27 +134,87 @@ metaDescription: "Useful websites"
 ### Misc
 
 - [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
-- [npm](https://www.npmjs.com/)
 
 </div>
 
 </cc>
 
-## .NET
+## Specific Language/Technologies
+
+<cc>
+
+<div>
+
+### Javascript/Typescript
+
+- [ReactJS](https://reactjs.org/docs/)
+- [Angular](https://angular.io/docs)
+- [VueJS](https://vuejs.org/api/)
+- [npm](https://www.npmjs.com/)
+- [Deno](https://deno.land/)
+
+</div>
+
+<div>
+
+### PHP
+
+- [Laravel](https://laravel.com/docs)
+- [Composer](https://getcomposer.org/doc/)
+
+</div>
+
+<div>
+
+### CSS
+
+- [Bootstrap](https://getbootstrap.com/docs/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Sass](https://sass-lang.com/documentation)
+- [PostCSS](https://postcss.org/)
+- [Emotion](https://emotion.sh/docs/)
+- [Styled Components](https://styled-components.com/docs)
+
+</div>
+
+<div>
+
+### C#
 
 - [C# Documentation](https://docs.microsoft.com/de-de/dotnet/csharp/)
 - [PInvoke.net](http://pinvoke.net/)
 - [NuGet](https://www.nuget.org/)
 
-## Java
+</div>
+
+<div>
+
+### Java
 
 - [Java Platform, Standard Edition Documentation](https://docs.oracle.com/en/java/javase/index.html)
 - [Gradle Build Language Reference](https://docs.gradle.org/current/dsl/)
+- [Apache Maven](http://maven.apache.org/)
 
-## Win32
+</div>
+
+<div>
+
+### Win32
 
 - [Windows API Index](https://docs.microsoft.com/en-us/windows/win32/apiindex/windows-api-list)
 - [Using WMI](https://docs.microsoft.com/en-us/windows/win32/wmisdk/connecting-to-wmi-remotely-with-c-)
+
+</div>
+
+<div>
+
+### WebAssembly
+
+- [WebAssembly](https://webassembly.org/)
+
+</div>
+
+</cc>
 
 ---
 

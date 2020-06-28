@@ -21,21 +21,10 @@ const TableOfContents = styled("nav")`
     overflow: auto;
     order: 1;
   }
-
-  li {
-    list-style-type: none;
-  }
-
-  li a {
-    font-size: 13px;
-    font-weight: 500;
-    padding-left: 0;
-
-    color: ${({ theme }) => theme.colors.text};
-  }
 `;
 
 const TOCTitle = styled("li")`
+  list-style-type: none;
   font-size: 0.8rem;
   line-height: 1;
   font-weight: 700;
@@ -47,82 +36,56 @@ const TOCTitle = styled("li")`
   color: ${({ theme }) => theme.colors.text};
 `;
 
-const StyledLi = styled("li")`
+const Li = styled("li")`
   list-style: none;
   margin: 0;
 
   a {
-    color: #5c6975;
+    font-size: 13px;
+    padding-left: 0;
     text-decoration: none;
-    font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
+    font-weight: 400;
     padding-top: 1rem;
     display: block;
     position: relative;
 
+    color: ${(props) =>
+      props.active ? props.theme.colors.link : props.theme.colors.text};
+
     &:hover {
       color: ${({ theme }) => theme.colors.link};
     }
-
-    &.active {
-      color: ${({ theme }) => theme.colors.link};
-    }
-
-    ${(props) =>
-      props.active &&
-      `
-    color: #1ED3C6;
-    border-color: ${({ theme }) => theme.colors.seperator};
-    border-style: solid none solid solid;
-    border-width: 1px 0px 1px 1px;
-    background-color: #fff;
-  `}
   }
 `;
 
-const ListItem = styled(({ ...props }) => {
-  return (
-    <StyledLi>
-      <Link href={props.to} {...props}>
-        {props.children}
-      </Link>
-    </StyledLi>
-  );
-})``;
+const TableOfContentsLayout = ({ mdx }) => {
+  const { tableOfContents } = mdx;
+  // slug != "/" only => append /
+  let slug =
+    mdx.fields.slug && mdx.fields.slug.length != 1
+      ? mdx.fields.slug + "/"
+      : mdx.fields.slug;
 
-const useActiveHash = () => {
-  let [prev] = useState(null);
+  let [current, setCurrent] = useState(false);
 
   useEffect(() => {
     const links = document.querySelectorAll("main div h2");
-
     const handleObserver = (entries) => {
       entries.forEach((entry) => {
-        let tocLink = document.querySelector(
-          `[href='#${entry.target.getAttribute("id")}']`
-        );
-
         if (entry.isIntersecting) {
-          tocLink.classList.add("active");
-          if (prev != null && prev != tocLink) {
-            prev.classList.remove("active");
-          }
-          prev = tocLink;
+          setCurrent(`${slug}#${entry.target.getAttribute("id")}`);
         }
       });
     };
 
     const observer = new IntersectionObserver(handleObserver, {
-      rootMargin: "0% 0% -30% 0%",
+      rootMargin: `0% 0% -30% 0%`,
     });
 
     links.forEach((item) => {
       observer.observe(item);
     });
-  });
-};
-
-const TableOfContentsLayout = ({ tableOfContents }) => {
-  useActiveHash();
+  }, []);
 
   if (typeof window === "undefined" || !tableOfContents) {
     return null;
@@ -130,9 +93,9 @@ const TableOfContentsLayout = ({ tableOfContents }) => {
 
   const toc = tableOfContents.items.map((item, index) => {
     return (
-      <ListItem key={index} to={item.url}>
-        {item.title}
-      </ListItem>
+      <Li key={index} active={current === slug + item.url}>
+        <Link to={item.url}>{item.title}</Link>
+      </Li>
     );
   });
   return (

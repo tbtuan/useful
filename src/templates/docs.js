@@ -16,7 +16,7 @@ const DocsTemplate = ({ mdx }) => (
       <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
     </TitleWrapper>
     <ContentWrapper>
-      <TableOfContents tableOfContents={mdx.tableOfContents} />
+      <TableOfContents mdx={mdx} />
       <StyledMainWrapper>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </StyledMainWrapper>
