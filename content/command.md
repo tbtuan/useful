@@ -4,6 +4,8 @@ metaTitle: "Commands - /useful"
 metaDescription: "Commands for CLIs"
 ---
 
+## Bash
+
 ## Git
 
 - [Git Documentation](https://git-scm.com/docs)
@@ -32,6 +34,12 @@ metaDescription: "Commands for CLIs"
 | Install a certain "version" of "package" globally (e.g. npm install eslint@5.2.0 -g) | `npm install [PACKAGE]@[VERSION] -g` |
 | Install "package" and save for development purpose (used for test suites etc.)       | `install [PACKAGE] --save-dev"`      |
 | Clean cache                                                                          | `npm cache clean --force`            |
+
+## Powershell
+
+| Description  | Command                                  |
+| ------------ | ---------------------------------------- |
+| Zip in Image | `copy /B pic.png+yourzip.zip newpic.png` |
 
 ## ssh
 

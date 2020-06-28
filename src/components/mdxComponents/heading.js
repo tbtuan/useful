@@ -39,7 +39,7 @@ const Heading3 = styled("h3")`
 `;
 
 const Heading4 = styled("h4")`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   margin-bottom: 1rem;

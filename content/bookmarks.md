@@ -10,22 +10,20 @@ metaDescription: "Useful websites"
 
 <div>
 
-### File sharing
-
-- [Firefox Send](https://send.firefox.com/)
-
-</div>
-
-<div>
-
 ### Security
 
+#### Security check
+
+- [Top 25 Most Dangerous Software Errors](http://cwe.mitre.org/top25/)
 - [Connection Information (DoH/DoT/WARP)](https://1.1.1.1/help)
 - [Cloudflare ESNI Checker](https://www.cloudflare.com/ssl/encrypted-sni/)
 - [Firefox Monitor](https://monitor.firefox.com/)
 - [have i been pwned?](https://haveibeenpwned.com/)
 - [twofactorauth](https://twofactorauth.org/)
 - [Shodan](https://www.shodan.io/)
+
+#### TLS Certificate
+
 - [Let's encrypt](https://letsencrypt.org/)
 
 </div>
@@ -34,9 +32,32 @@ metaDescription: "Useful websites"
 
 ### Online editors
 
+#### Text editor
+
 - [Dillinger - Markdown Editor](https://dillinger.io/)
 - [HexEd.it](https://hexed.it/)
+
+#### Diagrams
+
 - [Draw.io - Flowchart maker](https://www.draw.io/)
+- [textik - ASCII diagrams editor](https://textik.com/)
+
+</div>
+
+<div>
+
+### Design
+
+#### Interface Design/Prototyping
+
+- [Figma (Collaborative)](https://www.figma.com/)
+- [Adobe XD](https://www.adobe.com/products/xd.html)
+
+#### Color
+
+- [Adobe Color](https://color.adobe.com/)
+- [colormind.io](http://colormind.io/)
+- [colorsinspo](https://colorsinspo.com/)
 
 </div>
 
@@ -61,16 +82,6 @@ metaDescription: "Useful websites"
 
 <div>
 
-### Color
-
-- [Adobe Color](https://color.adobe.com/)
-- [colormind.io](http://colormind.io/)
-- [colorsinspo](https://colorsinspo.com/)
-
-</div>
-
-<div>
-
 ### CSS
 
 - [CSS Grid Generator - LayoutIt](https://grid.layoutit.com/)
@@ -79,17 +90,18 @@ metaDescription: "Useful websites"
 
 </div>
 
+<div>
+
+### Misc
+
+- [Firefox Send (File sharing)](https://send.firefox.com/)
+- [namechk (Social media name check)](https://namechk.com/)
+
+</div>
+
 </cc>
 
-
 ---
-
-
-## General
-
-- [Top 25 Most Dangerous Software Errors](http://cwe.mitre.org/top25/)
-- [W3Techs](https://w3techs.com/)
-- [TIOBE-Index](https://www.tiobe.com/tiobe-index/)
 
 ## Web Development
 
@@ -99,6 +111,7 @@ metaDescription: "Useful websites"
 
 ### General
 
+- [W3Techs](https://w3techs.com/)
 - [Can I use](https://caniuse.com/)
 - [Public APIs](https://github.com/public-apis/public-apis#books)
 
@@ -142,6 +155,14 @@ metaDescription: "Useful websites"
 ## Specific Language/Technologies
 
 <cc>
+
+<div>
+
+### General
+
+- [TIOBE-Index](https://www.tiobe.com/tiobe-index/)
+
+</div>
 
 <div>
 
