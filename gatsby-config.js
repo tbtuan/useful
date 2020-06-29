@@ -1,18 +1,4 @@
 const plugins = [
-  {
-    resolve: `gatsby-plugin-csp`,
-    options: {
-      mergeScriptHashes: false,
-      mergeStyleHashes: false,
-      directives: {
-        "script-src": `'self' 'unsafe-inline' 'unsafe-eval'`,
-        "style-src": `'self' 'unsafe-inline'`,
-        "style-src": `'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com`,
-        "prefetch-src": `'self' data: fonts.googleapis.com fonts.gstatic.com`,
-        "font-src": `'self' data: fonts.gstatic.com`,
-      },
-    },
-  },
   "gatsby-disable-404",
   "gatsby-plugin-react-helmet",
   {
