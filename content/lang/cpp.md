@@ -4,9 +4,9 @@ metaTitle: 'C++ - /useful'
 metaDescription: 'C++ Cheatsheet'
 ---
 
-<r minWidth='800'>
+<mc minWidth='800'>
 
-<div>
+<sc>
 
 ## Types
 
@@ -22,9 +22,9 @@ void*
 void (*)()
 ```
 
-</div>
+</sc>
 
-<div>
+<sc>
 
 ## Initialization
 
@@ -46,9 +46,9 @@ char& c = a[0];
 
 ```
 
-</div>
+</sc>
 
-<div>
+<sc>
 
 ## Reference/Dereferencing
 
@@ -56,10 +56,10 @@ char& c = a[0];
 
 ```
 
-</div>
+</sc>
 
 
-<div>
+<sc>
 
 ## Constructor/Destructor
 
@@ -117,9 +117,9 @@ int main() {
 
 ```
 
-</div>
+</sc>
 
-<div>
+<sc>
 
 ## Other constructors/assignment operators
 
@@ -158,9 +158,9 @@ int main() {
 }
 ```
 
-</div>
+</sc>
 
-<div>
+<sc>
 
 ## Access modifiers
 
@@ -179,9 +179,9 @@ class Foo {
 };
 ```
 
-</div>
+</sc>
 
-<div>
+<sc>
 
 ## Dynamic polymorphism
 
@@ -239,12 +239,15 @@ class Bar: public C {
 };
 ```
 
-</div>
+</sc>
 
-<div>
+<sc>
 
 ## Memory management
 
-</div>
+```cpp
+```
 
-</r>
+</sc>
+
+</mc>

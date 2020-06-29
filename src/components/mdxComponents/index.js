@@ -102,6 +102,30 @@ const ColumnContainer = styled("div")`
   }
 `;
 
+const SyntaxContainer = styled("div")`
+  display: inline-block;
+  width: 100%;
+
+  h2 {
+    font-weight: 600;
+    font-size: 13px;
+    background-color: rgb(34, 35, 41);
+    color: #d2d2d2;
+    text-align: left;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
+
+  a {
+    display: none;
+  }
+
+  pre {
+    border-radius: 0 0 0.4rem 0.4rem;
+  }
+`;
+
 const Divider = styled("hr")`
   background-color: ${({ theme }) => theme.colors.text};
   margin-top: 2rem;
@@ -137,11 +161,16 @@ export default {
   kbd: (props) => <Kbd {...props} />,
   hr: (props) => <Divider {...props} />,
 
+  // Level 1 Containers
   // MasonryContainer
-  r: (props) => <MasonryContainer {...props} />,
-  // TableContainer
-  tc: (props) => <TableContainer {...props} />,
+  mc: (props) => <MasonryContainer {...props} />,
   // ColumnContainer
   cc: (props) => <ColumnContainer {...props} />,
+
+  // Level 2 Containers
+  // TableContainer
+  tc: (props) => <TableContainer {...props} />,
+  // SyntaxContainer
+  sc: (props) => <SyntaxContainer {...props} />,
   // TODO add `blockquote`
 };

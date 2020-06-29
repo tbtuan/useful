@@ -13,7 +13,7 @@ type: "cheatsheet"
 
 - [Google Chrome Shortcuts](https://support.google.com/chrome/answer/157179)
 
-<r>
+<mc>
 
 <tc>
 
@@ -93,13 +93,13 @@ type: "cheatsheet"
 
 </tc>
 
-</r>
+</mc>
 
 ## Visual Studio Code
 
 [VSCode Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
-<r>
+<mc>
 
 <tc>
 
@@ -194,7 +194,7 @@ type: "cheatsheet"
 
 </tc>
 
-</r>
+</mc>
 
 ## Windows
 

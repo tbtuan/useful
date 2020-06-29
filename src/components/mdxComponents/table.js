@@ -21,14 +21,14 @@ const Table = styled("table")`
     background-color: ${({ theme }) => theme.colors.tableHeader};
     text-align: left;
     margin: 0;
-    padding: 6px 13px;
+    padding: 0.5rem 1rem;
   }
 
   tr td {
     text-align: left;
     font-size: 13px;
     margin: 0;
-    padding: 6px 13px;
+    padding: 0.5rem 1rem;
   }
 
   tr th :first-of-type,
