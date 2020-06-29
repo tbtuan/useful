@@ -1,9 +1,10 @@
-exports.onRouteUpdate = ({ location }) => {
+exports.shouldUpdateScroll = ({ routerProps: { location } }) => {
   if (location && location.hash) {
     window.scrollTo({
       top: document.querySelector(location.hash).offsetTop,
     });
   }
+  return false;
 };
 
 exports.onClientEntry = (

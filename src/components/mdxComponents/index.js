@@ -14,10 +14,10 @@ import {
 } from "./heading";
 import Table from "./table";
 import AnchorTag from "./anchor";
-import { Link } from "emotion-icons/fa-solid";
-import AnchorLink from "../anchorlink";
+import { Link as FaLink } from "emotion-icons/fa-solid";
+import Link from "../link";
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(FaLink)`
   width: 20px;
   height: 20px;
 `;
@@ -112,12 +112,11 @@ export default {
   h1: (props) => <Heading1 {...props} />,
   h2: (props) => {
     const heading = props.children;
-    console.log(props);
     return (
       <Heading2 id={tocId(heading)}>
-        <AnchorLink href={`#${tocId(heading)}`}>
+        <Link to={`#${tocId(heading)}`}>
           <StyledLink />
-        </AnchorLink>
+        </Link>
         {heading}
       </Heading2>
     );
