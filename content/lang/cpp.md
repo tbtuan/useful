@@ -4,14 +4,27 @@ metaTitle: 'C++ - /useful'
 metaDescription: 'C++ Cheatsheet'
 ---
 
+<r minWidth='800'>
+
+<div>
+
 ## Types
 
 ```cpp
-unsigned int // positive number
-std::size_t // Unsigned int but used for objects (size depends on the underlying architecture 32/64-bit)
-void* // void pointer
-void (*)() // Function pointer which returns void
+// positive number
+unsigned int 
+// Unsigned int but used for objects 
+// (size depends on the underlying architecture)
+std::size_t 
+ // void pointer
+void*
+ // Function pointer which returns void
+void (*)()
 ```
+
+</div>
+
+<div>
 
 ## Initialization
 
@@ -33,11 +46,20 @@ char& c = a[0];
 
 ```
 
+</div>
+
+<div>
+
 ## Reference/Dereferencing
 
 ```cpp
 
 ```
+
+</div>
+
+
+<div>
 
 ## Constructor/Destructor
 
@@ -49,12 +71,18 @@ class Foo {
         Foo(const char* bar)
             : bar(bar)
         {
-            std::cout << "\"" << bar << "\"" << " constructed" << std::endl;
+            std::cout 
+                << "\"" << bar 
+                << "\"" << " constructed" 
+                << std::endl;
         }
         ~Foo()
             : bar(bar)
         {
-            std::cout << "\"" << bar << "\"" << " destructed" << std::endl;
+            std::cout 
+                << "\"" << bar 
+                << "\"" << " destructed" 
+                << std::endl;
         }
     private:
         const char* bar;
@@ -88,6 +116,10 @@ int main() {
 }
 
 ```
+
+</div>
+
+<div>
 
 ## Other constructors/assignment operators
 
@@ -126,13 +158,17 @@ int main() {
 }
 ```
 
+</div>
+
+<div>
+
 ## Access modifiers
 
 ```cpp
 class Foo {
     public:
-        // const int at the beginning = return type is immutable
-        // const at the end = the object's state is immutable
+        // const (beginning) = return type is immutable
+        // const (end) = the object's state is immutable
         // (number = ... or text = ... doesn't work)
         const int bar() const {
             return 0;
@@ -142,6 +178,10 @@ class Foo {
         int number;
 };
 ```
+
+</div>
+
+<div>
 
 ## Dynamic polymorphism
 
@@ -153,7 +193,8 @@ class C final: public B {};
 class D {
     public:
         // A pure virtual function (marked by assigning 0).
-        // Any class (derived from D) must implement this method
+        // Any class (derived from D) 
+        // must implement this method
         virtual double calculate() const = 0;
 }
 
@@ -166,17 +207,21 @@ class Foo {
 
 class Bar: public Foo {
    public:
-        // Doesn't work (f =/= dynamically polymorphic method)
+        // Doesn't work 
+        // (f =/= dynamically polymorphic method)
         void f() override {};
         // Works (non polymorphic -> polymorphic)
         virtual void f() {};
-        // Works (f in "Foo" and f in "Bar" aren't polymorphic)
+        // Works 
+        // (f in "Foo" and f in "Bar" aren't polymorphic)
         void f() {};
         // Works (should have override)
         B* g() { return nullptr; }
-        // Doesn't work (Returns a contravariant type (A is base class of B))
+        // Doesn't work (Returns a contravariant type 
+        // (A is base class of B))
         A* g() { return nullptr; }
-        // Works (Returns a covariant type (B is base class of C))
+        // Works (Returns a covariant type 
+        // (B is base class of C))
         C* g() { return nullptr; }
         // Works (g is not polymorphic)
         B* g(B* b) { return nullptr; }
@@ -194,4 +239,12 @@ class Bar: public C {
 };
 ```
 
+</div>
+
+<div>
+
 ## Memory management
+
+</div>
+
+</r>

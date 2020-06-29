@@ -46,6 +46,7 @@ const MasonryDiv = styled("div")`
 const Col = styled("div")`
   display: flex;
   flex-direction: column;
+  min-inline-size: -webkit-fill-available;
 `;
 
 const fillCols = (children, cols) => {
@@ -57,14 +58,19 @@ const fillCols = (children, cols) => {
 export default function Masonry({ children, gap, minWidth = 500, ...rest }) {
   const ref = useRef();
 
-  const [numCols, setNumCols] = useState(3);
+  const [numCols, setNumCols] = useState(
+    Math.ceil(
+      (document.documentElement.clientWidth - 14 * 16 - 18 * 16) / minWidth
+    )
+  );
 
   const cols = [...Array(numCols)].map(() => []);
 
   fillCols(children, cols);
 
-  const resizeHandler = () =>
+  const resizeHandler = () => {
     setNumCols(Math.ceil(ref.current.offsetWidth / minWidth));
+  };
 
   useEffect(resizeHandler, []);
   useEventListener(`resize`, resizeHandler);

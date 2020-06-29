@@ -133,13 +133,13 @@ function useDatafetch(query, setResults, [itemIndex, setItemIndex]) {
   useEffect(() => {
     if (window.__FUSE__) {
       const fuse = new Fuse(window.__FUSE__, {
-        findAllMatches: true,
         includeMatches: true,
         includeScore: true,
-        keys: ["id", "title", "url", "toc"],
+        threshold: 0.3,
+        keys: ["id", "title", "url", "toc.title"],
       });
 
-      const results = fuse.search(query).slice(0, 5);
+      const results = fuse.search(query, { limit: 5 });
 
       setResults(results);
       // To keep the selection inside the bounds while typing
@@ -202,7 +202,11 @@ const SearchLayout = () => {
   };
 
   const searchResults = results.map((element, index) => {
-    const { item } = element;
+    const { item, matches } = element;
+    let url = item.url;
+    if (matches[0].key === "toc.title" && url !== "/") {
+      url += "/" + element.item.toc[matches[0].refIndex].url;
+    }
 
     return (
       <SearchLink
@@ -214,11 +218,11 @@ const SearchLayout = () => {
           setFocus(false);
         }}
         onMouseOver={() => setItemIndex(index)}
-        to={`${item.url}`}
+        to={`${url}`}
       >
         <li>
           <SearchTitle>{item.title}</SearchTitle>
-          <span> ({item.url})</span>
+          <span> ({url})</span>
         </li>
         <Hits>{item.title}</Hits>
       </SearchLink>

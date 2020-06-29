@@ -8,6 +8,15 @@ const Code = styled("pre")`
   margin: 0px;
   padding: 16px;
   overflow: auto;
+  background-color: ${({ theme }) => theme.colors.preFormattedText} !important;
+
+  .token-line {
+  }
+
+  .token-plain,
+  .token-comment {
+    width: auto;
+  }
 `;
 
 /** Removes the last token from a code example if it's empty. */

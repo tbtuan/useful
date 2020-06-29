@@ -28,11 +28,6 @@ const Pre = styled("pre")`
   border-radius: 1em;
 
   border-radius: 0.4rem;
-
-  pre {
-    background-color: ${({ theme }) =>
-      theme.colors.preFormattedText} !important;
-  }
 `;
 
 const Ul = styled("ul")`

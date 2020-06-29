@@ -41,7 +41,9 @@ exports.createPages = ({ graphql, actions }) => {
         result.data.allMdx.edges.forEach(({ node }) => {
           let tocConcat = [];
           if (node.tableOfContents.items) {
-            tocConcat = node.tableOfContents.items.map((item) => item.title);
+            tocConcat = node.tableOfContents.items.map((item) => {
+              return { title: item.title, url: item.url };
+            });
           }
           searchIndex.push({
             id: node.fields.id,
