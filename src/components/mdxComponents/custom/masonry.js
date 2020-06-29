@@ -58,11 +58,7 @@ const fillCols = (children, cols) => {
 export default function Masonry({ children, gap, minWidth = 500, ...rest }) {
   const ref = useRef();
 
-  const [numCols, setNumCols] = useState(
-    Math.ceil(
-      (document.documentElement.clientWidth - 14 * 16 - 18 * 16) / minWidth
-    )
-  );
+  const [numCols, setNumCols] = useState(2);
 
   const cols = [...Array(numCols)].map(() => []);
 
