@@ -10,35 +10,31 @@ import {
 } from "../components/templates";
 
 const StyledLink = styled(Link)`
-  color: ${(props) => props.theme.colors.text} !important;
-  font-size: 0.85rem;
+  color: ${(props) => props.theme.colors.link} !important;
 `;
 
-const StyledLinkTitle = styled(Link)`
-  color: ${(props) => props.theme.colors.link} !important;
+const Ul = styled("ul")`
+  padding-left: 0;
+  margin: 0 0 1.5rem 0;
+`;
+
+const Li = styled("li")`
+  list-style: none;
+  padding-left: 0;
 `;
 
 const Container = styled("div")`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 20rem));
+  grid-template-columns: repeat(3, minmax(0, 20rem));
   grid-gap: 1rem;
-`;
+  margin-bottom: 1.5rem;
 
-const Divider = styled((props) => (
-  <li {...props}>
-    <hr />
-  </li>
-))`
-  list-style: none;
-  padding: 0.5rem 0;
-  margin: 0;
+  @media only screen and (max-width: 1023px) {
+    grid-template-columns: repeat(2, minmax(0, 20rem));
+  }
 
-  hr {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    border-bottom: 1px solid #ede7f3;
-    background: none;
+  @media only screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, minmax(0, 20rem));
   }
 `;
 
@@ -61,29 +57,30 @@ const TreeNode = styled(({ url, title, layer, items }) => {
       </Container>
     );
   } else if (layer == 1) {
+    const mappedItems = hasChildren
+      ? items.map((item, index) => (
+          <TreeNode
+            key={item.url + index.toString()}
+            layer={layer + 1}
+            {...item}
+          />
+        ))
+      : null;
+
     return (
       <div>
-        {title && <StyledLinkTitle to={url}>{title}</StyledLinkTitle>}
-        <Divider />
-        {hasChildren ? (
-          <div>
-            {items.map((item, index) => (
-              <TreeNode
-                key={item.url + index.toString()}
-                layer={layer + 1}
-                {...item}
-              />
-            ))}
-          </div>
-        ) : null}
+        {title && <h3>{title}</h3>}
+        <Ul>
+          <Li>{title && <StyledLink to={url}>Index</StyledLink>}</Li>
+          {mappedItems}
+        </Ul>
       </div>
     );
   } else {
     return (
-      <div>
+      <Li>
         <StyledLink to={url}>{title}</StyledLink>
-        <br />
-      </div>
+      </Li>
     );
   }
 })``;
