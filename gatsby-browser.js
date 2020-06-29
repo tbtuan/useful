@@ -1,3 +1,11 @@
+exports.onRouteUpdate = ({ location }) => {
+  if (location && location.hash) {
+    window.scrollTo({
+      top: document.querySelector(location.hash).offsetTop,
+    });
+  }
+};
+
 exports.onClientEntry = (
   args,
   { filename = "searchIndex.json", fetchOptions = {} }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "./link";
 
 import styled from "@emotion/styled";
+import AnchorLink from "./anchorlink";
 
 const TableOfContents = styled("nav")`
   max-width: 18rem;
@@ -94,7 +95,9 @@ const TableOfContentsLayout = ({ mdx }) => {
   const toc = tableOfContents.items.map((item, index) => {
     return (
       <Li key={index} active={current === slug + item.url}>
-        <Link to={item.url}>{item.title}</Link>
+        {/* <a onClick={scrollToContent}>{item.title}</a> */}
+        {/* <Link to={item.url}>aaaaa{item.title}</Link> */}
+        <AnchorLink href={item.url}>{item.title}</AnchorLink>
       </Li>
     );
   });

@@ -13,8 +13,8 @@ const Heading2 = styled("h2")`
   line-height: 1.5;
   margin-bottom: 1.5rem;
   /* Anchor link */
-  padding-top: 8rem;
-  margin-top: -8rem;
+  // padding-top: 8rem;
+  // margin-top: -8rem;
 
   :hover a {
     opacity: 1;
