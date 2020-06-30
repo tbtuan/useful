@@ -2,6 +2,7 @@
 title: 'Tricks'
 metaTitle: 'cpp/tricks - /useful'
 metaDescription: 'C++ - Tricks'
+date: 2020-06-30
 ---
 
 ## Singleton-Pattern

@@ -1,7 +1,7 @@
 ---
 title: 'Python'
 metaTitle: 'Python - /useful'
-metaDescription: 'This is the meta description for this page'
+metaDescription: 'Python'
 ---
 
 ## Placeholder

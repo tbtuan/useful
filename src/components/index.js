@@ -78,13 +78,13 @@ export const pageQuery = graphql`
       parent {
         ... on File {
           relativePath
-          modifiedTime
         }
       }
       frontmatter {
         metaTitle
         metaDescription
         type
+        date
       }
     }
     allMdx {

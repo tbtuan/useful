@@ -1,7 +1,7 @@
 ---
 title: 'MySQL'
 metaTitle: 'MySQL - /useful'
-metaDescription: 'This is the meta description for this page'
+metaDescription: 'MySQL'
 ---
 
 ## Placeholder

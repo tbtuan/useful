@@ -13,7 +13,7 @@ const CheatsheetTemplate = ({ mdx }) => (
   <div>
     <TitleWrapper>
       <StyledHeading>{mdx.fields.title}</StyledHeading>
-      <ModifiedText modifiedTime={mdx.parent.modifiedTime} />
+      <ModifiedText modifiedTime={mdx.frontmatter.date} />
     </TitleWrapper>
     <ContentWrapper>
       <TableOfContents mdx={mdx} />

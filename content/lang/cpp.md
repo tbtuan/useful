@@ -2,7 +2,10 @@
 title: 'C++'
 metaTitle: 'C++ - /useful'
 metaDescription: 'C++ Cheatsheet'
+date: 2020-06-30
 ---
+
+[cppreference.com](cppreference.com)
 
 <mc minWidth='800'>
 
@@ -50,9 +53,19 @@ char& c = a[0];
 
 <sc>
 
-## Reference/Dereferencing
+## References
 
 ```cpp
+// lvalues = variable that stores something
+// rvalues = temporary values
+
+// lvalue-references = only takes lvalues unless it's const
+// rvalue-references = only takes rvalues
+
+// In case
+void setInt(const int& value) { }
+void setInt(int&& value) { }
+// Even if const int& accepts rvalues setInt(int&& value) will be chosen
 
 ```
 
@@ -246,6 +259,41 @@ class Bar: public C {
 ## Memory management
 
 ```cpp
+// TODO Something about RAII and stuff
+```
+
+</sc>
+
+<sc>
+
+## Templates
+
+```cpp
+#include <iostream>
+// templates are not restricted to types
+// Even int work
+template<typename T, int N>
+class Array
+{
+	public:
+		T size() const { return N; }
+	private:
+		T array[N];
+};
+
+template<typename T>
+void myMethod(T value) {
+    std::cout << value << std::endl;
+}
+
+int main() {
+    // Matches N with 10
+    Array<int, 10> a = Array<int, 10>();
+    std::cout << a.size() << std::endl;
+    myMethod<std::string>("asdf");
+    // C++ can infer types
+    myMethod("asdf");
+}
 ```
 
 </sc>

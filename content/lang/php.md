@@ -1,7 +1,7 @@
 ---
 title: 'PHP'
 metaTitle: 'PHP - /useful'
-metaDescription: 'This is the meta description for this page'
+metaDescription: 'PHP'
 ---
 
 ## Echo

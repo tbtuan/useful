@@ -161,13 +161,13 @@ export default {
   kbd: (props) => <Kbd {...props} />,
   hr: (props) => <Divider {...props} />,
 
-  // Level 1 Containers
+  // Layer 1 Containers
   // MasonryContainer
   mc: (props) => <MasonryContainer {...props} />,
   // ColumnContainer
   cc: (props) => <ColumnContainer {...props} />,
 
-  // Level 2 Containers
+  // Layer 2 Containers
   // TableContainer
   tc: (props) => <TableContainer {...props} />,
   // SyntaxContainer

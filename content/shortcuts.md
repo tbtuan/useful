@@ -3,6 +3,7 @@ title: "Shortcuts"
 metaTitle: "Shortcuts - /useful"
 metaDescription: "Shortcuts for different applications"
 type: "cheatsheet"
+date: 2020-06-30
 ---
 
 ## IntelliJ

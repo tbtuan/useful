@@ -1,7 +1,8 @@
 ---
 title: 'Javascript'
 metaTitle: 'Javascript - /useful'
-metaDescription: 'This is the meta description for this page'
+metaDescription: 'Javascript'
+date: 2020-06-30
 ---
 
 ## Placeholder
