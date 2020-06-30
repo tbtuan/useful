@@ -22,7 +22,6 @@ const Index = React.memo(
       return null;
     }
     const { mdx } = data;
-
     // meta tags
     const { metaTitle, metaDescription, type } = mdx.frontmatter;
 
@@ -38,7 +37,7 @@ const Index = React.memo(
     };
 
     return (
-      <Layout {...props}>
+      <>
         <Helmet defer={false} title={metaTitle}>
           {metaTitle ? <title>{metaTitle}</title> : null}
           {metaTitle ? <meta name="title" content={metaTitle} /> : null}
@@ -50,9 +49,11 @@ const Index = React.memo(
             <meta property="og:description" content={metaDescription} />
           ) : null}
         </Helmet>
-        <MarkdownFormat data={data} type={type} />
-        <Padding />
-      </Layout>
+        <Layout {...props}>
+          <MarkdownFormat data={data} type={type} />
+          <Padding />
+        </Layout>
+      </>
     );
   },
   (prev, next) => prev.data === next.data

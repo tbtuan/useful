@@ -55,10 +55,9 @@ const fillCols = (children, cols) => {
 
 // TODO Masonry works only for at least 2 <c> </c> inside <r> </r>
 // Fix later
-export default function Masonry({ children, gap, minWidth = 500, ...rest }) {
+const Masonry = ({ children, gap, minWidth = 500, ...rest }) => {
   const ref = useRef();
-
-  const [numCols, setNumCols] = useState(2);
+  const [numCols, setNumCols] = useState(3);
 
   const cols = [...Array(numCols)].map(() => []);
 
@@ -71,13 +70,17 @@ export default function Masonry({ children, gap, minWidth = 500, ...rest }) {
   useEffect(resizeHandler, []);
   useEventListener(`resize`, resizeHandler);
 
+  const items = [...Array(numCols)].map((_, index) => (
+    <Col key={index} gap={gap}>
+      {cols[index]}
+    </Col>
+  ));
+
   return (
     <MasonryDiv ref={ref} gap={gap} {...rest}>
-      {[...Array(numCols)].map((_, index) => (
-        <Col key={index} gap={gap}>
-          {cols[index]}
-        </Col>
-      ))}
+      {items}
     </MasonryDiv>
   );
-}
+};
+
+export default Masonry;

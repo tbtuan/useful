@@ -63,19 +63,12 @@ const Layout = ({ children, location, data }) => {
     return null;
   }
   const { mdx } = data;
-
-  const [isDarkThemeActive, setDarkThemeActive] = useState(false);
-
-  useEffect(() => {
-    setDarkThemeActive(
-      JSON.parse(window.localStorage.getItem("isDarkThemeActive")) === true
-        ? true
-        : false
-    );
-  });
+  const [isDarkThemeActive, setDarkThemeActive] = useState(
+    JSON.parse(window.localStorage.getItem("isDarkThemeActive"))
+  );
 
   const toggleActiveTheme = () => {
-    setDarkThemeActive((prevState) => !prevState);
+    setDarkThemeActive((prevTheme) => !prevTheme);
 
     window.localStorage.setItem(
       "isDarkThemeActive",
