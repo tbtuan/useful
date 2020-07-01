@@ -106,7 +106,7 @@ const SyntaxContainer = styled("div")`
   display: inline-block;
   width: 100%;
   border-radius: 0.4rem;
-  background-color: #282a33;
+  background-color: ${({ theme }) => theme.colors.preFormattedText} !important;
   padding: 0.5rem 0;
   padding-bottom: 0;
   margin-bottom: 1rem;
