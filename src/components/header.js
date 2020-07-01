@@ -72,6 +72,10 @@ const StyledThList = styled(ThList)`
   color: ${({ theme }) => theme.colors.switch};
   filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
   cursor: pointer;
+  user-select: none;
+  :hover {
+    opacity: 85%;
+  }
 `;
 
 const EditButton = styled(Link)`
@@ -85,6 +89,10 @@ const EditButton = styled(Link)`
   filter: drop-shadow(
     0px 4px 5px ${({ theme }) => theme.colors.editButtonShadow}
   );
+  user-select: none;
+  :hover {
+    opacity: 85%;
+  }
 `;
 
 const StyledEdit = styled(Edit)`

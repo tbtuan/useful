@@ -6,6 +6,7 @@ import Adjust from "emotion-icons/fa-solid/Adjust";
 const Switch = styled("label")`
   display: flex;
   margin-right: auto;
+  user-select: none;
 `;
 
 const StyledAdjust = styled(Adjust)`
@@ -14,6 +15,9 @@ const StyledAdjust = styled(Adjust)`
   height: 1.25rem;
   color: ${({ theme }) => theme.colors.switch};
   filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
+  :hover {
+    opacity: 85%;
+  }
 `;
 
 const Input = styled("input")`

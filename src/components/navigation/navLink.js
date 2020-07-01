@@ -5,6 +5,7 @@ import Link from "../link";
 const ListItem = styled("li")`
   list-style: none;
   padding: 0;
+  user-select: none;
 
   a {
     text-decoration: none;

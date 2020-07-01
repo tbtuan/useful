@@ -19,6 +19,9 @@ const lightTheme = {
     searchHover: "#fef1e8",
     tableHeader: "#CFCFCF",
     trSecondth: "#f8f8f8",
+    kbd: "#fafbfc",
+    kbdText: "#444d56",
+    kbdBorder: "#d1d5da",
     // Footer
     githubButton: "#3B454E",
   },
@@ -45,6 +48,9 @@ const darkTheme = {
     searchHover: "rgba(94, 137, 195, 0.5)",
     tableHeader: "#1A1C2E",
     trSecondth: "#20233A",
+    kbd: "#232538",
+    kbdText: "#d8d8d8",
+    kbdBorder: "#161721",
     // Footer
     githubButton: "#dbddde",
   },

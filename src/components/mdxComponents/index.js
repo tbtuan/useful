@@ -46,12 +46,12 @@ const Kbd = styled("kbd")`
   padding: 2px 5px;
   font: 11px Open Sans;
   font-weight: bold;
-  color: #444d56;
+  color: ${({ theme }) => theme.colors.kbdText};
   vertical-align: middle;
-  background-color: #fafbfc;
-  border: 1px solid #d1d5da;
+  background-color: ${({ theme }) => theme.colors.kbd};
+  border: 1px solid ${({ theme }) => theme.colors.kbdBorder};
   border-radius: 2px;
-  box-shadow: inset 0 -1px 0 #d1d5da;
+  box-shadow: inset 0 -1px 0 ${({ theme }) => theme.colors.kbdBorder};
 `;
 
 const P = styled("p")`

@@ -46,6 +46,7 @@ const StyledGithub = styled(Github)`
 const TextWrapper = styled("div")`
   display: inline-block;
   vertical-align: "middle";
+  user-select: none;
 
   @media only screen and (max-width: 1023px) {
     display: none;
