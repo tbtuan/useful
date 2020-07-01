@@ -62,19 +62,24 @@ const SearchContainer = styled("div")`
 `;
 
 const HitsWrapper = styled("div")`
-  display: ${(props) => (props.show ? `grid` : `none`)};
+  display: ${(props) => (props.show ? `flex` : `none`)};
+  flex-direction: column;
   position: absolute;
   z-index: 2;
   top: calc(100% + 0.5em);
   width: 40vw;
   filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.searchShadow});
   padding: 1rem;
-  background: white;
+  background: ${({ theme }) => theme.colors.search};
 
   border-radius: 4px;
   * {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: 576px) {
+    width: 60vw;
   }
 `;
 

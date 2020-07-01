@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 const Code = styled("pre")`
   font-size: 14px;
   margin: 0px;
-  padding: 16px;
+  padding: 1rem;
   overflow: auto;
   background-color: ${({ theme }) => theme.colors.preFormattedText} !important;
 

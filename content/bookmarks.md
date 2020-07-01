@@ -59,6 +59,8 @@ date: 2020-06-28
 - [Adobe Color](https://color.adobe.com/)
 - [colormind.io](http://colormind.io/)
 - [colorsinspo](https://colorsinspo.com/)
+- [htmlcolorcodes](https://htmlcolorcodes.com/)
+- [0to255](https://www.0to255.com/)
 
 </div>
 

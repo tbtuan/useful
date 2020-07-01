@@ -2,7 +2,7 @@
 title: 'C++'
 metaTitle: 'C++ - /useful'
 metaDescription: 'C++ Cheatsheet'
-date: 2020-06-30
+date: 2020-07-01
 ---
 
 [cppreference.com](cppreference.com)
@@ -65,7 +65,8 @@ char& c = a[0];
 // In case
 void setInt(const int& value) { }
 void setInt(int&& value) { }
-// Even if const int& accepts rvalues setInt(int&& value) will be chosen
+// Even if const int& accepts rvalues 
+// setInt(int&& value) will be chosen
 
 ```
 
@@ -209,6 +210,13 @@ class D {
         // Any class (derived from D) 
         // must implement this method
         virtual double calculate() const = 0;
+        // IMPORTANT FOR MEMORY LEAKS
+        // If D gets destructed any class derived from D
+        // will also be destructed
+        // e. g. D* b = new B();
+        // delete b;
+        // IT WON'T HAPPEN IF D IS NOT VIRTUAL!
+        virtual ~D() { }
 }
 
 class Foo {
@@ -251,6 +259,30 @@ class Bar: public Foo {
 class Bar: public C {
 };
 ```
+
+</sc>
+
+<sc>
+
+## Type casting
+
+```cpp
+// cast happens during translation time; 
+static_cast<int>
+// allows type casting for which a static_cast would fail
+reinterpret_cast<int>
+// Checks if it's actual the type (returns null otherwise)
+// Used for example for checking if bar is derived from a 
+// class Foo
+dynamic_cast<Foo*>(bar)
+// Used to remove or add "const"
+// modifying a formerly const value is only undefined 
+// if the original variable is const
+const_cast<int>
+```
+### See also
+
+[Stackoverflow - When should static_cast, dynamic_cast, const_cast and reinterpret_cast be used?](https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used)
 
 </sc>
 

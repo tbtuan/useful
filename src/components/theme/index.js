@@ -14,7 +14,7 @@ const lightTheme = {
     editButton: "#f77723",
     editButtonShadow: "rgba(247, 119, 35, 0.5)",
     // Search
-    textbox: "#eae4dd",
+    search: "#ffffff",
     searchShadow: "rgba(43, 44, 44, 0.5)",
     searchHover: "#fef1e8",
     tableHeader: "#CFCFCF",
@@ -40,9 +40,9 @@ const darkTheme = {
     editButton: "#73A3F5",
     editButtonShadow: "rgba(115, 163, 245, 0.5)",
     // Search
-    textbox: "#20232f",
-    searchShadow: "rgba(219, 221, 222, 0.5)",
-    searchHover: "rgba(219, 221, 222, 0.5)",
+    search: "#24273D",
+    searchShadow: "rgba(0, 3, 1, 0.5)",
+    searchHover: "rgba(94, 137, 195, 0.5)",
     tableHeader: "#1A1C2E",
     trSecondth: "#20233A",
     // Footer

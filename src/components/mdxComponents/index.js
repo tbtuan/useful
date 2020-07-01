@@ -105,24 +105,51 @@ const ColumnContainer = styled("div")`
 const SyntaxContainer = styled("div")`
   display: inline-block;
   width: 100%;
+  border-radius: 0.4rem;
+  background-color: #282a33;
+  padding: 0.5rem 0;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
 
   h2 {
     font-weight: 600;
     font-size: 13px;
-    background-color: rgb(34, 35, 41);
     color: #d2d2d2;
     text-align: left;
     margin: 0;
-    padding: 0.5rem 1rem;
-    border-radius: 0.4rem 0.4rem 0 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+
+    a {
+      display: none;
+    }
+  }
+
+  h3 {
+    color: #d2d2d2;
+    font-size: 13px;
+    font-weight: 500;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 1.5rem;
   }
 
   a {
-    display: none;
+    font-size: 12px;
+    padding-left: 1.5rem;
   }
 
   pre {
-    border-radius: 0 0 0.4rem 0.4rem;
+    margin-bottom: 0;
   }
 `;
 
