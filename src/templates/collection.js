@@ -3,11 +3,7 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
 import Link from "../components/link";
 import styled from "@emotion/styled";
-import {
-  StyledHeading,
-  TitleWrapper,
-  StyledMainWrapper,
-} from "../components/templates";
+import { StyledHeading, TitleWrapper } from "../components/templates";
 
 const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.link} !important;
@@ -200,6 +196,10 @@ const Tree = ({ edges, subpath }) => {
   return <TreeNode {...treeData} />;
 };
 
+const Main = styled("main")`
+  color: ${(props) => props.theme.colors.text};
+`;
+
 const CollectionTemplate = ({ data, location }) => {
   if (!data || !location) {
     return null;
@@ -221,10 +221,10 @@ const CollectionTemplate = ({ data, location }) => {
       <TitleWrapper>
         <StyledHeading>{mdx.fields.title}</StyledHeading>
       </TitleWrapper>
-      <StyledMainWrapper>
+      <Main>
         <MDXRenderer>{mdx.body}</MDXRenderer>
         <Tree edges={allMdx.edges} subpath={location.pathname} />
-      </StyledMainWrapper>
+      </Main>
     </div>
   );
 };

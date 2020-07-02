@@ -7,8 +7,8 @@ import Link from "../link";
 const StyledSearch = styled(Search)`
   position: relative;
   left: 0.25rem;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   color: ${({ theme }) => theme.colors.text};
 `;
 

@@ -79,7 +79,7 @@ const TableOfContentsLayout = ({ mdx }) => {
     };
 
     const observer = new IntersectionObserver(handleObserver, {
-      rootMargin: `0% 0% -30% 0%`,
+      rootMargin: `0% 0% -80% 0%`,
     });
 
     links.forEach((item) => {

@@ -2,10 +2,8 @@
 title: 'C++'
 metaTitle: 'C++ - /useful'
 metaDescription: 'C++ Cheatsheet'
-date: 2020-07-01
+date: 2020-07-02
 ---
-
-[cppreference.com](cppreference.com)
 
 <mc minWidth='800'>
 
@@ -280,7 +278,7 @@ dynamic_cast<Foo*>(bar)
 // if the original variable is const
 const_cast<int>
 ```
-### See also
+### See
 
 [Stackoverflow - When should static_cast, dynamic_cast, const_cast and reinterpret_cast be used?](https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used)
 
@@ -292,6 +290,37 @@ const_cast<int>
 
 ```cpp
 // TODO Something about RAII and stuff
+```
+
+</sc>
+
+<sc>
+
+## Function pointer
+
+```cpp
+void myFunction(int value) { }
+// Variant 1: Define a function pointer "myFunction2"
+// which points to myFunction
+void(*myFunction2)(int) = myFunction;
+// You can use "myFunction2" like a normal function
+myFunction2(3);
+// Variant 2
+typedef void(*myfunction3)(int);
+myfunction3 = myfunction;
+myfunction3(4);
+// Variant 3
+auto myFunction4 = myFunction;
+```
+
+</sc>
+
+<sc>
+
+## Iterators
+
+```cpp
+// TODO Iterators
 ```
 
 </sc>
@@ -327,6 +356,55 @@ int main() {
     myMethod("asdf");
 }
 ```
+
+</sc>
+
+<sc>
+
+## Lambdas
+
+```cpp
+#include <iostream>
+// [<capture>](<Parameters>) { ... }
+myFunction(void(*func)) { 
+    func();
+}
+
+auto str_equivalence_ignore_case(const std::string& text) {
+    // Copy reference of std::string& text with [=]
+    // otherwise it would be discarded (rvalue!)
+    // Set return type to bool
+    return [=](const std::string& s) -> bool {
+        // compare s from std::vector<std::string>
+        // with a copied "b" from const std::string& text
+        return boost::iequals(s, text);
+    };
+}
+
+int main() {
+
+    // lambda capture 
+    // [=] = pass everything in this scope by value
+    // [&] = pass everything in this scope by reference
+    // [a, &b, c] = pass individual values by value/reference
+    myFunction([]() {
+        std::cout << "pass a lambda" << std::endl;
+    });
+
+    std::vector<std::string> a = {"a", "b", "c"};
+    auto look_for_b = str_equivalence_ignore_case("b");
+    // std::find_if requires a UnaryPredicate 
+    auto it = std::find_if(a.begin(), a.end(), look_for_b);
+}
+
+
+```
+
+### See
+
+- [cppreference - Lambda expressions](https://en.cppreference.com/w/cpp/language/lambda)
+- [cppreference - find](https://en.cppreference.com/w/cpp/algorithm/find)
+
 
 </sc>
 

@@ -79,7 +79,7 @@ const TableContainer = styled("div")`
     background-color: ${({ theme }) => theme.colors.tableHeader};
     text-align: left;
     margin: 0;
-    padding: 6px 13px;
+    padding: 0.5rem 1rem;
   }
 
   thead {
@@ -124,6 +124,10 @@ const SyntaxContainer = styled("div")`
     a {
       display: none;
     }
+  }
+
+  li {
+    margin-bottom: 0;
   }
 
   h3 {
