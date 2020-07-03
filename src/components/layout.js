@@ -4,10 +4,7 @@ import { MDXProvider } from "@mdx-js/react";
 import mdxComponents from "./mdxComponents";
 import Sidebar from "./sidebar";
 import Header from "./header";
-
-import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
-
-import { lightTheme, darkTheme } from "./theme";
+import ThemeProvider from "../providers/themeProvider";
 
 const Wrapper = styled("div")`
   background: ${({ theme }) => theme.colors.background};
@@ -63,21 +60,9 @@ const Layout = ({ children, location, data }) => {
     return null;
   }
   const { mdx } = data;
-  const [isDarkThemeActive, setDarkThemeActive] = useState(
-    JSON.parse(window.localStorage.getItem("isDarkThemeActive"))
-  );
-
-  const toggleActiveTheme = () => {
-    setDarkThemeActive((prevTheme) => !prevTheme);
-
-    window.localStorage.setItem(
-      "isDarkThemeActive",
-      JSON.stringify(!isDarkThemeActive)
-    );
-  };
 
   return (
-    <EmotionThemeProvider theme={isDarkThemeActive ? darkTheme : lightTheme}>
+    <ThemeProvider>
       <MDXProvider components={mdxComponents}>
         <Wrapper>
           <ViewDiv />
@@ -86,8 +71,6 @@ const Layout = ({ children, location, data }) => {
               "https://github.com/tbtuan/useful/tree/master/content/" +
               mdx.parent.relativePath
             }
-            isDarkThemeActive={isDarkThemeActive}
-            toggleActiveTheme={toggleActiveTheme}
           />
           <Sidebar location={location} />
           <ContentWrapper>
@@ -95,7 +78,7 @@ const Layout = ({ children, location, data }) => {
           </ContentWrapper>
         </Wrapper>
       </MDXProvider>
-    </EmotionThemeProvider>
+    </ThemeProvider>
   );
 };
 

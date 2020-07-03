@@ -115,11 +115,7 @@ const Container = styled("div")`
   }
 `;
 
-const HeaderLayout = ({
-  docsLocation,
-  isDarkThemeActive,
-  toggleActiveTheme,
-}) => (
+const HeaderLayout = ({ docsLocation }) => (
   <Header>
     <TitleWrapper>
       <Title to="/">
@@ -131,10 +127,7 @@ const HeaderLayout = ({
     <OptionsWrapper>
       <Container>
         <StyledThList />
-        <ThemeSwitch
-          isDarkThemeActive={isDarkThemeActive}
-          toggleActiveTheme={toggleActiveTheme}
-        />
+        <ThemeSwitch />
         <EditButton to={docsLocation}>
           <StyledEdit />
           Edit

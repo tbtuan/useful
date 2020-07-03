@@ -28,13 +28,10 @@ const Sidebar = styled("aside")`
   }
 `;
 
-const SidebarLayout = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
+const SidebarLayout = ({ location }) => (
   <Sidebar>
     <Navigation location={location} />
-    <Footer
-      isDarkThemeActive={isDarkThemeActive}
-      toggleActiveTheme={toggleActiveTheme}
-    />
+    <Footer />
   </Sidebar>
 );
 

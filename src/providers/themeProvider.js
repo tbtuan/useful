@@ -1,3 +1,6 @@
+import React, { useState, createContext } from "react";
+import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
+
 const lightTheme = {
   colors: {
     background: "#fff",
@@ -56,4 +59,28 @@ const darkTheme = {
   },
 };
 
-export { lightTheme, darkTheme };
+export const ThemeContext = createContext();
+
+const ThemeProvider = ({ children }) => {
+  const [isDarkThemeActive, setDarkThemeActive] = useState(
+    JSON.parse(window.localStorage.getItem("isDarkThemeActive"))
+  );
+
+  const toggleActiveTheme = () => {
+    setDarkThemeActive((prevTheme) => !prevTheme);
+
+    window.localStorage.setItem(
+      "isDarkThemeActive",
+      JSON.stringify(!isDarkThemeActive)
+    );
+  };
+  return (
+    <ThemeContext.Provider value={{ isDarkThemeActive, toggleActiveTheme }}>
+      <EmotionThemeProvider theme={isDarkThemeActive ? darkTheme : lightTheme}>
+        {children}
+      </EmotionThemeProvider>
+    </ThemeContext.Provider>
+  );
+};
+
+export default ThemeProvider;

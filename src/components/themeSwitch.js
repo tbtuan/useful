@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext, useMemo } from "react";
 import styled from "@emotion/styled";
 
 import Adjust from "emotion-icons/fa-solid/Adjust";
+import { ThemeContext } from "../providers/themeProvider";
 
 const Switch = styled("label")`
   display: flex;
@@ -28,19 +29,20 @@ const Input = styled("input")`
   cursor: pointer;
 `;
 
-export const ThemeSwitch = React.memo(
-  ({ isDarkThemeActive, toggleActiveTheme }) => {
+export const ThemeSwitch = () => {
+  const themeContext = useContext(ThemeContext);
+  const isDarkThemeActive = themeContext.isDarkThemeActive;
+  return useMemo(() => {
     return (
       <Switch id="switch">
         <Input
           id="slider"
           type="checkbox"
-          onChange={toggleActiveTheme}
-          checked={isDarkThemeActive ? false : true}
+          onChange={themeContext.toggleActiveTheme}
+          checked={themeContext.isDarkThemeActive}
         />
         <StyledAdjust />
       </Switch>
     );
-  },
-  (prev, next) => prev.isDarkThemeActive === next.isDarkThemeActive
-);
+  }, [isDarkThemeActive]);
+};
