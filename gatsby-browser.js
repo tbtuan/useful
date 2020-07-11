@@ -1,14 +1,16 @@
 exports.shouldUpdateScroll = ({ routerProps: { location } }) => {
   if (location && location.hash) {
-    window.scrollTo({
-      top: document.querySelector(location.hash).offsetTop,
-    });
+    const anchorLink = document.querySelector(location.hash);
+    anchorLink &&
+      window.scrollTo({
+        top: anchorLink.offsetTop,
+      });
   }
   return false;
 };
 
 exports.onClientEntry = (
-  args,
+  _,
   { filename = "searchIndex.json", fetchOptions = {} }
 ) => {
   window.__FUSE__ = window.__FUSE__ || {};

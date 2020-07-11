@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "@emotion/styled";
 import { MDXProvider } from "@mdx-js/react";
 import mdxComponents from "./mdxComponents";

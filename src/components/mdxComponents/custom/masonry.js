@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
 
 // Based on https://janosh.dev/blog/react-hooks-masonry
@@ -67,7 +67,7 @@ const Masonry = ({ children, gap, minWidth = 500, ...rest }) => {
     setNumCols(Math.ceil(ref.current.offsetWidth / minWidth));
   };
 
-  useEffect(resizeHandler, []);
+  useLayoutEffect(resizeHandler, []);
   useEventListener(`resize`, resizeHandler);
 
   const items = [...Array(numCols)].map((_, index) => (
