@@ -408,23 +408,4 @@ int main() {
 
 </sc>
 
-
-<sc>
-
-```cpp
-#include <iostream>
-// [<capture>](<Parameters>) { ... }
-myFunction(void(*func)) { 
-    func();
-}
-
-int main() {
-
-    noexcept 
-}
-
-```
-
-</sc>
-
 </mc>

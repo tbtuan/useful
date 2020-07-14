@@ -5,6 +5,10 @@ metaDescription: 'This is the meta description for this page'
 date: 2020-06-30
 ---
 
+<mc minWidth='800'>
+
+<sc>
+
 ## Named Argument
 
 ```csharp
@@ -15,6 +19,10 @@ void Log(string msg, string system = "asdf", int priority) {
 Log("Tracker", priority: 0);
 ```
 
+</sc>
+
+<sc>
+
 ## out-Keyword
 
 ```csharp
@@ -23,12 +31,19 @@ string s = "42";
 int result;
 int.TryParse(s, out result)
 ```
+</sc>
+
+<sc>
 
 ## Lambda
 
 ```csharp
 people.Find(person => person.Name == "John");
 ```
+
+</sc>
+
+<sc>
 
 ## Extension Method
 
@@ -45,11 +60,19 @@ public static class ExtensionMethods {
 Console.ReadLine().toInt("a");
 ```
 
+</sc>
+
+<sc>
+
 ## String interpolation
 
 ```csharp
-Console.WriteLine($"System: {system}, Priority: {priority}, Msg: {msg}");
+Console.WriteLine($"Priority: {priority}, Msg: {msg}");
 ```
+
+</sc>
+
+<sc>
 
 ## Delegates
 
@@ -65,6 +88,10 @@ MyDelegate f = MyFunc;
 int result = f(1, "Hello World");
 ```
 
+</sc>
+
+<sc>
+
 ## Anonymous delegates
 
 ```csharp
@@ -73,6 +100,10 @@ MyDelegate f = delegate(int i, string s)
    return i;
 };
 ```
+
+</sc>
+
+<sc>
 
 ## Composable/chained delegates
 
@@ -87,10 +118,15 @@ f1f2 += delegate(string s)
 }
 ```
 
+</sc>
+
+<sc>
+
 ## Event handler
 
 ```csharp
-// Define delegate for Event handler (delegate is a special class therefore it can be outside)
+// Define delegate for Event handler 
+// (delegate is a special class therefore it can be outside)
 public delegate void MyEventHandler(string value);
 
 class EventPublisher {
@@ -110,6 +146,10 @@ class EventPublisher {
 
 }
 
+</sc>
+
+<sc>
+
 class Program {
 
     static void Main(string[] args) {
@@ -128,6 +168,10 @@ class Program {
 }
 ```
 
+</sc>
+
+<sc>
+
 ## Thread/Task
 
 ```csharp
@@ -137,6 +181,10 @@ t.Start();
 Task.Run(() => MyMethod());
 Tasks.Factory.StartNew(() => MyMethod());
 ```
+
+</sc>
+
+<sc>
 
 ## Monitor
 
@@ -151,6 +199,10 @@ try {
 // Same as lock(myLock) { }
 ```
 
+</sc>
+
+<sc>
+
 ## Mutex
 
 ```csharp
@@ -160,10 +212,15 @@ MyMethod();
 mutex.ReleaseMutex();
 ```
 
+</sc>
+
+<sc>
+
 ## Reader-Writer-Lock
 
 ```csharp
-ReaderWriterLockSlim readerWriterLockSlim = new ReaderWriterLockSlim();
+ReaderWriterLockSlim readerWriterLockSlim;
+readerWriterLockSlim = new ReaderWriterLockSlim();
 readerWriterLockSlim.EnterReadLock();
 MyReadMethod();
 readerWriterLockSlim.ExitReadLock();
@@ -171,3 +228,7 @@ readerWriterLockSlim.EnterWriteLock();
 MyWriteMethod();
 readerWriterLockSlim.ExitWriteLock();
 ```
+
+</sc>
+
+</mc>

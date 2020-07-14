@@ -10,6 +10,10 @@ date: 2020-06-30
 - [React documentation](https://reactjs.org/docs/react-api.html)
 - [React lifecycle methods diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
+<mc minWidth='800'>
+
+<sc>
+
 ## Render
 
 ```jsx
@@ -24,6 +28,10 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
+
+</sc>
+
+<sc>
 
 ## Javascript in JSX
 
@@ -43,6 +51,10 @@ function App() {
 
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
+
+</sc>
+
+<sc>
 
 ## CSS in JSX
 
@@ -66,6 +78,10 @@ function App() {
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
+</sc>
+
+<sc>
+
 ## Props in JSX
 
 ```jsx
@@ -73,7 +89,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 import React from "react";
 
 const App = () => {
-  return <Card name="Name" img="https://via.placeholder.com/200x120" />;
+  return <Card name="Name" img="https://via.placeholder.com/20x20" />;
 };
 
 // Inside Card.js
@@ -89,6 +105,10 @@ const Card = (props) => {
 };
 ```
 
+</sc>
+
+<sc>
+
 ## High Order Functions
 
 ```jsx
@@ -103,6 +123,10 @@ const App = () => {
   return <div>{cardsComponent}</div>;
 };
 ```
+
+</sc>
+
+<sc>
 
 ## Class-Components
 
@@ -120,6 +144,10 @@ class App extends Component {
 }
 ```
 
+</sc>
+
+<sc>
+
 ## States
 
 ```jsx
@@ -129,6 +157,10 @@ constructor(props) {
 }
 
 ```
+
+</sc>
+
+<sc>
 
 ## Event handling
 
@@ -148,6 +180,10 @@ function App() {
   );
 }
 ```
+
+</sc>
+
+<sc>
 
 ## Change state
 
@@ -185,7 +221,9 @@ class App extends React.Component {
                 <button onClick={this.handleClick}>Count</button>
                 <button
                   onClick={() => this.handleCustomClick(Math.random())}
-                  handleCustomClick={this.handleCustomClick}>Custom count</button>
+                  handleCustomClick={this.handleCustomClick}>
+                  Custom count
+                </button>
             </div>
         )
     }
@@ -195,3 +233,7 @@ class App extends React.Component {
 onClick={() => props.handleCustomClick(42)}
 onClick={() => props.handleCustomClick(props.number)}
 ```
+
+</sc>
+
+</mc>
