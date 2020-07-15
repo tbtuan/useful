@@ -2,7 +2,7 @@
 title: "Links"
 metaTitle: "Links - /useful"
 metaDescription: "Useful websites"
-date: 2020-06-28
+date: 2020-07-15
 ---
 
 ## Tools
@@ -61,6 +61,13 @@ date: 2020-06-28
 - [colorsinspo](https://colorsinspo.com/)
 - [htmlcolorcodes](https://htmlcolorcodes.com/)
 - [0to255](https://www.0to255.com/)
+
+#### Inspiration
+
+- [Behance](https://www.behance.net/)
+- [Dribbble](https://dribbble.com/)
+- [UI Movement](https://uimovement.com/)
+- [Collect UI](https://collectui.com/)
 
 </div>
 
@@ -223,6 +230,50 @@ date: 2020-06-28
 
 <div>
 
+### Python
+
+- [OpenCV](https://opencv.org/)
+
+</div>
+
+<div>
+
+### Database
+
+- [MySQL](https://dev.mysql.com/doc/)
+- [MongoDB](https://docs.mongodb.com/)
+- [Redis](https://redis.io/documentation)
+
+</div>
+
+<div>
+
+### GUI
+
+- [ElectronJS](https://www.electronjs.org/docs)
+
+</div>
+
+<div>
+
+### Testing
+
+- [Jest](https://jestjs.io/docs/en/getting-started)
+- [JUnit](https://junit.org/)
+
+</div>
+
+<div>
+
+### Static Site Rendering/Generation
+
+- [Gatsby](https://www.gatsbyjs.org/docs/)
+- [NextJS](https://nextjs.org/docs)
+
+</div>
+
+<div>
+
 ### Win32
 
 - [Windows API Index](https://docs.microsoft.com/en-us/windows/win32/apiindex/windows-api-list)
@@ -261,6 +312,22 @@ date: 2020-06-28
 - [Excercism](https://exercism.io/)
 - [freeCodeCamp](https://www.freecodecamp.org/)
 - [Codecademy](https://www.codecademy.com/)
+
+</div>
+
+<div>
+
+### YouTube
+
+#### General
+
+- [freeCodeCamp](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ/videos)
+- [Simplilearn](https://www.youtube.com/user/Simplilearn/videos)
+- [Coding Tech](https://www.youtube.com/channel/UCtxCXg-UvSnTKPOzLH4wJaQ/videos)
+
+#### Web
+
+- [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg/videos)
 
 </div>
 
