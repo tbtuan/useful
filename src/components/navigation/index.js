@@ -7,7 +7,7 @@ import {
   Cogs,
   Terminal,
   Keyboard,
-  Bookmark,
+  ExternalLinkAlt,
 } from "emotion-icons/fa-solid";
 
 const Nav = styled("nav")`
@@ -49,8 +49,8 @@ const NavigationLayout = ({ location }) => {
         <NavLink text="Languages" link="/lang" location={location}>
           <Icon tag={Code} />
         </NavLink>
-        <NavLink text="Bookmarks" link="/bookmarks" location={location}>
-          <Icon tag={Bookmark} />
+        <NavLink text="Links" link="/links" location={location}>
+          <Icon tag={ExternalLinkAlt} />
         </NavLink>
         <NavLink text="Setups" link="/setups" location={location}>
           <Icon tag={Cogs} />

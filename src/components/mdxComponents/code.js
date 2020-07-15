@@ -4,7 +4,7 @@ import prismTheme from "prism-react-renderer/themes/vsDark";
 import styled from "@emotion/styled";
 
 const Code = styled("pre")`
-  font-size: 14px;
+  font-size: 13px;
   margin: 0px;
   padding: 1rem;
   overflow: auto;

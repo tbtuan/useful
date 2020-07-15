@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import { ThemeSwitch } from "./themeSwitch";
 
 import { Edit, ThList } from "emotion-icons/fa-solid";
+import { Bookmark as NotBookmark } from "emotion-icons/fa-regular";
+import { Bookmark } from "emotion-icons/fa-solid";
 
 import Link from "./link";
 
@@ -66,13 +68,15 @@ const TitleSpan2 = styled("span")`
   }
 `;
 
-const StyledThList = styled(ThList)`
+const StyledBookmark = styled(NotBookmark)`
   width: 1.25rem;
   height: 1.25rem;
   color: ${({ theme }) => theme.colors.switch};
   filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
   cursor: pointer;
   user-select: none;
+  margin: 0;
+  margin-right: auto;
   :hover {
     opacity: 85%;
   }
@@ -108,7 +112,7 @@ const Container = styled("div")`
   width: 14rem;
   display: flex;
   align-items: center;
-  padding-right: 4rem;
+  padding-right: 4.5rem;
 
   @media only screen and (max-width: 576px) {
     flex: none;
@@ -126,7 +130,7 @@ const HeaderLayout = ({ docsLocation }) => (
     <Search />
     <OptionsWrapper>
       <Container>
-        <StyledThList />
+        <StyledBookmark />
         <ThemeSwitch />
         <EditButton to={docsLocation}>
           <StyledEdit />

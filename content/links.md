@@ -1,6 +1,6 @@
 ---
-title: "Bookmarks"
-metaTitle: "Bookmarks - /useful"
+title: "Links"
+metaTitle: "Links - /useful"
 metaDescription: "Useful websites"
 date: 2020-06-28
 ---

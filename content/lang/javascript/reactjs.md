@@ -2,13 +2,15 @@
 title: "ReactJS"
 metaTitle: "Reactjs - /useful"
 metaDescription: "Javascript - ReactJS"
-date: 2020-06-30
+date: 2020-07-15
 ---
 
 ## Resources
 
 - [React documentation](https://reactjs.org/docs/react-api.html)
 - [React lifecycle methods diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+- [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
+- 
 
 <mc minWidth='800'>
 
@@ -89,7 +91,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 import React from "react";
 
 const App = () => {
-  return <Card name="Name" img="https://via.placeholder.com/20x20" />;
+  return <Card name="Name" img="https://via.placeholder.com/20" />;
 };
 
 // Inside Card.js
@@ -195,7 +197,7 @@ class App extends React.Component {
             count: 0
         }
         this.handleClick = this.handleClick.bind(this)
-        this.handleCustomClick = this.handleCustomClick.bind(this)
+        this.handleClick2 = this.handleClick2.bind(this)
     }
 
     handleClick() {
@@ -206,7 +208,7 @@ class App extends React.Component {
         })
     }
 
-    handleCustomClick(number) {
+    handleClick2(number) {
         this.setState(prevState => {
             return {
                 count: prevState.count + number
@@ -220,8 +222,8 @@ class App extends React.Component {
                 <h1>{this.state.count}</h1>
                 <button onClick={this.handleClick}>Count</button>
                 <button
-                  onClick={() => this.handleCustomClick(Math.random())}
-                  handleCustomClick={this.handleCustomClick}>
+                  onClick={() => this.handleClick2(Math.random())}
+                  handleClick2={this.handleClick2}>
                   Custom count
                 </button>
             </div>
@@ -230,9 +232,35 @@ class App extends React.Component {
 }
 
 // Triggering handleClick on another component using props
-onClick={() => props.handleCustomClick(42)}
-onClick={() => props.handleCustomClick(props.number)}
+onClick={() => props.handleClick2(42)}
+onClick={() => props.handleClick2(props.number)}
 ```
+
+</sc>
+
+<sc>
+
+## React API Pitfalls
+
+```jsx
+/*
+Only Call Hooks at the Top Level
+Don’t call Hooks inside loops, conditions, 
+or nested functions.
+
+Low frequency updates like themes => Context API
+High frequency updates => React Redux
+
+Use useMemo for performance optimization, 
+not as a semantic guarantee.
+*/
+```
+
+### See
+
+- [Rules of Hooks - React](https://reactjs.org/docs/hooks-rules.html)
+- [React Top-Level API - React.memo](https://reactjs.org/docs/react-api.html#reactmemo)
+- [Pitfalls of overusing React Context](https://blog.logrocket.com/pitfalls-of-overusing-react-context/)
 
 </sc>
 
