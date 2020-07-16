@@ -2,6 +2,9 @@
 title: 'Python'
 metaTitle: 'Python - /useful'
 metaDescription: 'Python'
+date: 2020-07-16
 ---
 
-## Placeholder
+## Cheatsheet
+
+[Python Crash Course](https://github.com/ehmatthes/pcc)

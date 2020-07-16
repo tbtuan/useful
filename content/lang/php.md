@@ -2,7 +2,12 @@
 title: 'PHP'
 metaTitle: 'PHP - /useful'
 metaDescription: 'PHP'
+date: 2020-07-16
 ---
+
+<mc minWidth='800'>
+
+<sc>
 
 ## Echo
 
@@ -10,6 +15,10 @@ metaDescription: 'PHP'
 <?php echo $a; ?>
 <?= /*Shorthand*/ $a; ?>
 ```
+
+</sc>
+
+<sc>
 
 ## Array
 
@@ -29,6 +38,10 @@ $array2["key2"] = "value2";
 $array2 = array("key1" => "value1", "key2" => "value2");
 ```
 
+</sc>
+
+<sc>
+
 ## Foreach
 
 ```php
@@ -36,6 +49,10 @@ foreach($array as $key => $value) {
 	echo $key.$value;
 }
 ```
+
+</sc>
+
+<sc>
 
 ## Class
 
@@ -70,3 +87,7 @@ class Point {
 
 $p = new Point(1, 2);
 ```
+
+</sc>
+
+</mc>
