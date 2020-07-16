@@ -2,7 +2,7 @@
 title: "Links"
 metaTitle: "Links - /useful"
 metaDescription: "Useful websites"
-date: 2020-07-15
+date: 2020-07-16
 ---
 
 ## Tools
@@ -333,6 +333,26 @@ date: 2020-07-15
 
 <div>
 
+### Websites
+
+#### Design
+
+- [GoodUI](https://goodui.org/)
+
+</div>
+
+<div>
+
+### Articles
+
+#### Design
+
+- [7 steps to become a UI/UX designer](https://blog.nicolesaidy.com/7-steps-to-become-a-ui-ux-designer-8beed7639a95)
+
+</div>
+
+<div>
+
 ### Misc
 
 - [Learn X in Y Minutes](https://learnxinyminutes.com/)
@@ -343,3 +363,20 @@ date: 2020-07-15
 </div>
 
 </cc>
+
+---
+
+## Similar websites
+
+<cc>
+
+<div>
+
+### Cheatsheets
+
+- [devhints.io](https://devhints.io/)
+
+</div>
+
+</cc>
+
