@@ -162,6 +162,8 @@ date: 2020-07-16
 
 </cc>
 
+---
+
 ## Specific Language/Technologies
 
 <cc>
@@ -334,6 +336,10 @@ date: 2020-07-16
 <div>
 
 ### Websites
+
+#### Programming
+
+- [r/learnprogramming/ - Reddit](https://www.reddit.com/r/learnprogramming/wiki/index#wiki_other_resources)
 
 #### Design
 
