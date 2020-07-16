@@ -66,9 +66,9 @@ const plugins = [
   },
   {
     resolve: "gatsby-plugin-offline",
-    options: {
-      appendScript: require.resolve(`./src/sw.js`),
-    },
+    // options: {
+    //   appendScript: require.resolve(`./src/sw.js`),
+    // },
   },
   "gatsby-plugin-remove-trailing-slashes",
 ];
