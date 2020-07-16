@@ -5,9 +5,13 @@ metaDescription: 'Javascript'
 date: 2020-06-30
 ---
 
-## Placeholder
+## Resources
 
 [JavaScript Pro Tips - Code This, Not That](https://github.com/codediodeio/code-this-not-that-js)
+
+<mc minWidth='800'>
+
+<sc>
 
 ```js
 // Object literals
@@ -61,6 +65,10 @@ if (username) {
 let defaultName = username || 'Stranger';
 ```
 
+</sc>
+
+<sc>
+
 ### RegEx
 
 [RegExp](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
@@ -72,3 +80,7 @@ let regex = /this|string|\d/gi;
 regex.test(string);
 string.match(regex);
 ```
+
+</sc>
+
+</mc>
