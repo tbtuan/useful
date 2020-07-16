@@ -1,7 +1,7 @@
 import React, { useContext, useMemo } from "react";
 import styled from "@emotion/styled";
 
-import Adjust from "emotion-icons/fa-solid/Adjust";
+import { Adjust } from "emotion-icons/fa-solid";
 import { ThemeContext } from "../providers/themeProvider";
 
 const Switch = styled("label")`

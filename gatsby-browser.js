@@ -1,3 +1,5 @@
+exports.onServiceWorkerUpdateReady = () => window && window.location.reload();
+
 exports.shouldUpdateScroll = ({ routerProps: { location } }) => {
   if (location && location.hash) {
     const anchorLink = document.querySelector(location.hash);
