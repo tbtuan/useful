@@ -7,6 +7,10 @@ date: 2020-06-30
 
 ## Bash
 
+| Description                 | Command   |
+| --------------------------- | --------- |
+| Redo last command with sudo | `sudo !!` |
+
 ## Git
 
 - [Git Documentation](https://git-scm.com/docs)

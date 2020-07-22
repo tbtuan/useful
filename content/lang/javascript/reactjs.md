@@ -10,7 +10,7 @@ date: 2020-07-15
 - [React documentation](https://reactjs.org/docs/react-api.html)
 - [React lifecycle methods diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 - [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
-- 
+- [awesome-react](https://github.com/enaqx/awesome-react)
 
 <mc minWidth='800'>
 

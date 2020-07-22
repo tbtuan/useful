@@ -372,13 +372,22 @@ date: 2020-07-16
 
 ---
 
-## Similar websites
+## Misc
 
 <cc>
 
 <div>
 
-### Cheatsheets
+### Github 
+
+- [gitstar-ranking](https://gitstar-ranking.com/)
+- [Github stars search](https://github.com/search?o=desc&q=stars%3A%3E1&s=stars&type=Repositories)
+
+</div>
+
+<div>
+
+### Similar websites
 
 - [devhints.io](https://devhints.io/)
 
