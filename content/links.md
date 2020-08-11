@@ -2,7 +2,7 @@
 title: "Links"
 metaTitle: "Links - /useful"
 metaDescription: "Useful websites"
-date: 2020-07-16
+date: 2020-08-11
 ---
 
 ## Tools
@@ -22,6 +22,10 @@ date: 2020-07-16
 - [have i been pwned?](https://haveibeenpwned.com/)
 - [twofactorauth](https://twofactorauth.org/)
 - [Shodan](https://www.shodan.io/)
+- [exploit-db](https://www.exploit-db.com/google-hacking-database)
+- [Shellcode](https://github.com/hatRiot/shellme)
+- [Disassemblers](https://reverseengineering.stackexchange.com/questions/1817/is-there-any-disassembler-to-rival-ida-pro)
+- [List of pentest tools](https://www.reddit.com/r/HowToHack/comments/ewm1ax/a_complete_penetration_testing_hacking_tools_list/)
 
 #### TLS Certificate
 
