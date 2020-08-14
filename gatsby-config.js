@@ -112,8 +112,6 @@ module.exports = {
     description: "A site with useful things",
     docsLocation: "https://github.com/tbtuan/useful/tree/master/content",
     headerTitle: "/useful",
-    githubUrl: "https://github.com/tbtuan/useful",
-    siteUrl: "https://github.com/tbtuan/useful",
   },
   plugins: plugins,
 };

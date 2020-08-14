@@ -2,9 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { ThemeSwitch } from "./themeSwitch";
 
-import { Edit, ThList } from "emotion-icons/fa-solid";
-import { Bookmark as NotBookmark } from "emotion-icons/fa-regular";
-import { Bookmark } from "emotion-icons/fa-solid";
+import { Edit } from "emotion-icons/fa-solid";
 import { Github } from "emotion-icons/fa-brands";
 
 import Link from "./link";
@@ -141,7 +139,7 @@ const HeaderLayout = ({ docsLocation }) => (
     <Search />
     <OptionsWrapper>
       <Container>
-        <StyledLink to={githubUrl}>
+        <StyledLink to={"https://github.com/tbtuan/useful"}>
           <StyledGithub />
         </StyledLink>
         <ThemeSwitch />
