@@ -5,6 +5,7 @@ import { ThemeSwitch } from "./themeSwitch";
 import { Edit, ThList } from "emotion-icons/fa-solid";
 import { Bookmark as NotBookmark } from "emotion-icons/fa-regular";
 import { Bookmark } from "emotion-icons/fa-solid";
+import { Github } from "emotion-icons/fa-brands";
 
 import Link from "./link";
 
@@ -68,20 +69,6 @@ const TitleSpan2 = styled("span")`
   }
 `;
 
-const StyledBookmark = styled(NotBookmark)`
-  width: 1.25rem;
-  height: 1.25rem;
-  color: ${({ theme }) => theme.colors.switch};
-  filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
-  cursor: pointer;
-  user-select: none;
-  margin: 0;
-  margin-right: auto;
-  :hover {
-    opacity: 85%;
-  }
-`;
-
 const EditButton = styled(Link)`
   outline: 0;
   border: 0;
@@ -94,6 +81,30 @@ const EditButton = styled(Link)`
     0px 4px 5px ${({ theme }) => theme.colors.editButtonShadow}
   );
   user-select: none;
+  :hover {
+    opacity: 85%;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+  margin-right: auto;
+  :hover {
+    opacity: 85%;
+  }
+  display: flex;
+`;
+
+const StyledGithub = styled(Github)`
+  // width: 1.25rem;
+  height: 1.25rem;
+  color: ${({ theme }) => theme.colors.switch};
+  filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
+  cursor: pointer;
+  //user-select: none;
+  margin: 0;
   :hover {
     opacity: 85%;
   }
@@ -130,7 +141,9 @@ const HeaderLayout = ({ docsLocation }) => (
     <Search />
     <OptionsWrapper>
       <Container>
-        <StyledBookmark />
+        <StyledLink to={githubUrl}>
+          <StyledGithub />
+        </StyledLink>
         <ThemeSwitch />
         <EditButton to={docsLocation}>
           <StyledEdit />

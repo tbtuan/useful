@@ -6,7 +6,7 @@ import { ThemeContext } from "../providers/themeProvider";
 
 const Switch = styled("label")`
   display: flex;
-  margin-right: auto;
+  padding-right: 1rem;
   user-select: none;
 `;
 

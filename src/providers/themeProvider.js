@@ -25,8 +25,6 @@ const lightTheme = {
     kbd: "#fafbfc",
     kbdText: "#444d56",
     kbdBorder: "#d1d5da",
-    // Footer
-    githubButton: "#3B454E",
   },
 };
 
@@ -54,8 +52,6 @@ const darkTheme = {
     kbd: "#232538",
     kbdText: "#d8d8d8",
     kbdBorder: "#161721",
-    // Footer
-    githubButton: "#dbddde",
   },
 };
 

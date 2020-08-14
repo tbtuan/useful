@@ -1,6 +1,5 @@
 import React from "react";
 
-import Footer from "./footer";
 import Navigation from "./navigation";
 
 import styled from "@emotion/styled";
@@ -31,7 +30,6 @@ const Sidebar = styled("aside")`
 const SidebarLayout = ({ location }) => (
   <Sidebar>
     <Navigation location={location} />
-    <Footer />
   </Sidebar>
 );
 
