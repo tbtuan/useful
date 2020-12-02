@@ -103,7 +103,6 @@ const plugins = [
 ];
 
 module.exports = {
-  pathPrefix: "/",
   siteMetadata: {
     title: "/useful",
     description: "A site with useful things",
