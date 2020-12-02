@@ -30,6 +30,7 @@
     "react-helmet": "^6.1.0",
     "react-masonry-css": "^1.0.14",
     "react-typography": "^0.16.19",
+    "stylis": "^4.0.6",
     "typography": "^0.16.19"
   },
   "license": "MIT",
