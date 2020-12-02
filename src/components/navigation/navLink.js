@@ -73,11 +73,11 @@ const NavlinkLayout = ({ text, link, children, location }) => {
           <IconWrapper>{children}</IconWrapper>
         </ActiveLink>
       ) : (
-        <Link to={link}>
-          <TextWrapper>{text}</TextWrapper>
-          <IconWrapper>{children}</IconWrapper>
-        </Link>
-      )}
+          <Link to={link}>
+            <TextWrapper>{text}</TextWrapper>
+            <IconWrapper>{children}</IconWrapper>
+          </Link>
+        )}
     </ListItem>
   );
 };

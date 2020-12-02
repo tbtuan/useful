@@ -1,7 +1,7 @@
 import React, { useContext, useMemo } from "react";
 import styled from "@emotion/styled";
 
-import { Adjust } from "emotion-icons/fa-solid";
+import { Adjust } from "./icon"
 import { ThemeContext } from "../providers/themeProvider";
 
 const Switch = styled("label")`
@@ -10,7 +10,7 @@ const Switch = styled("label")`
   user-select: none;
 `;
 
-const StyledAdjust = styled(Adjust)`
+const StyledAdjust = styled(Adjust/*Adjust*/)`
   cursor: pointer;
   width: 1.25rem;
   height: 1.25rem;

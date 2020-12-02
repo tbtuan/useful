@@ -14,7 +14,7 @@ import {
 } from "./heading";
 import Table from "./table";
 import AnchorTag from "./anchor";
-import { Link as FaLink } from "emotion-icons/fa-solid";
+import { FaLink } from "../icon";
 import Link from "../link";
 
 const StyledLink = styled(FaLink)`

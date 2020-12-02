@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
+import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 
 const lightTheme = {
   colors: {

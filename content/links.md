@@ -2,7 +2,7 @@
 title: "Links"
 metaTitle: "Links - /useful"
 metaDescription: "Useful websites"
-date: 2020-08-11
+date: 2020-12-02
 ---
 
 ## Tools
@@ -238,6 +238,10 @@ date: 2020-08-11
 
 ### Python
 
+- [Tensorflow](https://www.tensorflow.org/api_docs/python/)
+- [matplotlib](https://matplotlib.org/contents.html)
+- [NumPy](https://numpy.org/doc/stable/reference/index.html)
+- [Pandas](https://pandas.pydata.org/docs/)
 - [OpenCV](https://opencv.org/)
 
 </div>

@@ -1,7 +1,7 @@
 ---
-title: 'Python'
-metaTitle: 'Python - /useful'
-metaDescription: 'Python'
+title: 'Tensorflow'
+metaTitle: 'Tensorflow - /useful'
+metaDescription: 'Tensorflow'
 date: 2020-12-02
 ---
 

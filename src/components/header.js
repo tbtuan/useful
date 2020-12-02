@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { ThemeSwitch } from "./themeSwitch";
-
-import { Edit } from "emotion-icons/fa-solid";
-import { Github } from "emotion-icons/fa-brands";
+import { Github, Edit } from "./icon";
 
 import Link from "./link";
 
@@ -110,7 +108,7 @@ const StyledGithub = styled(Github)`
 
 const StyledEdit = styled(Edit)`
   width: 0.8rem;
-  height: 0.8rem;
+  height: 0.6rem;
   margin-left: auto;
   margin-right: 0.2rem;
   color: ${({ theme }) => theme.colors.background};

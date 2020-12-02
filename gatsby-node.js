@@ -96,7 +96,7 @@ exports.onCreateBabelConfig = ({ actions }) => {
     name: "@babel/plugin-proposal-class-properties",
   });
   actions.setBabelPlugin({
-    name: `babel-plugin-emotion`,
+    name: `@emotion/babel-plugin`,
     options: {
       sourceMap: true,
     },

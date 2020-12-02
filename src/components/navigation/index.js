@@ -8,7 +8,7 @@ import {
   Terminal,
   Keyboard,
   ExternalLinkAlt,
-} from "emotion-icons/fa-solid";
+} from "../icon";
 
 const Nav = styled("nav")`
   width: 100%;

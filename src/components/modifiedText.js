@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
-import { Clock } from "emotion-icons/fa-solid";
-import Icon from "./icon";
+import Icon, { Clock } from "./icon";
 
 const StyledSmall = styled("small")`
   color: ${({ theme }) => theme.colors.text};
@@ -11,7 +10,7 @@ const ModifiedText = ({ modifiedTime }) => {
 
   return (
     <div>
-      <Icon tag={Clock} size="12px" gap="0.5rem" />
+      {<Icon tag={Clock} size="10px" gap="0.5rem" />}
       <StyledSmall>Last update: {modifiedDate}</StyledSmall>
     </div>
   );
