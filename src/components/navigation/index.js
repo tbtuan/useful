@@ -8,7 +8,7 @@ import {
   Terminal,
   Keyboard,
   ExternalLinkAlt,
-} from "../icon";
+} from "../icons";
 
 const Nav = styled("nav")`
   width: 100%;

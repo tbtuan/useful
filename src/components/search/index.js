@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import styled from "@emotion/styled";
-import { Search } from "../icon";
+import { Search } from "../icons";
 import Fuse from "fuse.js";
 import Link from "../link";
 

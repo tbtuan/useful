@@ -98,9 +98,6 @@ const plugins = [
         ],
       },
     },
-    // options: {
-    //   appendScript: require.resolve(`./src/sw.js`),
-    // },
   },
   "gatsby-plugin-remove-trailing-slashes",
 ];

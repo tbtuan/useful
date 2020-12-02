@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { ThemeSwitch } from "./themeSwitch";
-import { Github, Edit } from "./icon";
+import { Github, Edit } from "./icons";
 
 import Link from "./link";
 

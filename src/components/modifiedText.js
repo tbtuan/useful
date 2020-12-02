@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Icon, { Clock } from "./icon";
+import Icon, { Clock } from "./icons";
 
 const StyledSmall = styled("small")`
   color: ${({ theme }) => theme.colors.text};
