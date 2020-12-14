@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
-import Link from "../components/link";
+import Link from "components/link";
 import styled from "@emotion/styled";
-import { StyledHeading, TitleWrapper } from "../components/templates";
+import { StyledHeading, TitleWrapper } from "./style";
 
 const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.link} !important;
@@ -55,12 +55,12 @@ const TreeNode = styled(({ url, title, layer, items }) => {
   } else if (layer == 1) {
     const mappedItems = hasChildren
       ? items.map((item, index) => (
-          <TreeNode
-            key={item.url + index.toString()}
-            layer={layer + 1}
-            {...item}
-          />
-        ))
+        <TreeNode
+          key={item.url + index.toString()}
+          layer={layer + 1}
+          {...item}
+        />
+      ))
       : null;
 
     return (
@@ -167,7 +167,7 @@ const calculateTreeData = (edges, subpath) => {
     }
     // sort items alphabetically.
     prevItems.map((item) => {
-      item.items = item.items.sort(function(a, b) {
+      item.items = item.items.sort(function (a, b) {
         if (a.label < b.label) return -1;
         if (a.label > b.label) return 1;
         return 0;
@@ -209,12 +209,6 @@ const CollectionTemplate = ({ data, location }) => {
   if (typeof window === "undefined") {
     return null;
   }
-
-  // console.log(
-  //   allMdx.edges.filter(({ node }) =>
-  //     node.fields.slug.startsWith(location.pathname)
-  //   )
-  // );
 
   return (
     <div>

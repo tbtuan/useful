@@ -1,10 +1,6 @@
-import React from "react";
-
-import Navigation from "./navigation";
-
 import styled from "@emotion/styled";
 
-const Sidebar = styled("aside")`
+export const StyledSidebar = styled("aside")`
   position: fixed;
   top: 6rem;
   bottom: 0;
@@ -26,11 +22,3 @@ const Sidebar = styled("aside")`
     top: 3rem;
   }
 `;
-
-const SidebarLayout = ({ location }) => (
-  <Sidebar>
-    <Navigation location={location} />
-  </Sidebar>
-);
-
-export default SidebarLayout;

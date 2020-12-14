@@ -3,9 +3,9 @@ import { graphql } from "gatsby";
 
 import Helmet from "react-helmet";
 
-import Cheatsheet from "../templates/cheatsheet";
-import Collection from "../templates/collection";
-import Docs from "../templates/docs";
+import Cheatsheet from "templates/cheatsheet";
+import Collection from "templates/collection";
+import Docs from "templates/docs";
 
 import Layout from "./layout";
 

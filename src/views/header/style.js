@@ -1,14 +1,10 @@
-import React from "react";
+
 import styled from "@emotion/styled";
-import { ThemeSwitch } from "./themeSwitch";
-import Github from "./icons/github";
-import Edit from "./icons/edit"
+import Github from "components/icons/github";
+import Edit from "components/icons/edit"
+import Link from "components/link";
 
-import Link from "./link";
-
-import Search from "./search";
-
-const Header = styled("header")`
+export const Header = styled("header")`
   width: 100%;
   height: 5rem;
   padding-top: 2rem;
@@ -24,7 +20,7 @@ const Header = styled("header")`
   }
 `;
 
-const TitleWrapper = styled("div")`
+export const TitleWrapper = styled("div")`
   padding: 4rem;
   flex: 0 0 18em;
   background-color: ${({ theme }) => theme.colors.sidebar};
@@ -41,32 +37,32 @@ const TitleWrapper = styled("div")`
   }
 `;
 
-const OptionsWrapper = styled("div")`
+export const OptionsWrapper = styled("div")`
   background-color: ${({ theme }) => theme.colors.background};
   width: 100%;
   display: flex;
 `;
 
-const Title = styled(Link)`
+export const Title = styled(Link)`
   margin-top: 4rem;
   font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.text};
 `;
 
-const TitleSpan = styled("span")`
+export const TitleSpan = styled("span")`
   @media only screen and (max-width: 1023px) {
     display: none;
   }
 `;
 
-const TitleSpan2 = styled("span")`
+export const TitleSpan2 = styled("span")`
   display: none;
   @media only screen and (max-width: 1023px) {
     display: block;
   }
 `;
 
-const EditButton = styled(Link)`
+export const EditButton = styled(Link)`
   outline: 0;
   border: 0;
   color: ${({ theme }) => theme.colors.background};
@@ -83,7 +79,7 @@ const EditButton = styled(Link)`
   }
 `;
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   cursor: pointer;
   user-select: none;
   margin: 0;
@@ -94,7 +90,7 @@ const StyledLink = styled(Link)`
   display: flex;
 `;
 
-const StyledGithub = styled(Github)`
+export const StyledGithub = styled(Github)`
   // width: 1.25rem;
   height: 1.25rem;
   color: ${({ theme }) => theme.colors.switch};
@@ -107,7 +103,7 @@ const StyledGithub = styled(Github)`
   }
 `;
 
-const StyledEdit = styled(Edit)`
+export const StyledEdit = styled(Edit)`
   width: 0.8rem;
   height: 0.6rem;
   margin-left: auto;
@@ -115,7 +111,7 @@ const StyledEdit = styled(Edit)`
   color: ${({ theme }) => theme.colors.background};
 `;
 
-const Container = styled("div")`
+export const Container = styled("div")`
   margin-left: auto;
   width: 14rem;
   display: flex;
@@ -126,29 +122,3 @@ const Container = styled("div")`
     flex: none;
   }
 `;
-
-const HeaderLayout = ({ docsLocation }) => (
-  <Header>
-    <TitleWrapper>
-      <Title to="/">
-        <TitleSpan>/useful</TitleSpan>
-        <TitleSpan2>/</TitleSpan2>
-      </Title>
-    </TitleWrapper>
-    <Search />
-    <OptionsWrapper>
-      <Container>
-        <StyledLink to={"https://github.com/tbtuan/useful"}>
-          <StyledGithub />
-        </StyledLink>
-        <ThemeSwitch />
-        <EditButton to={docsLocation}>
-          <StyledEdit />
-          Edit
-        </EditButton>
-      </Container>
-    </OptionsWrapper>
-  </Header>
-);
-
-export default HeaderLayout;

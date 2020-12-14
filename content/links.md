@@ -125,6 +125,7 @@ date: 2020-12-02
 
 ### Principles
 
+- [Clean code](https://github.com/ryanmcdermott/clean-code-javascript)
 - [S.O.L.I.D: The First 5 Principles of Object Oriented Design](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 
 </div>

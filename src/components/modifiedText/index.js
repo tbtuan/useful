@@ -1,10 +1,6 @@
-import styled from "@emotion/styled";
-import Icon from "./icons";
-import Clock from "./icons/clock";
-
-const StyledSmall = styled("small")`
-  color: ${({ theme }) => theme.colors.text};
-`;
+import Icon from "../icons";
+import Clock from "../icons/clock";
+import { StyledSmall } from "./style"
 
 const ModifiedText = ({ modifiedTime }) => {
   const modifiedDate = new Date(Date.parse(modifiedTime)).toLocaleDateString();

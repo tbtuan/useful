@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import NavLink from "./navLink";
-import Code from "../icons/code";
-import Cogs from "../icons/cogs";
-import Terminal from "../icons/terminal";
-import Keyboard from "../icons/keyboard";
-import ExternalLinkAlt from "../icons/externalLinkAlt";
+import NavLink from "components/navLink";
+import Code from "components/icons/code";
+import Cogs from "components/icons/cogs";
+import Terminal from "components/icons/terminal";
+import Keyboard from "components/icons/keyboard";
+import ExternalLinkAlt from "components/icons/externalLinkAlt";
 
 const Nav = styled("nav")`
   width: 100%;
