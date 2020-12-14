@@ -50,7 +50,7 @@ const Li = styled("li")`
     position: relative;
 
     color: ${(props) =>
-      props.active ? props.theme.colors.link : props.theme.colors.text};
+    props.active ? props.theme.colors.link : props.theme.colors.text};
 
     &:hover {
       color: ${({ theme }) => theme.colors.link};

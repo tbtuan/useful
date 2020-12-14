@@ -106,10 +106,32 @@ date: 2020-12-02
 
 <div>
 
-### Misc
+### General
 
 - [Firefox Send (File sharing)](https://send.firefox.com/)
 - [namechk (Social media name check)](https://namechk.com/)
+
+</div>
+
+</cc>
+
+---
+
+## Software Engineering
+
+<cc>
+
+<div>
+
+### Principles
+
+- [S.O.L.I.D: The First 5 Principles of Object Oriented Design](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
+
+</div>
+
+<div>
+
+### Design patterns
 
 </div>
 
@@ -128,6 +150,7 @@ date: 2020-12-02
 - [W3Techs](https://w3techs.com/)
 - [Can I use](https://caniuse.com/)
 - [Public APIs](https://github.com/public-apis/public-apis#books)
+- [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
 
 </div>
 
@@ -153,14 +176,6 @@ date: 2020-12-02
 - [MDN - CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 - [w3schools - JS Reference](https://www.w3schools.com/jsref/)
 - [w3schools - CSS Reference](https://www.w3schools.com/cssref/)
-
-</div>
-
-<div>
-
-### Misc
-
-- [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
 
 </div>
 
@@ -367,7 +382,7 @@ date: 2020-12-02
 
 <div>
 
-### Misc
+### General
 
 - [Learn X in Y Minutes](https://learnxinyminutes.com/)
 - [Developer Roadmap](https://roadmap.sh/)
