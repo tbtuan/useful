@@ -10,7 +10,7 @@ import { Padding } from "./style"
 
 const Index = React.memo(
   (props) => {
-    const { data, location } = props.data;
+    const { data, location } = props;
     if (!data) return null;
 
     const { mdx } = data;
