@@ -1,9 +1,8 @@
-import React from "react";
 import { MDXProvider } from "@mdx-js/react";
-import mdxComponents from "components/mdxComponents";
+import mdxComponents from "mdxComponents";
 import Sidebar from "../sidebar";
 import Header from "../header";
-import ThemeProvider from "providers/themeProvider";
+import ThemeProvider from "contexts/themeContext";
 import {
   Content,
   ContentWrapper,

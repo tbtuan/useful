@@ -70,7 +70,7 @@ export const HitsWrapper = styled("div")`
   padding: 1rem;
   background: ${({ theme }) => theme.colors.search};
 
-  border-radius: 4px;
+  border-radius: 0.25rem;
   * {
     margin-top: 0;
     margin-bottom: 0;
@@ -81,13 +81,16 @@ export const HitsWrapper = styled("div")`
   }
 `;
 
-export const Hits = styled("li")``;
+export const Hits = styled("li")`
+  font-size: 0.9rem;
+`;
 
 export const SearchLink = styled(Link)`
   color: ${({ theme }) => theme.colors.text};
   list-style: none;
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.8rem 0.8rem;
+  border-radius: 0.25rem;
   margin: 0;
 
   background-color: ${({ selected, theme }) =>
@@ -96,4 +99,5 @@ export const SearchLink = styled(Link)`
 
 export const SearchTitle = styled("span")`
   font-weight: 700;
+  font-size: 1.2rem;
 `;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
 import Link from "components/link";

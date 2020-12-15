@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import NavLink from "components/navLink";
+import NavLink from "./navLink";
 import Code from "components/icons/code";
 import Cogs from "components/icons/cogs";
 import Terminal from "components/icons/terminal";

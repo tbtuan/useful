@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Link from "../link";
+import Link from "components/link";
 
 export const ListItem = styled("li")`
 list-style: none;

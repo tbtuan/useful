@@ -1,5 +1,5 @@
-import Icon from "../icons";
-import Clock from "../icons/clock";
+import Icon from "components/icons";
+import Clock from "components/icons/clock";
 import { StyledSmall } from "./style"
 
 const ModifiedText = ({ modifiedTime }) => {

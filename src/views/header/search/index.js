@@ -1,40 +1,8 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import Fuse from "fuse.js";
+import { useClickOutside } from "hooks/useClickOutside"
+import { useFocus } from "hooks/useFocus"
 import { StyledSearch, SearchBox, SearchContainer, HitsWrapper, Hits, SearchLink, SearchTitle } from "./style.js"
-
-function useFocus(ref, handler) {
-  useEffect(() => {
-    const handleKeyOutside = (e) => {
-      if (ref.current && !ref.current.contains(e.target) && e.key === "f") {
-        handler();
-      }
-    };
-
-    // Bind the event listener
-    document.addEventListener("keyup", handleKeyOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("keyup", handleKeyOutside);
-    };
-  }, [ref]);
-}
-
-function useClickOutside(ref, handler) {
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) {
-        handler();
-      }
-    };
-
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
-}
 
 function useDatafetch(query, setResults, [itemIndex, setItemIndex]) {
   useEffect(() => {
@@ -110,9 +78,11 @@ const SearchLayout = () => {
 
   const searchResults = results.map((element, index) => {
     const { item, matches } = element;
+    const firstMatch = matches[0];
+
     let url = item.url;
-    if (matches[0].key === "toc.title" && url !== "/") {
-      url += "/" + element.item.toc[matches[0].refIndex].url;
+    if (firstMatch.key === "toc.title" && url !== "/") {
+      url += "/" + element.item.toc[firstMatch.refIndex].url;
     }
 
     return (

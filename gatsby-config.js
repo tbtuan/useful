@@ -14,7 +14,7 @@ const plugins = [
   {
     resolve: "gatsby-plugin-layout",
     options: {
-      component: require.resolve("./src/views/index.js"),
+      component: require.resolve("./src/views/app/index.js"),
     },
   },
   "gatsby-plugin-catch-links",

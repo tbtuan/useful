@@ -1,21 +1,13 @@
-import React from "react";
-import { ThemeSwitch } from "../themeSwitch";
 import {
-  Container,
-  EditButton,
   Header,
-  OptionsWrapper,
-  StyledEdit,
-  StyledGithub,
-  StyledLink,
   Title,
   TitleSpan,
   TitleSpan2,
   TitleWrapper
 } from "./style"
 
-
-import Search from "../search";
+import Search from "./search";
+import Options from "./options"
 
 const HeaderLayout = ({ docsLocation }) => (
   <Header>
@@ -26,18 +18,7 @@ const HeaderLayout = ({ docsLocation }) => (
       </Title>
     </TitleWrapper>
     <Search />
-    <OptionsWrapper>
-      <Container>
-        <StyledLink to={"https://github.com/tbtuan/useful"}>
-          <StyledGithub />
-        </StyledLink>
-        <ThemeSwitch />
-        <EditButton to={docsLocation}>
-          <StyledEdit />
-          Edit
-        </EditButton>
-      </Container>
-    </OptionsWrapper>
+    <Options docsLocation={docsLocation} />
   </Header>
 );
 

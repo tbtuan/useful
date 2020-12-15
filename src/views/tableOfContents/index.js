@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "components/link";
 import { TableOfContents, TOCTitle, Li } from "./style"
 

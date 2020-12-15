@@ -3,11 +3,11 @@ import { graphql } from "gatsby";
 
 import Helmet from "react-helmet";
 
-import Cheatsheet from "templates/cheatsheet";
-import Collection from "templates/collection";
-import Docs from "templates/docs";
+import Cheatsheet from "../layout/templates/cheatsheet";
+import Collection from "../layout/templates/collection";
+import Docs from "../layout/templates/docs";
 
-import Layout from "./layout";
+import Layout from "../layout";
 
 import styled from "@emotion/styled";
 

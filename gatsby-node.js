@@ -53,7 +53,7 @@ exports.createPages = ({ graphql, actions }) => {
           });
           createPage({
             path: node.fields.slug ? node.fields.slug : "/",
-            component: path.resolve("./src/views/index.js"),
+            component: path.resolve("./src/views/app/index.js"),
             context: {
               id: node.fields.id,
             },

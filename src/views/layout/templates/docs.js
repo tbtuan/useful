@@ -1,6 +1,6 @@
 import React from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
-import ModifiedText from "components/modifiedText";
+import ModifiedText from "./modifiedText";
 import TableOfContents from "views/tableOfContents";
 import {
   StyledHeading,

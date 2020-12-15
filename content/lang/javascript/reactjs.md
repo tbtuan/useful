@@ -2,7 +2,7 @@
 title: "ReactJS"
 metaTitle: "Reactjs - /useful"
 metaDescription: "Javascript - ReactJS"
-date: 2020-07-15
+date: 2020-12-15
 ---
 
 ## Resources
@@ -19,6 +19,7 @@ date: 2020-07-15
 ## Render
 
 ```jsx
+// No "import React" for JSX since 17
 import React from "react";
 import ReactDOM from "react-dom";
 

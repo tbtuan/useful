@@ -1,5 +1,4 @@
-import React from "react";
-import Link from "../link";
+import Link from "components/link";
 import { ActiveLink, IconWrapper, ListItem, TextWrapper } from "./style"
 
 const NavlinkLayout = ({ text, link, children, location }) => {

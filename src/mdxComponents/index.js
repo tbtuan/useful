@@ -14,8 +14,8 @@ import {
 } from "./heading";
 import Table from "./table";
 import AnchorTag from "./anchor";
-import FaLink from "../icons/faLink";
-import Link from "../link";
+import FaLink from "../components/icons/faLink";
+import Link from "../components/link";
 
 const StyledLink = styled(FaLink)`
   width: 20px;

@@ -1,5 +1,5 @@
-import React, { useContext, useMemo } from "react";
-import { ThemeContext } from "providers/themeProvider";
+import { useContext, useMemo } from "react";
+import { ThemeContext } from "contexts/themeContext";
 import { Switch, StyledAdjust, Input } from "./style"
 
 export const ThemeSwitch = () => {
