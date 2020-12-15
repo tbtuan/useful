@@ -1,6 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby";
-
 import Helmet from "react-helmet";
 
 import Cheatsheet from "../layout/templates/cheatsheet";
@@ -8,19 +6,13 @@ import Collection from "../layout/templates/collection";
 import Docs from "../layout/templates/docs";
 
 import Layout from "../layout";
-
-import styled from "@emotion/styled";
-
-const Padding = styled("div")`
-  padding: 50px 0;
-`;
+import { Padding } from "./style"
 
 const Index = React.memo(
   (props) => {
     const { data, location } = props;
-    if (!data) {
-      return null;
-    }
+    if (!data) return null;
+
     const { mdx } = data;
     // meta tags
     const { metaTitle, metaDescription, type } = mdx.frontmatter;
@@ -41,13 +33,9 @@ const Index = React.memo(
         <Helmet defer={false} title={metaTitle}>
           {metaTitle ? <title>{metaTitle}</title> : null}
           {metaTitle ? <meta name="title" content={metaTitle} /> : null}
-          {metaDescription ? (
-            <meta name="description" content={metaDescription} />
-          ) : null}
+          {metaDescription ? <meta name="description" content={metaDescription} /> : null}
           {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
-          {metaDescription ? (
-            <meta property="og:description" content={metaDescription} />
-          ) : null}
+          {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
         </Helmet>
         <Layout {...props}>
           <MarkdownFormat data={data} type={type} />
@@ -58,52 +46,5 @@ const Index = React.memo(
   },
   (prev, next) => prev.data === next.data
 );
-
-export const pageQuery = graphql`
-  query($id: String!) {
-    site {
-      siteMetadata {
-        title
-        docsLocation
-      }
-    }
-    mdx(fields: { id: { eq: $id } }) {
-      fields {
-        id
-        title
-        slug
-      }
-      body
-      tableOfContents
-      parent {
-        ... on File {
-          relativePath
-        }
-      }
-      frontmatter {
-        metaTitle
-        metaDescription
-        type
-        date
-      }
-    }
-    allMdx {
-      edges {
-        node {
-          fields {
-            slug
-            title
-          }
-          parent {
-            ... on File {
-              relativePath
-            }
-          }
-          tableOfContents
-        }
-      }
-    }
-  }
-`;
 
 export default Index;
