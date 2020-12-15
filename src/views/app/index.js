@@ -10,7 +10,7 @@ import { Padding } from "./style"
 
 const Index = React.memo(
   (props) => {
-    const { data, location } = props;
+    const { data, location } = props.data;
     if (!data) return null;
 
     const { mdx } = data;
@@ -46,5 +46,52 @@ const Index = React.memo(
   },
   (prev, next) => prev.data === next.data
 );
+
+export const pageQuery = graphql`
+  query($id: String!) {
+    site {
+      siteMetadata {
+        title
+        docsLocation
+      }
+    }
+    mdx(fields: { id: { eq: $id } }) {
+      fields {
+        id
+        title
+        slug
+      }
+      body
+      tableOfContents
+      parent {
+        ... on File {
+          relativePath
+        }
+      }
+      frontmatter {
+        metaTitle
+        metaDescription
+        type
+        date
+      }
+    }
+    allMdx {
+      edges {
+        node {
+          fields {
+            slug
+            title
+          }
+          parent {
+            ... on File {
+              relativePath
+            }
+          }
+          tableOfContents
+        }
+      }
+    }
+  }
+`;
 
 export default Index;
