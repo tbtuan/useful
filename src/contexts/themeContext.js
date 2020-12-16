@@ -1,7 +1,7 @@
 import { useState, createContext } from "react";
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import { lightTheme, darkTheme } from "theme"
-import { storeItem, getItemFromStorage } from "helper/localStorage"
+import { storeItem, getItemFromStorage } from "utils/localStorage"
 
 export const ThemeContext = createContext();
 
@@ -12,6 +12,7 @@ const ThemeProvider = ({ children }) => {
     setDarkThemeActive((prevTheme) => !prevTheme);
     storeItem("isDarkThemeActive", !isDarkThemeActive)
   };
+
   return (
     <ThemeContext.Provider value={{ isDarkThemeActive, toggleActiveTheme }}>
       <EmotionThemeProvider theme={isDarkThemeActive ? darkTheme : lightTheme}>

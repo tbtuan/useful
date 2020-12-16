@@ -1,5 +1,4 @@
 const plugins = [
-  "gatsby-disable-404",
   "gatsby-plugin-react-helmet",
   {
     resolve: `gatsby-plugin-emotion`,
@@ -14,7 +13,7 @@ const plugins = [
   {
     resolve: "gatsby-plugin-layout",
     options: {
-      component: require.resolve("./src/views/app/index.js"),
+      component: require.resolve("./src/index.js"),
     },
   },
   "gatsby-plugin-catch-links",

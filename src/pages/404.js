@@ -1,4 +1,4 @@
-import Layout from "components/layout";
+import Layout from "templates/layout";
 
 export default function NotFound() {
   return (
