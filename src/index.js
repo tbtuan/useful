@@ -11,7 +11,7 @@ import { Padding } from "./style"
 
 const Index = (props) => useMemo(() => {
   const { data, location } = props;
-
+  if (!data) return null;
   const { mdx } = data;
 
   // meta tags
