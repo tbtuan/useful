@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import Helmet from "react-helmet";
 
 import Cheatsheet from "templates/cheatsheet";
