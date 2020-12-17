@@ -1,4 +1,3 @@
-import React from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import ModifiedText from "./components/modifiedText";
 import TableOfContents from "./components/tableOfContents";

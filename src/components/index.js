@@ -1,5 +1,3 @@
-import React from "react";
-
 import MasonryContainer from "./container/masonry";
 import ColumnContainer from "./container/column";
 import SyntaxContainer from "./container/syntax";

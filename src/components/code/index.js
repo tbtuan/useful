@@ -1,4 +1,4 @@
-import * as React from "react";
+import { Fragment } from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import prismTheme from "prism-react-renderer/themes/vsDark";
 import { Code } from "./style"
@@ -96,7 +96,7 @@ const CodeBlock = ({ children: exampleCode }) => {
                         };
 
                         return (
-                          <React.Fragment key={token + key}>
+                          <Fragment key={token + key}>
                             <span
                               {...getTokenProps({ token: firstChar, key })}
                               style={diffStyle}
@@ -104,7 +104,7 @@ const CodeBlock = ({ children: exampleCode }) => {
                             <span
                               {...getTokenProps({ token: splitToken, key })}
                             />
-                          </React.Fragment>
+                          </Fragment>
                         );
                       } else {
                         return (

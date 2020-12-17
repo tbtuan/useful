@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Anchor } from "./style"
 
 const AnchorTag = ({ children: link, ...props }) => {

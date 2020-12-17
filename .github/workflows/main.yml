@@ -18,7 +18,7 @@ jobs:
           node-version: '15.x'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build gatsby
         run: npm run build

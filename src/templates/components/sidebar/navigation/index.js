@@ -1,4 +1,4 @@
-import React from "react";
+import { createElement } from "react";
 import styled from "@emotion/styled";
 
 import NavLink from "./navLink";
@@ -25,7 +25,7 @@ const Ul = styled("ul")`
 `;
 
 const Icon = styled(({ tag, children, ...props }) =>
-  React.createElement(tag, props, children)
+  createElement(tag, props, children)
 )`
   width: 1rem;
   height: 1rem;
