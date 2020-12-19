@@ -123,6 +123,16 @@ date: 2020-12-02
 
 <div>
 
+### Algorithms and data structures
+
+- [The algorithms](https://thealgorithms.github.io/)
+- [Algorithm visualizer](https://algorithm-visualizer.org/)
+
+
+</div>
+
+<div>
+
 ### Principles
 
 - [Clean code](https://github.com/ryanmcdermott/clean-code-javascript)
@@ -133,6 +143,10 @@ date: 2020-12-02
 <div>
 
 ### Design patterns
+
+- [Design Patterns](https://refactoring.guru/design-patterns)
+- [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#designpatternsjavascript)
+- [ES6 Design Patterns](https://loredanacirstea.github.io/es6-design-patterns/)
 
 </div>
 
@@ -163,6 +177,7 @@ date: 2020-12-02
 - [The Twelve-Factor App](https://12factor.net/)
 - [web.dev](https://web.dev/)
 - [Serviceworke.rs](https://serviceworke.rs/)
+- [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 
 </div>
 
@@ -323,6 +338,22 @@ date: 2020-12-02
 
 <cc>
 
+### Useful websites
+
+<div>
+
+- [Some useful websites for programmers](https://github.com/sdmg15/Best-websites-a-programmer-should-visit)
+
+</div>
+
+### Tutorials
+
+<div>
+
+- [Build your own X](https://github.com/danistefanovic/build-your-own-x)
+
+</div>
+
 <div>
 
 ### E-Books
@@ -385,9 +416,11 @@ date: 2020-12-02
 
 ### General
 
+- [Learn anything](https://learn-anything.xyz/)
 - [Learn X in Y Minutes](https://learnxinyminutes.com/)
 - [Developer Roadmap](https://roadmap.sh/)
 - [Web Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap)
+- [AI Expert Roadmap](https://github.com/AMAI-GmbH/AI-Expert-Roadmap)
 - [Game Developer Roadmap](https://github.com/utilForever/game-developer-roadmap)
 
 </div>
