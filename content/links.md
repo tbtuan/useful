@@ -2,7 +2,7 @@
 title: "Links"
 metaTitle: "Links - /useful"
 metaDescription: "Useful websites"
-date: 2020-12-02
+date: 2020-12-20
 ---
 
 ## Tools
@@ -342,7 +342,8 @@ date: 2020-12-02
 
 ### Useful websites
 
-- [Some useful websites for programmers](https://github.com/sdmg15/Best-websites-a-programmer-should-visit)
+- 📖 [Some useful websites for programmers](https://github.com/sdmg15/Best-websites-a-programmer-should-visit)
+- 📖 [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)
 
 </div>
 
@@ -358,7 +359,7 @@ date: 2020-12-02
 
 ### E-Books
 
-- [List of Free Learning Resources](https://github.com/EbookFoundation/free-programming-books/blob/master/README.md)
+- 📚 [List of Free Learning Resources](https://github.com/EbookFoundation/free-programming-books/blob/master/README.md)
 
 </div>
 

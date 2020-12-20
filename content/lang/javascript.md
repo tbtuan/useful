@@ -2,12 +2,13 @@
 title: 'Javascript'
 metaTitle: 'Javascript - /useful'
 metaDescription: 'Javascript'
-date: 2020-06-30
+date: 2020-12-20
 ---
 
 ## Resources
 
-[JavaScript Pro Tips - Code This, Not That](https://github.com/codediodeio/code-this-not-that-js)
+- [awesome-javascript](https://github.com/sorrycc/awesome-javascript)
+- [JavaScript Pro Tips - Code This, Not That](https://github.com/codediodeio/code-this-not-that-js)
 
 <mc minWidth='800'>
 

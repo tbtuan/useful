@@ -9,6 +9,7 @@ date: 2020-12-02
 
 - [Python Cheatsheet](https://www.pythoncheatsheet.org/)
 - [Python Crash Course](https://github.com/ehmatthes/pcc)
+- [awesome-python](https://github.com/vinta/awesome-python)
 
 <mc minWidth='800'>
 
