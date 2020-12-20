@@ -203,9 +203,15 @@ date: 2020-12-02
 
 <cc>
 
+<div>
+
 ### General
 
 - [TIOBE-Index](https://www.tiobe.com/tiobe-index/)
+
+</div>
+
+<div>
 
 ### Javascript/Typescript
 
@@ -215,10 +221,18 @@ date: 2020-12-02
 - [npm](https://www.npmjs.com/)
 - [Deno](https://deno.land/)
 
+</div>
+
+<div>
+
 ### PHP
 
 - [Laravel](https://laravel.com/docs)
 - [Composer](https://getcomposer.org/doc/)
+
+</div>
+
+<div>
 
 ### CSS
 
@@ -229,17 +243,29 @@ date: 2020-12-02
 - [Emotion](https://emotion.sh/docs/)
 - [Styled Components](https://styled-components.com/docs)
 
+</div>
+
+<div>
+
 ### C#
 
 - [C# Documentation](https://docs.microsoft.com/de-de/dotnet/csharp/)
 - [PInvoke.net](http://pinvoke.net/)
 - [NuGet](https://www.nuget.org/)
 
+</div>
+
+<div>
+
 ### Java
 
 - [Java Platform, Standard Edition Documentation](https://docs.oracle.com/en/java/javase/index.html)
 - [Gradle Build Language Reference](https://docs.gradle.org/current/dsl/)
 - [Apache Maven](http://maven.apache.org/)
+
+</div>
+
+<div>
 
 ### Python
 
@@ -249,34 +275,60 @@ date: 2020-12-02
 - [Pandas](https://pandas.pydata.org/docs/)
 - [OpenCV](https://opencv.org/)
 
+</div>
+
+<div>
+
 ### Database
 
 - [MySQL](https://dev.mysql.com/doc/)
 - [MongoDB](https://docs.mongodb.com/)
 - [Redis](https://redis.io/documentation)
 
+</div>
+
+<div>
+
 ### GUI
 
 - [ElectronJS](https://www.electronjs.org/docs)
+
+</div>
+
+<div>
 
 ### Testing
 
 - [Jest](https://jestjs.io/docs/en/getting-started)
 - [JUnit](https://junit.org/)
 
+</div>
+
+<div>
+
 ### Static Site Rendering/Generation
 
 - [Gatsby](https://www.gatsbyjs.org/docs/)
 - [NextJS](https://nextjs.org/docs)
+
+</div>
+
+<div>
 
 ### Win32
 
 - [Windows API Index](https://docs.microsoft.com/en-us/windows/win32/apiindex/windows-api-list)
 - [Using WMI](https://docs.microsoft.com/en-us/windows/win32/wmisdk/connecting-to-wmi-remotely-with-c-)
 
+</div>
+
+<div>
+
 ### WebAssembly
 
 - [WebAssembly](https://webassembly.org/)
+
+</div>
 
 </cc>
 
@@ -286,23 +338,41 @@ date: 2020-12-02
 
 <cc>
 
+<div>
+
 ### Useful websites
 
 - [Some useful websites for programmers](https://github.com/sdmg15/Best-websites-a-programmer-should-visit)
+
+</div>
+
+<div>
 
 ### Tutorials
 
 - [Build your own X](https://github.com/danistefanovic/build-your-own-x)
 
+</div>
+
+<div>
+
 ### E-Books
 
 - [List of Free Learning Resources](https://github.com/EbookFoundation/free-programming-books/blob/master/README.md)
+
+</div>
+
+<div>
 
 ### Online learning platforms
 
 - [Excercism](https://exercism.io/)
 - [freeCodeCamp](https://www.freecodecamp.org/)
 - [Codecademy](https://www.codecademy.com/)
+
+</div>
+
+<div>
 
 ### YouTube
 
@@ -316,6 +386,10 @@ date: 2020-12-02
 
 - [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg/videos)
 
+</div>
+
+<div>
+
 ### Websites
 
 #### Programming
@@ -326,11 +400,19 @@ date: 2020-12-02
 
 - [GoodUI](https://goodui.org/)
 
+</div>
+
+<div>
+
 ### Articles
 
 #### Design
 
 - [7 steps to become a UI/UX designer](https://blog.nicolesaidy.com/7-steps-to-become-a-ui-ux-designer-8beed7639a95)
+
+</div>
+
+<div>
 
 ### General
 
@@ -341,6 +423,8 @@ date: 2020-12-02
 - [AI Expert Roadmap](https://github.com/AMAI-GmbH/AI-Expert-Roadmap)
 - [Game Developer Roadmap](https://github.com/utilForever/game-developer-roadmap)
 
+</div>
+
 </cc>
 
 ---
@@ -349,14 +433,22 @@ date: 2020-12-02
 
 <cc>
 
+<div>
+
 ### Github 
 
 - [gitstar-ranking](https://gitstar-ranking.com/)
 - [Github stars search](https://github.com/search?o=desc&q=stars%3A%3E1&s=stars&type=Repositories)
 
+</div>
+
+<div>
+
 ### Similar websites
 
 - [devhints.io](https://devhints.io/)
+
+</div>
 
 </cc>
 
