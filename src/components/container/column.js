@@ -15,4 +15,14 @@ const ColumnContainer = styled("div")`
   }
 `;
 
-export default ColumnContainer;
+const Column = (props) => {
+  const children = props.children;
+
+  return (
+    <ColumnContainer>
+      { children.map((child) => <div>{child}</div>) }
+    </ColumnContainer>
+  );
+}
+
+export default Column;
