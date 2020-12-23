@@ -42,6 +42,10 @@ date: 2020-06-30
 
 ## Powershell
 
+Powershell and CMD
+
+- [Control Panel Command Line Commands](https://www.lifewire.com/command-line-commands-for-control-panel-applets-2626060)
+
 | Description  | Command                                  |
 | ------------ | ---------------------------------------- |
 | Zip in Image | `copy /B pic.png+yourzip.zip newpic.png` |

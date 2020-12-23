@@ -2,7 +2,7 @@
 title: 'Python'
 metaTitle: 'Python - /useful'
 metaDescription: 'Python'
-date: 2020-12-02
+date: 2020-12-23
 ---
 
 ## Cheatsheet
@@ -96,6 +96,37 @@ for i, element in enumerate(x):
 
 while True:
     print('runs forever')
+```
+
+</sc>
+
+<sc>
+
+## Unpacking arguments
+
+```python
+# *args and **kwargs
+# Unpacking list *
+# Unpacking dictionaries ** 
+
+def fun1(a, b, c): 
+    print(a, b, c) 
+  
+l = [1, 2, 3] 
+
+fun1(*l) 
+
+def fun2(a, b, c): 
+    print(a, b, c) 
+  
+d = {'a':1, 'b':2, 'c':3} 
+fun2(**d) 
+
+def func3(*args, **kwargs):
+    print(args, kwargs)
+
+func3(1, 2, 3, a=1, b=1)
+
 ```
 
 </sc>
