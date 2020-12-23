@@ -1,19 +1,19 @@
 import {
   Header,
-  TitleWrapper
+  TitleWrapper,
+  LogoWrapper
 } from "./style"
 
 import Search from "./search";
 import Options from "./options"
 import Logo from "icons/logo"
-import Link from "components/link";
 
 const HeaderLayout = ({ docsLocation }) => (
   <Header>
     <TitleWrapper>
-      <Link to="/">
+      <LogoWrapper to="/">
         <Logo />
-      </Link>
+      </LogoWrapper>
     </TitleWrapper>
     <Search />
     <Options docsLocation={docsLocation} />

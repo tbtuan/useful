@@ -27,6 +27,16 @@ export const TitleWrapper = styled("div")`
 
   @media only screen and (max-width: 1023px) {
     flex: 0 0 4em;
-    padding: 1rem;
+    padding: 0rem;
+  }
+`;
+
+export const LogoWrapper = styled(Link)`
+
+  @media only screen and (max-width: 1023px) {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
   }
 `;
