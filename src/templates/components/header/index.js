@@ -1,8 +1,5 @@
 import {
   Header,
-  Title,
-  TitleSpan,
-  TitleSpan2,
   TitleWrapper
 } from "./style"
 
@@ -16,8 +13,6 @@ const HeaderLayout = ({ docsLocation }) => (
     <TitleWrapper>
       <Link to="/">
         <Logo />
-        {/* <TitleSpan>/useful</TitleSpan>
-        <TitleSpan2>/</TitleSpan2> */}
       </Link>
     </TitleWrapper>
     <Search />

@@ -11,8 +11,12 @@ width: 100%;
 padding: 3rem;
 padding-left: 4rem;
 
+@media only screen and (max-width: 1023px) {
+  padding: 3rem;
+}
+
 @media only screen and (max-width: 576px) {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 `;
 
@@ -30,6 +34,10 @@ table tr {
 
 @media only screen and (max-width: 1023px) {
   margin-left: 4rem;
+  top: 3rem;
+}
+@media only screen and (max-width: 576px) {
+  top: 3rem;
 }
 `;
 

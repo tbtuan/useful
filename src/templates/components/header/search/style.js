@@ -52,6 +52,10 @@ export const SearchContainer = styled("div")`
   align-items: center;
   place-content: flex-start;
 
+  @media only screen and (max-width: 1023px) {
+    padding-left: 3rem;
+  }
+
   @media only screen and (max-width: 576px) {
     flex: none;
     padding-left: 1.5rem;

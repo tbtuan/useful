@@ -18,6 +18,10 @@ const Nav = styled("nav")`
     width: auto;
     margin: 0;
   }
+
+  @media only screen and (max-width: 1023px) {
+    padding-top: 2rem;
+  }
 `;
 
 const Ul = styled("ul")`

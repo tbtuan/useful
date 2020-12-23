@@ -24,17 +24,18 @@ export const EditButton = styled(Link)`
   :hover {
     opacity: 85%;
   }
+
 `;
 
 export const StyledLink = styled(Link)`
   cursor: pointer;
   user-select: none;
   margin: 0;
-  margin-right: auto;
   :hover {
     opacity: 85%;
   }
   display: flex;
+  padding-right: 1rem;
 `;
 
 export const StyledGithub = styled(Github)`
@@ -60,12 +61,19 @@ export const StyledEdit = styled(Edit)`
 
 export const Container = styled("div")`
   margin-left: auto;
-  width: 14rem;
+
   display: flex;
   align-items: center;
   padding-right: 4.5rem;
 
+  @media only screen and (max-width: 1023px) {
+    padding-right: 3rem;
+    width: 12.5rem;
+  }
+
   @media only screen and (max-width: 576px) {
     flex: none;
+    width: auto;
+    padding-right: 1.5rem;
   }
 `;
