@@ -54,7 +54,7 @@ export const SearchContainer = styled("div")`
 
   @media only screen and (max-width: 576px) {
     flex: none;
-    padding-left: 2rem;
+    padding-left: 1.5rem;
     width: 40%;
   }
 `;

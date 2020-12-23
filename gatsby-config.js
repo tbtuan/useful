@@ -1,7 +1,7 @@
 const plugins = [
   "gatsby-plugin-react-helmet",
   {
-    resolve: `gatsby-plugin-emotion`,
+    resolve: "gatsby-plugin-emotion",
   },
   {
     resolve: "gatsby-plugin-typography",

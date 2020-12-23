@@ -22,7 +22,6 @@ const Heading2 = styled("h2")`
 
   a {
     position: absolute;
-    margin-top: -3px;
     margin-left: calc(-20px - 0.5rem);
     padding-right: calc(0.5rem);
     opacity: 0;

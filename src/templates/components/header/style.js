@@ -19,6 +19,7 @@ export const Header = styled("header")`
 
 export const TitleWrapper = styled("div")`
   padding: 4rem;
+  margin-top: 5px;
   flex: 0 0 18em;
   background-color: ${({ theme }) => theme.colors.sidebar};
   text-align: center;
@@ -30,7 +31,7 @@ export const TitleWrapper = styled("div")`
   }
 
   @media only screen and (max-width: 576px) {
-    padding: 2rem;
+    padding: 1rem;
   }
 `;
 
