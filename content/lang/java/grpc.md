@@ -1,6 +1,6 @@
 ---
 title: 'Grpc'
-metaTitle: 'java/grpc - /useful'
+metaTitle: 'java/grpc'
 metaDescription: 'Java - Grpc'
 date: 2020-06-30
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Languages'
-metaTitle: 'Languages - /useful'
+metaTitle: 'Languages'
 metaDescription: 'A collection of programming/script/markup languages etc'
 type: 'collection'
 ---

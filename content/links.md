@@ -1,6 +1,6 @@
 ---
 title: "Links"
-metaTitle: "Links - /useful"
+metaTitle: "Links"
 metaDescription: "Useful websites"
 date: 2020-12-20
 ---

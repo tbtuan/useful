@@ -1,6 +1,6 @@
 ---
 title: 'Javascript'
-metaTitle: 'Javascript - /useful'
+metaTitle: 'Javascript'
 metaDescription: 'Javascript'
 date: 2020-12-20
 ---

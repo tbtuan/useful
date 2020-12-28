@@ -1,6 +1,6 @@
 ---
 title: 'CSS'
-metaTitle: 'CSS - /useful'
+metaTitle: 'CSS'
 metaDescription: 'This is the meta description for this page'
 date: 2020-08-11
 ---

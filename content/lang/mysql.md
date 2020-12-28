@@ -1,6 +1,6 @@
 ---
 title: 'MySQL'
-metaTitle: 'MySQL - /useful'
+metaTitle: 'MySQL'
 metaDescription: 'MySQL'
 date: 2020-07-16
 ---

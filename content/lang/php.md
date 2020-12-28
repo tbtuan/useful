@@ -1,6 +1,6 @@
 ---
 title: 'PHP'
-metaTitle: 'PHP - /useful'
+metaTitle: 'PHP'
 metaDescription: 'PHP'
 date: 2020-07-16
 ---

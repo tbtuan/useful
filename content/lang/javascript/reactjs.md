@@ -1,6 +1,6 @@
 ---
 title: "ReactJS"
-metaTitle: "Reactjs - /useful"
+metaTitle: "Reactjs"
 metaDescription: "Javascript - ReactJS"
 date: 2020-12-15
 ---

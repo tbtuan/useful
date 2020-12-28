@@ -1,8 +1,8 @@
 ---
 title: "Commands"
-metaTitle: "Commands - /useful"
+metaTitle: "Commands"
 metaDescription: "Commands for CLIs"
-date: 2020-06-30
+date: 2020-12-28
 ---
 
 ## Bash
@@ -29,6 +29,7 @@ date: 2020-06-30
 | Rename "old" branch to "new" branch locally | `git branch -m [OLD] [NEW]`                                                                                                       |
 | Delete "old" branch and push "new" branch   | `git push origin :[OLD] [NEW]`                                                                                                    |
 | Reset upstream for "new" branch             | `git push -u origin [NEW]`                                                                                                        |
+| Remove commits from history             | `git reset --hard [HASH] && git push -f`                                                                                                        |
 
 ## npm
 

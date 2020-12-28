@@ -1,6 +1,6 @@
 ---
 title: "Shortcuts"
-metaTitle: "Shortcuts - /useful"
+metaTitle: "Shortcuts"
 metaDescription: "Shortcuts for different applications"
 type: "cheatsheet"
 date: 2020-06-30

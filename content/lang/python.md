@@ -1,6 +1,6 @@
 ---
 title: 'Python'
-metaTitle: 'Python - /useful'
+metaTitle: 'Python'
 metaDescription: 'Python'
 date: 2020-12-23
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'C#'
-metaTitle: 'C# - /useful'
+metaTitle: 'C#'
 metaDescription: 'This is the meta description for this page'
 date: 2020-06-30
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Sass'
-metaTitle: 'Sass - /useful'
+metaTitle: 'Sass'
 metaDescription: 'CSS - Sass'
 date: 2020-06-30
 ---

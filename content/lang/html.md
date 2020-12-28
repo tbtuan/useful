@@ -1,6 +1,6 @@
 ---
 title: 'HTML'
-metaTitle: 'HTML - /useful'
+metaTitle: 'HTML'
 metaDescription: 'Resources for HTML'
 date: 2020-12-21
 ---

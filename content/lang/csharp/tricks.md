@@ -1,6 +1,6 @@
 ---
 title: 'Tricks'
-metaTitle: 'csharp/tricks - /useful'
+metaTitle: 'csharp/tricks'
 metaDescription: 'C# - Tricks'
 date: 2020-06-30
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Java'
-metaTitle: 'Java - /useful'
+metaTitle: 'Java'
 metaDescription: 'Java'
 date: 2020-12-20
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'C++'
-metaTitle: 'C++ - /useful'
+metaTitle: 'C++'
 metaDescription: 'C++ Cheatsheet'
 date: 2020-07-02
 ---

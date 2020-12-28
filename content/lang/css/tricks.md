@@ -1,6 +1,6 @@
 ---
 title: 'Tricks'
-metaTitle: 'css/tricks - /useful'
+metaTitle: 'css/tricks'
 metaDescription: 'CSS - Tricks'
 date: 2020-06-30
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Setups'
-metaTitle: 'Setups - /useful'
+metaTitle: 'Setups'
 metaDescription: 'Setting up things such as config files'
 date: 2020-06-30
 ---

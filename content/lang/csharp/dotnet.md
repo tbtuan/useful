@@ -1,6 +1,6 @@
 ---
 title: '.NET'
-metaTitle: '.NET - /useful'
+metaTitle: '.NET'
 metaDescription: 'C# - .NET'
 date: 2020-06-30
 ---

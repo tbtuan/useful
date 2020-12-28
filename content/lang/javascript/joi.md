@@ -1,6 +1,6 @@
 ---
 title: 'Joi'
-metaTitle: 'javascript/joi - /useful'
+metaTitle: 'javascript/joi'
 metaDescription: 'Javascript - Joi'
 date: 2020-06-30
 ---
