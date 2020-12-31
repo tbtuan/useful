@@ -20,10 +20,10 @@ exports.onClientEntry = (
     `${__PATH_PREFIX__}/${filename}`,
     fetchOptions
   )
-    .then(function(response) {
+    .then(function (response) {
       return response.json();
     })
-    .then(function(fullIndex) {
+    .then(function (fullIndex) {
       window.__FUSE__ = fullIndex;
       return window.__FUSE__;
     })

@@ -8,8 +8,8 @@ const Link = styled(({ to, ...props }) =>
       {props.children}
     </a>
   ) : (
-      <GatsbyLink to={to} {...props} />
-    )
+    <GatsbyLink to={to} {...props} />
+  )
 )`
   text-decoration: none;
 `;

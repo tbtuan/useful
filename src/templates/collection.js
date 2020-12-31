@@ -55,12 +55,12 @@ const TreeNode = styled(({ url, title, layer, items }) => {
   } else if (layer == 1) {
     const mappedItems = hasChildren
       ? items.map((item, index) => (
-        <TreeNode
-          key={item.url + index.toString()}
-          layer={layer + 1}
-          {...item}
-        />
-      ))
+          <TreeNode
+            key={item.url + index.toString()}
+            layer={layer + 1}
+            {...item}
+          />
+        ))
       : null;
 
     return (

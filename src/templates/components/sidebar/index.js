@@ -1,5 +1,5 @@
 import Navigation from "./navigation";
-import { StyledSidebar } from "./style"
+import { StyledSidebar } from "./style";
 
 const SidebarLayout = ({ location }) => (
   <StyledSidebar>

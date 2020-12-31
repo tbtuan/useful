@@ -1,12 +1,8 @@
-import {
-  Header,
-  TitleWrapper,
-  LogoWrapper
-} from "./style"
+import { Header, TitleWrapper, LogoWrapper } from "./style";
 
 import Search from "./search";
-import Options from "./options"
-import Logo from "icons/logo"
+import Options from "./options";
+import Logo from "icons/logo";
 
 const HeaderLayout = ({ docsLocation }) => (
   <Header>

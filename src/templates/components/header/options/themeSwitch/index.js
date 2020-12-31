@@ -1,6 +1,6 @@
 import { useContext, useMemo } from "react";
 import { ThemeContext } from "contexts/themeContext";
-import { Switch, StyledAdjust, Input } from "./style"
+import { Switch, StyledAdjust, Input } from "./style";
 
 export const ThemeSwitch = () => {
   const themeContext = useContext(ThemeContext);

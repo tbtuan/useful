@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "components/link";
-import { TableOfContents, TOCTitle, Li } from "./style"
+import { TableOfContents, TOCTitle, Li } from "./style";
 
 const TableOfContentsLayout = ({ mdx }) => {
   const { tableOfContents } = mdx;
@@ -17,9 +17,11 @@ const TableOfContentsLayout = ({ mdx }) => {
     const links = document.querySelectorAll("main div h2");
 
     const handleObserver = (entries) => {
-      entries.filter(entry => entry.isIntersecting).forEach((entry) => {
-        setCurrent(`${slug}#${entry.target.getAttribute("id")}`);
-      });
+      entries
+        .filter((entry) => entry.isIntersecting)
+        .forEach((entry) => {
+          setCurrent(`${slug}#${entry.target.getAttribute("id")}`);
+        });
     };
 
     const observer = new IntersectionObserver(handleObserver, {

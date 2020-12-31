@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import prismTheme from "prism-react-renderer/themes/vsDark";
-import { Code } from "./style"
+import { Code } from "./style";
 
 /** Removes the last token from a code example if it's empty. */
 function cleanTokens(tokens) {

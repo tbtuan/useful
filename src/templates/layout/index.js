@@ -3,12 +3,7 @@ import mdxComponents from "components";
 import Sidebar from "../components/sidebar";
 import Header from "../components/header";
 import ThemeProvider from "contexts/themeContext";
-import {
-  Content,
-  ContentWrapper,
-  ViewDiv,
-  Wrapper
-} from "./style"
+import { Content, ContentWrapper, ViewDiv, Wrapper } from "./style";
 
 const Layout = ({ children, location, data }) => {
   if (typeof window === "undefined") {

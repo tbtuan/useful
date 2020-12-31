@@ -1,6 +1,6 @@
 import Icon from "components/icons";
 import Clock from "icons/clock";
-import { StyledSmall } from "./style"
+import { StyledSmall } from "./style";
 
 const ModifiedText = ({ modifiedTime }) => {
   const modifiedDate = new Date(Date.parse(modifiedTime)).toLocaleDateString();

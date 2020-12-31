@@ -1,8 +1,16 @@
 import { useEffect, useState, useRef } from "react";
 import Fuse from "fuse.js";
-import { useClickOutside } from "hooks/useClickOutside"
-import { useFocus } from "hooks/useFocus"
-import { StyledSearch, SearchBox, SearchContainer, HitsWrapper, Hits, SearchLink, SearchTitle } from "./style.js"
+import { useClickOutside } from "hooks/useClickOutside";
+import { useFocus } from "hooks/useFocus";
+import {
+  StyledSearch,
+  SearchBox,
+  SearchContainer,
+  HitsWrapper,
+  Hits,
+  SearchLink,
+  SearchTitle,
+} from "./style.js";
 
 function useDatafetch(query, setResults, [itemIndex, setItemIndex]) {
   useEffect(() => {

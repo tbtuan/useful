@@ -1,4 +1,4 @@
-import { Anchor } from "./style"
+import { Anchor } from "./style";
 
 const AnchorTag = ({ children: link, ...props }) => {
   if (link) {

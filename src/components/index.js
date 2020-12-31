@@ -5,21 +5,15 @@ import TableContainer from "./container/table";
 import HeadingAnchor from "./headingAnchor";
 
 import CodeBlock from "./code";
-import {
-  Heading1,
-  Heading3,
-  Heading4,
-  Heading5,
-  Heading6,
-} from "./heading";
-import Paragraph from "./paragraph"
-import ListItem from "./listitem"
-import UnorderedList from "./unorderedList"
+import { Heading1, Heading3, Heading4, Heading5, Heading6 } from "./heading";
+import Paragraph from "./paragraph";
+import ListItem from "./listitem";
+import UnorderedList from "./unorderedList";
 import Table from "./table";
-import Keyboard from "./keyboard"
+import Keyboard from "./keyboard";
 import AnchorTag from "./anchor";
 import Divider from "./divider";
-import Preformatted from "./preformatted"
+import Preformatted from "./preformatted";
 
 export default {
   h1: (props) => <Heading1 {...props} />,

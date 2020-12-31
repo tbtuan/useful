@@ -18,7 +18,7 @@ const QUERY = `
     }
   }
 }
-`
+`;
 
 const SEARCH_INDEX = "searchIndex.json";
 
@@ -28,8 +28,8 @@ module.exports = async ({ graphql, actions, reporter }) => {
   const result = await graphql(QUERY);
 
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
   }
 
   // Create search index

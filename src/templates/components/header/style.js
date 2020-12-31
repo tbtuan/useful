@@ -32,7 +32,6 @@ export const TitleWrapper = styled("div")`
 `;
 
 export const LogoWrapper = styled(Link)`
-
   @media only screen and (max-width: 1023px) {
     svg {
       width: 32px;

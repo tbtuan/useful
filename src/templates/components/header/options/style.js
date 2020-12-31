@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import Github from "icons/github";
-import Edit from "icons/edit"
+import Edit from "icons/edit";
 import Link from "components/link";
 
 export const OptionsWrapper = styled("div")`
@@ -24,7 +24,6 @@ export const EditButton = styled(Link)`
   :hover {
     opacity: 85%;
   }
-
 `;
 
 export const StyledLink = styled(Link)`
