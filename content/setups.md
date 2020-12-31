@@ -2,7 +2,7 @@
 title: 'Setups'
 metaTitle: 'Setups'
 metaDescription: 'Setting up things such as config files'
-date: 2020-06-30
+date: 2020-12-31
 ---
 
 ## Apache
@@ -66,3 +66,11 @@ Useful extensions
 
 - [emmet](https://docs.emmet.io/)
 - [Live Server](https://ritwickdey.github.io/vscode-live-server/)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+### Prettier
+
+```text
+Settings -> Editor: Default Formatter -> esbenp.prettier-vscode
+```
