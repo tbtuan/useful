@@ -10,7 +10,6 @@ const plugins = [
       component: require.resolve("./src/index.js"),
     },
   },
-  "gatsby-plugin-catch-links",
   {
     resolve: "gatsby-source-filesystem",
     options: {
@@ -18,7 +17,6 @@ const plugins = [
       path: `${__dirname}/content/`,
     },
   },
-  "gatsby-plugin-catch-links",
   {
     resolve: "gatsby-source-filesystem",
     options: {
@@ -29,11 +27,6 @@ const plugins = [
   {
     resolve: "gatsby-plugin-mdx",
     options: {
-      gatsbyRemarkPlugins: [
-        {
-          resolve: "gatsby-remark-copy-linked-files",
-        },
-      ],
       extensions: [".mdx", ".md"],
     },
   },
@@ -92,7 +85,6 @@ const plugins = [
       },
     },
   },
-  "gatsby-plugin-remove-trailing-slashes",
 ];
 
 module.exports = {

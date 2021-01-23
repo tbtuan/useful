@@ -43,7 +43,7 @@ export const NormalLink = styled(Link)`
     color: #fff !important;
     background-size: 200% 100%;
     background-position: left top;
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease-in-out;
   }
 `;
 
