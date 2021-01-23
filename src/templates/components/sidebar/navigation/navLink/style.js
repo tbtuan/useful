@@ -14,7 +14,6 @@ export const ListItem = styled("li")`
     width: 100%;
 
     color: ${({ theme }) => theme.colors.text};
-    font-size: 14px;
     font-weight: 500;
     height: 3.5rem;
 

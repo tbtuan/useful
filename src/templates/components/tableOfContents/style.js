@@ -37,7 +37,7 @@ export const Li = styled("li")`
   margin: 0;
 
   a {
-    font-size: 13px;
+    font-size: 0.8rem;
     padding-left: 0;
     text-decoration: none;
     font-weight: 400;

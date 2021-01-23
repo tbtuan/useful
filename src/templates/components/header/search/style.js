@@ -13,7 +13,6 @@ export const StyledSearch = styled(Search)`
 `;
 
 export const SearchBox = styled("input")`
-  font-size: 1rem;
   line-height: 2rem;
 
   border-width: 0 0 2px;
@@ -96,7 +95,7 @@ export const HitsWrapper = styled("div")`
 `;
 
 export const Hits = styled("li")`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 `;
 
 export const SearchLink = styled(Link)`
@@ -113,5 +112,4 @@ export const SearchLink = styled(Link)`
 
 export const SearchTitle = styled("span")`
   font-weight: 700;
-  font-size: 1.2rem;
 `;

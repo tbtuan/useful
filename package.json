@@ -3,11 +3,10 @@
   "private": true,
   "description": "A site with useful content",
   "author": "@tbtuan",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
-    "@mdx-js/loader": "^1.6.22",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "fuse.js": "^6.4.6",
@@ -34,6 +33,7 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
     "lint": "eslint --fix \"src/**/*.{js,jsx}\""
   },

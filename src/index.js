@@ -99,5 +99,4 @@ export const pageQuery = graphql`
   }
 `;
 
-//export default Index;
 export default Index;

@@ -11,7 +11,6 @@ const SyntaxContainer = styled("div")`
 
   h2 {
     font-weight: 600;
-    font-size: 13px;
     color: #d2d2d2;
     text-align: left;
     margin: 0;
@@ -30,7 +29,6 @@ const SyntaxContainer = styled("div")`
 
   h3 {
     color: #d2d2d2;
-    font-size: 13px;
     font-weight: 500;
     padding-top: 0.5rem;
     padding-left: 1.5rem;
@@ -46,7 +44,6 @@ const SyntaxContainer = styled("div")`
   }
 
   a {
-    font-size: 12px;
     padding-left: 1.5rem;
   }
 

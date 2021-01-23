@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const Keyboard = styled("kbd")`
   display: inline-block;
   padding: 2px 5px;
-  font-size: 11px;
+  font-size: 0.8rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.kbdText};
   vertical-align: middle;

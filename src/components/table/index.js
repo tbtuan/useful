@@ -17,7 +17,7 @@ const Table = styled("table")`
 
   tr th {
     font-weight: bold;
-    font-size: 13px;
+    font-size: 0.8rem;
     background-color: ${({ theme }) => theme.colors.tableHeader};
     text-align: left;
     margin: 0;
@@ -26,7 +26,7 @@ const Table = styled("table")`
 
   tr td {
     text-align: left;
-    font-size: 13px;
+    font-size: 0.8rem;
     margin: 0;
     padding: 0.5rem 1rem;
   }

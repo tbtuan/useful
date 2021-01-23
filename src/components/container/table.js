@@ -6,7 +6,7 @@ const TableContainer = styled("div")`
 
   h3 {
     font-weight: bold;
-    font-size: 13px;
+    font-size: 0.8rem;
     background-color: ${({ theme }) => theme.colors.tableHeader};
     text-align: left;
     margin: 0;
