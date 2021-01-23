@@ -26,6 +26,7 @@ const Nav = styled("nav")`
 
 const Ul = styled("ul")`
   margin-left: 0;
+  padding-inline-start: 0;
 `;
 
 const Icon = styled(({ tag, children, ...props }) =>

@@ -4,7 +4,6 @@ import Edit from "icons/edit";
 import Link from "components/link";
 
 export const OptionsWrapper = styled("div")`
-  background-color: ${({ theme }) => theme.colors.background};
   width: 100%;
   display: flex;
 `;

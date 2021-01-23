@@ -131,4 +131,23 @@ func3(1, 2, 3, a=1, b=1)
 
 </sc>
 
+<sc>
+
+## Classes
+
+```python
+# Inheritance
+
+class Parent:
+
+def __init__(self):
+    pass
+
+class child(Parent):
+    pass
+
+```
+
+</sc>
+
 </mc>

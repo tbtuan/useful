@@ -31,16 +31,28 @@ export const ListItem = styled("li")`
       display: inline-block;
     }
   }
+`;
 
-  a:hover {
-    background-color: ${({ theme }) => theme.colors.link};
+export const NormalLink = styled(Link)`
+  background-position: right bottom;
+  :hover {
+    background: linear-gradient(to left, transparent 50%, rgb(59, 69, 78) 50%);
+    filter: drop-shadow(
+      0px 4px 5px ${({ theme }) => theme.colors.navLinkShadow}
+    );
     color: #fff !important;
+    background-size: 200% 100%;
+    background-position: left top;
+    transition: all 0.2s ease-out;
   }
 `;
 
 export const ActiveLink = styled(Link)`
   background-color: ${({ theme }) => theme.colors.link};
   color: #fff !important;
+  filter: drop-shadow(
+    0px 4px 5px ${({ theme }) => theme.colors.activeNavLinkShadow}
+  );
 `;
 
 export const IconWrapper = styled("div")`

@@ -17,6 +17,7 @@ const Ul = styled("ul")`
 const Li = styled("li")`
   list-style: none;
   padding-left: 0;
+  margin-bottom: 0.4rem;
 `;
 
 const Container = styled("div")`

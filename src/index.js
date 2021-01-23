@@ -8,6 +8,7 @@ import Docs from "templates/docs";
 
 import Layout from "templates/layout";
 import { Padding } from "./style";
+import "normalize.css";
 
 const Index = (props) =>
   useMemo(() => {

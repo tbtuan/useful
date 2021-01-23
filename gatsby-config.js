@@ -3,12 +3,6 @@ const plugins = [
   {
     resolve: "gatsby-plugin-emotion",
   },
-  {
-    resolve: "gatsby-plugin-typography",
-    options: {
-      pathToConfigModule: "./src/utils/typography",
-    },
-  },
   "gatsby-plugin-sitemap",
   {
     resolve: "gatsby-plugin-layout",
@@ -29,7 +23,7 @@ const plugins = [
     resolve: "gatsby-source-filesystem",
     options: {
       name: "images",
-      path: `${__dirname}/images/`,
+      path: `${__dirname}/static/images/`,
     },
   },
   {
@@ -53,10 +47,10 @@ const plugins = [
       theme_color: "#FFFFFF",
       display: "standalone",
       crossOrigin: "use-credentials",
-      icon: `images/icon-512.png`,
+      icon: `static/images/icon-512.png`,
       icons: [
         {
-          src: "images/icon-512.png",
+          src: "static/images/icon-512.png",
           sizes: `512x512`,
           type: `image/png`,
         },

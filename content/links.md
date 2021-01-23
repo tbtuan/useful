@@ -111,6 +111,7 @@ date: 2020-12-20
 - [Firefox Send (File sharing)](https://send.firefox.com/)
 - [namechk (Social media name check)](https://namechk.com/)
 - [Regexr](https://regexr.com/)
+- [free-for.dev](free-for.dev)
 
 </div>
 

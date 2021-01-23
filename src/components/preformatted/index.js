@@ -5,7 +5,7 @@ const Preformatted = styled("pre")`
   z-index: 1;
   background: ${({ theme }) => theme.colors.preFormattedText};
   border-radius: 1em;
-
+  font-family: "monospace";
   border-radius: 0.4rem;
 `;
 

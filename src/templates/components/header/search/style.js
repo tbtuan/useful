@@ -7,7 +7,9 @@ export const StyledSearch = styled(Search)`
   left: 0.25rem;
   width: 1rem;
   height: 1rem;
+  z-index: 1;
   color: ${({ theme }) => theme.colors.text};
+  left: ${(props) => (props.show ? `1.25rem` : `none`)};
 `;
 
 export const SearchBox = styled("input")`
@@ -20,30 +22,38 @@ export const SearchBox = styled("input")`
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
   width: 100%;
-  padding-left: 2rem;
+  //padding-left: 2rem;
   margin-left: -1rem;
 
   :focus {
     border-color: ${({ theme }) => theme.colors.link};
   }
 
+  padding: ${(props) => (props.show ? `0.5rem` : `0rem`)};
+  padding-left: ${(props) => (props.show ? `3rem` : `2rem`)};
+  width: ${(props) => (props.show ? `40vw` : `100%`)};
+
   :hover {
     border-color: ${({ theme }) => theme.colors.link};
+    transition: all 0.2s ease-in;
   }
 
   ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.placeholder};
   }
 
   ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.placeholder};
+  }
+
+  ::-webkit-search-cancel-button {
+    -webkit-appearance: none;
   }
 `;
 
 export const SearchContainer = styled("div")`
-  background-color: ${({ theme }) => theme.colors.background};
   padding-left: 4rem;
   flex: 0 0 20em;
 
@@ -67,11 +77,12 @@ export const HitsWrapper = styled("div")`
   display: ${(props) => (props.show ? `flex` : `none`)};
   flex-direction: column;
   position: absolute;
-  z-index: 2;
-  top: calc(100% + 0.5em);
+  z-index: -2;
+  top: calc(100% + 0.5em - 3rem);
   width: 40vw;
   filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.searchShadow});
   padding: 1rem;
+  padding-top: 4rem;
   background: ${({ theme }) => theme.colors.search};
 
   border-radius: 0.25rem;

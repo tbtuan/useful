@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+//import { Fragment } from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import prismTheme from "prism-react-renderer/themes/vsDark";
 import { Code } from "./style";
@@ -18,7 +18,7 @@ function cleanTokens(tokens) {
   return tokens;
 }
 
-/* eslint-disable react/jsx-key */
+///* eslint-disable react/jsx-key */
 const CodeBlock = ({ children: exampleCode }) => {
   return (
     <Highlight

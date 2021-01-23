@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Code = styled("pre")`
+  font-family: monospace !important;
   font-size: 13px;
   margin: 0px;
   padding: 1rem;

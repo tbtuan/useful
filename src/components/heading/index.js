@@ -2,14 +2,14 @@ import styled from "@emotion/styled";
 
 const Heading1 = styled("h1")`
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.5;
   margin-bottom: 1rem;
 `;
 
 const Heading2 = styled("h2")`
   font-size: 26px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.5;
   margin-bottom: 1.5rem;
   /* Anchor link */

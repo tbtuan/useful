@@ -24,7 +24,7 @@ export const ContentWrapper = styled("div")`
   display: flex;
   margin-left: 18rem;
   position: relative;
-  top: 6rem;
+  top: 5rem;
 
   background: ${({ theme }) => theme.colors.background};
 

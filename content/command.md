@@ -5,6 +5,10 @@ metaDescription: "Commands for CLIs"
 date: 2020-12-28
 ---
 
+# Resource
+
+- [tl;dr pages (Web client)](https://tldr.ostera.io/)
+
 ## Bash
 
 | Description                 | Command   |
@@ -30,6 +34,14 @@ date: 2020-12-28
 | Delete "old" branch and push "new" branch   | `git push origin :[OLD] [NEW]`                                                                                                    |
 | Reset upstream for "new" branch             | `git push -u origin [NEW]`                                                                                                        |
 | Remove commits from history             | `git reset --hard [HASH] && git push -f`                                                                                                        |
+
+## grep
+
+
+| Description                                                                          | Command                              |
+| ------------------------------------------------------------------------------------ | ------------------------------------ |
+| Search "pattern" in "files" | `grep -n [TERM] [FILES]` |
+| Concatenate (cat) and search | `cat [FILES] | grep [TERM]` |
 
 ## npm
 
