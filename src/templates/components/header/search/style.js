@@ -35,7 +35,6 @@ export const SearchBox = styled("input")`
 
   :hover {
     border-color: ${({ theme }) => theme.colors.link};
-    transition: all 0.2s ease-in;
   }
 
   ::placeholder {
