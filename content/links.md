@@ -2,7 +2,7 @@
 title: "Links"
 metaTitle: "Links"
 metaDescription: "Useful websites"
-date: 2020-12-20
+date: 2020-01-24
 ---
 
 ## Tools
@@ -21,11 +21,16 @@ date: 2020-12-20
 - [Firefox Monitor](https://monitor.firefox.com/)
 - [have i been pwned?](https://haveibeenpwned.com/)
 - [twofactorauth](https://twofactorauth.org/)
+
+#### Hacking, Pentest
+
 - [Shodan](https://www.shodan.io/)
 - [exploit-db](https://www.exploit-db.com/google-hacking-database)
 - [Shellcode](https://github.com/hatRiot/shellme)
 - [Disassemblers](https://reverseengineering.stackexchange.com/questions/1817/is-there-any-disassembler-to-rival-ida-pro)
 - [List of pentest tools](https://www.reddit.com/r/HowToHack/comments/ewm1ax/a_complete_penetration_testing_hacking_tools_list/)
+- [Awesome-Hacking](https://github.com/NetanMangal/Awesome-Hacking)
+- [awesome-web-security](https://github.com/qazbnm456/awesome-web-security)
 
 #### TLS Certificate
 
@@ -101,6 +106,7 @@ date: 2020-12-20
 - [CSS Grid Generator - LayoutIt](https://grid.layoutit.com/)
 - [Box-shadow](https://brumm.af/shadows)
 - [CSS Gradient](https://cssgradient.io/)
+- [CSS Protips](https://github.com/AllThingsSmitty/css-protips)
 
 </div>
 
@@ -168,6 +174,8 @@ date: 2020-12-20
 - [Can I use](https://caniuse.com/)
 - [Public APIs](https://github.com/public-apis/public-apis#books)
 - [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
+- [frontend-dev-bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
+- [Backend Development](https://gist.github.com/dypsilon/5819528)
 
 </div>
 
