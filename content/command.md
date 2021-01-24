@@ -2,10 +2,10 @@
 title: "Commands"
 metaTitle: "Commands"
 metaDescription: "Commands for CLIs"
-date: 2020-12-28
+date: 2020-01-24
 ---
 
-# Resource
+## General
 
 - [tl;dr pages (Web client)](https://tldr.ostera.io/)
 

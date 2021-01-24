@@ -7,7 +7,6 @@ import {
   SearchBox,
   SearchContainer,
   HitsWrapper,
-  Hits,
   SearchLink,
   SearchTitle,
 } from "./style.js";
@@ -111,7 +110,6 @@ const SearchLayout = () => {
           <SearchTitle>{item.title}</SearchTitle>
           <span> ({url})</span>
         </li>
-        <Hits>{item.title}</Hits>
       </SearchLink>
     );
   });

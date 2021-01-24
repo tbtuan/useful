@@ -94,10 +94,6 @@ export const HitsWrapper = styled("div")`
   }
 `;
 
-export const Hits = styled("li")`
-  font-size: 0.8rem;
-`;
-
 export const SearchLink = styled(Link)`
   color: ${({ theme }) => theme.colors.text};
   list-style: none;

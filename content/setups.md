@@ -2,7 +2,7 @@
 title: 'Setups'
 metaTitle: 'Setups'
 metaDescription: 'Setting up things such as config files'
-date: 2020-12-31
+date: 2020-01-24
 ---
 
 ## Apache

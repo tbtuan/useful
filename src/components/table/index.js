@@ -7,8 +7,8 @@ const Table = styled("table")`
   border-spacing: 0;
   border-radius: 2px;
   border-spacing: 0;
-
   border-radius: 2px;
+  margin-bottom: 1rem;
 
   tr {
     margin: 0;

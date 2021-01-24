@@ -11,6 +11,7 @@ const SyntaxContainer = styled("div")`
 
   h2 {
     font-weight: 600;
+    font-size: 0.8rem;
     color: #d2d2d2;
     text-align: left;
     margin: 0;
@@ -28,6 +29,7 @@ const SyntaxContainer = styled("div")`
   }
 
   h3 {
+    font-size: 0.8rem;
     color: #d2d2d2;
     font-weight: 500;
     padding-top: 0.5rem;
@@ -36,6 +38,7 @@ const SyntaxContainer = styled("div")`
   }
 
   p {
+    font-size: 0.8rem;
     margin-top: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -44,11 +47,13 @@ const SyntaxContainer = styled("div")`
   }
 
   a {
+    font-size: 0.8rem;
     padding-left: 1.5rem;
   }
 
   pre {
     margin-bottom: 0;
+    padding-top: 0;
   }
 `;
 
