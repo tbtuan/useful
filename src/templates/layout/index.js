@@ -1,5 +1,5 @@
 import { MDXProvider } from "@mdx-js/react";
-import mdxComponents from "components/MDXComponents";
+import mdxComponents from "components/mdxComponents";
 
 import ThemeProvider from "contexts/themeContext";
 
