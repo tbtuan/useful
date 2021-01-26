@@ -3,7 +3,6 @@ const plugins = [
   {
     resolve: "gatsby-plugin-emotion",
   },
-  "gatsby-plugin-sitemap",
   {
     resolve: "gatsby-source-filesystem",
     options: {
@@ -50,7 +49,7 @@ const plugins = [
       workboxConfig: {
         runtimeCaching: [
           {
-            urlPattern: /(\.js$|\.css$|static\/)/,
+            urlPattern: /(\.css$|static\/)/,
             handler: `CacheFirst`,
           },
           {
@@ -61,7 +60,7 @@ const plugins = [
             },
           },
           {
-            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|woff|woff2|json|css)$/,
             handler: `StaleWhileRevalidate`,
           },
           {
@@ -83,11 +82,8 @@ const plugins = [
 
 module.exports = {
   siteMetadata: {
-    title: "/useful",
-    description: "A site with useful things",
-    docsLocation: "https://github.com/tbtuan/useful/tree/master/content",
-    headerTitle: "/useful",
-    siteUrl: "https://github.com/tbtuan/useful",
+    docsLocation: "https://github.com/tbtuan/useful/tree/master/content/",
+    githubUrl: "https://github.com/tbtuan/useful",
   },
   plugins: plugins,
 };

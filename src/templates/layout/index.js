@@ -31,12 +31,12 @@ import {
   GithubLink,
 } from "./style";
 
-const Layout = ({ children, location, data }) => {
-  if (typeof window === "undefined") {
-    return null;
-  }
-  const { mdx } = data;
-
+const Layout = ({
+  children,
+  location,
+  relativePath,
+  siteMetadata: { docsLocation, githubUrl },
+}) => {
   return (
     <ThemeProvider>
       <MDXProvider components={mdxComponents}>
@@ -50,16 +50,11 @@ const Layout = ({ children, location, data }) => {
             </TitleWrapper>
             <Search />
             <Options>
-              <GithubLink href={"https://github.com/tbtuan/useful"}>
+              <GithubLink href={githubUrl}>
                 <StyledGithub />
               </GithubLink>
               <ThemeSwitch />
-              <EditButton
-                href={
-                  "https://github.com/tbtuan/useful/tree/master/content/" +
-                  mdx.parent.relativePath
-                }
-              >
+              <EditButton href={docsLocation + relativePath}>
                 <StyledEdit />
                 Edit
               </EditButton>

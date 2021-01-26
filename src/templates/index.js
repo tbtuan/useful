@@ -13,32 +13,39 @@ import {
   StyledMainWrapper,
   Padding,
 } from "./style";
-import "normalize.css";
 
 const Index = (props) =>
   useMemo(() => {
     const { data } = props;
 
     if (!data) return null;
-    const { mdx } = data;
-
-    // meta tags
-    if (!mdx) return props.children;
-    const { metaTitle, metaDescription } = mdx.frontmatter;
-
+    const {
+      site: { siteMetadata },
+      mdx: {
+        frontmatter: { date, metaTitle, metaDescription },
+        fields: { title, slug },
+        parent: { relativePath },
+        body,
+        tableOfContents,
+      },
+    } = data;
     return (
       <>
         <Seo metaTitle={metaTitle} metaDescription={metaDescription} />
-        <Layout {...props}>
+        <Layout
+          location={location}
+          relativePath={relativePath}
+          siteMetadata={siteMetadata}
+        >
           <div>
             <TitleWrapper>
-              <StyledHeading>{mdx.fields.title}</StyledHeading>
-              <ModifiedText modifiedTime={mdx.frontmatter.date} />
+              <StyledHeading>{title}</StyledHeading>
+              <ModifiedText modifiedTime={date} />
             </TitleWrapper>
             <ContentWrapper>
-              <TableOfContents mdx={mdx} />
+              <TableOfContents tableOfContents={tableOfContents} slug={slug} />
               <StyledMainWrapper>
-                <MDXRenderer>{mdx.body}</MDXRenderer>
+                <MDXRenderer>{body}</MDXRenderer>
               </StyledMainWrapper>
             </ContentWrapper>
           </div>
@@ -52,8 +59,8 @@ export const pageQuery = graphql`
   query($id: String!) {
     site {
       siteMetadata {
-        title
         docsLocation
+        githubUrl
       }
     }
     mdx(fields: { id: { eq: $id } }) {

@@ -49,12 +49,11 @@ module.exports = async ({ graphql, actions, reporter }) => {
       url: node.fields.slug,
       toc: tocConcat,
     });
-    console.log(node.fields.slug);
     switch (node.fields.slug) {
       case "/lang":
         createPage({
           path: node.fields.slug,
-          component: resolve("./src/templates/lang.js"),
+          component: resolve("./src/templates/collection/index.js"),
           context: {
             id: node.fields.id,
           },

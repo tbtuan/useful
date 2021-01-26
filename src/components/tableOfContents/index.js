@@ -2,15 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { TableOfContents, TOCTitle, Li } from "./style";
 
-const TableOfContentsLayout = ({ mdx }) => {
-  const { tableOfContents } = mdx;
-
-  // slug != "/" only => append /
-  let slug =
-    mdx.fields.slug && mdx.fields.slug.length != 1
-      ? mdx.fields.slug + "/"
-      : mdx.fields.slug;
-
+const TableOfContentsLayout = ({ tableOfContents, slug }) => {
   let [current, setCurrent] = useState(false);
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import { Global, css } from "@emotion/react";
+import "normalize.css";
 
 const style = css`
   /* open-sans-300 - latin */
