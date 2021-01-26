@@ -13,7 +13,7 @@ const Collection = (props) =>
   useMemo(() => {
     const { data } = props;
 
-    if (!data || !location) return null;
+    if (data === undefined || location === undefined) return null;
 
     const {
       site: { siteMetadata },
