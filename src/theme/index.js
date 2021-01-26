@@ -5,7 +5,7 @@ export const lightTheme = {
     placeholder: "#969BA0",
     text: "#3B454E",
     preFormattedText: "#282a33",
-    link: "#f77723",
+    textLink: "#f77723",
     // Sidebar
     sidebar: "#FBFAF9",
     sidebarShadow: "#d9d9d9",
@@ -36,7 +36,7 @@ export const darkTheme = {
     placeholder: "#969BA0",
     text: "#D2D2D4",
     preFormattedText: "#1B1E2B",
-    link: "#73A3F5",
+    textLink: "#73A3F5",
     // Sidebar
     sidebar: "#24273D",
     sidebarShadow: "#1D213D",

@@ -1,5 +1,9 @@
 import styled from "@emotion/styled";
 
+export const Padding = styled("div")`
+  padding: 50px 0;
+`;
+
 const StyledHeading = styled("h1")`
   line-height: 1.5;
   font-weight: 700;

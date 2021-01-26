@@ -5,12 +5,6 @@ const plugins = [
   },
   "gatsby-plugin-sitemap",
   {
-    resolve: "gatsby-plugin-layout",
-    options: {
-      component: require.resolve("./src/index.js"),
-    },
-  },
-  {
     resolve: "gatsby-source-filesystem",
     options: {
       name: "docs",

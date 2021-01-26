@@ -49,13 +49,27 @@ module.exports = async ({ graphql, actions, reporter }) => {
       url: node.fields.slug,
       toc: tocConcat,
     });
-    createPage({
-      path: node.fields.slug ? node.fields.slug : "/",
-      component: resolve("./src/index.js"),
-      context: {
-        id: node.fields.id,
-      },
-    });
+    console.log(node.fields.slug);
+    switch (node.fields.slug) {
+      case "/lang":
+        createPage({
+          path: node.fields.slug,
+          component: resolve("./src/templates/lang.js"),
+          context: {
+            id: node.fields.id,
+          },
+        });
+        break;
+      default:
+        createPage({
+          path: node.fields.slug,
+          component: resolve("./src/templates/index.js"),
+          context: {
+            id: node.fields.id,
+          },
+        });
+        break;
+    }
   });
   fs.writeFileSync(`public/${SEARCH_INDEX}`, JSON.stringify(searchIndex));
 };

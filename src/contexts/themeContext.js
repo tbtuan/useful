@@ -1,6 +1,6 @@
 import { useState, createContext } from "react";
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
-import { GlobalStyle } from "../global";
+import { GlobalStyle } from "../theme/global";
 import { lightTheme, darkTheme } from "theme";
 import { storeItem, getItemFromStorage } from "utils/localStorage";
 
