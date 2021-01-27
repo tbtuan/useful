@@ -9,7 +9,7 @@ const Table = styled("table")`
   border-spacing: 0;
   border-radius: 2px;
   margin-bottom: 1rem;
-
+  width: 100%;
   tr {
     margin: 0;
     padding: 0;

@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { TableOfContents, TOCTitle, Li } from "./style";
 
 const TableOfContentsLayout = ({ tableOfContents, slug }) => {
-  let [current, setCurrent] = useState(false);
+  let [current, setCurrent] = useState("");
 
   useEffect(() => {
     const links = document.querySelectorAll("main div h2");

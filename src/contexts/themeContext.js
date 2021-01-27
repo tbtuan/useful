@@ -1,10 +1,10 @@
 import { useState, createContext } from "react";
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import { GlobalStyle } from "../theme/global";
-import { lightTheme, darkTheme } from "theme";
-import { storeItem, getItemFromStorage } from "utils/localStorage";
+import { lightTheme, darkTheme } from "../theme";
+import { storeItem, getItemFromStorage } from "../utils/localStorage";
 
-export const ThemeContext = createContext();
+export const ThemeContext = createContext(null);
 
 const ThemeProvider = ({ children }) => {
   const [isDarkThemeActive, setDarkThemeActive] = useState(

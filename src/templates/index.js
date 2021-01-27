@@ -29,6 +29,7 @@ const Index = (props) =>
         tableOfContents,
       },
     } = data;
+
     return (
       <>
         <Seo metaTitle={metaTitle} metaDescription={metaDescription} />

@@ -14,6 +14,7 @@ import Keyboard from "./keyboard";
 import AnchorTag from "./anchor";
 import Divider from "./divider";
 import Preformatted from "./preformatted";
+import React from "react";
 
 export default {
   h1: (props) => <Heading1 {...props} />,

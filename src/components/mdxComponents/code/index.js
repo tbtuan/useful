@@ -1,4 +1,3 @@
-//import { Fragment } from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import prismTheme from "prism-react-renderer/themes/vsDark";
 import { StyledPre } from "./style";
