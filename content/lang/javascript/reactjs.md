@@ -2,8 +2,12 @@
 title: "ReactJS"
 metaTitle: "Reactjs"
 metaDescription: "Javascript - ReactJS"
-date: 2020-12-15
+date: 2021-01-28
 ---
+
+<cc col="2">
+
+<div>
 
 ## Resources
 
@@ -11,6 +15,71 @@ date: 2020-12-15
 - [React lifecycle methods diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 - [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
 - [awesome-react](https://github.com/enaqx/awesome-react)
+
+</div>
+
+<div>
+
+## Ecosystem
+
+<cc>
+
+<div>
+
+### State management
+
+- [Redux](https://redux.js.org/)
+- [MobX](https://mobx.js.org/)
+
+</div>
+
+<div>
+
+### Forms
+
+- [React Hook Form](https://react-hook-form.com/)
+
+</div>
+
+<div>
+
+### Router
+
+- [React-Router](https://reactrouter.com/)
+
+</div>
+
+<div>
+
+### SSR/SSG
+
+- [Next.js](https://nextjs.org/docs/)
+- [Gatsby](https://www.gatsbyjs.com/docs/)
+
+</div>
+
+<div>
+
+### Testing
+
+- [React Testing library](https://testing-library.com/docs/react-testing-library/intro/)
+
+</div>
+
+<div>
+
+### CSS-in-JS
+
+- [Emotion](https://emotion.sh/docs/)
+- [Styled Components](https://styled-components.com/docs)
+
+</div>
+
+</cc>
+
+</div>
+
+</cc>
 
 <mc minWidth='800'>
 

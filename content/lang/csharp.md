@@ -1,9 +1,18 @@
 ---
 title: 'C#'
 metaTitle: 'C#'
-metaDescription: 'This is the meta description for this page'
-date: 2020-06-30
+metaDescription: 'C#'
+date: 2021-01-28
 ---
+
+## Resources
+
+- [C# Documentation](https://docs.microsoft.com/de-de/dotnet/csharp/)
+
+## Ecosystem
+
+- [PInvoke.net](http://pinvoke.net/)
+- [NuGet](https://www.nuget.org/)
 
 <mc minWidth='800'>
 

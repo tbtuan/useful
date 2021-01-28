@@ -5,11 +5,19 @@ metaDescription: 'Python'
 date: 2020-12-23
 ---
 
-## Cheatsheet
+## Resources
 
 - [Python Cheatsheet](https://www.pythoncheatsheet.org/)
 - [Python Crash Course](https://github.com/ehmatthes/pcc)
 - [awesome-python](https://github.com/vinta/awesome-python)
+
+## Ecosystem
+
+- [Tensorflow](https://www.tensorflow.org/api_docs/python/)
+- [matplotlib](https://matplotlib.org/contents.html)
+- [NumPy](https://numpy.org/doc/stable/reference/index.html)
+- [Pandas](https://pandas.pydata.org/docs/)
+- [OpenCV](https://opencv.org/)
 
 <mc minWidth='800'>
 

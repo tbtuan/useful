@@ -2,7 +2,10 @@ import styled from "@emotion/styled";
 
 const ColumnContainer = styled("div")`
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 20rem));
+  grid-template-columns: repeat(
+    ${({ col, max }) => col || `2`},
+    minmax(0, 20rem)
+  );
   grid-gap: 1rem;
   margin-bottom: 1.5rem;
 
@@ -15,4 +18,8 @@ const ColumnContainer = styled("div")`
   }
 `;
 
-export default ColumnContainer;
+const Column = ({ children, col = 3, max = "20rem" }) => {
+  return <ColumnContainer col={col}>{children}</ColumnContainer>;
+};
+
+export default Column;

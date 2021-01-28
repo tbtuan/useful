@@ -22,7 +22,7 @@ date: 2020-01-24
 - [have i been pwned?](https://haveibeenpwned.com/)
 - [twofactorauth](https://twofactorauth.org/)
 
-#### Hacking, Pentest
+#### Hacking tools, Pentest
 
 - [Shodan](https://www.shodan.io/)
 - [exploit-db](https://www.exploit-db.com/google-hacking-database)
@@ -96,6 +96,7 @@ date: 2020-01-24
 
 - [Google Fonts](https://fonts.google.com/)
 - [Fontjoy](https://fontjoy.com/)
+- [modularscale](https://www.modularscale.com/)
 
 </div>
 
@@ -193,6 +194,17 @@ date: 2020-01-24
 
 <div>
 
+### SEO
+
+- [web.dev - Measure](https://web.dev/measure/)
+- [Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+- [Google SearchConsole](https://search.google.com/search-console/)
+
+</div>
+
+
+<div>
+
 ### Documentation/Reference
 
 - [DevDocs](https://devdocs.io/)
@@ -225,20 +237,10 @@ date: 2020-01-24
 
 ### Javascript/Typescript
 
-- [ReactJS](https://reactjs.org/docs/)
 - [Angular](https://angular.io/docs)
 - [VueJS](https://vuejs.org/api/)
 - [npm](https://www.npmjs.com/)
 - [Deno](https://deno.land/)
-
-</div>
-
-<div>
-
-### PHP
-
-- [Laravel](https://laravel.com/docs)
-- [Composer](https://getcomposer.org/doc/)
 
 </div>
 
@@ -250,40 +252,6 @@ date: 2020-01-24
 - [TailwindCSS](https://tailwindcss.com/)
 - [Sass](https://sass-lang.com/documentation)
 - [PostCSS](https://postcss.org/)
-- [Emotion](https://emotion.sh/docs/)
-- [Styled Components](https://styled-components.com/docs)
-
-</div>
-
-<div>
-
-### C#
-
-- [C# Documentation](https://docs.microsoft.com/de-de/dotnet/csharp/)
-- [PInvoke.net](http://pinvoke.net/)
-- [NuGet](https://www.nuget.org/)
-
-</div>
-
-<div>
-
-### Java
-
-- [Java Platform, Standard Edition Documentation](https://docs.oracle.com/en/java/javase/index.html)
-- [Gradle Build Language Reference](https://docs.gradle.org/current/dsl/)
-- [Apache Maven](http://maven.apache.org/)
-
-</div>
-
-<div>
-
-### Python
-
-- [Tensorflow](https://www.tensorflow.org/api_docs/python/)
-- [matplotlib](https://matplotlib.org/contents.html)
-- [NumPy](https://numpy.org/doc/stable/reference/index.html)
-- [Pandas](https://pandas.pydata.org/docs/)
-- [OpenCV](https://opencv.org/)
 
 </div>
 
