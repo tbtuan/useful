@@ -5,15 +5,14 @@ metaDescription: "Useful websites"
 date: 2020-01-24
 ---
 
-## Tools
+
+## Security
 
 <cc>
 
 <div>
 
-### Security
-
-#### Security check
+### Security check
 
 - [Top 25 Most Dangerous Software Errors](http://cwe.mitre.org/top25/)
 - [Connection Information (DoH/DoT/WARP)](https://1.1.1.1/help)
@@ -22,7 +21,19 @@ date: 2020-01-24
 - [have i been pwned?](https://haveibeenpwned.com/)
 - [twofactorauth](https://twofactorauth.org/)
 
-#### Hacking tools, Pentest
+</div>
+
+<div>
+
+### Web Security
+
+- [Stop using JWT for sessions](https://hackernoon.com/using-session-cookies-vs-jwt-for-authentication-sd2v3vci)
+
+</div>
+
+<div>
+
+### Hacking tools, Pentest
 
 - [Shodan](https://www.shodan.io/)
 - [exploit-db](https://www.exploit-db.com/google-hacking-database)
@@ -32,11 +43,23 @@ date: 2020-01-24
 - [Awesome-Hacking](https://github.com/NetanMangal/Awesome-Hacking)
 - [awesome-web-security](https://github.com/qazbnm456/awesome-web-security)
 
-#### TLS Certificate
+</div>
+
+<div>
+
+### TLS Certificate
 
 - [Let's encrypt](https://letsencrypt.org/)
 
 </div>
+
+</cc>
+
+---
+
+## Tools
+
+<cc>
 
 <div>
 
@@ -82,21 +105,13 @@ date: 2020-01-24
 
 <div>
 
-### Free/Open-Source Softwares
-
-- [Texmaker](https://www.xm1math.net/texmaker/index.html)
-- [youtube-dl](https://github.com/ytdl-org/youtube-dl)
-- [FFmpeg](https://www.ffmpeg.org/)
-
-</div>
-
-<div>
-
 ### Type
 
 - [Google Fonts](https://fonts.google.com/)
 - [Fontjoy](https://fontjoy.com/)
 - [modularscale](https://www.modularscale.com/)
+- [Type scale](https://type-scale.com/)
+- [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts)
 
 </div>
 
@@ -136,6 +151,8 @@ date: 2020-01-24
 
 - [The algorithms](https://thealgorithms.github.io/)
 - [Algorithm visualizer](https://algorithm-visualizer.org/)
+- [Dynamic programming - GeeksForGeeks](https://www.geeksforgeeks.org/dynamic-programming/)
+- [Dynamic programming](https://github.com/tristanguigue/dynamic-programming)
 
 
 </div>
@@ -146,6 +163,7 @@ date: 2020-01-24
 
 - [Clean code](https://github.com/ryanmcdermott/clean-code-javascript)
 - [S.O.L.I.D: The First 5 Principles of Object Oriented Design](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
+- [SOLID](https://medium.com/better-programming/solid-principles-simple-and-easy-explanation-f57d86c47a7f)
 
 </div>
 
@@ -199,6 +217,15 @@ date: 2020-01-24
 - [web.dev - Measure](https://web.dev/measure/)
 - [Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 - [Google SearchConsole](https://search.google.com/search-console/)
+- [Javascript SEO Basics](https://developers.google.com/search/docs/guides/javascript-seo-basics)
+
+</div>
+
+<div>
+
+### Analytics
+
+- [Web Vitals Report](https://github.com/GoogleChromeLabs/web-vitals-report)
 
 </div>
 
@@ -235,11 +262,18 @@ date: 2020-01-24
 
 <div>
 
+### Data
+
+- [GraphQL](https://graphql.org/code/)
+
+</div>
+
+<div>
+
 ### Javascript/Typescript
 
 - [Angular](https://angular.io/docs)
 - [VueJS](https://vuejs.org/api/)
-- [npm](https://www.npmjs.com/)
 - [Deno](https://deno.land/)
 
 </div>
@@ -278,15 +312,6 @@ date: 2020-01-24
 ### Testing
 
 - [Jest](https://jestjs.io/docs/en/getting-started)
-
-</div>
-
-<div>
-
-### Static Site Rendering/Generation
-
-- [Gatsby](https://www.gatsbyjs.org/docs/)
-- [NextJS](https://nextjs.org/docs)
 
 </div>
 

@@ -2,13 +2,15 @@
 title: 'Javascript'
 metaTitle: 'Javascript'
 metaDescription: 'Javascript'
-date: 2020-12-20
+date: 2021-01-28
 ---
 
 ## Resources
 
 - [awesome-javascript](https://github.com/sorrycc/awesome-javascript)
 - [JavaScript Pro Tips - Code This, Not That](https://github.com/codediodeio/code-this-not-that-js)
+- [npm documentation](https://docs.npmjs.com/)
+- [NodeJS documentation](https://nodejs.org/en/docs/)
 
 <mc minWidth='800'>
 

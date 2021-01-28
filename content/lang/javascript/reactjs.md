@@ -15,6 +15,7 @@ date: 2021-01-28
 - [React lifecycle methods diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 - [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
 - [awesome-react](https://github.com/enaqx/awesome-react)
+- [Typescript](https://www.typescriptlang.org/docs/handbook/react.html)
 
 </div>
 
