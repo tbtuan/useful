@@ -278,7 +278,6 @@ date: 2020-01-24
 ### Testing
 
 - [Jest](https://jestjs.io/docs/en/getting-started)
-- [JUnit](https://junit.org/)
 
 </div>
 
