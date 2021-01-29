@@ -54,10 +54,7 @@ const plugins = [
           },
           {
             urlPattern: /^https?:.*\/page-data\/.*\/(page-data|app-data)\.json$/,
-            handler: `NetworkFirst`,
-            options: {
-              networkTimeoutSeconds: 3,
-            },
+            handler: `StaleWhileRevalidate`,
           },
           {
             urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|woff|woff2|json|css)$/,
@@ -69,10 +66,7 @@ const plugins = [
           },
           {
             urlPattern: /\/$/,
-            handler: `NetworkFirst`,
-            options: {
-              networkTimeoutSeconds: 3,
-            },
+            handler: `StaleWhileRevalidate`,
           },
         ],
       },
