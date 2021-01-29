@@ -2,7 +2,9 @@
 title: 'Express'
 metaTitle: 'javascript/express'
 metaDescription: 'Javascript - Express'
-date: 2020-06-30
+date: 2021-01-29
 ---
 
-## Placeholder
+## Resources
+
+- [Best practise](https://expressjs.com/de/advanced/best-practice-security.html)

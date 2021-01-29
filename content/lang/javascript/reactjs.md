@@ -16,6 +16,12 @@ date: 2021-01-28
 - [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
 - [awesome-react](https://github.com/enaqx/awesome-react)
 - [Typescript](https://www.typescriptlang.org/docs/handbook/react.html)
+- [Redux concept](https://medium.com/javascript-in-plain-english/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6)
+- [Redux ecosystem links](https://github.com/markerikson/redux-ecosystem-links)
+
+### Community
+
+- [dev.to - React](https://dev.to/t/react)
 
 </div>
 
@@ -36,9 +42,10 @@ date: 2021-01-28
 
 <div>
 
-### Forms
+### Misc
 
 - [React Hook Form](https://react-hook-form.com/)
+- [React Intl](https://formatjs.io/docs/getting-started/installation/)
 
 </div>
 
@@ -69,10 +76,12 @@ date: 2021-01-28
 
 <div>
 
-### CSS-in-JS
+### Styling/CSS Animation
 
 - [Emotion](https://emotion.sh/docs/)
 - [Styled Components](https://styled-components.com/docs)
+- [Material UI](https://material-ui.com/)
+- [Framer API](https://www.framer.com/api/)
 
 </div>
 

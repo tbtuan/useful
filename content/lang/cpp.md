@@ -2,8 +2,13 @@
 title: 'C++'
 metaTitle: 'C++'
 metaDescription: 'C++ Cheatsheet'
-date: 2020-07-02
+date: 2021-01-29
 ---
+
+## Resources
+
+- [awesome-cpp](https://github.com/fffaraz/awesome-cpp)
+- [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines)
 
 <mc minWidth='800'>
 

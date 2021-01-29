@@ -9,6 +9,12 @@ date: 2020-12-29
 
 - [cssreference.io](https://cssreference.io/)
 - [CSS Reference - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+- [BEM](https://www.integralist.co.uk/posts/bem/)
+- [stateofcss](https://stateofcss.com/)
+
+## Ecosystem
+
+- [CSS Animation libraries](https://css-tricks.com/css-animation-libraries/)
 
 <mc minWidth='800'>
 

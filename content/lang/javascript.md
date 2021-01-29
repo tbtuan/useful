@@ -9,8 +9,23 @@ date: 2021-01-28
 
 - [awesome-javascript](https://github.com/sorrycc/awesome-javascript)
 - [JavaScript Pro Tips - Code This, Not That](https://github.com/codediodeio/code-this-not-that-js)
-- [npm documentation](https://docs.npmjs.com/)
 - [NodeJS documentation](https://nodejs.org/en/docs/)
+- [stateofjs](https://stateofjs.com/)
+- [3 node.js scalability problems and how to solve them](https://softwareontheroad.com/nodejs-scalability-issues/)
+- [Good practices for high-performance and scalable Node.js applications](https://medium.com/iquii/good-practices-for-high-performance-and-scalable-node-js-applications-part-1-3-bb06b6204197)
+- [Source map](https://blog.teamtreehouse.com/introduction-source-maps)
+
+## Ecosystem
+
+- [npm documentation](https://docs.npmjs.com/)
+- [NodeJS](https://nodejs.org/docs/latest/api/)
+- [lodash](https://lodash.com/docs)
+- [concurrently](https://www.npmjs.com/package/concurrently)
+
+### Bundlers
+
+- [webpack](https://webpack.js.org/concepts/)
+
 
 <mc minWidth='800'>
 

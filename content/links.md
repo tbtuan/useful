@@ -28,6 +28,7 @@ date: 2020-01-24
 ### Web Security
 
 - [Stop using JWT for sessions](https://hackernoon.com/using-session-cookies-vs-jwt-for-authentication-sd2v3vci)
+- [Best Practices for Secure Session Management in Node](https://blog.jscrambler.com/best-practices-for-secure-session-management-in-node/)
 
 </div>
 
@@ -63,66 +64,19 @@ date: 2020-01-24
 
 <div>
 
-### Online editors
-
-#### Text editor
+### Text editor
 
 - [Dillinger - Markdown Editor](https://dillinger.io/)
 - [HexEd.it](https://hexed.it/)
 
-#### Diagrams
+</div>
+
+<div>
+
+### Diagrams
 
 - [Draw.io - Flowchart maker](https://www.draw.io/)
 - [textik - ASCII diagrams editor](https://textik.com/)
-
-</div>
-
-<div>
-
-### Design
-
-#### Interface Design/Prototyping
-
-- [Figma (Collaborative)](https://www.figma.com/)
-- [Adobe XD](https://www.adobe.com/products/xd.html)
-
-#### Color
-
-- [Adobe Color](https://color.adobe.com/)
-- [colormind.io](http://colormind.io/)
-- [colorsinspo](https://colorsinspo.com/)
-- [htmlcolorcodes](https://htmlcolorcodes.com/)
-- [0to255](https://www.0to255.com/)
-
-#### Inspiration
-
-- [Behance](https://www.behance.net/)
-- [Dribbble](https://dribbble.com/)
-- [UI Movement](https://uimovement.com/)
-- [Collect UI](https://collectui.com/)
-
-</div>
-
-<div>
-
-### Type
-
-- [Google Fonts](https://fonts.google.com/)
-- [Fontjoy](https://fontjoy.com/)
-- [modularscale](https://www.modularscale.com/)
-- [Type scale](https://type-scale.com/)
-- [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts)
-
-</div>
-
-<div>
-
-### CSS
-
-- [CSS Grid Generator - LayoutIt](https://grid.layoutit.com/)
-- [Box-shadow](https://brumm.af/shadows)
-- [CSS Gradient](https://cssgradient.io/)
-- [CSS Protips](https://github.com/AllThingsSmitty/css-protips)
 
 </div>
 
@@ -141,6 +95,103 @@ date: 2020-01-24
 
 ---
 
+## Design
+
+<cc>
+
+<div>
+
+### General
+
+- [UI Patterns](http://ui-patterns.com/)
+
+</div>
+
+<div>
+
+### Interface Design/Prototyping
+
+- [Figma (Collaborative)](https://www.figma.com/)
+- [Adobe XD](https://www.adobe.com/products/xd.html)
+
+</div>
+
+<div>
+
+### Color
+
+- [Adobe Color](https://color.adobe.com/)
+- [colormind.io](http://colormind.io/)
+- [colorsinspo](https://colorsinspo.com/)
+- [htmlcolorcodes](https://htmlcolorcodes.com/)
+- [0to255](https://www.0to255.com/)
+
+</div>
+
+<div>
+
+### Inspiration
+
+- [Behance](https://www.behance.net/)
+- [Dribbble](https://dribbble.com/)
+- [UI Movement](https://uimovement.com/)
+- [Collect UI](https://collectui.com/)
+
+</div>
+
+<div>
+
+### Type
+
+- [Google Fonts](https://fonts.google.com/)
+- [Fontjoy](https://fontjoy.com/)
+- [modularscale](https://www.modularscale.com/)
+- [Type scale](https://type-scale.com/)
+- [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts)
+- [Font loading strategies](https://www.zachleat.com/web/comprehensive-webfonts/)
+
+</div>
+
+<div>
+
+### CSS
+
+- [CSS Grid Generator - LayoutIt](https://grid.layoutit.com/)
+- [Box-shadow](https://brumm.af/shadows)
+- [CSS Gradient](https://cssgradient.io/)
+- [CSS Protips](https://github.com/AllThingsSmitty/css-protips)
+
+</div>
+
+</cc>
+
+---
+
+## DevOps
+
+<cc>
+
+<div>
+
+### General
+
+- [Docker](https://docs.docker.com/reference/)
+- [Kubernetes](https://kubernetes.io/docs/reference/kubernetes-api/)
+
+</div>
+
+<div>
+
+### Secrets management
+
+- [Vault](https://www.vaultproject.io/docs)
+
+</div>
+
+</cc>
+
+---
+
 ## Software Engineering
 
 <cc>
@@ -150,6 +201,8 @@ date: 2020-01-24
 ### Algorithms and data structures
 
 - [The algorithms](https://thealgorithms.github.io/)
+- [Javascript algorithms](https://github.com/trekhleb/javascript-algorithms)
+- [30-seconds-of-code](https://github.com/30-seconds/30-seconds-of-code/tree/master/snippets)
 - [Algorithm visualizer](https://algorithm-visualizer.org/)
 - [Dynamic programming - GeeksForGeeks](https://www.geeksforgeeks.org/dynamic-programming/)
 - [Dynamic programming](https://github.com/tristanguigue/dynamic-programming)
@@ -162,8 +215,11 @@ date: 2020-01-24
 ### Principles
 
 - [Clean code](https://github.com/ryanmcdermott/clean-code-javascript)
+- [Lessons learnt from Clean code](https://medium.com/@huytrongnguyen1985/lessons-learnt-from-the-clean-code-robert-c-martin-cecbe2b09139)
+- [Clean code summary](https://cheatography.com/costemaxime/cheat-sheets/summary-of-clean-code-by-robert-c-martin/)
 - [S.O.L.I.D: The First 5 Principles of Object Oriented Design](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
-- [SOLID](https://medium.com/better-programming/solid-principles-simple-and-easy-explanation-f57d86c47a7f)
+- [SOLID](https://www.baeldung.com/solid-principles)
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 
 </div>
 
@@ -207,6 +263,25 @@ date: 2020-01-24
 - [web.dev](https://web.dev/)
 - [Serviceworke.rs](https://serviceworke.rs/)
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
+- [Jamstack - Best Practices](https://jamstack.org/best-practices/)
+
+</div>
+
+<div>
+
+### Headless CMS
+
+- [Headless CMS explained](https://www.storyblok.com/tp/headless-cms-explained)
+- [Strapi](https://github.com/strapi/strapi)
+- [Contentful](https://www.contentful.com/developers/docs/references/content-delivery-api/)
+
+</div>
+
+<div>
+
+### Web crawling/scraping
+
+- [Scrapy](https://github.com/scrapy/scrapy)
 
 </div>
 
@@ -226,6 +301,14 @@ date: 2020-01-24
 ### Analytics
 
 - [Web Vitals Report](https://github.com/GoogleChromeLabs/web-vitals-report)
+
+</div>
+
+<div>
+
+### Benchmarking
+
+- [wrk](https://github.com/wg/wrk)
 
 </div>
 
@@ -293,6 +376,7 @@ date: 2020-01-24
 
 ### Database
 
+- [DB-Engines Ranking](https://db-engines.com/en/ranking)
 - [MySQL](https://dev.mysql.com/doc/)
 - [MongoDB](https://docs.mongodb.com/)
 - [Redis](https://redis.io/documentation)
@@ -329,6 +413,44 @@ date: 2020-01-24
 ### WebAssembly
 
 - [WebAssembly](https://webassembly.org/)
+- [AssemblyScript](https://www.assemblyscript.org/)
+- [From TypeScript to WebAssembly](https://medium.com/javascript-in-plain-english/from-typescript-to-webassembly-in-few-steps-c76f98f00632)
+
+</div>
+
+</cc>
+
+---
+
+## Machine learning
+
+<cc>
+
+<div>
+
+### General
+
+- [Linear algebra for ML](https://towardsdatascience.com/linear-algebra-for-machine-learning-22f1d8aea83c)
+- [NLP](https://towardsdatascience.com/natural-language-processing-nlp-for-machine-learning-d44498845d5b)
+
+</div>
+
+<div>
+
+### Roadmaps
+
+- [100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code)
+- [Deep Learning Papers Reading Roadmap](https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap)
+- [Timeline for Data Science Competence](https://medium.com/towards-artificial-intelligence/timeline-for-data-science-competence-1b724e7977e0)
+
+</div>
+
+<div>
+
+### Models
+
+- [ResNet-50](https://towardsdatascience.com/understand-and-implement-resnet-50-with-tensorflow-2-0-1190b9b52691)
+- [GPT-3](https://dzlab.github.io/ml/2020/07/25/gpt3-overview/)
 
 </div>
 
@@ -342,10 +464,19 @@ date: 2020-01-24
 
 <div>
 
+### General
+
+- [Open Source Society University](https://github.com/ossu/computer-science)
+
+</div>
+
+<div>
+
 ### Useful websites
 
 - 📖 [Some useful websites for programmers](https://github.com/sdmg15/Best-websites-a-programmer-should-visit)
 - 📖 [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)
+- 📖 [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 
 </div>
 
@@ -354,6 +485,7 @@ date: 2020-01-24
 ### Tutorials
 
 - [Build your own X](https://github.com/danistefanovic/build-your-own-x)
+- [Flavio Copes](https://flaviocopes.com/)
 
 </div>
 
@@ -412,6 +544,8 @@ date: 2020-01-24
 #### Design
 
 - [7 steps to become a UI/UX designer](https://blog.nicolesaidy.com/7-steps-to-become-a-ui-ux-designer-8beed7639a95)
+- [How we Build a Design System](https://blog.bitsrc.io/how-we-build-our-design-system-15713a1f1833)
+- [Figma: A Fluid and Modular Design Approach](https://insights.papertiger.com/figma-a-fluid-and-modular-design-approach-to-typography-with-components-a9feef8e84a6)
 
 </div>
 

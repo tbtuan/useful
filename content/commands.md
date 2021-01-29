@@ -2,12 +2,13 @@
 title: "Commands"
 metaTitle: "Commands"
 metaDescription: "Commands for CLIs"
-date: 2020-01-24
+date: 2021-01-29
 ---
 
 ## General
 
 - [tl;dr pages (Web client)](https://tldr.ostera.io/)
+- [awesome-shell](https://github.com/alebcay/awesome-shell)
 
 ## Bash
 
