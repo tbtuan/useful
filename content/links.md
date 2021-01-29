@@ -260,9 +260,20 @@ date: 2021-01-29
 - [High Performance Browser Networking](https://hpbn.co/)
 - [The Twelve-Factor App](https://12factor.net/)
 - [web.dev](https://web.dev/)
-- [Serviceworke.rs](https://serviceworke.rs/)
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 - [Jamstack - Best Practices](https://jamstack.org/best-practices/)
+
+</div>
+
+<div>
+
+### Serviceworker
+
+- [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers)
+- [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+- [Serviceworke.rs](https://serviceworke.rs/)
+- [Workbox](https://developers.google.com/web/tools/workbox/modules)
+
 
 </div>
 
