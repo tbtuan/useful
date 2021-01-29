@@ -1,4 +1,6 @@
-exports.onServiceWorkerUpdateReady = () => window.location.reload();
+exports.onServiceWorkerUpdateReady = () => {
+  window.location.reload();
+};
 
 exports.shouldUpdateScroll = ({ routerProps: { location } }) => {
   if (location && location.hash) {

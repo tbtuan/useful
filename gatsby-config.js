@@ -24,7 +24,7 @@ const plugins = [
     },
   },
   {
-    resolve: `gatsby-plugin-manifest`,
+    resolve: "gatsby-plugin-manifest",
     options: {
       name: "/useful",
       short_name: "/useful",
@@ -41,35 +41,6 @@ const plugins = [
           type: `image/png`,
         },
       ],
-    },
-  },
-  {
-    resolve: "gatsby-plugin-offline",
-    options: {
-      workboxConfig: {
-        runtimeCaching: [
-          {
-            urlPattern: /(\.css$|static\/)/,
-            handler: `CacheFirst`,
-          },
-          {
-            urlPattern: /^https?:.*\/page-data\/.*\/(page-data|app-data)\.json$/,
-            handler: `StaleWhileRevalidate`,
-          },
-          {
-            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|woff|woff2|json|css)$/,
-            handler: `StaleWhileRevalidate`,
-          },
-          {
-            urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
-            handler: `StaleWhileRevalidate`,
-          },
-          {
-            urlPattern: /\/$/,
-            handler: `StaleWhileRevalidate`,
-          },
-        ],
-      },
     },
   },
 ];

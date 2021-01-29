@@ -2,7 +2,7 @@
 title: "ReactJS"
 metaTitle: "Reactjs"
 metaDescription: "Javascript - ReactJS"
-date: 2021-01-28
+date: 2021-01-29
 ---
 
 <cc col="2">
@@ -18,10 +18,12 @@ date: 2021-01-28
 - [Typescript](https://www.typescriptlang.org/docs/handbook/react.html)
 - [Redux concept](https://medium.com/javascript-in-plain-english/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6)
 - [Redux ecosystem links](https://github.com/markerikson/redux-ecosystem-links)
+- [Performance optimization](https://medium.com/technofunnel/https-medium-com-mayank-gupta-6-88-21-performance-optimizations-techniques-for-react-d15fa52c2349#2809)
 
 ### Community
 
 - [dev.to - React](https://dev.to/t/react)
+- [r/reactjs](https://www.reddit.com/r/reactjs/)
 
 </div>
 
