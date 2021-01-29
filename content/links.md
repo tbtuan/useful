@@ -87,7 +87,6 @@ date: 2020-01-24
 - [Firefox Send (File sharing)](https://send.firefox.com/)
 - [namechk (Social media name check)](https://namechk.com/)
 - [Regexr](https://regexr.com/)
-- [free-for.dev](free-for.dev)
 
 </div>
 
@@ -584,6 +583,7 @@ date: 2020-01-24
 ### Similar websites
 
 - [devhints.io](https://devhints.io/)
+- [free-for.dev](https://free-for.dev)
 
 </div>
 
