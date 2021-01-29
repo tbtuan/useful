@@ -346,4 +346,75 @@ not as a semantic guarantee.
 
 </sc>
 
+<sc>
+
+## React Hooks
+
+```jsx
+
+import { useEffect, useContext, useRef
+         createContext, useState, useReducer } from "react";
+
+const theme = {
+  light: "#FFFFFF",
+  dark: "#000000"
+}
+
+const ThemeContext = createContext(theme);
+
+const App = () => {
+
+  const [count, setCount] = useState(0);
+
+  const clickReducer = (state, action) => {
+    switch (action.type) {
+      case "increment":
+        return {count: state + 1};
+      case "decrement":
+        return {count: state - 1};
+      case 'reset':
+        return {count: action.payload};
+      default:
+        throw new Error();
+    }
+  };
+
+  const initialState = {count: 0};
+
+  const [state, dispatch] = useReducer(clickReducer, initialState);
+
+
+  const btn = useRef(null);
+
+  const handleSth = () => btn.current.click();
+
+  useEffect(() => {
+    fetch("component will mount");
+    return console.log("component will unmount")
+    // [count] = dependency array "component did update"
+  }, [count]);
+
+
+  return (
+    <ThemeContext.Provider value={theme.light}>
+      <>
+        <button onClick={() => setCount(count + 1)}>
+          Re-render counter {count}
+        </button>
+        <button ref={btn}></button>
+        <button onClick={() => dispatch({type: "reset", payload: initialCount})}>
+      </>
+    </ThemeContext.Provider>
+  )
+}
+
+const Consumer = () => {
+  const theme = useContext(ThemeContext);
+
+  return (<p>Current theme {theme}</p>)
+}
+```
+
+</sc>
+
 </mc>

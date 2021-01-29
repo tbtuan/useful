@@ -181,6 +181,14 @@ date: 2021-01-29
 
 <div>
 
+### Message broker
+
+- [RabbitMQ](https://www.rabbitmq.com/documentation.html)
+
+</div>
+
+<div>
+
 ### Secrets management
 
 - [Vault](https://www.vaultproject.io/docs)
@@ -594,6 +602,7 @@ date: 2021-01-29
 
 - [gitstar-ranking](https://gitstar-ranking.com/)
 - [Github stars search](https://github.com/search?o=desc&q=stars%3A%3E1&s=stars&type=Repositories)
+- [awesomeopensource](https://awesomeopensource.com/projects/)
 
 </div>
 
