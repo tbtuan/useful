@@ -347,6 +347,7 @@ date: 2021-01-29
 ### VoIP
 
 - [WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
+- [Introduction to VoIP](https://medium.com/@2014eeb1046/introduction-to-voice-over-internet-protocol-voip-10c00f790213)
 
 </div>
 
