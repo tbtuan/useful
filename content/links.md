@@ -240,6 +240,18 @@ date: 2021-01-29
 
 </div>
 
+<div>
+
+### Architectual Patterns
+
+- [Monolithic Architecture](https://microservices.io/patterns/monolithic.html)
+- [Microservices](https://microservices.io/patterns/index.html)
+- [Service Oriented Architecture](https://medium.com/@SoftwareDevelopmentCommunity/what-is-service-oriented-architecture-fa894d11a7ec)
+- [Event sourcing/CQRS](https://microservices.io/patterns/data/event-sourcing.html)
+- [Serverless](https://aws.amazon.com/lambda/serverless-architectures-learn-more/)
+
+</div>
+
 </cc>
 
 ---
