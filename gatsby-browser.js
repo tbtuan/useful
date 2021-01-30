@@ -1,8 +1,11 @@
-exports.onServiceWorkerUpdateReady = () => {
+import "normalize.css";
+import "theme/global.css";
+
+export const onServiceWorkerUpdateReady = () => {
   window.location.reload();
 };
 
-exports.shouldUpdateScroll = ({ routerProps: { location } }) => {
+export const shouldUpdateScroll = ({ routerProps: { location } }) => {
   if (location && location.hash) {
     const anchorLink = document.querySelector(location.hash);
     anchorLink &&
@@ -13,7 +16,7 @@ exports.shouldUpdateScroll = ({ routerProps: { location } }) => {
   return false;
 };
 
-exports.onClientEntry = (
+export const onClientEntry = (
   _,
   { filename = "searchIndex.json", fetchOptions = {} }
 ) => {

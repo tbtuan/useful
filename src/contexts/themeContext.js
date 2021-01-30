@@ -1,6 +1,5 @@
 import { useState, createContext } from "react";
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
-import { GlobalStyle } from "../theme/global";
 import { lightTheme, darkTheme } from "../theme";
 import { storeItem, getItemFromStorage } from "../utils/localStorage";
 
@@ -19,7 +18,6 @@ const ThemeProvider = ({ children }) => {
   return (
     <ThemeContext.Provider value={{ isDarkThemeActive, toggleActiveTheme }}>
       <EmotionThemeProvider theme={isDarkThemeActive ? darkTheme : lightTheme}>
-        <GlobalStyle />
         {children}
       </EmotionThemeProvider>
     </ThemeContext.Provider>
