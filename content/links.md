@@ -226,6 +226,7 @@ date: 2021-01-29
 - [Clean code summary](https://cheatography.com/costemaxime/cheat-sheets/summary-of-clean-code-by-robert-c-martin/)
 - [S.O.L.I.D: The First 5 Principles of Object Oriented Design](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 - [SOLID](https://www.baeldung.com/solid-principles)
+- [solid example](https://github.com/nahidulhasan/solid-principles)
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 
 </div>
@@ -392,27 +393,6 @@ date: 2021-01-29
 
 <div>
 
-### Javascript/Typescript
-
-- [Angular](https://angular.io/docs)
-- [VueJS](https://vuejs.org/api/)
-- [Deno](https://deno.land/)
-
-</div>
-
-<div>
-
-### CSS
-
-- [Bootstrap](https://getbootstrap.com/docs/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Sass](https://sass-lang.com/documentation)
-- [PostCSS](https://postcss.org/)
-
-</div>
-
-<div>
-
 ### Database
 
 - [DB-Engines Ranking](https://db-engines.com/en/ranking)
@@ -424,17 +404,9 @@ date: 2021-01-29
 
 <div>
 
-### GUI
-
-- [ElectronJS](https://www.electronjs.org/docs)
-
-</div>
-
-<div>
-
 ### Testing
 
-- [Jest](https://jestjs.io/docs/en/getting-started)
+- [Unit vs Integration vs E2E](https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests/)
 
 </div>
 
