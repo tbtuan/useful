@@ -67,6 +67,21 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
+Install an OpenSSH server
+
+```text
+sudo apt install openssh-server
+```
+
+Configure VirtualBox
+
+```text
+Settings -> Network -> NAT -> Port forwarding -> Add rule ->
+Name: ssh, Protocol: TCP, Host-Port: 2522, Guest-Port: 22
+
+ssh 127.0.0.1 -p 2522
+```
+
 TODO: ssh forwarding 
 
 ## LAMP

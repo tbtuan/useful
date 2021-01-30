@@ -195,6 +195,14 @@ date: 2021-01-29
 
 </div>
 
+<div>
+
+### Monitoring
+
+- [Graphite](https://graphite.readthedocs.io/en/latest/)
+
+</div>
+
 </cc>
 
 ---
@@ -583,6 +591,14 @@ date: 2021-01-29
 
 <div>
 
+### Alternative
+
+- [How to de-Google your site](https://markosaric.com/degoogleify/)
+
+</div>
+
+<div>
+
 ### Github 
 
 - [gitstar-ranking](https://gitstar-ranking.com/)
@@ -597,6 +613,23 @@ date: 2021-01-29
 
 - [devhints.io](https://devhints.io/)
 - [free-for.dev](https://free-for.dev)
+
+</div>
+
+<div>
+
+### Communities
+
+- [Awesome Discord Communities](https://github.com/mhxion/awesome-discord-communities)
+- [Top 10 Discord Servers For Developers](https://dev.to/htnguy/top-10-discord-servers-for-developers-559o)
+
+</div>
+
+<div>
+
+### Project ideas
+
+- [](https://gist.github.com/MWins/41c6fec2122dd47fdfaca31924647499)
 
 </div>
 
