@@ -206,3 +206,15 @@ date: 2020-06-30
 | Open Windows Explorer      | <kbd>Win</kbd> + <kbd>E</kbd>                     |
 | New folder                 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> |
 | Jump to the navigation bar | <kbd>Ctrl</kbd> + <kbd>L</kbd>                    |
+
+## Figma
+
+| Description                | Shortcut                                          |
+| -------------------------- | ------------------------------------------------- |
+| Click through group      | <kbd>Ctrl</kbd> + <kbd>Click</kbd>                  |
+
+## Notepad++
+
+| Description                | Shortcut                                          |
+| -------------------------- | ------------------------------------------------- |
+| Delete line      | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd>   |

@@ -8,6 +8,7 @@ date: 2021-01-29
 ## NodeJS
 
 - [awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs)
+- [Using Clean Architecture for Microservice APIs in Node.js with MongoDB and Express](https://www.youtube.com/watch?v=CnailTcJV_U)
 
 ## Ecosystem
 
