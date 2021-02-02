@@ -2,12 +2,14 @@
 title: 'Java'
 metaTitle: 'Java'
 metaDescription: 'Java'
-date: 2020-01-28
+date: 2021-02-02
 ---
 
 ## Resources
 
 - [awesome-java](https://github.com/akullpp/awesome-java)
+- [Java Developer Roadmap](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+- [Java Developer Roadmap (Github)](https://github.com/s4kibs4mi/java-developer-roadmap)
 
 ## Ecosystem
 

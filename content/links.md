@@ -2,7 +2,7 @@
 title: "Links"
 metaTitle: "Links"
 metaDescription: "Useful websites"
-date: 2021-01-29
+date: 2021-02-02
 ---
 
 
@@ -102,7 +102,12 @@ date: 2021-01-29
 
 ### General
 
+- [GoodUI](https://goodui.org/)
 - [UI Patterns](http://ui-patterns.com/)
+- [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
+- [7 steps to become a UI/UX designer](https://blog.nicolesaidy.com/7-steps-to-become-a-ui-ux-designer-8beed7639a95)
+- [How we Build a Design System](https://blog.bitsrc.io/how-we-build-our-design-system-15713a1f1833)
+- [Figma: A Fluid and Modular Design Approach](https://insights.papertiger.com/figma-a-fluid-and-modular-design-approach-to-typography-with-components-a9feef8e84a6)
 
 </div>
 
@@ -117,6 +122,14 @@ date: 2021-01-29
 
 <div>
 
+### Illustrations
+
+- [unDraw](https://undraw.co/illustrations)
+
+</div>
+
+<div>
+
 ### Color
 
 - [Adobe Color](https://color.adobe.com/)
@@ -124,6 +137,7 @@ date: 2021-01-29
 - [colorsinspo](https://colorsinspo.com/)
 - [htmlcolorcodes](https://htmlcolorcodes.com/)
 - [0to255](https://www.0to255.com/)
+- [colorsandfonts](https://www.colorsandfonts.com/)
 
 </div>
 
@@ -135,6 +149,7 @@ date: 2021-01-29
 - [Dribbble](https://dribbble.com/)
 - [UI Movement](https://uimovement.com/)
 - [Collect UI](https://collectui.com/)
+- [One Page Annual Report Websites](https://onepagelove.com/inspiration/annual-report)
 
 </div>
 
@@ -213,6 +228,15 @@ date: 2021-01-29
 
 <div>
 
+### General
+
+- [TIOBE-Index](https://www.tiobe.com/tiobe-index/)
+- [PYPL-Index](https://pypl.github.io/)
+
+</div>
+
+<div>
+
 ### Algorithms and data structures
 
 - [The algorithms](https://thealgorithms.github.io/)
@@ -268,6 +292,14 @@ date: 2021-01-29
 ## Web Development
 
 <cc>
+
+<div>
+
+### News/Articles
+
+- [Javascript in Plain English](https://medium.com/javascript-in-plain-english)
+
+</div>
 
 <div>
 
@@ -360,7 +392,6 @@ date: 2021-01-29
 
 </div>
 
-
 <div>
 
 ### Documentation/Reference
@@ -375,25 +406,25 @@ date: 2021-01-29
 
 </div>
 
+<div>
+
+### Communities
+
+- [r/webdev](https://www.reddit.com/r/webdev/)
+
+</div>
+
 </cc>
 
 ---
 
-## Specific Language/Technologies
+## Specific Technologies
 
 <cc>
 
 <div>
 
-### General
-
-- [TIOBE-Index](https://www.tiobe.com/tiobe-index/)
-
-</div>
-
-<div>
-
-### Data
+### Data Fetching
 
 - [GraphQL](https://graphql.org/code/)
 
@@ -449,6 +480,7 @@ date: 2021-01-29
 
 ### General
 
+- [Towards Data Science](https://towardsdatascience.com/)
 - [Linear algebra for ML](https://towardsdatascience.com/linear-algebra-for-machine-learning-22f1d8aea83c)
 - [NLP](https://towardsdatascience.com/natural-language-processing-nlp-for-machine-learning-d44498845d5b)
 
@@ -470,6 +502,8 @@ date: 2021-01-29
 
 - [ResNet-50](https://towardsdatascience.com/understand-and-implement-resnet-50-with-tensorflow-2-0-1190b9b52691)
 - [GPT-3](https://dzlab.github.io/ml/2020/07/25/gpt3-overview/)
+- [VAE](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73)
+- [GAN](https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29)
 
 </div>
 
@@ -549,22 +583,6 @@ date: 2021-01-29
 #### Programming
 
 - [r/learnprogramming/ - Reddit](https://www.reddit.com/r/learnprogramming/wiki/index#wiki_other_resources)
-
-#### Design
-
-- [GoodUI](https://goodui.org/)
-
-</div>
-
-<div>
-
-### Articles
-
-#### Design
-
-- [7 steps to become a UI/UX designer](https://blog.nicolesaidy.com/7-steps-to-become-a-ui-ux-designer-8beed7639a95)
-- [How we Build a Design System](https://blog.bitsrc.io/how-we-build-our-design-system-15713a1f1833)
-- [Figma: A Fluid and Modular Design Approach](https://insights.papertiger.com/figma-a-fluid-and-modular-design-approach-to-typography-with-components-a9feef8e84a6)
 
 </div>
 
