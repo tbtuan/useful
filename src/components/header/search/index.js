@@ -116,7 +116,7 @@ const SearchLayout = () => {
 
   return (
     <SearchContainer show={results.length > 0 && focus} ref={ref}>
-      <StyledSearch show={results.length > 0 && focus} />
+      <StyledSearch show={results.length > 0 && focus ? 1 : 0} />
       <SearchBox
         show={results.length > 0 && focus}
         id="searchbox"

@@ -6,23 +6,23 @@ import ThemeProvider from "contexts/themeContext";
 import Header from "components/header";
 import Sidebar from "components/sidebar";
 import NavLink from "components/sidebar/navLink";
-import Code from "icons/code";
-import Cogs from "icons/cogs";
-import Terminal from "icons/terminal";
-import Keyboard from "icons/keyboard";
-import ExternalLinkAlt from "icons/externalLinkAlt";
+
 import { ThemeSwitch } from "components/header/options/themeSwitch";
 
 import Search from "components/header/search";
 import Options from "components/header/options";
-import Logo from "icons/logo";
+import Logo from "icons/Logo.svg";
 
 import {
   Content,
+  CodeIcon,
+  TerminalIcon,
+  KeyboardIcon,
+  CogsIcon,
+  ExternalLinkAltIcon,
   ContentWrapper,
   ViewDiv,
   Wrapper,
-  Icon,
   TitleWrapper,
   LogoWrapper,
   EditButton,
@@ -62,19 +62,19 @@ const Layout = ({
           </Header>
           <Sidebar>
             <NavLink text="Commands" path="/commands" location={location}>
-              <Icon tag={Terminal} />
+              <TerminalIcon />
             </NavLink>
             <NavLink text="Languages" path="/lang" location={location}>
-              <Icon tag={Code} />
+              <CodeIcon />
             </NavLink>
             <NavLink text="Links" path="/links" location={location}>
-              <Icon tag={ExternalLinkAlt} />
+              <ExternalLinkAltIcon />
             </NavLink>
             <NavLink text="Setups" path="/setups" location={location}>
-              <Icon tag={Cogs} />
+              <CogsIcon />
             </NavLink>
             <NavLink text="Shortcuts" path="/shortcuts" location={location}>
-              <Icon tag={Keyboard} />
+              <KeyboardIcon />
             </NavLink>
           </Sidebar>
           <ContentWrapper>

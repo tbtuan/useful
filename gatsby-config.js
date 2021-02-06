@@ -25,6 +25,14 @@ const plugins = [
     },
   },
   {
+    resolve: "gatsby-plugin-react-svg",
+    options: {
+      rule: {
+        include: /icons/,
+      },
+    },
+  },
+  {
     resolve: "gatsby-plugin-manifest",
     options: {
       name: "/useful",

@@ -1,12 +1,16 @@
 import styled from "@emotion/styled";
-import { createElement } from "react";
+import { css, jsx } from "@emotion/react";
 import { Link } from "gatsby";
-import Github from "icons/github";
-import Edit from "icons/edit";
+import Github from "icons/Github.svg";
+import Edit from "icons/Edit.svg";
 
-export const Icon = styled(({ tag, children, ...props }) =>
-  createElement(tag, props, children)
-)`
+import Code from "icons/Code.svg";
+import Terminal from "icons/Terminal.svg";
+import ExternalLinkAlt from "icons/ExternalLinkAlt.svg";
+import Cogs from "icons/Cogs.svg";
+import Keyboard from "icons/Keyboard.svg";
+
+const iconBase = css`
   width: 1rem;
   height: 1rem;
   margin-left: 0;
@@ -15,6 +19,26 @@ export const Icon = styled(({ tag, children, ...props }) =>
   @media only screen and (max-width: 1023px) {
     margin-right: 0;
   }
+`;
+
+export const TerminalIcon = styled(Terminal)`
+  ${iconBase};
+`;
+
+export const ExternalLinkAltIcon = styled(ExternalLinkAlt)`
+  ${iconBase};
+`;
+
+export const CodeIcon = styled(Code)`
+  ${iconBase};
+`;
+
+export const CogsIcon = styled(Cogs)`
+  ${iconBase};
+`;
+
+export const KeyboardIcon = styled(Keyboard)`
+  ${iconBase};
 `;
 
 export const Wrapper = styled("div")`

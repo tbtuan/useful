@@ -1,13 +1,11 @@
-import Icon from "components/icons";
-import Clock from "icons/clock";
-import { StyledSmall } from "./style";
+import { StyledSmall, ClockIcon } from "./style";
 
 const ModifiedText = ({ modifiedTime }) => {
   const modifiedDate = new Date(Date.parse(modifiedTime)).toLocaleDateString();
 
   return (
     <div>
-      {<Icon tag={Clock} size="10px" gap="0.5rem" />}
+      <ClockIcon />
       <StyledSmall>Last update: {modifiedDate}</StyledSmall>
     </div>
   );

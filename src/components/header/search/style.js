@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Search from "icons/search";
+import Search from "icons/Search.svg";
 import { Link } from "gatsby";
 
 export const StyledSearch = styled(Search)`
@@ -9,7 +9,7 @@ export const StyledSearch = styled(Search)`
   height: 1rem;
   z-index: 1;
   color: ${({ theme }) => theme.colors.text};
-  left: ${(props) => (props.show ? `1.25rem` : `none`)};
+  left: ${({ show }) => (show ? `1.25rem` : `none`)};
 `;
 
 export const SearchBox = styled("input")`
@@ -28,9 +28,9 @@ export const SearchBox = styled("input")`
     border-color: ${({ theme }) => theme.colors.textLink};
   }
 
-  padding: ${(props) => (props.show ? `0.5rem` : `0rem`)};
-  padding-left: ${(props) => (props.show ? `3rem` : `2rem`)};
-  width: ${(props) => (props.show ? `40vw` : `100%`)};
+  padding: ${({ show }) => (show ? `0.5rem` : `0rem`)};
+  padding-left: ${({ show }) => (show ? `3rem` : `2rem`)};
+  width: ${({ show }) => (show ? `40vw` : `100%`)};
 
   :hover {
     border-color: ${({ theme }) => theme.colors.textLink};
