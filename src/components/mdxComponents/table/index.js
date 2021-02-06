@@ -5,9 +5,10 @@ const Table = styled("table")`
   border: solid 1px;
   border-color: ${({ theme }) => theme.colors.tableHeader};
   border-spacing: 0;
-  border-radius: 2px;
+  border-radius: 0.4rem 0.4rem 0.4rem 0.4rem;
   margin-bottom: 1rem;
   width: 100%;
+
   tr {
     margin: 0;
     padding: 0;
@@ -20,6 +21,10 @@ const Table = styled("table")`
     text-align: left;
     margin: 0;
     padding: 0.5rem 1rem;
+  }
+
+  thead th {
+    padding: 0.7rem 1rem;
   }
 
   tr td {

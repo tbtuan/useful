@@ -21,7 +21,7 @@ export const lightTheme = {
     search: "#ffffff",
     searchShadow: "rgba(43, 44, 44, 0.5)",
     searchHover: "#fef1e8",
-    tableHeader: "#CFCFCF",
+    tableHeader: "#e2e2e2",
     trSecondth: "#f8f8f8",
     kbd: "#fafbfc",
     kbdText: "#444d56",

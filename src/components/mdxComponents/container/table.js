@@ -10,7 +10,12 @@ const TableContainer = styled("div")`
     background-color: ${({ theme }) => theme.colors.tableHeader};
     text-align: left;
     margin: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
+
+  table {
+    border-radius: 0 0 0.4rem 0.4rem;
   }
 
   thead {

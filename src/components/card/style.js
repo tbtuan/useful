@@ -4,7 +4,7 @@ export const StyledDiv = styled("div")`
   height: 22.5rem;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   background-color: ${({ theme }) => theme.colors.sidebar};
-  border-radius: 2px;
+  border-radius: 0.4rem;
 `;
 
 export const StyledContainer = styled("div")`
