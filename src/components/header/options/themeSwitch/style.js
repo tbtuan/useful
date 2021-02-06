@@ -3,7 +3,6 @@ import Adjust from "icons/adjust";
 
 export const Switch = styled("label")`
   display: flex;
-  padding-right: 1rem;
   user-select: none;
 `;
 
@@ -23,5 +22,6 @@ export const Input = styled("input")`
   opacity: 0;
   width: 0;
   height: 0;
+  position: absolute;
   cursor: pointer;
 `;

@@ -8,6 +8,7 @@ import { StyledLink, Ul, Li, Container, Main } from "./style";
 import Layout from "templates/layout";
 import { Padding } from "../style";
 import Seo from "components/seo";
+import Card from "components/card";
 
 const Collection = (props) => {
   const { data } = props;
@@ -25,55 +26,26 @@ const Collection = (props) => {
     allMdx: { edges },
   } = data;
 
-  const TreeNode = ({ url, title, layer, items }) => {
-    const hasChildren = items.length !== 0;
-
-    if (!layer) {
-      layer = 0;
-    }
-    if (layer == 0) {
-      return (
-        <Container>
-          {items.map((item, index) => (
-            <TreeNode
-              key={item.url + index.toString()}
-              layer={layer + 1}
-              {...item}
-            />
-          ))}
-        </Container>
-      );
-    } else if (layer == 1) {
-      const mappedItems = hasChildren
-        ? items.map((item, index) => (
-            <TreeNode
-              key={item.url + index.toString()}
-              layer={layer + 1}
-              {...item}
-            />
-          ))
-        : null;
-
-      return (
-        <div>
-          {title && <h3>{title}</h3>}
-          <Ul>
-            <Li>{title && <StyledLink to={url}>Index</StyledLink>}</Li>
-            {mappedItems}
-          </Ul>
-        </div>
-      );
-    } else {
-      return (
-        <Li>
-          <StyledLink to={url}>{title}</StyledLink>
-        </Li>
-      );
-    }
+  const CardContainer = ({ items }) => {
+    return (
+      <Container>
+        {items.map((item, index) => (
+          <Card key={item.url + index.toString()} title={item.title}>
+            <Li key={item.url + index.toString() + "Index"}>
+              <StyledLink to={item.url}>Index</StyledLink>
+            </Li>
+            {item.items.map((innerItem, index) => (
+              <Li key={innerItem.url + index.toString()}>
+                <StyledLink to={innerItem.url}>{innerItem.title}</StyledLink>
+              </Li>
+            ))}
+          </Card>
+        ))}
+      </Container>
+    );
   };
 
   const treeData = calculateTreeData(edges, location.pathname);
-
   return (
     <>
       <Seo metaTitle={metaTitle} metaDescription={metaDescription} />
@@ -88,7 +60,7 @@ const Collection = (props) => {
           </TitleWrapper>
           <Main>
             <MDXRenderer>{body}</MDXRenderer>
-            <TreeNode {...treeData} />
+            <CardContainer {...treeData} />
           </Main>
         </div>
         <Padding />

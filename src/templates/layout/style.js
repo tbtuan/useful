@@ -25,7 +25,7 @@ export const Wrapper = styled("div")`
 export const Content = styled("main")`
   min-width: 0;
   width: 100%;
-  padding: 3rem;
+  padding-right: 4rem;
   padding-left: 4rem;
 
   @media only screen and (max-width: 1023px) {
@@ -41,7 +41,7 @@ export const ContentWrapper = styled("div")`
   display: flex;
   margin-left: 18rem;
   position: relative;
-  top: 5rem;
+  top: 8rem;
 
   background: ${({ theme }) => theme.colors.background};
 
@@ -128,7 +128,6 @@ export const GithubLink = styled("a")`
     opacity: 85%;
   }
   display: flex;
-  padding-right: 1rem;
 `;
 
 export const StyledGithub = styled(Github)`

@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 
 export const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.textLink} !important;
+  text-decoration: none;
 `;
 
 export const Ul = styled("ul")`
@@ -19,7 +20,7 @@ export const Li = styled("li")`
 export const Container = styled("div")`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 20rem));
-  grid-gap: 1rem;
+  grid-gap: 3.5rem;
   margin-bottom: 1.5rem;
 
   @media only screen and (max-width: 1023px) {

@@ -9,6 +9,7 @@ export const Container = styled("div")`
   margin-left: auto;
 
   display: flex;
+  gap: 1rem;
   align-items: center;
   padding-right: 4.5rem;
 

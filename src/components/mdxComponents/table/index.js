@@ -6,8 +6,6 @@ const Table = styled("table")`
   border-color: ${({ theme }) => theme.colors.tableHeader};
   border-spacing: 0;
   border-radius: 2px;
-  border-spacing: 0;
-  border-radius: 2px;
   margin-bottom: 1rem;
   width: 100%;
   tr {
