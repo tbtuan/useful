@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "contexts/themeContext";
-import { Switch, StyledAdjust, Input } from "./style";
+import { Switch, AdjustIcon, Input } from "./style";
 
 export const ThemeSwitch = () => {
   const themeContext = useContext(ThemeContext);
@@ -13,7 +13,7 @@ export const ThemeSwitch = () => {
         onChange={themeContext.toggleActiveTheme}
         checked={themeContext.isDarkThemeActive}
       />
-      <StyledAdjust />
+      <AdjustIcon />
     </Switch>
   );
 };

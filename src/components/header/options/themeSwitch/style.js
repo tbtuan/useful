@@ -6,7 +6,7 @@ export const Switch = styled("label")`
   user-select: none;
 `;
 
-export const StyledAdjust = styled(Adjust)`
+export const AdjustIcon = styled(Adjust)`
   cursor: pointer;
   width: 1.25rem;
   height: 1.25rem;

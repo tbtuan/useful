@@ -1,9 +1,5 @@
-import { Container, OptionsWrapper } from "./style";
+import { Container } from "./style";
 
-const OptionsLayout = ({ children }) => (
-  <OptionsWrapper>
-    <Container>{children}</Container>
-  </OptionsWrapper>
-);
+const OptionsLayout = ({ children }) => <Container>{children}</Container>;
 
 export default OptionsLayout;

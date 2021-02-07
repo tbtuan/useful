@@ -1,4 +1,4 @@
-import Layout from "templates/layout";
+import Layout from "layout";
 import {
   StyledHeading,
   TitleWrapper,

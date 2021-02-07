@@ -1,12 +1,11 @@
 import { StyledSmall, ClockIcon } from "./style";
+import { dateToString } from "utils/date";
 
 const ModifiedText = ({ modifiedTime }) => {
-  const modifiedDate = new Date(Date.parse(modifiedTime)).toLocaleDateString();
-
   return (
     <div>
       <ClockIcon />
-      <StyledSmall>Last update: {modifiedDate}</StyledSmall>
+      <StyledSmall>Last update: {dateToString(modifiedTime)}</StyledSmall>
     </div>
   );
 };

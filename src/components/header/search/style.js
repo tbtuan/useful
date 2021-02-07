@@ -20,8 +20,8 @@ export const SearchBox = styled("input")`
   outline: 0;
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
-  width: 100%;
-  //padding-left: 2rem;
+  max-width: ${({ show }) => (show ? `100%` : `18rem`)};
+  padding-left: 2rem;
   margin-left: -1rem;
 
   :focus {
@@ -53,7 +53,7 @@ export const SearchBox = styled("input")`
 
 export const SearchContainer = styled("div")`
   padding-left: 4rem;
-  flex: 0 0 20em;
+  padding-right: 4rem;
 
   display: flex;
   justify-content: center;
@@ -67,7 +67,8 @@ export const SearchContainer = styled("div")`
   @media only screen and (max-width: 576px) {
     flex: none;
     padding-left: 1.5rem;
-    width: 40%;
+    padding-right: 1.5rem;
+    width: 70%;
   }
 `;
 

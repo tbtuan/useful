@@ -41,11 +41,6 @@ export const KeyboardIcon = styled(Keyboard)`
   ${iconBase};
 `;
 
-export const Wrapper = styled("div")`
-  background: ${({ theme }) => theme.colors.background};
-  height: 100vh;
-`;
-
 export const Content = styled("main")`
   min-width: 0;
   width: 100%;
@@ -142,34 +137,32 @@ export const EditButton = styled("a")`
   :hover {
     opacity: 85%;
   }
+  display: flex;
+  align-items: center;
 `;
 
 export const GithubLink = styled("a")`
   cursor: pointer;
   user-select: none;
-  margin: 0;
   :hover {
     opacity: 85%;
   }
   display: flex;
 `;
 
-export const StyledGithub = styled(Github)`
+export const GithubIcon = styled(Github)`
   height: 1.25rem;
   color: ${({ theme }) => theme.colors.switch};
   filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
   cursor: pointer;
-  //user-select: none;
-  margin: 0;
   :hover {
     opacity: 85%;
   }
 `;
 
-export const StyledEdit = styled(Edit)`
+export const EditIcon = styled(Edit)`
   width: 0.8rem;
   height: 0.6rem;
-  margin-left: auto;
   margin-right: 0.2rem;
   color: ${({ theme }) => theme.colors.background};
 `;

@@ -5,7 +5,7 @@ import { calculateTreeData } from "utils/nestedTree";
 
 import { StyledHeading, TitleWrapper } from "../style";
 import { StyledLink, Ul, Li, Container, Main } from "./style";
-import Layout from "templates/layout";
+import Layout from "layout";
 import { Padding } from "../style";
 import Seo from "components/seo";
 import Card from "components/card";
