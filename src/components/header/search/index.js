@@ -121,6 +121,7 @@ const SearchLayout = () => {
         show={results.length > 0 && focus}
         id="searchbox"
         type="Search"
+        aria-label="Search"
         value={query}
         onChange={searchData}
         onFocus={() => setFocus(true)}

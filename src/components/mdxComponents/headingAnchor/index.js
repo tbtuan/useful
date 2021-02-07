@@ -9,7 +9,7 @@ const HeadingAnchor = (props) => {
 
   return (
     <Heading2 id={stringToSlug(heading)}>
-      <Link to={`#${stringToSlug(heading)}`}>
+      <Link aria-label={heading} to={`#${stringToSlug(heading)}`}>
         <StyledFaLink />
       </Link>
       {heading}

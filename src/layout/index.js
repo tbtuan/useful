@@ -42,7 +42,7 @@ const Layout = ({
         <ViewDiv />
         <Header>
           <TitleWrapper>
-            <LogoWrapper to="/">
+            <LogoWrapper aria-label="Home" to="/">
               <Logo />
             </LogoWrapper>
           </TitleWrapper>

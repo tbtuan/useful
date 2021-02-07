@@ -14,12 +14,12 @@ const NavlinkLayout = ({ text, path, children, location }) => {
   return (
     <ListItem>
       {isActive(path) ? (
-        <ActiveLink to={path}>
+        <ActiveLink aria-label={text} to={path}>
           <TextWrapper>{text}</TextWrapper>
           <IconWrapper>{children}</IconWrapper>
         </ActiveLink>
       ) : (
-        <NormalLink to={path}>
+        <NormalLink aria-label={text} to={path}>
           <TextWrapper>{text}</TextWrapper>
           <IconWrapper>{children}</IconWrapper>
         </NormalLink>

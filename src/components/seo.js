@@ -11,6 +11,7 @@ const Seo = ({ metaTitle, metaDescription }) => (
     {metaDescription ? (
       <meta property="og:description" content={metaDescription} />
     ) : null}
+    <html lang="en" />
   </Helmet>
 );
 

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const TableOfContents = styled("nav")`
+export const TableOfContents = styled("ol")`
   max-width: 18rem;
   position: fixed;
   top: calc(8rem);
@@ -10,6 +10,8 @@ export const TableOfContents = styled("nav")`
   overflow-x: hidden;
   padding-bottom: 2rem;
   order: 2;
+  padding: 0;
+  margin: 0;
 
   @media only screen and (max-width: 1023px) {
     max-width: 18rem;
