@@ -12,7 +12,7 @@ import {
   ContentWrapper,
   StyledMainWrapper,
   Padding,
-} from "./style";
+} from "../style";
 
 const Index = (props) => {
   const { data } = props;
@@ -37,18 +37,16 @@ const Index = (props) => {
         relativePath={relativePath}
         siteMetadata={siteMetadata}
       >
-        <div>
-          <TitleWrapper>
-            <StyledHeading>{title}</StyledHeading>
-            <ModifiedText modifiedTime={date} />
-          </TitleWrapper>
-          <ContentWrapper>
-            <TableOfContents tableOfContents={tableOfContents} slug={slug} />
-            <StyledMainWrapper>
-              <MDXRenderer>{body}</MDXRenderer>
-            </StyledMainWrapper>
-          </ContentWrapper>
-        </div>
+        <TitleWrapper>
+          <StyledHeading>{title}</StyledHeading>
+          <ModifiedText modifiedTime={date} />
+        </TitleWrapper>
+        <ContentWrapper>
+          <TableOfContents tableOfContents={tableOfContents} slug={slug} />
+          <StyledMainWrapper>
+            <MDXRenderer>{body}</MDXRenderer>
+          </StyledMainWrapper>
+        </ContentWrapper>
         <Padding />
       </Layout>
     </>

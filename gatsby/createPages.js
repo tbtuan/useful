@@ -62,7 +62,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       default:
         createPage({
           path: node.fields.slug,
-          component: resolve("./src/templates/index.js"),
+          component: resolve("./src/templates/default/index.js"),
           context: {
             id: node.fields.id,
           },

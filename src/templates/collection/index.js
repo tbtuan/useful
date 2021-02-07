@@ -3,10 +3,9 @@ import React from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import { calculateTreeData } from "utils/nestedTree";
 
-import { StyledHeading, TitleWrapper } from "../style";
-import { StyledLink, Ul, Li, Container, Main } from "./style";
+import { StyledHeading, TitleWrapper, Padding } from "../style";
+import { StyledLink, Li, Container, Main } from "./style";
 import Layout from "layout";
-import { Padding } from "../style";
 import Seo from "components/seo";
 import Card from "components/card";
 
@@ -54,15 +53,13 @@ const Collection = (props) => {
         relativePath={relativePath}
         siteMetadata={siteMetadata}
       >
-        <div>
-          <TitleWrapper>
-            <StyledHeading>{title}</StyledHeading>
-          </TitleWrapper>
-          <Main>
-            <MDXRenderer>{body}</MDXRenderer>
-            <CardContainer {...treeData} />
-          </Main>
-        </div>
+        <TitleWrapper>
+          <StyledHeading>{title}</StyledHeading>
+        </TitleWrapper>
+        <Main>
+          <MDXRenderer>{body}</MDXRenderer>
+          <CardContainer {...treeData} />
+        </Main>
         <Padding />
       </Layout>
     </>
