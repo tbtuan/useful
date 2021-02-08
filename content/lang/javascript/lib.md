@@ -11,7 +11,20 @@ date: 2020-06-30
 // TODO
 ```
 
+## Joi
+
+```js
+// TODO
+```
+
+
 ## Jsonwebtoken
+
+```js
+// TODO
+```
+
+## Mongoose
 
 ```js
 // TODO
