@@ -8,6 +8,7 @@ import { StyledLink, Li, Container, Main } from "./style";
 import Layout from "layout";
 import Seo from "components/seo";
 import Card from "components/card";
+import ModifiedText from "components/modifiedText";
 
 const Collection = (props) => {
   const { data } = props;
