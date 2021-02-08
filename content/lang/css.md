@@ -2,7 +2,7 @@
 title: 'CSS'
 metaTitle: 'CSS'
 metaDescription: 'CSS Resources and tricks'
-date: 2020-12-29
+date: 2021-02-08
 ---
 
 ## Resources
@@ -77,6 +77,27 @@ li a:hover {
   /* .../#anchor-link offset of 40px */
   margin-top: -40px;
   padding-top: 40px;
+}
+```
+
+</sc>
+
+<sc>
+
+## Center div
+
+```css
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
 }
 ```
 

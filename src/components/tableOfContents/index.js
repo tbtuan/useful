@@ -25,7 +25,7 @@ const TableOfContentsLayout = ({ tableOfContents, slug }) => {
     });
   }, []);
 
-  if (typeof window === "undefined" || !tableOfContents) {
+  if (typeof window === "undefined" || !tableOfContents.items) {
     return null;
   }
 

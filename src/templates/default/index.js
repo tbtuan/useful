@@ -6,6 +6,7 @@ import Layout from "layout";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import ModifiedText from "components/modifiedText";
 import TableOfContents from "components/tableOfContents";
+
 import {
   StyledHeading,
   TitleWrapper,
