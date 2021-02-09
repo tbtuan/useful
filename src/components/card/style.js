@@ -17,8 +17,9 @@ export const TagContainer = styled("div")`
   border-top: 1px solid #d6d6d6;
   position: absolute;
   width: 100%;
-  height: 4.5rem;
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 1rem 0 0.5rem 0;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const StyledTag = styled("small")`
@@ -35,8 +36,8 @@ export const Tag = styled("p")`
 
 export const TagList = styled("ol")`
   margin: 0;
-  margin-top: -0.5rem;
-  margin-left: -0.5rem;
+  padding: 0rem;
+  margin-left: 2rem;
 `;
 
 export const StyledContainer = styled("div")`

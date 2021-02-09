@@ -7,7 +7,7 @@ export const StyledSmall = styled("small")`
 
 export const ClockIcon = styled(Clock)`
   color: ${({ theme }) => theme.colors.small};
-  width: 10px;
-  height: 10px;
-  margin-right: 0.5rem;
+  width: 9px;
+  height: 9px;
+  margin-right: 0.3rem;
 `;
