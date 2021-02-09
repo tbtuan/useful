@@ -4,11 +4,18 @@
     <a><img src="https://github.com/tbtuan/useful/workflows/build/badge.svg" alt="Build status"></a>
 </p>
 
-What's /useful?
+## What's /useful?
 
-/useful is
+### /useful is
 
 - a repository for keeping track of everything you would bookmark.
-- a cheatsheet to show the essential concepts of any languages/libraries or frameworks. Switching between them should be easy.
+- a cheatsheet to show the essential concepts/syntax of any languages/libraries/frameworks.
 - a site to outsource your knowledge
 - a collection of websites, tools and other resources you might use
+
+### Basic structure
+- Commands: Like "git status"
+- Languages: Cheatsheets for every programming/markup/script languages including frameworks/libraries etc.
+- Links: Documentations, useful websites
+- Setups: How to get things up and running
+- Shortcuts: Like <kbd>Ctrl</kbd> + <kbd>F</kbd>
