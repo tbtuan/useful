@@ -1,11 +1,11 @@
 import { StyledSmall, ClockIcon } from "./style";
 import { dateToString } from "utils/date";
 
-const ModifiedText = ({ modifiedTime, text = "Last update: " }) => {
+const ModifiedText = ({ modifiedTime }) => {
   return (
     <div>
       <ClockIcon />
-      <StyledSmall>{text + dateToString(modifiedTime)}</StyledSmall>
+      <StyledSmall>{dateToString(modifiedTime)}</StyledSmall>
     </div>
   );
 };

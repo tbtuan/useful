@@ -4,6 +4,7 @@ export const lightTheme = {
     heading: "#3B454E",
     placeholder: "#969BA0",
     text: "#3B454E",
+    small: "#76828c",
     preFormattedText: "#282a33",
     textLink: "#f77723",
     // Sidebar
@@ -35,6 +36,7 @@ export const darkTheme = {
     heading: "#DBDDDE",
     placeholder: "#969BA0",
     text: "#D2D2D4",
+    small: "#76828c",
     preFormattedText: "#1B1E2B",
     textLink: "#73A3F5",
     // Sidebar
