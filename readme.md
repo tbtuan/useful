@@ -19,3 +19,9 @@
 - Links: Documentations, useful websites
 - Setups: How to get things up and running
 - Shortcuts: Like <kbd>Ctrl</kbd> + <kbd>F</kbd>
+
+### Markdown & Features
+
+- [Roadmap](https://github.com/tbtuan/useful/projects/1)
+- [Planed Markdowns](https://github.com/tbtuan/useful/projects/2)
+- [/useful wiki](https://github.com/tbtuan/useful/wiki)
