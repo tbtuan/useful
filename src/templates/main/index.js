@@ -4,16 +4,11 @@ import Seo from "components/seo";
 
 import Layout from "layout";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
-import ModifiedText from "components/modifiedText";
-import TableOfContents from "components/tableOfContents";
+import ModifiedAt from "components/modifiedAt";
 
-import {
-  StyledHeading,
-  TitleWrapper,
-  ContentWrapper,
-  StyledMainWrapper,
-  Padding,
-} from "../style";
+import { TitleWrapper } from "./style";
+
+import { StyledHeading, ContentWrapper, StyledMainWrapper } from "../style";
 
 const Index = (props) => {
   const { data } = props;
@@ -22,14 +17,21 @@ const Index = (props) => {
   const {
     site: { siteMetadata },
     mdx: {
-      frontmatter: { date, metaTitle, metaDescription },
-      fields: { title, slug },
+      frontmatter: { metaTitle, metaDescription },
+      fields: { title },
       parent: { relativePath },
       body,
-      tableOfContents,
     },
+    allMdx: { edges },
   } = data;
 
+  const dateTitleSlug = edges.map((item) => {
+    const tmp = {};
+    tmp["title"] = item.node.frontmatter.title;
+    tmp["date"] = item.node.frontmatter.date;
+    tmp["slug"] = item.node.fields.slug;
+    return tmp;
+  });
   return (
     <>
       <Seo metaTitle={metaTitle} metaDescription={metaDescription} />
@@ -40,15 +42,12 @@ const Index = (props) => {
       >
         <TitleWrapper>
           <StyledHeading>{title}</StyledHeading>
-          <ModifiedText modifiedTime={date} />
+          <MDXRenderer>{body}</MDXRenderer>
         </TitleWrapper>
         <ContentWrapper>
-          <TableOfContents tableOfContents={tableOfContents} slug={slug} />
-          <StyledMainWrapper>
-            <MDXRenderer>{body}</MDXRenderer>
-          </StyledMainWrapper>
+          <ModifiedAt dateTitleSlug={dateTitleSlug} />
+          <StyledMainWrapper></StyledMainWrapper>
         </ContentWrapper>
-        <Padding />
       </Layout>
     </>
   );
@@ -78,7 +77,23 @@ export const pageQuery = graphql`
       frontmatter {
         metaTitle
         metaDescription
-        date
+      }
+    }
+    allMdx(
+      filter: { frontmatter: { date: { gt: "0" } } }
+      sort: { order: DESC, fields: frontmatter___date }
+      limit: 10
+    ) {
+      edges {
+        node {
+          frontmatter {
+            date
+            title
+          }
+          fields {
+            slug
+          }
+        }
       }
     }
   }

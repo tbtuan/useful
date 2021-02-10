@@ -50,6 +50,15 @@ module.exports = async ({ graphql, actions, reporter }) => {
       toc: tocConcat,
     });
     switch (node.fields.slug) {
+      case "/":
+        createPage({
+          path: node.fields.slug,
+          component: resolve("./src/templates/main/index.js"),
+          context: {
+            id: node.fields.id,
+          },
+        });
+        break;
       case "/lang":
         createPage({
           path: node.fields.slug,

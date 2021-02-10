@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const StyledDiv = styled("div")`
   position: relative;
   height: 22.5rem;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   background-color: ${({ theme }) => theme.colors.sidebar};
   border: 1px solid #d6d6d6b3;
   border-radius: 0.4rem;
@@ -17,16 +17,17 @@ export const TagContainer = styled("div")`
   border-top: 1px solid #d6d6d6;
   position: absolute;
   width: 100%;
-  padding: 1rem 0 0.5rem 0;
+  padding: 0.9rem 0 1.2rem 0;
   display: flex;
   flex-direction: column;
+  gap: 0.3rem;
 `;
 
 export const StyledTag = styled("small")`
   margin-left: 2rem;
 `;
 
-export const Tag = styled("p")`
+export const Tag = styled("span")`
   display: inline-block;
   font-size: 0.7rem;
   padding: 0.3rem;
