@@ -5,7 +5,13 @@ const ModifiedAtLayout = ({ dateTitleSlug }) => {
   if (typeof window === "undefined" || !dateTitleSlug) {
     return null;
   }
-  const currentDate = new Date();
+  const currentDate = new Date(
+    Date.UTC(
+      new Date().getFullYear(),
+      new Date().getMonth(),
+      new Date().getDate()
+    )
+  );
   const toc = dateTitleSlug.map((item, index) => {
     return (
       <Li key={index}>
