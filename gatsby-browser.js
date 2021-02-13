@@ -5,17 +5,6 @@ export const onServiceWorkerUpdateReady = () => {
   window.location.reload();
 };
 
-export const shouldUpdateScroll = ({ routerProps: { location } }) => {
-  if (location && location.hash) {
-    const anchorLink = document.querySelector(location.hash);
-    anchorLink &&
-      window.scrollTo({
-        top: anchorLink.offsetTop,
-      });
-  }
-  return false;
-};
-
 export const onClientEntry = (
   _,
   { filename = "searchIndex.json", fetchOptions = {} }
