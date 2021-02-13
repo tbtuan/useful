@@ -56,7 +56,7 @@ date: 2021-02-02
 
 ## YouTube
 
-### General
+### Various
 
 - [freeCodeCamp](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ/videos)
 - [Simplilearn](https://www.youtube.com/user/Simplilearn/videos)

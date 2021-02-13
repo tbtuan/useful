@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const StyledDiv = styled("div")`
   position: relative;
   height: 12rem;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px #6f6f6f21, 0px 4px 4px #f777230d;
   background-color: ${({ theme }) => theme.colors.sidebar};
   border: 1px solid #d6d6d6b3;
   border-radius: 0.4rem;

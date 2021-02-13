@@ -2,7 +2,7 @@
 title: "Machine learning"
 metaTitle: "Machine learning"
 metaDescription: "Machine learning"
-date: 2021-02-02
+date: 2021-02-13
 ---
 
 <cc>
@@ -57,6 +57,14 @@ date: 2021-02-02
 
 - [ConvNet Calculator](https://madebyollin.github.io/convnet-calculator/)
 - [Visualising Activation Functions](https://dashee87.github.io/deep%20learning/visualising-activation-functions-in-neural-networks/)
+
+</div>
+
+<div>
+
+## Community
+
+- [kaggle](https://www.kaggle.com/)
 
 </div>
 
