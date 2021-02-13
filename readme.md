@@ -25,3 +25,7 @@
 - [Roadmap](https://github.com/tbtuan/useful/projects/1)
 - [Planed Markdowns](https://github.com/tbtuan/useful/projects/2)
 - [/useful wiki](https://github.com/tbtuan/useful/wiki)
+
+### How to navigate
+
+Press <kbd>F</kbd> to focus "Search..."
