@@ -83,7 +83,7 @@ export const ViewDiv = styled("div")`
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 4px 4px 18px ${({ theme }) => theme.colors.sidebarShadow};
+  box-shadow: 4px 0px 10px ${({ theme }) => theme.colors.sidebarShadow};
   background: transparent;
   z-index: 2;
   pointer-events: none;

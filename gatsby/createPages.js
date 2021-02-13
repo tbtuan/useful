@@ -68,6 +68,15 @@ module.exports = async ({ graphql, actions, reporter }) => {
           },
         });
         break;
+      case "/links":
+        createPage({
+          path: node.fields.slug,
+          component: resolve("./src/templates/links/index.js"),
+          context: {
+            id: node.fields.id,
+          },
+        });
+        break;
       default:
         createPage({
           path: node.fields.slug,
