@@ -2,7 +2,7 @@
 title: "Design"
 metaTitle: "Design"
 metaDescription: "Design"
-date: 2021-02-02
+date: 2021-02-13
 ---
 
 <cc>
@@ -22,7 +22,7 @@ date: 2021-02-02
 
 <div>
 
-## Interface Design/Prototyping
+## Prototyping
 
 - [Figma (Collaborative)](https://www.figma.com/)
 - [Adobe XD](https://www.adobe.com/products/xd.html)

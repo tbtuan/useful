@@ -43,7 +43,7 @@ const Index = (props) => {
           <ModifiedText modifiedTime={date} />
         </TitleWrapper>
         <ContentWrapper>
-          <TableOfContents tableOfContents={tableOfContents} slug={slug} />
+          <TableOfContents tableOfContents={tableOfContents} />
           <StyledMainWrapper>
             <MDXRenderer>{body}</MDXRenderer>
           </StyledMainWrapper>
