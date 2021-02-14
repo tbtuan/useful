@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
-import Cog from "icons/cog.svg";
+import Cog from "icons/Cog.svg";
 import { Link } from "gatsby";
 
 export const TitleWrapper = styled("div")`
   color: ${(props) => props.theme.colors.text};
+  width: calc(100% - 14rem);
 `;
 
 export const CogIcon = styled(Cog)`
@@ -27,6 +28,8 @@ export const Main = styled("main")`
 `;
 
 export const StyledLink = styled(Link)`
+  float: right;
+  margin-top: 1rem;
   svg {
     fill: ${(props) => props.theme.colors.text};
 
