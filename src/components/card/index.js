@@ -4,25 +4,24 @@ import {
   StyledContainer,
   StyledHeading,
   TagContainer,
-  StyledTag,
   Tag,
   TagList,
 } from "./style";
 
-const Card = ({ title, children, tags }) => {
+const Card = ({ title, tags, children }) => {
   return (
     <StyledDiv>
       <HeadingWrapper>
         <StyledHeading>{title}</StyledHeading>
+        <StyledContainer>{children}</StyledContainer>
+        <TagContainer>
+          <TagList>
+            {tags?.map((tag) => (
+              <Tag key={title && tag}>#{tag}</Tag>
+            ))}
+          </TagList>
+        </TagContainer>
       </HeadingWrapper>
-      <StyledContainer>{children}</StyledContainer>
-      <TagContainer>
-        <TagList>
-          {tags?.map((tag) => (
-            <Tag key={title && tag}>#{tag}</Tag>
-          ))}
-        </TagList>
-      </TagContainer>
     </StyledDiv>
   );
 };

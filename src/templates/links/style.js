@@ -7,7 +7,14 @@ export const StyledLink = styled(Link)`
   display: block;
 `;
 
-export const Container = styled("div")``;
+export const Container = styled("div")`
+  color: ${(props) => props.theme.colors.text};
+  max-width: calc(100% - 14rem);
+
+  @media only screen and (max-width: 1023px) {
+    max-width: 100%;
+  }
+`;
 
 export const Main = styled("main")`
   color: ${(props) => props.theme.colors.text};

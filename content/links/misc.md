@@ -2,6 +2,7 @@
 title: "Misc"
 description: "Similar sites"
 date: 2021-02-14
+tags: [general]
 ---
 
 <cc>

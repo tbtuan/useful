@@ -2,6 +2,7 @@
 title: "DevOps"
 description: "DevOps tools"
 date: 2021-02-14
+tags: [devops]
 ---
 
 <cc>

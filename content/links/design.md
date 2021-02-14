@@ -2,6 +2,7 @@
 title: "Design"
 description: "Tips and tools for CSS"
 date: 2021-02-14
+tags: [design]
 ---
 
 <cc>

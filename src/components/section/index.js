@@ -5,11 +5,14 @@ import {
   StyledHeading,
   StyledLink,
   Li,
+  TagContainer,
+  Tag,
+  TagList,
 } from "./style";
 
 const Section = ({
   node: {
-    frontmatter: { description },
+    frontmatter: { description, tags },
     fields: { slug, title, id },
     tableOfContents: { items },
   },
@@ -20,6 +23,13 @@ const Section = ({
         <StyledHeading>{title}</StyledHeading>
         <p>{description}</p>
         <StyledLink to={slug}>Read more</StyledLink>
+        <TagContainer>
+          <TagList>
+            {tags?.map((tag) => (
+              <Tag key={title && tag}>#{tag}</Tag>
+            ))}
+          </TagList>
+        </TagContainer>
       </HeadingWrapper>
       <StyledContainer>
         {items.map((item, index) => (

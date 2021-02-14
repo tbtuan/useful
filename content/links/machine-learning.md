@@ -2,6 +2,7 @@
 title: "Machine learning"
 description: "Resources for deep learning"
 date: 2021-02-13
+tags: [machine-learning]
 ---
 
 <cc>

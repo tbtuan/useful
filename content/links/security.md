@@ -2,6 +2,7 @@
 title: "Security"
 description: "Best pratices and tools for pentesters"
 date: 2021-02-02
+tags: [security]
 ---
 
 <cc>

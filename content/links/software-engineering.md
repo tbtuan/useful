@@ -2,6 +2,7 @@
 title: "Software Engineering"
 description: "Best pratices in se and data structures"
 date: 2021-02-02
+tags: [general]
 ---
 
 <cc>

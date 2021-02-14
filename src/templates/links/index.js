@@ -23,9 +23,9 @@ const Links = (props) => {
     allMdx: { edges },
   } = data;
 
-  const CardContainer = ({ edges }) => {
+  const SectionContainer = ({ edges }) => {
     return (
-      <Container key="asdf">
+      <Container>
         {edges.map(({ node }, index) => (
           <Section key={node.fields.id} node={node}></Section>
         ))}
@@ -46,7 +46,7 @@ const Links = (props) => {
         </TitleWrapper>
         <Main>
           <MDXRenderer>{body}</MDXRenderer>
-          <CardContainer edges={edges} />
+          <SectionContainer edges={edges} />
         </Main>
         <Padding />
       </Layout>
@@ -84,6 +84,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             description
+            tags
           }
           fields {
             slug
