@@ -11,6 +11,7 @@ const StyledHeading = styled("h1")`
   margin: 0;
   padding: 0;
   color: ${(props) => props.theme.colors.heading};
+  display: inline;
 `;
 
 const Main = styled("main")`

@@ -42,7 +42,7 @@ const Index = (props) => {
             <Breadcrumb crumbs={pageContext.crumbs} />
           )}
           <StyledHeading>{title}</StyledHeading>
-          <ModifiedText modifiedTime={date} />
+          {date && <ModifiedText modifiedTime={date} />}
         </TitleWrapper>
         <ContentWrapper>
           <TableOfContents tableOfContents={tableOfContents} />

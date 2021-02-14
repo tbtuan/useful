@@ -7,9 +7,9 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import ModifiedAt from "components/modifiedAt";
 import Featured from "components/featured";
 
-import { TitleWrapper, Main } from "./style";
+import { TitleWrapper, Main, CogIcon, StyledLink } from "./style";
 
-import { StyledHeading, ContentWrapper, StyledMainWrapper } from "../style";
+import { StyledHeading, ContentWrapper } from "../style";
 
 const Index = (props) => {
   const { data } = props;
@@ -42,6 +42,9 @@ const Index = (props) => {
       >
         <TitleWrapper>
           <StyledHeading>{title}</StyledHeading>
+          <StyledLink to="/settings">
+            <CogIcon />
+          </StyledLink>
           <MDXRenderer>{body}</MDXRenderer>
         </TitleWrapper>
         <ContentWrapper>

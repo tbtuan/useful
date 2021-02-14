@@ -3,10 +3,6 @@ import styled from "@emotion/styled";
 export const StyledDiv = styled("div")`
   position: relative;
   height: 22.5rem;
-  box-shadow: 0px 2px 2px #6f6f6f21, 0px 4px 4px #f777230d;
-  background-color: ${({ theme }) => theme.colors.sidebar};
-  border: 1px solid #d6d6d6b3;
-  border-radius: 0.4rem;
 `;
 
 export const StyledContainer = styled("div")`
@@ -31,16 +27,13 @@ export const StyledContainer = styled("div")`
 `;
 
 export const HeadingWrapper = styled("div")`
-  border-bottom: 1px solid #d6d6d6;
   position: relative;
   margin: 0;
   height: 3.75rem;
 `;
 
-export const StyledHeading = styled("h4")`
+export const StyledHeading = styled("h2")`
   display: inline-block;
   margin-top: 3rem;
-  margin-left: 1.5rem;
-  background-color: ${({ theme }) => theme.colors.sidebar};
   padding: 0 0.5rem;
 `;
