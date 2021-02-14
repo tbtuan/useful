@@ -1,8 +1,8 @@
 ---
 title: 'HTML'
-metaTitle: 'HTML'
-metaDescription: 'Resources for HTML'
+description: 'Resources for HTML'
 date: 2020-12-21
+tags: ["general", "web-development"]
 ---
 
 ## Resources

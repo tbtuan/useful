@@ -1,8 +1,8 @@
 ---
 title: 'Javascript'
-metaTitle: 'Javascript'
-metaDescription: 'Javascript'
+description: 'Javascript'
 date: 2021-01-28
+tags: ["web-development", "backend"]
 ---
 
 ## Resources

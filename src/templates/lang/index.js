@@ -17,8 +17,7 @@ const Collection = (props) => {
   const {
     site: { siteMetadata },
     mdx: {
-      frontmatter: { metaTitle, metaDescription },
-      fields: { title },
+      frontmatter: { title, description },
       parent: { relativePath },
       body,
     },
@@ -29,7 +28,18 @@ const Collection = (props) => {
     return (
       <Container>
         {items.map((item, index) => (
-          <Card key={item.url + index.toString()} title={item.title}>
+          <Card
+            key={item.url + index.toString()}
+            title={item.title}
+            tags={[
+              ...new Set(
+                [
+                  ...item.items.flatMap((item) => item.tags),
+                  ...item.tags,
+                ].filter((tag) => tag !== null)
+              ),
+            ]}
+          >
             <Li key={item.url + index.toString() + "Index"}>
               <StyledLink to={item.url}>Index</StyledLink>
             </Li>
@@ -45,9 +55,10 @@ const Collection = (props) => {
   };
 
   const treeData = calculateTreeData(edges, location.pathname);
+
   return (
     <>
-      <Seo metaTitle={metaTitle} metaDescription={metaDescription} />
+      <Seo metaTitle={title} metaDescription={description} />
       <Layout
         location={location}
         relativePath={relativePath}
@@ -86,14 +97,17 @@ export const pageQuery = graphql`
         }
       }
       frontmatter {
-        metaTitle
-        metaDescription
+        title
+        description
         date
       }
     }
-    allMdx {
+    allMdx(filter: { slug: { regex: "/lang//" } }) {
       edges {
         node {
+          frontmatter {
+            tags
+          }
           fields {
             slug
             title

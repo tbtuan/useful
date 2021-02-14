@@ -1,8 +1,8 @@
 ---
 title: 'Java'
-metaTitle: 'Java'
-metaDescription: 'Java'
+description: 'Java'
 date: 2021-02-02
+tags: ["general"]
 ---
 
 ## Resources

@@ -1,8 +1,8 @@
 ---
 title: 'Express'
-metaTitle: 'javascript/express'
-metaDescription: 'Javascript - Express'
+description: 'Javascript - Express'
 date: 2021-01-29
+tags: ["backend", "web-development"]
 ---
 
 ## Resources

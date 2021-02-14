@@ -1,7 +1,6 @@
 ---
 title: "Commands"
-metaTitle: "Commands"
-metaDescription: "Commands for CLIs"
+description: "Commands for CLIs"
 date: 2021-01-29
 ---
 

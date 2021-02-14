@@ -1,8 +1,8 @@
 ---
 title: 'matplotlib'
-metaTitle: 'matplotlib - /useful'
-metaDescription: 'Data visualization'
+description: 'Data visualization'
 date: 2020-12-08
+tags: ["data-visualization"]
 ---
 
 ## Resources

@@ -1,7 +1,6 @@
 ---
 title: 'Setups'
-metaTitle: 'Setups'
-metaDescription: 'Setting up things such as config files'
+description: 'Setting up things such as config files'
 date: 2020-01-24
 ---
 

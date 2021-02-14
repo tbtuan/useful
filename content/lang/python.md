@@ -1,8 +1,8 @@
 ---
 title: 'Python'
-metaTitle: 'Python'
-metaDescription: 'Python'
+description: 'Python'
 date: 2020-12-23
+tags: ["general"]
 ---
 
 ## Resources

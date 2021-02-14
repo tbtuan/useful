@@ -1,7 +1,6 @@
 ---
 title: "Learning Resources"
-metaTitle: "Learning Resources"
-metaDescription: "Learning Resources"
+description: "Learning Resources"
 date: 2021-02-02
 ---
 

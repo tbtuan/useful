@@ -1,7 +1,6 @@
 ---
 title: 'Tricks'
-metaTitle: 'cpp/tricks'
-metaDescription: 'C++ - Tricks'
+description: 'C++ - Tricks'
 date: 2020-06-30
 ---
 

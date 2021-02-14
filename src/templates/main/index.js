@@ -5,8 +5,9 @@ import Seo from "components/seo";
 import Layout from "layout";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import ModifiedAt from "components/modifiedAt";
+import Featured from "components/featured";
 
-import { TitleWrapper } from "./style";
+import { TitleWrapper, Main } from "./style";
 
 import { StyledHeading, ContentWrapper, StyledMainWrapper } from "../style";
 
@@ -17,8 +18,7 @@ const Index = (props) => {
   const {
     site: { siteMetadata },
     mdx: {
-      frontmatter: { metaTitle, metaDescription },
-      fields: { title },
+      frontmatter: { title, description },
       parent: { relativePath },
       body,
     },
@@ -34,7 +34,7 @@ const Index = (props) => {
   });
   return (
     <>
-      <Seo metaTitle={metaTitle} metaDescription={metaDescription} />
+      <Seo metaTitle={title} metaDescription={description} />
       <Layout
         location={location}
         relativePath={relativePath}
@@ -46,7 +46,10 @@ const Index = (props) => {
         </TitleWrapper>
         <ContentWrapper>
           <ModifiedAt dateTitleSlug={dateTitleSlug} />
-          <StyledMainWrapper></StyledMainWrapper>
+          <Main>
+            <Featured title="Featured" />
+            <Featured title="Bookmark" />
+          </Main>
         </ContentWrapper>
       </Layout>
     </>
@@ -75,8 +78,8 @@ export const pageQuery = graphql`
         }
       }
       frontmatter {
-        metaTitle
-        metaDescription
+        title
+        description
       }
     }
     allMdx(

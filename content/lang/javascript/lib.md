@@ -1,7 +1,6 @@
 ---
 title: 'Library'
-metaTitle: 'javascript/lib'
-metaDescription: 'Javascript - Library'
+description: 'Javascript - Library'
 date: 2020-06-30
 ---
 

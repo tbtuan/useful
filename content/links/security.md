@@ -1,7 +1,6 @@
 ---
 title: "Security"
-metaTitle: "Security"
-metaDescription: "Security"
+description: "Security"
 date: 2021-02-02
 ---
 

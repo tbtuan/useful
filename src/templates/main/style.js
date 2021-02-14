@@ -8,3 +8,15 @@ export const TitleWrapper = styled("div")`
     padding-bottom: 2rem;
   }
 `;
+
+export const Main = styled("main")`
+  color: ${(props) => props.theme.colors.text};
+  display: grid;
+  max-width: calc(100% - 14rem);
+  grid-template-columns: repeat(2, minmax(0, 20rem));
+  grid-gap: 3.5rem;
+
+  @media only screen and (max-width: 1023px) {
+    max-width: 100%;
+  }
+`;

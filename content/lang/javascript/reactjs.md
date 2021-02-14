@@ -1,8 +1,8 @@
 ---
 title: "ReactJS"
-metaTitle: "Reactjs"
-metaDescription: "Javascript - ReactJS"
+description: "Javascript - ReactJS"
 date: 2021-01-29
+tags: ["web-development", "frontend"]
 ---
 
 <cc col="2">

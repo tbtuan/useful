@@ -1,7 +1,6 @@
 ---
 title: "Design"
-metaTitle: "Design"
-metaDescription: "Design"
+description: "Design"
 date: 2021-02-13
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: 'C++'
-metaTitle: 'C++'
-metaDescription: 'C++ Cheatsheet'
+description: 'C++ Cheatsheet'
 date: 2021-01-29
+tags: ["general"]
 ---
 
 ## Resources

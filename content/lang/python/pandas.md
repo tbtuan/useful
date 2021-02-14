@@ -1,7 +1,6 @@
 ---
 title: 'Pandas'
-metaTitle: 'Pandas - /useful'
-metaDescription: 'Data manipulation tool'
+description: 'Data manipulation tool'
 date: 2020-12-07
 ---
 

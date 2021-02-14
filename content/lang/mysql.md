@@ -1,8 +1,8 @@
 ---
 title: 'MySQL'
-metaTitle: 'MySQL'
-metaDescription: 'MySQL'
+description: 'MySQL'
 date: 2020-07-16
+tags: ["database"]
 ---
 
 ## Resources

@@ -1,7 +1,6 @@
 ---
 title: "Web Development"
-metaTitle: "Web Development"
-metaDescription: "Web Development"
+description: "Web Development"
 date: 2021-02-02
 ---
 

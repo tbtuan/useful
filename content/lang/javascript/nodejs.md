@@ -1,8 +1,8 @@
 ---
 title: 'NodeJS'
-metaTitle: 'NodeJS'
-metaDescription: 'NodeJS'
+description: 'NodeJS'
 date: 2021-02-09
+tags: ["web-development", "backend"]
 ---
 
 <cc col="2">

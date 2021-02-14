@@ -1,7 +1,6 @@
 ---
 title: "Tools"
-metaTitle: "Tools"
-metaDescription: "Tools"
+description: "Tools"
 date: 2021-02-02
 ---
 

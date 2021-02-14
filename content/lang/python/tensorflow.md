@@ -1,8 +1,8 @@
 ---
 title: 'Tensorflow'
-metaTitle: 'Tensorflow - /useful'
-metaDescription: 'Tensorflow'
+description: 'Tensorflow'
 date: 2020-12-02
+tags: ["machine-learning"]
 ---
 
 ## Cheatsheet

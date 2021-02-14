@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import React from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
-import { calculateTreeData } from "utils/nestedTree";
+import { calculateTreeData2 } from "utils/nestedTree";
 
 import { StyledHeading, TitleWrapper, Padding } from "../style";
 import { StyledLink, Li, Container, Main } from "./style";
@@ -17,8 +17,7 @@ const Links = (props) => {
   const {
     site: { siteMetadata },
     mdx: {
-      frontmatter: { metaTitle, metaDescription },
-      fields: { title },
+      frontmatter: { title, description },
       parent: { relativePath },
       body,
     },
@@ -39,10 +38,10 @@ const Links = (props) => {
     );
   };
 
-  const treeData = calculateTreeData(edges, location.pathname);
+  const treeData = calculateTreeData2(edges, location.pathname);
   return (
     <>
-      <Seo metaTitle={metaTitle} metaDescription={metaDescription} />
+      <Seo metaTitle={title} metaDescription={description} />
       <Layout
         location={location}
         relativePath={relativePath}
@@ -81,12 +80,12 @@ export const pageQuery = graphql`
         }
       }
       frontmatter {
-        metaTitle
-        metaDescription
+        title
+        description
         date
       }
     }
-    allMdx {
+    allMdx(filter: { slug: { regex: "/links//" } }) {
       edges {
         node {
           fields {

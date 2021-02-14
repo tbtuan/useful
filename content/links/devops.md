@@ -1,7 +1,6 @@
 ---
 title: "DevOps"
-metaTitle: "DevOps"
-metaDescription: "DevOps"
+description: "DevOps"
 date: 2021-02-02
 ---
 

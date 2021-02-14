@@ -1,7 +1,6 @@
 ---
 title: 'Numpy'
-metaTitle: 'Numpy - /useful'
-metaDescription: 'Multidimensional array'
+description: 'Multidimensional array'
 date: 2020-12-08
 ---
 

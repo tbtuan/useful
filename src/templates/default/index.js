@@ -6,6 +6,7 @@ import Layout from "layout";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import ModifiedText from "components/modifiedText";
 import TableOfContents from "components/tableOfContents";
+import Breadcrumb from "components/breadcrumb";
 
 import {
   StyledHeading,
@@ -16,14 +17,12 @@ import {
 } from "../style";
 
 const Index = (props) => {
-  const { data } = props;
-
+  const { data, pageContext } = props;
   if (typeof location === "undefined") return null;
   const {
     site: { siteMetadata },
     mdx: {
-      frontmatter: { date, metaTitle, metaDescription },
-      fields: { title, slug },
+      frontmatter: { date, title, description },
       parent: { relativePath },
       body,
       tableOfContents,
@@ -32,13 +31,16 @@ const Index = (props) => {
 
   return (
     <>
-      <Seo metaTitle={metaTitle} metaDescription={metaDescription} />
+      <Seo metaTitle={title} metaDescription={description} />
       <Layout
         location={location}
         relativePath={relativePath}
         siteMetadata={siteMetadata}
       >
         <TitleWrapper>
+          {pageContext.crumbs?.length > 1 && (
+            <Breadcrumb crumbs={pageContext.crumbs} />
+          )}
           <StyledHeading>{title}</StyledHeading>
           <ModifiedText modifiedTime={date} />
         </TitleWrapper>
@@ -66,7 +68,6 @@ export const pageQuery = graphql`
       fields {
         id
         title
-        slug
       }
       body
       tableOfContents
@@ -76,8 +77,8 @@ export const pageQuery = graphql`
         }
       }
       frontmatter {
-        metaTitle
-        metaDescription
+        title
+        description
         date
       }
     }

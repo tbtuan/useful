@@ -1,7 +1,6 @@
 ---
 title: "Software Engineering"
-metaTitle: "Software Engineering"
-metaDescription: "Software Engineering"
+description: "Software Engineering"
 date: 2021-02-02
 ---
 

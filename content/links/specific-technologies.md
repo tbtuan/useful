@@ -1,7 +1,6 @@
 ---
 title: "Specific technologies"
-metaTitle: "Specific technologies"
-metaDescription: "Specific technologies"
+description: "Specific technologies"
 date: 2021-02-02
 ---
 

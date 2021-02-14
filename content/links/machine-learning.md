@@ -1,7 +1,6 @@
 ---
 title: "Machine learning"
-metaTitle: "Machine learning"
-metaDescription: "Machine learning"
+description: "Machine learning"
 date: 2021-02-13
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: 'CSS'
-metaTitle: 'CSS'
-metaDescription: 'CSS Resources and tricks'
+description: 'CSS Resources and tricks'
 date: 2021-02-08
+tags: ["web-development", "styling"]
 ---
 
 ## Resources

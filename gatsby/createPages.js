@@ -31,9 +31,17 @@ module.exports = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
-
   // Create search index
   let searchIndex = [];
+
+  // Breadcrumbs
+  const crumbs = [];
+  result.data.allMdx.edges.forEach(({ node }) => {
+    crumbs.push({
+      title: node.fields.title,
+      slug: node.fields.slug,
+    });
+  });
 
   // Create blog posts pages.
   result.data.allMdx.edges.forEach(({ node }) => {
@@ -62,7 +70,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       case "/lang":
         createPage({
           path: node.fields.slug,
-          component: resolve("./src/templates/collection/index.js"),
+          component: resolve("./src/templates/lang/index.js"),
           context: {
             id: node.fields.id,
           },
@@ -78,11 +86,27 @@ module.exports = async ({ graphql, actions, reporter }) => {
         });
         break;
       default:
+        const slugArr = node.fields.slug.split("/");
+
         createPage({
           path: node.fields.slug,
           component: resolve("./src/templates/default/index.js"),
           context: {
             id: node.fields.id,
+            crumbs: crumbs.filter((crumb) => {
+              // Returns an array of crumbs according to the current slug
+              // crumbs array is sorted
+              if (crumb.slug === "/") {
+                return false;
+              }
+              const crumbParts = crumb.slug.split("/");
+              for (const crumbPart of crumbParts) {
+                if (slugArr.indexOf(crumbPart) === -1) {
+                  return false;
+                }
+              }
+              return true;
+            }),
           },
         });
         break;

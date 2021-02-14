@@ -1,7 +1,6 @@
 ---
 title: "Misc"
-metaTitle: "Misc"
-metaDescription: "Misc"
+description: "Misc"
 date: 2021-02-02
 ---
 
