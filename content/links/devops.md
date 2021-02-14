@@ -1,7 +1,7 @@
 ---
 title: "DevOps"
-description: "DevOps"
-date: 2021-02-02
+description: "DevOps tools"
+date: 2021-02-14
 ---
 
 <cc>

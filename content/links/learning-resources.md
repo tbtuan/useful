@@ -1,7 +1,7 @@
 ---
 title: "Learning Resources"
-description: "Learning Resources"
-date: 2021-02-02
+description: "Tutorials, EBooks, Code interviews"
+date: 2021-02-14
 ---
 
 <cc>

@@ -1,7 +1,7 @@
 ---
 title: "Design"
-description: "Design"
-date: 2021-02-13
+description: "Tips and tools for CSS"
+date: 2021-02-14
 ---
 
 <cc>

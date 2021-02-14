@@ -1,6 +1,6 @@
 ---
 title: "Web Development"
-description: "Web Development"
+description: "Collection of links for web development"
 date: 2021-02-02
 ---
 

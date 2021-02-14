@@ -1,6 +1,6 @@
 ---
 title: "Software Engineering"
-description: "Software Engineering"
+description: "Best pratices in se and data structures"
 date: 2021-02-02
 ---
 

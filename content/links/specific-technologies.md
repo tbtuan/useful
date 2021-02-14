@@ -1,6 +1,6 @@
 ---
 title: "Specific technologies"
-description: "Specific technologies"
+description: "Links to specific technologies"
 date: 2021-02-02
 ---
 

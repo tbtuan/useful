@@ -1,10 +1,9 @@
 import { graphql } from "gatsby";
 import React from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
-import { calculateTreeData2 } from "utils/nestedTree";
 
 import { StyledHeading, TitleWrapper, Padding } from "../style";
-import { StyledLink, Li, Container, Main } from "./style";
+import { Container, Main } from "./style";
 import Layout from "layout";
 import Seo from "components/seo";
 import Section from "components/section";
@@ -24,21 +23,16 @@ const Links = (props) => {
     allMdx: { edges },
   } = data;
 
-  const CardContainer = ({ items }) => {
+  const CardContainer = ({ edges }) => {
     return (
-      <Container>
-        {items.map((item, index) => (
-          <Section key={item.url + index.toString()} title={item.title}>
-            <Li key={item.url + index.toString()}>
-              <StyledLink to={item.url}>{item.title}</StyledLink>
-            </Li>
-          </Section>
+      <Container key="asdf">
+        {edges.map(({ node }, index) => (
+          <Section key={node.fields.id} node={node}></Section>
         ))}
       </Container>
     );
   };
 
-  const treeData = calculateTreeData2(edges, location.pathname);
   return (
     <>
       <Seo metaTitle={title} metaDescription={description} />
@@ -52,7 +46,7 @@ const Links = (props) => {
         </TitleWrapper>
         <Main>
           <MDXRenderer>{body}</MDXRenderer>
-          <CardContainer {...treeData} />
+          <CardContainer edges={edges} />
         </Main>
         <Padding />
       </Layout>
@@ -88,10 +82,15 @@ export const pageQuery = graphql`
     allMdx(filter: { slug: { regex: "/links//" } }) {
       edges {
         node {
+          frontmatter {
+            description
+          }
           fields {
             slug
             title
+            id
           }
+          tableOfContents
         }
       }
     }
