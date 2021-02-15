@@ -76,12 +76,17 @@ module.exports = async ({ graphql, actions, reporter }) => {
           },
         });
         break;
+      case "/commands":
+      case "/setups":
       case "/links":
+      case "/shortcuts":
         createPage({
           path: node.fields.slug,
-          component: resolve("./src/templates/links/index.js"),
+          component: resolve("./src/templates/collection/index.js"),
           context: {
             id: node.fields.id,
+            // e.g /links//
+            slugRegex: `${node.fields.slug}//`,
           },
         });
         break;

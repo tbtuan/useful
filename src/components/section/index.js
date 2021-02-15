@@ -32,7 +32,7 @@ const Section = ({
         </TagContainer>
       </HeadingWrapper>
       <StyledContainer>
-        {items.map((item, index) => (
+        {items?.map((item, index) => (
           <Li key={item.url + index.toString()}>
             <StyledLink to={slug + item.url}>{item.title}</StyledLink>
           </Li>

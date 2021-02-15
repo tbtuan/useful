@@ -22,7 +22,6 @@ const Links = (props) => {
     },
     allMdx: { edges },
   } = data;
-
   const SectionContainer = ({ edges }) => {
     return (
       <Container>
@@ -55,7 +54,7 @@ const Links = (props) => {
 };
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query($id: String!, $slugRegex: String!) {
     site {
       siteMetadata {
         docsLocation
@@ -79,7 +78,7 @@ export const pageQuery = graphql`
         date
       }
     }
-    allMdx(filter: { slug: { regex: "/links//" } }) {
+    allMdx(filter: { slug: { regex: $slugRegex } }) {
       edges {
         node {
           frontmatter {

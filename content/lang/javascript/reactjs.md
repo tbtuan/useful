@@ -48,6 +48,7 @@ tags: ["web-development", "frontend"]
 
 - [React Hook Form](https://react-hook-form.com/)
 - [React Intl](https://formatjs.io/docs/getting-started/installation/)
+- [usehooks](https://usehooks.com/)
 
 </div>
 
