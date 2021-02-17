@@ -4,24 +4,24 @@ import Seo from "components/seo";
 
 import Layout from "layout";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
-import ModifiedAt from "components/modifiedAt";
-import Featured from "components/featured";
-import { getItemFromStorage } from "utils/localStorage";
+import { getItemFromStorage, storeItem } from "utils/localStorage";
 
 import {
   TitleWrapper,
   Main,
-  CogIcon,
-  StyledIconLink,
-  StyledLink,
-  StyledA,
+  StyledDiv,
+  StyledLabel,
+  StyledInput,
+  HeadingWrapper,
+  StyledContainer,
+  StyledHeading2,
   Li,
 } from "./style";
 
 import { StyledHeading, ContentWrapper } from "../style";
 
-const Index = (props) => {
-  const { data } = props;
+const Settings = (props) => {
+  const { data, pageContext } = props;
 
   if (typeof location === "undefined") return null;
   const {
@@ -31,18 +31,23 @@ const Index = (props) => {
       parent: { relativePath },
       body,
     },
-    allMdx: { edges },
   } = data;
 
-  const dateTitleSlug = edges.map((item) => {
-    const tmp = {};
-    tmp["title"] = item.node.frontmatter.title;
-    tmp["date"] = item.node.frontmatter.date;
-    tmp["slug"] = item.node.fields.slug;
-    return tmp;
+  let filterArr = getItemFromStorage("filter") || [];
+  const handleChange = (e, name) => {
+    if (e.target.checked) {
+      filterArr = filterArr.filter((tag) => tag !== name);
+    } else {
+      filterArr.push(name);
+    }
+    storeItem("filter", filterArr);
+  };
+  const tags = pageContext.tags.map((item) => {
+    return {
+      name: item,
+      checked: !filterArr?.includes(item),
+    };
   });
-  const visistedArr = getItemFromStorage("visited");
-  const pageVisistedArr = getItemFromStorage("page_visited");
   return (
     <>
       <Seo metaTitle={title} metaDescription={description} />
@@ -53,37 +58,32 @@ const Index = (props) => {
       >
         <TitleWrapper>
           <StyledHeading>{title}</StyledHeading>
-          <StyledIconLink to="/settings">
-            <CogIcon />
-          </StyledIconLink>
           <MDXRenderer>{body}</MDXRenderer>
         </TitleWrapper>
         <ContentWrapper>
-          <ModifiedAt dateTitleSlug={dateTitleSlug} />
           <Main>
-            <Featured title="Visited links">
-              {visistedArr &&
-                visistedArr.map((item, index) => (
-                  <Li key={item.url + index.toString()}>
-                    <StyledA
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.text}
-                    </StyledA>
-                  </Li>
-                ))}
-            </Featured>
-            <Featured title="Visited pages">
-              {pageVisistedArr &&
-                pageVisistedArr.map((item, index) => (
-                  <Li key={item.url + index.toString()}>
-                    <StyledLink to={item.url}>{item.text}</StyledLink>
-                  </Li>
-                ))}
-            </Featured>
-            {/* <Featured title="Bookmark" /> */}
+            <StyledDiv>
+              <HeadingWrapper>
+                <StyledHeading2>Filter</StyledHeading2>
+              </HeadingWrapper>
+              <StyledContainer>
+                {tags &&
+                  tags.map((item, index) => (
+                    <Li key={item.name + index.toString()}>
+                      <StyledLabel>
+                        <StyledInput
+                          type="checkbox"
+                          name="checkbox"
+                          value={item.name}
+                          defaultChecked={item.checked}
+                          onChange={(e) => handleChange(e, item.name)}
+                        ></StyledInput>
+                        {item.name}
+                      </StyledLabel>
+                    </Li>
+                  ))}
+              </StyledContainer>
+            </StyledDiv>
           </Main>
         </ContentWrapper>
       </Layout>
@@ -137,4 +137,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default Index;
+export default Settings;

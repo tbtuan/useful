@@ -9,10 +9,14 @@ export const StyledDiv = styled("div")`
   margin-bottom: 1rem;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled("a")`
   color: ${(props) => props.theme.colors.textLink} !important;
   text-decoration: none;
-  display: block;
+  cursor: pointer;
+
+  :hover {
+    text-decoration: underline;
+  }
 `;
 
 export const Ul = styled("ul")`

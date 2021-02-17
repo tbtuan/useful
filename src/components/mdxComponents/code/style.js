@@ -7,6 +7,19 @@ export const StyledPre = styled("pre")`
   overflow: auto;
   background-color: ${({ theme }) => theme.colors.preFormattedText} !important;
 
+  ::-webkit-scrollbar-track {
+    background-color: #424555;
+  }
+
+  ::-webkit-scrollbar {
+    height: 5px;
+    background-color: #6d738d;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #6d738d;
+  }
+
   .token-line {
   }
 

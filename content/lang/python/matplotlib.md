@@ -2,7 +2,7 @@
 title: 'matplotlib'
 description: 'Data visualization'
 date: 2020-12-08
-tags: ["data-visualization"]
+tags: ["python", "data-visualization"]
 ---
 
 ## Resources

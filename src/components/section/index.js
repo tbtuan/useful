@@ -10,6 +10,9 @@ import {
   TagList,
 } from "./style";
 
+import { getItemFromStorage, storeItem } from "utils/localStorage";
+import { navigate } from "gatsby";
+
 const Section = ({
   node: {
     frontmatter: { description, tags },
@@ -17,12 +20,40 @@ const Section = ({
     tableOfContents: { items },
   },
 }) => {
+  const handleClick = (text, href) => {
+    let visistedArr = getItemFromStorage("page_visited");
+    if (!visistedArr) {
+      visistedArr = [];
+    }
+    visistedArr = visistedArr
+      ?.filter((item) => item.href !== href)
+      ?.slice(0, 9);
+    visistedArr.unshift({
+      text: text,
+      url: href,
+      relevance: 0,
+    });
+    storeItem("page_visited", visistedArr);
+  };
+  const filter = getItemFromStorage("filter");
+  const filtered =
+    tags?.filter((tag) => filter?.includes(tag)).length > 0 && tags.length > 0;
+  if (filtered) {
+    return null;
+  }
   return (
     <StyledDiv>
       <HeadingWrapper>
         <StyledHeading>{title}</StyledHeading>
         <p>{description}</p>
-        <StyledLink to={slug}>Read more</StyledLink>
+        <StyledLink
+          onClick={() => {
+            handleClick(title, slug);
+            navigate(slug);
+          }}
+        >
+          Read more
+        </StyledLink>
         <TagContainer>
           <TagList>
             {tags?.map((tag) => (
@@ -34,7 +65,15 @@ const Section = ({
       <StyledContainer>
         {items?.map((item, index) => (
           <Li key={item.url + index.toString()}>
-            <StyledLink to={slug + item.url}>{item.title}</StyledLink>
+            <StyledLink
+              to={slug + item.url}
+              onClick={() => {
+                handleClick(item.title + " (" + title + ")", slug + item.url);
+                navigate(slug + item.url);
+              }}
+            >
+              {item.title}
+            </StyledLink>
           </Li>
         ))}
       </StyledContainer>

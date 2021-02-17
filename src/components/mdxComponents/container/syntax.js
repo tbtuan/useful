@@ -12,7 +12,7 @@ const SyntaxContainer = styled("div")`
   h2 {
     font-weight: 600;
     font-size: 0.8rem;
-    color: #d2d2d2;
+    color: #e4e4e4;
     text-align: left;
     margin: 0;
     padding-top: 0.5rem;

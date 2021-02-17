@@ -22,6 +22,7 @@ const Links = (props) => {
     },
     allMdx: { edges },
   } = data;
+
   const SectionContainer = ({ edges }) => {
     return (
       <Container>

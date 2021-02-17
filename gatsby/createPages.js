@@ -9,11 +9,12 @@ const QUERY = `
         fields {
           title
           id
-        }
-        tableOfContents
-        fields {
           slug
         }
+        frontmatter {
+          tags
+        }
+        tableOfContents
       }
     }
   }
@@ -31,32 +32,35 @@ module.exports = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
-  // Create search index
-  let searchIndex = [];
 
-  // Breadcrumbs
-  const crumbs = [];
+  let searchIndex = [],
+    crumbs = [],
+    tags = [];
   result.data.allMdx.edges.forEach(({ node }) => {
+    // Create breadcrumbs
     crumbs.push({
       title: node.fields.title,
       slug: node.fields.slug,
     });
-  });
-
-  // Create blog posts pages.
-  result.data.allMdx.edges.forEach(({ node }) => {
-    let tocConcat = [];
-    if (node.tableOfContents.items) {
-      tocConcat = node.tableOfContents.items.map((item) => {
-        return { title: item.title, url: item.url };
-      });
-    }
+    // Create search index
     searchIndex.push({
       id: node.fields.id,
       title: node.fields.title,
       url: node.fields.slug,
-      toc: tocConcat,
+      toc:
+        node.tableOfContents.items &&
+        node.tableOfContents.items.map((item) => {
+          return { title: item.title, url: item.url };
+        }),
     });
+    if (node.frontmatter.tags !== null) {
+      tags.push(node.frontmatter.tags);
+    }
+  });
+  tags = [...new Set([].concat.apply([], tags))];
+
+  // Create blog posts pages.
+  result.data.allMdx.edges.forEach(({ node }) => {
     switch (node.fields.slug) {
       case "/":
         createPage({
@@ -64,6 +68,16 @@ module.exports = async ({ graphql, actions, reporter }) => {
           component: resolve("./src/templates/main/index.js"),
           context: {
             id: node.fields.id,
+          },
+        });
+        break;
+      case "/settings":
+        createPage({
+          path: node.fields.slug,
+          component: resolve("./src/templates/settings/index.js"),
+          context: {
+            id: node.fields.id,
+            tags: tags,
           },
         });
         break;

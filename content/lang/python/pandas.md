@@ -2,6 +2,7 @@
 title: 'Pandas'
 description: 'Data manipulation tool'
 date: 2020-12-07
+tags: ["python"]
 ---
 
 - [Pandas API Reference](https://pandas.pydata.org/pandas-docs/stable/reference/index.html#api)

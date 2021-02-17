@@ -2,6 +2,7 @@ import { graphql } from "gatsby";
 import React from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import { calculateTreeData } from "utils/nestedTree";
+import { getItemFromStorage } from "utils/localStorage";
 
 import { StyledHeading, TitleWrapper, Padding } from "../style";
 import { StyledLink, Li, Container, Main } from "./style";
@@ -25,31 +26,40 @@ const Collection = (props) => {
   } = data;
 
   const CardContainer = ({ items }) => {
+    const filter = getItemFromStorage("filter");
     return (
       <Container>
-        {items.map((item, index) => (
-          <Card
-            key={item.url + index.toString()}
-            title={item.title}
-            tags={[
-              ...new Set(
-                [
-                  ...item.items.flatMap((item) => item.tags),
-                  ...item.tags,
-                ].filter((tag) => tag !== null)
-              ),
-            ]}
-          >
-            <Li key={item.url + index.toString() + "Index"}>
-              <StyledLink to={item.url}>Index</StyledLink>
-            </Li>
-            {item.items.map((innerItem, index) => (
-              <Li key={innerItem.url + index.toString()}>
-                <StyledLink to={innerItem.url}>{innerItem.title}</StyledLink>
+        {items.map((item, index) => {
+          const tags = [
+            ...new Set(
+              [...item.items.flatMap((item) => item.tags), ...item.tags].filter(
+                (tag) => tag !== null
+              )
+            ),
+          ];
+          const filtered =
+            tags?.filter((tag) => filter?.includes(tag)).length > 0 &&
+            tags.length > 0;
+          if (filtered) {
+            return null;
+          }
+          return (
+            <Card
+              key={item.url + index.toString()}
+              title={item.title}
+              tags={tags}
+            >
+              <Li key={item.url + index.toString() + "Index"}>
+                <StyledLink to={item.url}>Index</StyledLink>
               </Li>
-            ))}
-          </Card>
-        ))}
+              {item.items.map((innerItem, index) => (
+                <Li key={innerItem.url + index.toString()}>
+                  <StyledLink to={innerItem.url}>{innerItem.title}</StyledLink>
+                </Li>
+              ))}
+            </Card>
+          );
+        })}
       </Container>
     );
   };

@@ -2,7 +2,7 @@
 title: 'Tensorflow'
 description: 'Tensorflow'
 date: 2020-12-02
-tags: ["machine-learning"]
+tags: ["python", "machine-learning"]
 ---
 
 ## Cheatsheet

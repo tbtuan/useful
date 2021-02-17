@@ -2,7 +2,7 @@
 title: 'C++'
 description: 'C++ Cheatsheet'
 date: 2021-01-29
-tags: ["general"]
+tags: ["cpp"]
 ---
 
 ## Resources

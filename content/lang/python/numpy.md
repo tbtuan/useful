@@ -2,6 +2,7 @@
 title: 'Numpy'
 description: 'Multidimensional array'
 date: 2020-12-08
+tags: ["python"]
 ---
 
 ## Resources

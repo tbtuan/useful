@@ -2,7 +2,7 @@
 title: 'C#'
 description: 'C#'
 date: 2021-01-28
-tags: ["general"]
+tags: ["csharp"]
 ---
 
 ## Resources
