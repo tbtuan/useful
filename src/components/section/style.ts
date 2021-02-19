@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "gatsby";
 
 export const StyledDiv = styled("div")`
   position: relative;
@@ -8,7 +9,7 @@ export const StyledDiv = styled("div")`
   margin-bottom: 1rem;
 `;
 
-export const StyledLink = styled("a")`
+export const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.textLink} !important;
   text-decoration: none;
   cursor: pointer;
@@ -17,6 +18,16 @@ export const StyledLink = styled("a")`
     text-decoration: underline;
   }
 `;
+
+// export const StyledLink = styled("a")`
+//   color: ${(props) => props.theme.colors.textLink} !important;
+//   text-decoration: none;
+//   cursor: pointer;
+
+//   :hover {
+//     text-decoration: underline;
+//   }
+// `;
 
 export const Ul = styled("ul")`
   padding-left: 0;

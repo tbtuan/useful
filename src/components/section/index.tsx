@@ -25,23 +25,6 @@ const Section = ({
     tableOfContents: { items },
   },
 }: Props) => {
-  const handleClick = (text, href) => {
-    let visistedArr = getItemFromStorage("page_visited");
-
-    if (!visistedArr) {
-      visistedArr = [];
-    }
-    visistedArr = visistedArr
-      ?.filter((item) => item.href !== href)
-      ?.slice(0, 9);
-    visistedArr.unshift({
-      text: text,
-      url: href,
-      relevance: 0,
-    });
-    storeItem("page_visited", visistedArr);
-  };
-
   const filter = getItemFromStorage("filter");
 
   const filtered =
@@ -55,12 +38,7 @@ const Section = ({
       <HeadingWrapper>
         <StyledHeading>{title}</StyledHeading>
         <p>{description}</p>
-        <StyledLink
-          onClick={() => {
-            handleClick(title, slug);
-            navigate(slug);
-          }}
-        >
+        <StyledLink to={slug} state={{ pageTitle: `${title}` }}>
           Read more
         </StyledLink>
         <TagContainer>
@@ -75,11 +53,8 @@ const Section = ({
         {items?.map((item, index) => (
           <Li key={item.url + index.toString()}>
             <StyledLink
-              href={slug + item.url}
-              onClick={() => {
-                handleClick(item.title + " (" + title + ")", slug + item.url);
-                navigate(slug + item.url);
-              }}
+              to={slug + item.url}
+              state={{ pageTitle: `${item.title} (${title})` }}
             >
               {item.title}
             </StyledLink>
