@@ -65,7 +65,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       case "/":
         createPage({
           path: node.fields.slug,
-          component: resolve("./src/templates/main/index.js"),
+          component: resolve("./src/templates/main/index.tsx"),
           context: {
             id: node.fields.id,
           },
@@ -74,7 +74,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       case "/settings":
         createPage({
           path: node.fields.slug,
-          component: resolve("./src/templates/settings/index.js"),
+          component: resolve("./src/templates/settings/index.tsx"),
           context: {
             id: node.fields.id,
             tags: tags,
@@ -84,7 +84,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       case "/lang":
         createPage({
           path: node.fields.slug,
-          component: resolve("./src/templates/lang/index.js"),
+          component: resolve("./src/templates/lang/index.tsx"),
           context: {
             id: node.fields.id,
           },
@@ -96,7 +96,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       case "/shortcuts":
         createPage({
           path: node.fields.slug,
-          component: resolve("./src/templates/collection/index.js"),
+          component: resolve("./src/templates/collection/index.tsx"),
           context: {
             id: node.fields.id,
             // e.g /links//
@@ -109,7 +109,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
         createPage({
           path: node.fields.slug,
-          component: resolve("./src/templates/default/index.js"),
+          component: resolve("./src/templates/default/index.tsx"),
           context: {
             id: node.fields.id,
             crumbs: crumbs.filter((crumb) => {

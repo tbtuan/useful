@@ -3,7 +3,7 @@
   "private": true,
   "description": "A site with useful content",
   "author": "@tbtuan",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "dependencies": {
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
@@ -22,8 +22,7 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-helmet": "^6.1.0",
-    "slugify": "^1.4.6",
-    "stylis": "^4.0.7"
+    "slugify": "^1.4.6"
   },
   "license": "MIT",
   "main": "n/a",
@@ -32,11 +31,14 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
-    "lint": "eslint --fix \"src/**/*.{js,jsx}\""
+    "lint": "eslint --fix \"src/**/*.{js,jsx,tsx,ts}\""
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@emotion/babel-plugin": "^11.1.2",
+    "@types/node": "^14.14.28",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
