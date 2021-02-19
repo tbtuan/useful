@@ -2,7 +2,16 @@ import React from "react";
 import { ModifiedAt, ModifiedAtTitle, Li, Span, StyledLink } from "./style";
 import { dateDifference } from "utils/date";
 
-const ModifiedAtLayout = ({ dateTitleSlug }) => {
+interface DateTitleSlug {
+  title: string;
+  slug: string;
+  date: string;
+}
+interface Props {
+  dateTitleSlug: DateTitleSlug[];
+}
+
+const ModifiedAtLayout = ({ dateTitleSlug }: Props) => {
   if (typeof window === "undefined" || !dateTitleSlug) {
     return null;
   }
@@ -19,7 +28,7 @@ const ModifiedAtLayout = ({ dateTitleSlug }) => {
       <Li key={index}>
         <StyledLink to={item.slug}>{item.title}</StyledLink>
         <Span>
-          {dateDifference(currentDate.getMilliseconds(), Date.parse(item.date))}
+          {dateDifference(currentDate.getTime(), Date.parse(item.date))}
         </Span>
       </Li>
     );
