@@ -7,7 +7,7 @@ on:
       - release/*
 
 jobs:
-  firebase-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -50,7 +50,18 @@ jobs:
           GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
           CI: true
 
-      - name: Firebase Deploy
-        run: |
-          sudo yarn global add firebase-tools
-          firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+  deployment-tools:
+    runs-on: ubuntu-latest
+      steps:
+        - name: Firebase Deploy
+          run: |
+            sudo yarn global add firebase-tools
+
+  firebase-deploy:
+    runs-on: ubuntu-latest
+
+      needs: [build, deployment-tools]
+      steps:
+        - name: Firebase Deploy
+          run: |
+            firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
