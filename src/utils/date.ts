@@ -1,4 +1,4 @@
-export const dateToString = (modifiedTime: string) =>
+export const zuluDateToString = (modifiedTime: string) =>
   new Date(Date.parse(modifiedTime)).toLocaleDateString("en-Us", {
     day: "2-digit",
     month: "long",

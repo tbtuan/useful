@@ -10,7 +10,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "fuse.js": "^6.4.6",
-    "gatsby": "^2.32.3",
+    "gatsby": "^2.32.4",
     "gatsby-plugin-emotion": "^5.4.0",
     "gatsby-plugin-manifest": "^2.12.0",
     "gatsby-plugin-mdx": "^1.10.0",
@@ -31,22 +31,30 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
-    "lint": "eslint --fix \"src/**/*.{js,jsx,tsx,ts}\""
+    "lint": "eslint --fix \"src/**/*.{js,jsx,tsx,ts}\"",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.13",
-    "@emotion/babel-plugin": "^11.1.2",
-    "@types/node": "^14.14.28",
+    "@emotion/babel-plugin": "^11.2.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
+    "@types/react-test-renderer": "^17.0.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.19.0",
+    "babel-jest": "^26.6.3",
+    "babel-preset-gatsby": "^0.12.1",
+    "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
     "prettier": "^2.2.1",
-    "prism-react-renderer": "^1.1.0"
+    "prism-react-renderer": "^1.1.0",
+    "react-test-renderer": "^17.0.1"
   }
 }

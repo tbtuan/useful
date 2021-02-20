@@ -1,12 +1,12 @@
 import React from "react";
 import { StyledSmall, ClockIcon } from "./style";
-import { dateToString } from "utils/date";
+import { zuluDateToString } from "utils/date";
 
 const ModifiedText = ({ modifiedTime }) => {
   return (
     <div>
       <ClockIcon />
-      <StyledSmall>{dateToString(modifiedTime)}</StyledSmall>
+      <StyledSmall>{zuluDateToString(modifiedTime)}</StyledSmall>
     </div>
   );
 };
