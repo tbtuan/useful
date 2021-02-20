@@ -13,7 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Cache node modules
-        id: cache-node
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
@@ -32,11 +31,7 @@ jobs:
           node-version: "15.x"
 
       - name: Install dependencies
-        if: steps.cache-node.outputs.cache-hit != 'true'
         run: npm ci
-
-      - name: Install Gatsby CLI
-        run: npm install -g gatsby-cli
 
       - name: Build gatsby
         run: npm run build
