@@ -39,7 +39,7 @@ jobs:
 
 ## Caching
 
-See (Speed up workflows)[https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows]
+See [Speed up workflows](https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows)
 
 ```yml
 name: Caching with npm
