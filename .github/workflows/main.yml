@@ -25,6 +25,26 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
+      - name: Gatsby Cache Folder
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-gatsby-cache-folder
+        with:
+          path: .cache
+          key: ${{ runner.os }}-${{ env.cache-name }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}
+
+      - name: Gatsby Public Folder
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-gatsby-public-folder
+        with:
+          path: public/
+          key: ${{ runner.os }}-${{ env.cache-name }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}
+
       - name: Use Node.js
         uses: actions/setup-node@master
         with:
@@ -35,6 +55,9 @@ jobs:
 
       - name: Build gatsby
         run: npm run build
+        env:
+          GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
+          NODE_ENV: production
 
       - name: Firebase Deploy
         run: |
