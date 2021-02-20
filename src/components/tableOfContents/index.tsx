@@ -8,19 +8,15 @@ interface Item {
   url: string;
 }
 
-interface TOC {
-  items: Item[];
-}
-
 interface Props {
-  tableOfContents: TOC;
+  tableOfContents: Item[];
 }
 
 const TableOfContentsLayout = ({ tableOfContents }: Props) => {
   let [current, setCurrent] = useState([]);
 
   useEffect(() => {
-    const links = document.querySelectorAll("main div h2");
+    const links = document.querySelectorAll("h2");
 
     const handleObserver = (entries) => {
       const elements = [];
@@ -44,11 +40,15 @@ const TableOfContentsLayout = ({ tableOfContents }: Props) => {
     });
   }, []);
 
-  if (typeof window === "undefined" || !tableOfContents.items) {
+  if (
+    typeof window === "undefined" ||
+    !tableOfContents ||
+    tableOfContents.length === 0
+  ) {
     return null;
   }
 
-  const toc = tableOfContents.items.map((item, index) => {
+  const toc = tableOfContents.map((item, index) => {
     return (
       <Li key={index} active={current.includes(item.url)}>
         <Link to={item.url}>{item.title}</Link>

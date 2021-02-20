@@ -4,7 +4,7 @@ import AngleRight from "icons/AngleRight.svg";
 import { Link } from "gatsby";
 
 export const BreadcrumbLink = styled(Link)`
-  color: #76828c;
+  color: ${({ theme }) => theme.colors.breadcrumb};
   font-size: 0.9rem;
   text-decoration: none;
   :hover {
@@ -14,7 +14,7 @@ export const BreadcrumbLink = styled(Link)`
 `;
 
 export const AngleRightIcon = styled(AngleRight)`
-  fill: #76828c;
+  fill: ${({ theme }) => theme.colors.breadcrumb};
   width: 1rem;
   height: 1rem;
   vertical-align: middle;

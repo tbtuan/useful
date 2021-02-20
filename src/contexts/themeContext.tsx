@@ -17,7 +17,7 @@ export const ThemeContext: React.Context<Context> = createContext(null);
 
 const ThemeProvider = ({ children }: Props) => {
   const [isDarkThemeActive, setDarkThemeActive] = useState(
-    getItemFromStorage("isDarkThemeActive") === "true"
+    getItemFromStorage("isDarkThemeActive")
   );
 
   const toggleActiveTheme = () => {

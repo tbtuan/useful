@@ -11,8 +11,7 @@ import {
   TagList,
 } from "./style";
 
-import { getItemFromStorage, storeItem } from "utils/localStorage";
-import { navigate } from "gatsby";
+import { getItemFromStorage } from "utils/localStorage";
 
 interface Props {
   node: Node;

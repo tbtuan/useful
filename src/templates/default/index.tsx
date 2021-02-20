@@ -10,6 +10,8 @@ import Breadcrumb from "components/breadcrumb";
 
 import { getItemFromStorage, storeItem } from "utils/localStorage";
 
+import { stringToSlug } from "utils/slugify";
+
 import {
   StyledHeading,
   TitleWrapper,
@@ -39,13 +41,18 @@ const Index = ({
       frontmatter: { date, title, description },
       parent: { relativePath },
       body,
-      tableOfContents,
+      headings,
     },
   },
   pageContext,
 }: Props) => {
   if (typeof location === "undefined") return null;
-
+  const tableOfContents = headings.map((item) => {
+    return {
+      title: item.value,
+      url: `#${stringToSlug(item.value)}`,
+    };
+  });
   let visistedArr = getItemFromStorage("page_visited");
   if (!visistedArr) {
     visistedArr = [];
@@ -104,7 +111,9 @@ export const pageQuery = graphql`
         title
       }
       body
-      tableOfContents
+      headings(depth: h2) {
+        value
+      }
       parent {
         ... on File {
           relativePath

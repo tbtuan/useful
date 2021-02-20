@@ -40,11 +40,15 @@ interface Node {
 interface Mdx {
   fields?: Fields;
   body?: string;
+  headings?: Value[];
   tableOfContents?: Items;
   parent?: Parent;
   frontmatter?: Frontmatter;
 }
 
+interface Value {
+  value: string;
+}
 interface Items {
   items?: Item[];
 }

@@ -35,7 +35,11 @@ export const ListItem = styled("li")`
 export const NormalLink = styled(Link)`
   background-position: right bottom;
   :hover {
-    background: linear-gradient(to left, transparent 50%, rgb(59, 69, 78) 50%);
+    background: linear-gradient(
+      to left,
+      transparent 50%,
+      ${({ theme }) => theme.colors.navLink} 50%
+    );
     filter: drop-shadow(
       0px 4px 5px ${({ theme }) => theme.colors.navLinkShadow}
     );

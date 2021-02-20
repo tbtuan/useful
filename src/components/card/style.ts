@@ -24,16 +24,16 @@ export const StyledContainer = styled("div")`
   max-height: 13rem;
   columns: 2;
   ::-webkit-scrollbar-track {
-    background-color: #e6e6e6;
+    background-color: ${({ theme }) => theme.colors.scrollbarTrack};
   }
 
   ::-webkit-scrollbar {
     width: 5px;
-    background-color: #c0c0c0;
+    background-color: ${({ theme }) => theme.colors.scrollbar};
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #c0c0c0;
+    background-color: ${({ theme }) => theme.colors.scrollbar};
   }
 `;
 
@@ -65,7 +65,7 @@ export const Tag = styled("span")`
   font-size: 0.7rem;
   padding: 0.5rem;
   margin-right: 0.5rem;
-  background-color: #ededed;
+  background-color: ${({ theme }) => theme.colors.tag};
   border-radius: 1rem;
 `;
 

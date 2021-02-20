@@ -56,6 +56,11 @@ export const Content = styled("main")`
   }
 `;
 
+export const Div = styled("div")`
+  height: 100vh;
+  background-color: ${({ theme }) => theme.colors.background};
+`;
+
 export const ContentWrapper = styled("div")`
   display: flex;
   margin-left: 18rem;
@@ -125,7 +130,7 @@ export const EditButton = styled("a")`
   text-decoration: none;
   outline: 0;
   border: 0;
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.editButtonText};
   font-size: 0.8rem;
   background-color: ${({ theme }) => theme.colors.editButton};
   border-radius: 0.5rem;
@@ -164,5 +169,5 @@ export const EditIcon = styled(Edit)`
   width: 0.8rem;
   height: 0.6rem;
   margin-right: 0.2rem;
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.editButtonText};
 `;
