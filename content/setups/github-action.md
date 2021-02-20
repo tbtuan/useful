@@ -1,9 +1,13 @@
 ---
 title: 'Github Action'
 description: 'Github action workflow'
-date: 2020-01-24
+date: 2020-02-20
 tags: ["devops", "cicd"]
 ---
+
+## Resources
+
+[Virtual environment](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md)
 
 ## Firebase
 
@@ -40,6 +44,8 @@ jobs:
 ## Caching
 
 See [Speed up workflows](https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows)
+
+- [Additional examples](https://github.com/actions/cache/blob/main/examples.md)
 
 ```yml
 name: Caching with npm
