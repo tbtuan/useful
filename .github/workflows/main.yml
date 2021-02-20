@@ -66,7 +66,7 @@ jobs:
           node-version: "15.x"
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
 
       - name: Build gatsby
         run: yarn build --log-pages
