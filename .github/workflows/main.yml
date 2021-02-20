@@ -54,7 +54,7 @@ jobs:
         run: npm ci
 
       - name: Build gatsby
-        run: npm run build
+        run: npm run build --log-pages
         env:
           GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
           NODE_ENV: production
