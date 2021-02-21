@@ -26,7 +26,6 @@ const Collection = ({
   },
 }: Props) => {
   if (typeof location === "undefined") return null;
-
   const CardContainer = ({ items }) => {
     const filter = getItemFromStorage("filter");
 
@@ -69,7 +68,7 @@ const Collection = ({
     );
   };
 
-  const treeData = calculateTreeData(edges, location.pathname);
+  const treeData = calculateTreeData(edges);
 
   return (
     <>
