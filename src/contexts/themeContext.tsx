@@ -16,6 +16,9 @@ interface Props {
 export const ThemeContext: React.Context<Context> = createContext(null);
 
 const ThemeProvider = ({ children }: Props) => {
+  if (typeof localStorage == "undefined") {
+    return null;
+  }
   const [isDarkThemeActive, setDarkThemeActive] = useState(
     getItemFromStorage("isDarkThemeActive")
   );

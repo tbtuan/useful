@@ -36,6 +36,9 @@ interface Props {
 }
 
 const Layout = ({ children, location, data }: Props) => {
+  if (typeof location == "undefined") {
+    return children;
+  }
   const docsLocation = data?.site?.siteMetadata?.docsLocation;
   const githubUrl = data?.site?.siteMetadata?.githubUrl;
   const relativePath = data?.mdx?.parent?.relativePath;
