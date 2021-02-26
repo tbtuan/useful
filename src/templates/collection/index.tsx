@@ -4,7 +4,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { StyledHeading, TitleWrapper, Padding } from "../style";
 import { Container, Main } from "./style";
-import Layout from "components/layout";
 import Seo from "components/seo";
 import Section from "components/section";
 
@@ -38,20 +37,14 @@ const Links = ({ data }: Props) => {
   return (
     <>
       <Seo metaTitle={title} metaDescription={description} />
-      <Layout
-        location={location}
-        relativePath={relativePath}
-        siteMetadata={siteMetadata}
-      >
-        <TitleWrapper>
-          <StyledHeading>{title}</StyledHeading>
-        </TitleWrapper>
-        <Main>
-          <MDXRenderer>{body}</MDXRenderer>
-          <SectionContainer edges={edges} />
-        </Main>
-        <Padding />
-      </Layout>
+      <TitleWrapper>
+        <StyledHeading>{title}</StyledHeading>
+      </TitleWrapper>
+      <Main>
+        <MDXRenderer>{body}</MDXRenderer>
+        <SectionContainer edges={edges} />
+      </Main>
+      <Padding />
     </>
   );
 };

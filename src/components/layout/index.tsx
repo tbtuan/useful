@@ -1,8 +1,4 @@
-import { MDXProvider } from "@mdx-js/react";
-import mdxComponents from "components/mdxComponents";
 import React from "react";
-
-import ThemeProvider from "contexts/themeContext";
 
 import Header from "components/header";
 import Sidebar from "components/sidebar";
@@ -36,61 +32,58 @@ interface Props {
   children?: React.ReactNode;
   location: Location;
   relativePath: string;
-  siteMetadata: SiteMetadata;
+  data: Data;
 }
 
-const Layout = ({
-  children,
-  location,
-  relativePath,
-  siteMetadata: { docsLocation, githubUrl },
-}: Props) => {
+const Layout = ({ children, location, data }: Props) => {
+  const docsLocation = data?.site?.siteMetadata?.docsLocation;
+  const githubUrl = data?.site?.siteMetadata?.githubUrl;
+  const relativePath = data?.mdx?.parent?.relativePath;
+
   return (
-    <ThemeProvider>
-      <MDXProvider components={mdxComponents}>
-        <Div>
-          <ViewDiv />
-          <Header>
-            <TitleWrapper>
-              <LogoWrapper aria-label="Home" to="/">
-                <Logo />
-              </LogoWrapper>
-            </TitleWrapper>
-            <Search />
-            <Options>
-              <GithubLink href={githubUrl}>
-                <GithubIcon />
-              </GithubLink>
-              <ThemeSwitch />
-              <EditButton href={docsLocation + relativePath}>
-                <EditIcon />
-                Edit
-              </EditButton>
-            </Options>
-          </Header>
-          <Sidebar>
-            <NavLink text="Commands" path="/commands" location={location}>
-              <TerminalIcon />
-            </NavLink>
-            <NavLink text="Languages" path="/lang" location={location}>
-              <CodeIcon />
-            </NavLink>
-            <NavLink text="Links" path="/links" location={location}>
-              <ExternalLinkAltIcon />
-            </NavLink>
-            <NavLink text="Setups" path="/setups" location={location}>
-              <CogsIcon />
-            </NavLink>
-            <NavLink text="Shortcuts" path="/shortcuts" location={location}>
-              <KeyboardIcon />
-            </NavLink>
-          </Sidebar>
-          <ContentWrapper>
-            <Content>{children}</Content>
-          </ContentWrapper>
-        </Div>
-      </MDXProvider>
-    </ThemeProvider>
+    <Div>
+      <ViewDiv />
+      <Header>
+        <TitleWrapper>
+          <LogoWrapper aria-label="Home" to="/">
+            <Logo />
+          </LogoWrapper>
+        </TitleWrapper>
+        <Search />
+        {docsLocation && relativePath && githubUrl && (
+          <Options>
+            <GithubLink href={githubUrl}>
+              <GithubIcon />
+            </GithubLink>
+            <ThemeSwitch />
+            <EditButton href={docsLocation + relativePath}>
+              <EditIcon />
+              Edit
+            </EditButton>
+          </Options>
+        )}
+      </Header>
+      <Sidebar>
+        <NavLink text="Commands" path="/commands" location={location}>
+          <TerminalIcon />
+        </NavLink>
+        <NavLink text="Languages" path="/lang" location={location}>
+          <CodeIcon />
+        </NavLink>
+        <NavLink text="Links" path="/links" location={location}>
+          <ExternalLinkAltIcon />
+        </NavLink>
+        <NavLink text="Setups" path="/setups" location={location}>
+          <CogsIcon />
+        </NavLink>
+        <NavLink text="Shortcuts" path="/shortcuts" location={location}>
+          <KeyboardIcon />
+        </NavLink>
+      </Sidebar>
+      <ContentWrapper>
+        <Content>{children}</Content>
+      </ContentWrapper>
+    </Div>
   );
 };
 

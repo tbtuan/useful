@@ -2,7 +2,6 @@ import { graphql } from "gatsby";
 import React from "react";
 import Seo from "components/seo";
 
-import Layout from "components/layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import ModifiedAt from "components/modifiedAt";
 import Featured from "components/featured";
@@ -26,10 +25,8 @@ interface Props {
 
 const Index = ({
   data: {
-    site: { siteMetadata },
     mdx: {
       frontmatter: { title, description },
-      parent: { relativePath },
       body,
     },
     allMdx: { edges },
@@ -53,46 +50,40 @@ const Index = ({
   return (
     <>
       <Seo metaTitle={title} metaDescription={description} />
-      <Layout
-        location={location}
-        relativePath={relativePath}
-        siteMetadata={siteMetadata}
-      >
-        <TitleWrapper>
-          <StyledHeading>{title}</StyledHeading>
-          <StyledIconLink to="/settings">
-            <CogIcon />
-          </StyledIconLink>
-          <MDXRenderer>{body}</MDXRenderer>
-        </TitleWrapper>
-        <ContentWrapper>
-          <ModifiedAt dateTitleSlug={dateTitleSlug} />
-          <Main>
-            <Featured title="Visited links">
-              {visistedArr &&
-                visistedArr.map((item, index) => (
-                  <Li key={item.url + index.toString()}>
-                    <StyledA
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.text}
-                    </StyledA>
-                  </Li>
-                ))}
-            </Featured>
-            <Featured title="Visited pages">
-              {pageVisistedArr &&
-                pageVisistedArr.map((item, index) => (
-                  <Li key={item.url + index.toString()}>
-                    <StyledLink to={item.url}>{item.text}</StyledLink>
-                  </Li>
-                ))}
-            </Featured>
-          </Main>
-        </ContentWrapper>
-      </Layout>
+      <TitleWrapper>
+        <StyledHeading>{title}</StyledHeading>
+        <StyledIconLink to="/settings">
+          <CogIcon />
+        </StyledIconLink>
+        <MDXRenderer>{body}</MDXRenderer>
+      </TitleWrapper>
+      <ContentWrapper>
+        <ModifiedAt dateTitleSlug={dateTitleSlug} />
+        <Main>
+          <Featured title="Visited links">
+            {visistedArr &&
+              visistedArr.map((item, index) => (
+                <Li key={item.url + index.toString()}>
+                  <StyledA
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.text}
+                  </StyledA>
+                </Li>
+              ))}
+          </Featured>
+          <Featured title="Visited pages">
+            {pageVisistedArr &&
+              pageVisistedArr.map((item, index) => (
+                <Li key={item.url + index.toString()}>
+                  <StyledLink to={item.url}>{item.text}</StyledLink>
+                </Li>
+              ))}
+          </Featured>
+        </Main>
+      </ContentWrapper>
     </>
   );
 };

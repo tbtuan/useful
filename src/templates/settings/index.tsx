@@ -2,7 +2,6 @@ import { graphql } from "gatsby";
 import React from "react";
 import Seo from "components/seo";
 
-import Layout from "components/layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { getItemFromStorage, storeItem } from "utils/localStorage";
 
@@ -31,10 +30,8 @@ interface Props {
 
 const Settings = ({
   data: {
-    site: { siteMetadata },
     mdx: {
       frontmatter: { title, description },
-      parent: { relativePath },
       body,
     },
   },
@@ -66,41 +63,35 @@ const Settings = ({
   return (
     <>
       <Seo metaTitle={title} metaDescription={description} />
-      <Layout
-        location={location}
-        relativePath={relativePath}
-        siteMetadata={siteMetadata}
-      >
-        <TitleWrapper>
-          <StyledHeading>{title}</StyledHeading>
-          <MDXRenderer>{body}</MDXRenderer>
-        </TitleWrapper>
-        <ContentWrapper>
-          <Main>
-            <StyledDiv>
-              <HeadingWrapper>
-                <StyledHeading2>Filter</StyledHeading2>
-              </HeadingWrapper>
-              <StyledContainer>
-                {tags?.map((item, index) => (
-                  <Li key={item.name + index.toString()}>
-                    <StyledLabel>
-                      <StyledInput
-                        type="checkbox"
-                        name="checkbox"
-                        value={item.name}
-                        defaultChecked={item.checked}
-                        onChange={(e) => handleChange(e, item.name)}
-                      ></StyledInput>
-                      {item.name}
-                    </StyledLabel>
-                  </Li>
-                ))}
-              </StyledContainer>
-            </StyledDiv>
-          </Main>
-        </ContentWrapper>
-      </Layout>
+      <TitleWrapper>
+        <StyledHeading>{title}</StyledHeading>
+        <MDXRenderer>{body}</MDXRenderer>
+      </TitleWrapper>
+      <ContentWrapper>
+        <Main>
+          <StyledDiv>
+            <HeadingWrapper>
+              <StyledHeading2>Filter</StyledHeading2>
+            </HeadingWrapper>
+            <StyledContainer>
+              {tags?.map((item, index) => (
+                <Li key={item.name + index.toString()}>
+                  <StyledLabel>
+                    <StyledInput
+                      type="checkbox"
+                      name="checkbox"
+                      value={item.name}
+                      defaultChecked={item.checked}
+                      onChange={(e) => handleChange(e, item.name)}
+                    ></StyledInput>
+                    {item.name}
+                  </StyledLabel>
+                </Li>
+              ))}
+            </StyledContainer>
+          </StyledDiv>
+        </Main>
+      </ContentWrapper>
     </>
   );
 };

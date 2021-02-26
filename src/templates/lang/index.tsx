@@ -6,7 +6,6 @@ import { getItemFromStorage } from "utils/localStorage";
 
 import { StyledHeading, TitleWrapper, Padding } from "../style";
 import { StyledLink, Li, Container, Main } from "./style";
-import Layout from "components/layout";
 import Seo from "components/seo";
 import Card from "components/card";
 
@@ -16,10 +15,8 @@ interface Props {
 
 const Collection = ({
   data: {
-    site: { siteMetadata },
     mdx: {
       frontmatter: { title, description },
-      parent: { relativePath },
       body,
     },
     allMdx: { edges },
@@ -73,20 +70,14 @@ const Collection = ({
   return (
     <>
       <Seo metaTitle={title} metaDescription={description} />
-      <Layout
-        location={location}
-        relativePath={relativePath}
-        siteMetadata={siteMetadata}
-      >
-        <TitleWrapper>
-          <StyledHeading>{title}</StyledHeading>
-        </TitleWrapper>
-        <Main>
-          <MDXRenderer>{body}</MDXRenderer>
-          <CardContainer {...treeData} />
-        </Main>
-        <Padding />
-      </Layout>
+      <TitleWrapper>
+        <StyledHeading>{title}</StyledHeading>
+      </TitleWrapper>
+      <Main>
+        <MDXRenderer>{body}</MDXRenderer>
+        <CardContainer {...treeData} />
+      </Main>
+      <Padding />
     </>
   );
 };

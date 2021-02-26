@@ -2,7 +2,6 @@ import { graphql } from "gatsby";
 import React, { useState } from "react";
 import Seo from "components/seo";
 
-import Layout from "components/layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import ModifiedText from "components/modifiedText";
 import TableOfContents from "components/tableOfContents";
@@ -36,10 +35,8 @@ interface Props {
 
 const Index = ({
   data: {
-    site: { siteMetadata },
     mdx: {
       frontmatter: { date, title, description },
-      parent: { relativePath },
       body,
       headings,
     },
@@ -73,26 +70,20 @@ const Index = ({
   return (
     <>
       <Seo metaTitle={title} metaDescription={description} />
-      <Layout
-        location={location}
-        relativePath={relativePath}
-        siteMetadata={siteMetadata}
-      >
-        <TitleWrapper>
-          {pageContext?.crumbs?.length > 1 && (
-            <Breadcrumb crumbs={pageContext?.crumbs} />
-          )}
-          <StyledHeading>{title}</StyledHeading>
-          {date && <ModifiedText modifiedTime={date} />}
-        </TitleWrapper>
-        <ContentWrapper>
-          <TableOfContents tableOfContents={tableOfContents} />
-          <StyledMainWrapper>
-            <MDXRenderer>{body}</MDXRenderer>
-          </StyledMainWrapper>
-        </ContentWrapper>
-        <Padding />
-      </Layout>
+      <TitleWrapper>
+        {pageContext?.crumbs?.length > 1 && (
+          <Breadcrumb crumbs={pageContext?.crumbs} />
+        )}
+        <StyledHeading>{title}</StyledHeading>
+        {date && <ModifiedText modifiedTime={date} />}
+      </TitleWrapper>
+      <ContentWrapper>
+        <TableOfContents tableOfContents={tableOfContents} />
+        <StyledMainWrapper>
+          <MDXRenderer>{body}</MDXRenderer>
+        </StyledMainWrapper>
+      </ContentWrapper>
+      <Padding />
     </>
   );
 };
