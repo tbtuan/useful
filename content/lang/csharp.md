@@ -14,7 +14,7 @@ tags: ["csharp"]
 - [PInvoke.net](http://pinvoke.net/)
 - [NuGet](https://www.nuget.org/)
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 

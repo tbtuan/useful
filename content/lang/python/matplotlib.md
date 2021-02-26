@@ -10,7 +10,7 @@ tags: ["python", "data-visualization"]
 - [matplotlib documentation](https://matplotlib.org/contents.html)
 
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 

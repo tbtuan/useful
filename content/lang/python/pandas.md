@@ -7,7 +7,7 @@ tags: ["python"]
 
 - [Pandas API Reference](https://pandas.pydata.org/pandas-docs/stable/reference/index.html#api)
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 

@@ -10,7 +10,7 @@ tags: ["cpp"]
 - [awesome-cpp](https://github.com/fffaraz/awesome-cpp)
 - [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines)
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 

@@ -26,7 +26,9 @@ My content
 
 </sc>
 
-## Heading level 2 - becomes a table of contents entry
+# Heading level 1
+
+## Heading level 2
 
 ### Heading level 3
 
@@ -84,7 +86,7 @@ for example
 
 </sc>
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 
@@ -105,5 +107,40 @@ print("Example for a python code")
 ```
 
 </sc>
+
+</mc>
+
+<mc>
+
+<cc>
+
+<div>
+
+## Column Container
+
+- Default behavior: 3 columns
+
+</div>
+
+<div>
+
+## Column Container
+
+```text
+<cc col="x">  x = INT 
+```
+
+</div>
+
+<div>
+
+## Column Container
+
+- Default behavior: 3 columns
+
+</div>
+
+</cc>
+
 
 </mc>

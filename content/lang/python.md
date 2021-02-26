@@ -19,7 +19,7 @@ tags: ["general"]
 - [Pandas](https://pandas.pydata.org/docs/)
 - [OpenCV](https://opencv.org/)
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 

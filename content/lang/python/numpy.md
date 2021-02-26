@@ -10,7 +10,7 @@ tags: ["python"]
 - [NumPy documentation](https://numpy.org/doc/stable/reference/index.html)
 
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 

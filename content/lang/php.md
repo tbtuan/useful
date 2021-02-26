@@ -10,7 +10,7 @@ tags: ["web-development", "backend"]
 - [Laravel](https://laravel.com/docs)
 - [Composer](https://getcomposer.org/doc/)
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 

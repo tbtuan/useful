@@ -94,7 +94,7 @@ tags: ["web-development", "frontend"]
 
 </cc>
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 
@@ -391,7 +391,7 @@ const App = () => {
 
   useEffect(() => {
     fetch("component will mount");
-    return console.log("component will unmount")
+    return () => console.log("component will unmount");
     // [count] = dependency array "component did update"
   }, [count]);
 

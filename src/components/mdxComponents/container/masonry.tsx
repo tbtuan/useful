@@ -55,14 +55,18 @@ const fillCols = (children, cols) => {
 
 // TODO Masonry works only for at least 2 <c> </c> inside <r> </r>
 // Fix later
-const Masonry = ({ children, gap, minWidth = 500, ...rest }) => {
+const Masonry = ({ children, gap, minWidth = 800, ...rest }) => {
   const ref = useRef();
 
   const [numCols, setNumCols] = useState(3);
 
   const cols = [...Array(numCols)].map(() => []);
 
-  fillCols(children, cols);
+  if (children.forEach) {
+    fillCols(children, cols);
+  } else {
+    return children;
+  }
 
   const resizeHandler = () => {
     setNumCols(Math.ceil(ref.current.offsetWidth / minWidth));

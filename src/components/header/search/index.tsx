@@ -1,8 +1,8 @@
 import React from "react";
-import { useEffect, useState, useRef } from "react";
-import Fuse from "fuse.js";
+import { useState, useRef } from "react";
 import { useClickOutside } from "hooks/useClickOutside";
 import { useFocus } from "hooks/useFocus";
+import { useSearch } from "hooks/useSearch";
 import {
   StyledSearch,
   SearchBox,
@@ -12,31 +12,6 @@ import {
   SearchTitle,
 } from "./style";
 
-const useDatafetch = (
-  query: string,
-  setResults: React.Dispatch<React.SetStateAction<any[]>>,
-  [itemIndex, setItemIndex]
-) => {
-  useEffect(() => {
-    if (globalThis.__FUSE__) {
-      const fuse = new Fuse(globalThis.__FUSE__, {
-        includeMatches: true,
-        includeScore: true,
-        threshold: 0.3,
-        keys: ["id", "title", "url", "toc.title"],
-      });
-
-      const results = fuse.search(query, { limit: 5 });
-
-      setResults(results);
-      // To keep the selection inside the bounds while typing
-      if (results && itemIndex > results.length - 1) {
-        setItemIndex(0);
-      }
-    }
-  }, [query]);
-};
-
 const SearchLayout = () => {
   if (typeof window === "undefined") {
     return null;
@@ -45,16 +20,13 @@ const SearchLayout = () => {
   const ref = useRef(null);
 
   const [results, setResults] = useState([]);
-
   const [query, setQuery] = useState("");
-
   const [focus, setFocus] = useState(false);
-
   const [itemIndex, setItemIndex] = useState(0);
 
   useFocus(ref, () => document.getElementById("searchbox").focus());
   useClickOutside(ref, () => setFocus(false));
-  useDatafetch(query, setResults, [itemIndex, setItemIndex]);
+  useSearch(query, setResults, [itemIndex, setItemIndex]);
 
   const searchData = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
@@ -133,7 +105,7 @@ const SearchLayout = () => {
         onKeyUp={handleKeyPress}
         onKeyDown={handleKeyDownPress}
         placeholder="Search..."
-        autoComplete="false"
+        autoComplete="off"
       />
       <HitsWrapper show={results.length > 0 && focus}>
         {searchResults}

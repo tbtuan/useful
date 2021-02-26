@@ -20,7 +20,7 @@ tags: ["web-development", "styling"]
 - [Sass](https://sass-lang.com/documentation)
 - [PostCSS](https://postcss.org/)
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 

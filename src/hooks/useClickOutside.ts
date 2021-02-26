@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 
-export const useClickOutside = (ref, handler) => {
+export const useClickOutside = (
+  ref: React.MutableRefObject<any>,
+  handler: () => void
+) => {
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (ref.current && !ref.current.contains(e.target)) {

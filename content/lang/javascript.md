@@ -27,7 +27,7 @@ tags: ["web-development", "backend"]
 - [webpack](https://webpack.js.org/concepts/)
 
 
-<mc minWidth='800'>
+<mc>
 
 <sc>
 
