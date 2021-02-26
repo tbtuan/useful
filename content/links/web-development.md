@@ -1,7 +1,7 @@
 ---
 title: "Web Development"
 description: "Collection of links for web development"
-date: 2021-02-02
+date: 2021-02-26
 tags: [web-development]
 ---
 
@@ -78,6 +78,14 @@ tags: [web-development]
 - [Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 - [Google SearchConsole](https://search.google.com/search-console/)
 - [Javascript SEO Basics](https://developers.google.com/search/docs/guides/javascript-seo-basics)
+
+</div>
+
+<div>
+
+## Accessibility
+
+- [GatsbyJS - How to improve accessibility](https://www.gatsbyjs.com/docs/conceptual/making-your-site-accessible/#how-to-improve-accessibility)
 
 </div>
 

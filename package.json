@@ -32,11 +32,14 @@
     "serve": "gatsby serve",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
     "lint": "eslint --fix \"src/**/*.{js,jsx,tsx,ts}\"",
-    "test": "jest"
+    "test": "jest --verbose ./jest/tests",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test start http://localhost:8000 cy:open"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@emotion/babel-plugin": "^11.2.0",
+    "@emotion/jest": "^11.2.0",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
@@ -45,6 +48,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "babel-preset-gatsby": "^0.12.1",
+    "cypress": "^6.5.0",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.1",
@@ -55,6 +59,7 @@
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "prism-react-renderer": "^1.1.0",
-    "react-test-renderer": "^17.0.1"
+    "react-test-renderer": "^17.0.1",
+    "start-server-and-test": "^1.12.0"
   }
 }

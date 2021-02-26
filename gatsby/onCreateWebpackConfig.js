@@ -5,6 +5,7 @@ module.exports = ({ stage, actions }) => {
     resolve: {
       alias: {
         icons: resolve(__dirname, "../static/icons"),
+        "@": resolve(__dirname, "..", "src"),
       },
       modules: [resolve(__dirname, "../src"), "node_modules"],
     },

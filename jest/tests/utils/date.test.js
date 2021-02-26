@@ -1,4 +1,4 @@
-import { zuluDateToString } from "../../src/utils/date";
+import { zuluDateToString } from "utils/date";
 
 test("Datetime", () => {
   expect(zuluDateToString("2021-02-20T00:00:00.000Z")).toBe(
