@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Layout from "components/layout";
 import {
   StyledHeading,
@@ -8,10 +9,18 @@ import {
   Padding,
 } from "templates/style";
 
-export default function NotFound() {
+interface Props {
+  data: Data;
+}
+
+export default function NotFound({
+  data: {
+    site: { siteMetadata },
+  },
+}: Props) {
   if (typeof window === "undefined") return null;
   return (
-    <Layout location={location} relativePath="/" siteMetadata={null}>
+    <Layout location={location} relativePath="" siteMetadata={siteMetadata}>
       <div>
         <TitleWrapper>
           <StyledHeading>Page not found</StyledHeading>
@@ -24,3 +33,14 @@ export default function NotFound() {
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        docsLocation
+        githubUrl
+      }
+    }
+  }
+`;
