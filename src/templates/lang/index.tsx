@@ -6,7 +6,7 @@ import { getItemFromStorage } from "utils/localStorage";
 
 import { StyledHeading, TitleWrapper, Padding } from "../style";
 import { StyledLink, Li, Container, Main } from "./style";
-import Layout from "layout";
+import Layout from "components/layout";
 import Seo from "components/seo";
 import Card from "components/card";
 

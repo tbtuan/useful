@@ -4,7 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { StyledHeading, TitleWrapper, Padding } from "../style";
 import { Container, Main } from "./style";
-import Layout from "layout";
+import Layout from "components/layout";
 import Seo from "components/seo";
 import Section from "components/section";
 

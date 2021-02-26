@@ -37,7 +37,7 @@
     "test:e2e": "start-server-and-test start http://localhost:8000 cy:open"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@emotion/babel-plugin": "^11.2.0",
     "@emotion/jest": "^11.2.0",
     "@types/jest": "^26.0.20",
