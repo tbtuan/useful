@@ -15,10 +15,8 @@ const Links = ({ data }: Props) => {
   if (typeof location === "undefined") return null;
 
   const {
-    site: { siteMetadata },
     mdx: {
       frontmatter: { title, description },
-      parent: { relativePath },
       body,
     },
     allMdx: { edges },

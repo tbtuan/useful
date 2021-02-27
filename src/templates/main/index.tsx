@@ -35,17 +35,22 @@ const Index = ({
   if (typeof location === "undefined") return null;
 
   const dateTitleSlug = edges.map((item) => {
-    const tmp = {};
-
-    tmp["title"] = item.node.frontmatter.title;
-    tmp["date"] = item.node.frontmatter.date;
-    tmp["slug"] = item.node.fields.slug;
-    return tmp;
+    return {
+      title: item.node.frontmatter.title,
+      slug: item.node.fields.slug,
+      date: item.node.frontmatter.date,
+    };
   });
 
-  const visistedArr = getItemFromStorage("visited");
+  const visistedArr: {
+    url: string;
+    text: string;
+  }[] = getItemFromStorage("visited");
 
-  const pageVisistedArr = getItemFromStorage("page_visited");
+  const pageVisistedArr: {
+    url: string;
+    text: string;
+  }[] = getItemFromStorage("page_visited");
 
   return (
     <>

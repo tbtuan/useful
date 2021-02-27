@@ -30,15 +30,11 @@ import {
 
 interface Props {
   children?: React.ReactNode;
-  location: Location;
   relativePath: string;
   data: Data;
 }
 
-const Layout = ({ children, location, data }: Props) => {
-  if (typeof location == "undefined") {
-    return children;
-  }
+const Layout = ({ children, data }: Props) => {
   const docsLocation = data?.site?.siteMetadata?.docsLocation;
   const githubUrl = data?.site?.siteMetadata?.githubUrl;
   const relativePath = data?.mdx?.parent?.relativePath;
@@ -67,19 +63,19 @@ const Layout = ({ children, location, data }: Props) => {
         )}
       </Header>
       <Sidebar>
-        <NavLink text="Commands" path="/commands" location={location}>
+        <NavLink text="Commands" path="/commands">
           <TerminalIcon />
         </NavLink>
-        <NavLink text="Languages" path="/lang" location={location}>
+        <NavLink text="Languages" path="/lang">
           <CodeIcon />
         </NavLink>
-        <NavLink text="Links" path="/links" location={location}>
+        <NavLink text="Links" path="/links">
           <ExternalLinkAltIcon />
         </NavLink>
-        <NavLink text="Setups" path="/setups" location={location}>
+        <NavLink text="Setups" path="/setups">
           <CogsIcon />
         </NavLink>
-        <NavLink text="Shortcuts" path="/shortcuts" location={location}>
+        <NavLink text="Shortcuts" path="/shortcuts">
           <KeyboardIcon />
         </NavLink>
       </Sidebar>

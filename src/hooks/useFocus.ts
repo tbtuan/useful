@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 
-export const useFocus = (ref, handler) => {
+export const useFocus = (
+  ref: React.MutableRefObject<any>,
+  handler: () => void
+) => {
   useEffect(() => {
     const handleKeyOutside = (e) => {
       if (ref.current && !ref.current.contains(e.target) && e.key === "f") {

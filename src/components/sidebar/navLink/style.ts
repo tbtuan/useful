@@ -32,9 +32,9 @@ export const ListItem = styled("li")`
   }
 `;
 
-export const NormalLink = styled(Link)`
+export const NavLink = styled(Link)`
   background-position: right bottom;
-  :hover {
+  &:hover:not(.active) {
     background: linear-gradient(
       to left,
       transparent 50%,
@@ -48,14 +48,13 @@ export const NormalLink = styled(Link)`
     background-position: left top;
     transition: all 0.2s ease-in-out;
   }
-`;
-
-export const ActiveLink = styled(Link)`
-  background-color: ${({ theme }) => theme.colors.textLink};
-  color: #fff !important;
-  filter: drop-shadow(
-    0px 4px 5px ${({ theme }) => theme.colors.activeNavLinkShadow}
-  );
+  &.active {
+    background-color: ${({ theme }) => theme.colors.textLink};
+    color: #fff !important;
+    filter: drop-shadow(
+      0px 4px 5px ${({ theme }) => theme.colors.activeNavLinkShadow}
+    );
+  }
 `;
 
 export const IconWrapper = styled("div")`

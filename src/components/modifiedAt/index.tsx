@@ -2,13 +2,12 @@ import React from "react";
 import { ModifiedAt, ModifiedAtTitle, Li, Span, StyledLink } from "./style";
 import { dateDifference } from "utils/date";
 
-interface DateTitleSlug {
-  title: string;
-  slug: string;
-  date: string;
-}
 interface Props {
-  dateTitleSlug: DateTitleSlug[];
+  dateTitleSlug: {
+    title: string;
+    slug: string;
+    date: Date;
+  }[];
 }
 
 const ModifiedAtLayout = ({ dateTitleSlug }: Props) => {
@@ -28,7 +27,10 @@ const ModifiedAtLayout = ({ dateTitleSlug }: Props) => {
       <Li key={index}>
         <StyledLink to={item.slug}>{item.title}</StyledLink>
         <Span>
-          {dateDifference(currentDate.getTime(), Date.parse(item.date))}
+          {dateDifference(
+            currentDate.getTime(),
+            Date.parse(item.date.toString())
+          )}
         </Span>
       </Li>
     );

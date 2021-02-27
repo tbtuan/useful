@@ -1,36 +1,24 @@
 import React from "react";
-import {
-  ActiveLink,
-  NormalLink,
-  IconWrapper,
-  ListItem,
-  TextWrapper,
-} from "./style";
+import { NavLink, IconWrapper, ListItem, TextWrapper } from "./style";
 
 interface Props {
   text: string;
   path: string;
   children: React.ReactNode;
-  location: Location;
 }
 
-const NavlinkLayout = ({ text, path, children, location }: Props) => {
-  const isActive = (path: string) =>
-    location?.pathname === path || location?.pathname === path + "/";
-
+const NavlinkLayout = ({ text, path, children }: Props) => {
   return (
     <ListItem>
-      {isActive(path) ? (
-        <ActiveLink aria-label={text} to={path}>
-          <TextWrapper>{text}</TextWrapper>
-          <IconWrapper>{children}</IconWrapper>
-        </ActiveLink>
-      ) : (
-        <NormalLink aria-label={text} to={path}>
-          <TextWrapper>{text}</TextWrapper>
-          <IconWrapper>{children}</IconWrapper>
-        </NormalLink>
-      )}
+      <NavLink
+        aria-label={text}
+        to={path}
+        activeClassName="active"
+        partiallyActive={true}
+      >
+        <TextWrapper>{text}</TextWrapper>
+        <IconWrapper>{children}</IconWrapper>
+      </NavLink>
     </ListItem>
   );
 };
