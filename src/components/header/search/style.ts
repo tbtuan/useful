@@ -101,7 +101,10 @@ export const HitsWrapper = styled("div")`
   }
 
   @media only screen and (max-width: 576px) {
-    width: 60vw;
+    top: calc((100% + 0.5em) - 4rem);
+    width: 100%;
+    padding: 5rem 1rem 1rem;
+    left: 0;
   }
 `;
 
