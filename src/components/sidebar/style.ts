@@ -13,8 +13,11 @@ export const StyledSidebar = styled("aside")`
   justify-content: space-between;
 
   @media only screen and (max-width: 1023px) {
-    width: 4rem;
-    top: 3rem;
+    /* width: 4rem;
+    top: 3rem; */
+    top: auto;
+    width: 100%;
+    z-index: 2;
   }
 `;
 
@@ -30,11 +33,20 @@ export const Nav = styled("nav")`
   }
 
   @media only screen and (max-width: 1023px) {
-    padding-top: 2rem;
+    padding-top: 0;
+
+    li {
+      width: 100%;
+    }
   }
 `;
 
 export const Ul = styled("ul")`
   margin-left: 0;
   padding-inline-start: 0;
+
+  @media only screen and (max-width: 1023px) {
+    margin: 0;
+    display: flex;
+  }
 `;

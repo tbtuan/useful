@@ -74,11 +74,9 @@ export const ContentWrapper = styled("div")`
   }
 
   @media only screen and (max-width: 1023px) {
-    margin-left: 4rem;
+    margin-left: 0rem;
     top: 3rem;
-  }
-  @media only screen and (max-width: 576px) {
-    top: 3rem;
+    padding-bottom: 3rem;
   }
 `;
 
@@ -94,7 +92,7 @@ export const ViewDiv = styled("div")`
   pointer-events: none;
 
   @media only screen and (max-width: 1023px) {
-    width: 4rem;
+    display: none;
   }
 `;
 
@@ -106,8 +104,13 @@ export const TitleWrapper = styled("div")`
   align-self: center;
 
   @media only screen and (max-width: 1023px) {
-    flex: 0 0 4em;
+    flex: 0;
+    margin-left: 3rem;
     padding: 0rem;
+  }
+
+  @media only screen and (max-width: 576px) {
+    margin-left: 1.5rem;
   }
 `;
 
