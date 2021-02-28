@@ -41,13 +41,6 @@ const Section = ({
         <StyledLink to={slug} state={{ pageTitle: `${title}` }}>
           Read more
         </StyledLink>
-        <TagContainer>
-          <TagList>
-            {tags?.map((tag) => (
-              <Tag key={title && tag}>#{tag}</Tag>
-            ))}
-          </TagList>
-        </TagContainer>
       </HeadingWrapper>
       <StyledContainer>
         {items?.map((item, index) => (
@@ -61,6 +54,13 @@ const Section = ({
           </Li>
         ))}
       </StyledContainer>
+      <TagContainer>
+        <TagList>
+          {tags?.map((tag) => (
+            <Tag key={title && tag}>#{tag}</Tag>
+          ))}
+        </TagList>
+      </TagContainer>
     </StyledDiv>
   );
 };

@@ -38,4 +38,7 @@ export const Container = styled("div")`
 export const Main = styled("main")`
   color: ${(props) => props.theme.colors.text};
   max-width: calc(100% - 14rem);
+  @media only screen and (max-width: 1023px) {
+    max-width: 100%;
+  }
 `;

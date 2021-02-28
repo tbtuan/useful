@@ -3,9 +3,13 @@ import { Link } from "gatsby";
 
 export const StyledDiv = styled("div")`
   position: relative;
-  height: 12rem;
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
+  grid-template-columns: 1fr 0.7fr;
+  grid-template-rows: 1fr 0.1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Main Side"
+    "Tags Tags";
   margin-bottom: 1rem;
 `;
 
@@ -33,10 +37,10 @@ export const Li = styled("li")`
 export const StyledContainer = styled("div")`
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   overflow-y: auto;
   max-height: 13rem;
-  margin-right: 1rem;
+  grid-area: Side;
   ::-webkit-scrollbar-track {
     background-color: ${({ theme }) => theme.colors.scrollbarTrack};
   }
@@ -54,7 +58,7 @@ export const StyledContainer = styled("div")`
 export const HeadingWrapper = styled("div")`
   position: relative;
   margin: 0;
-  height: 3.75rem;
+  grid-area: Main;
 `;
 
 export const StyledHeading = styled("h2")``;
@@ -68,6 +72,7 @@ export const TagContainer = styled("div")`
   flex-direction: column;
   gap: 0.3rem;
   margin-top: 1.5rem;
+  grid-area: Tags;
 `;
 
 export const StyledTag = styled("small")`

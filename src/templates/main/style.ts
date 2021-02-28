@@ -9,6 +9,9 @@ export const StyledDiv = styled("div")`
 export const TitleWrapper = styled("div")`
   color: ${(props) => props.theme.colors.text};
   width: calc(100% - 14rem);
+  @media only screen and (max-width: 1023px) {
+    width: auto;
+  }
 `;
 
 export const CogIcon = styled(Cog)`

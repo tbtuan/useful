@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const StyledDiv = styled("div")`
   position: relative;
-  height: 12rem;
+  min-height: 12rem;
   margin-bottom: 1rem;
 `;
 

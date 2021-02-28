@@ -115,6 +115,7 @@ export const TitleWrapper = styled("div")`
 `;
 
 export const LogoWrapper = styled(Link)`
+  display: inline-flex;
   :hover {
     rect:first-of-type {
       fill: ${({ theme }) => theme.colors.textLink};
@@ -122,6 +123,7 @@ export const LogoWrapper = styled(Link)`
     }
   }
   @media only screen and (max-width: 1023px) {
+    display: flex;
     svg {
       width: 32px;
       height: 32px;
