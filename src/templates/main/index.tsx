@@ -1,11 +1,11 @@
 import { graphql } from "gatsby";
-import React from "react";
+import React, { useContext } from "react";
 import Seo from "components/seo";
 
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import ModifiedAt from "components/modifiedAt";
 import Featured from "components/featured";
-import { getItemFromStorage } from "utils/localStorage";
+import { SiteContext } from "providers/siteContext";
 
 import {
   TitleWrapper,
@@ -33,7 +33,7 @@ const Index = ({
   },
 }: Props) => {
   if (typeof location === "undefined") return null;
-
+  const siteContext = useContext(SiteContext);
   const dateTitleSlug = edges.map((item) => {
     return {
       title: item.node.frontmatter.title,
@@ -41,16 +41,6 @@ const Index = ({
       date: item.node.frontmatter.date,
     };
   });
-
-  const visistedArr: {
-    url: string;
-    text: string;
-  }[] = getItemFromStorage("visited");
-
-  const pageVisistedArr: {
-    url: string;
-    text: string;
-  }[] = getItemFromStorage("page_visited");
 
   return (
     <>
@@ -66,8 +56,8 @@ const Index = ({
         <ModifiedAt dateTitleSlug={dateTitleSlug} />
         <Main>
           <Featured title="Visited links">
-            {visistedArr &&
-              visistedArr.map((item, index) => (
+            {siteContext?.visited?.length > 0 &&
+              siteContext.visited.map((item, index) => (
                 <Li key={item.url + index.toString()}>
                   <StyledA
                     href={item.url}
@@ -80,8 +70,8 @@ const Index = ({
               ))}
           </Featured>
           <Featured title="Visited pages">
-            {pageVisistedArr &&
-              pageVisistedArr.map((item, index) => (
+            {siteContext?.pageVisited?.length > 0 &&
+              siteContext.pageVisited.map((item, index) => (
                 <Li key={item.url + index.toString()}>
                   <StyledLink to={item.url}>{item.text}</StyledLink>
                 </Li>

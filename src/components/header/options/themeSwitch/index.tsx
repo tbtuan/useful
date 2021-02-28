@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "contexts/themeContext";
+import { ThemeContext } from "providers/themeContext";
 import { Switch, AdjustIcon, Input } from "./style";
 
 export const ThemeSwitch = () => {

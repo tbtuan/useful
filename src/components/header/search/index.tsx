@@ -3,7 +3,6 @@ import { useState, useRef } from "react";
 import { useClickOutside } from "hooks/useClickOutside";
 import { useFocus } from "hooks/useFocus";
 import { useSearch } from "hooks/useSearch";
-import { getItemFromStorage, storeItem } from "utils/localStorage";
 import {
   StyledSearch,
   SearchBox,
@@ -61,11 +60,6 @@ const SearchLayout = () => {
     return;
   };
 
-  let visistedArr = getItemFromStorage("page_visited");
-  if (!visistedArr) {
-    visistedArr = [];
-  }
-
   const searchResults = results.map((element, index) => {
     const { item, matches } = element;
 
@@ -76,16 +70,6 @@ const SearchLayout = () => {
     if (firstMatch.key === "toc.title" && url !== "/") {
       url += "/" + element.item.toc[firstMatch.refIndex].url;
     }
-
-    const offset = url.indexOf("#");
-    const fragment = url.substring(offset);
-    visistedArr = visistedArr?.filter((item) => item.url !== url)?.slice(0, 9);
-    visistedArr.unshift({
-      text: offset !== -1 ? item.title + " (" + fragment + ")" : item.title,
-      url: url,
-      relevance: 0,
-    });
-    storeItem("page_visited", visistedArr);
 
     return (
       <SearchLink

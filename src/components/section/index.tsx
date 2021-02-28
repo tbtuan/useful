@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   StyledDiv,
   HeadingWrapper,
@@ -11,7 +11,7 @@ import {
   TagList,
 } from "./style";
 
-import { getItemFromStorage } from "utils/localStorage";
+import { SiteContext } from "providers/siteContext";
 
 interface Props {
   node: Node;
@@ -24,10 +24,11 @@ const Section = ({
     tableOfContents: { items },
   },
 }: Props) => {
-  const filter = getItemFromStorage("filter");
+  const siteContext = useContext(SiteContext);
 
   const filtered =
-    tags?.filter((tag) => filter?.includes(tag)).length > 0 && tags.length > 0;
+    tags?.filter((tag) => siteContext.filter?.includes(tag)).length > 0 &&
+    tags.length > 0;
 
   if (filtered) {
     return null;

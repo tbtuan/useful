@@ -1,24 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StyledAnchor } from "./style";
-import { getItemFromStorage, storeItem } from "utils/localStorage";
+import { SiteContext } from "providers/siteContext";
 
 const AnchorTag = ({ children: url, ...props }) => {
+  const siteContext = useContext(SiteContext);
   if (url) {
     const handleClick = () => {
-      let visistedArr = getItemFromStorage("visited");
-
-      if (!visistedArr) {
-        visistedArr = [];
-      }
-      visistedArr = visistedArr
-        .filter((item) => item.href !== props.href)
-        .slice(0, 9);
-      visistedArr.unshift({
-        text: url,
-        url: props.href,
-        relevance: 0,
-      });
-      storeItem("visited", visistedArr);
+      siteContext.storeVisited(url, props.href);
     };
 
     return (

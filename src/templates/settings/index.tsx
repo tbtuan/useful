@@ -1,9 +1,9 @@
 import { graphql } from "gatsby";
-import React from "react";
+import React, { useContext } from "react";
 import Seo from "components/seo";
+import { SiteContext } from "providers/siteContext";
 
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { getItemFromStorage, storeItem } from "utils/localStorage";
 
 import {
   TitleWrapper,
@@ -39,24 +39,23 @@ const Settings = ({
 }: Props) => {
   if (typeof location === "undefined") return null;
 
-  let filterArr: string[] = getItemFromStorage("filter") || [];
+  const siteContext = useContext(SiteContext);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>,
     name: string
   ) => {
     if (e.target.checked) {
-      filterArr = filterArr.filter((tag) => tag !== name);
+      siteContext.includeTags(name);
     } else {
-      filterArr.push(name);
+      siteContext.excludeTags(name);
     }
-    storeItem("filter", filterArr);
   };
 
   const tags = pageContext.tags.map((item) => {
     return {
       name: item,
-      checked: !filterArr?.includes(item),
+      checked: !siteContext.filter?.includes(item),
     };
   });
 

@@ -1,8 +1,9 @@
 import { graphql } from "gatsby";
-import React from "react";
+import React, { useContext } from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { calculateTreeData } from "utils/nestedTree";
-import { getItemFromStorage } from "utils/localStorage";
+
+import { SiteContext } from "providers/siteContext";
 
 import { StyledHeading, TitleWrapper, Padding } from "../style";
 import { StyledLink, Li, Container, Main } from "./style";
@@ -24,7 +25,7 @@ const Collection = ({
 }: Props) => {
   if (typeof location === "undefined") return null;
   const CardContainer = ({ items }) => {
-    const filter = getItemFromStorage("filter");
+    const siteContext = useContext(SiteContext);
 
     return (
       <Container>
@@ -38,8 +39,8 @@ const Collection = ({
           ];
 
           const filtered =
-            tags?.filter((tag) => filter?.includes(tag)).length > 0 &&
-            tags.length > 0;
+            tags?.filter((tag) => siteContext.filter?.includes(tag)).length >
+              0 && tags.length > 0;
 
           if (filtered) {
             return null;
