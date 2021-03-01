@@ -105,9 +105,11 @@ const SearchLayout = () => {
     if (focus && window.matchMedia("(max-width: 576px)").matches) {
       disableBodyScroll(document.body);
       disableBodyScroll(document.getElementById("header"));
+      disableBodyScroll(ref.current);
     } else {
       enableBodyScroll(document.body);
       enableBodyScroll(document.getElementById("header"));
+      enableBodyScroll(ref.current);
     }
   }, [focus]);
 
