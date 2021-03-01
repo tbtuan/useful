@@ -58,7 +58,7 @@ export const Content = styled("main")`
 `;
 
 export const Div = styled("div")`
-  height: 100vh;
+  height: 100%;
   background-color: ${({ theme }) => theme.colors.background};
 `;
 

@@ -13,6 +13,7 @@ export const StyledSidebar = styled("aside")`
   justify-content: space-between;
 
   @media only screen and (max-width: 1023px) {
+    position: absolute;
     top: auto;
     width: 100%;
     z-index: 2;

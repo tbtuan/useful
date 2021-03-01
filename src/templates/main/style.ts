@@ -3,7 +3,7 @@ import Cog from "icons/Cog.svg";
 import { Link } from "gatsby";
 
 export const StyledDiv = styled("div")`
-  /* column-count: 2; */
+  column-count: 2;
 `;
 
 export const TitleWrapper = styled("div")`
@@ -24,13 +24,21 @@ export const CogIcon = styled(Cog)`
 
 export const Main = styled("main")`
   color: ${(props) => props.theme.colors.text};
-  //display: grid;
   max-width: calc(100% - 14rem);
-  /* grid-template-columns: repeat(2, minmax(0, 30rem));
-  grid-gap: 1rem; */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 30rem));
+  grid-gap: 1rem;
 
   @media only screen and (max-width: 1023px) {
     max-width: 100%;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 30rem));
+  grid-gap: 1rem;
+
+  @media only screen and (max-width: 576px) {
+    display: block;
   }
 `;
 
