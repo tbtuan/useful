@@ -5,6 +5,8 @@ interface Props {
   children: React.ReactNode;
 }
 
-const HeaderLayout = ({ children }: Props) => <Header>{children}</Header>;
+const HeaderLayout = ({ children }: Props) => (
+  <Header id="header">{children}</Header>
+);
 
 export default HeaderLayout;
