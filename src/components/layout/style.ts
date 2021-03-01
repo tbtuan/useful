@@ -59,6 +59,8 @@ export const Content = styled("main")`
 
 export const Div = styled("div")`
   height: 100%;
+  min-height: 100%;
+  position: relative;
   background-color: ${({ theme }) => theme.colors.background};
 `;
 
@@ -67,6 +69,7 @@ export const ContentWrapper = styled("div")`
   margin-left: 18rem;
   position: relative;
   top: 8rem;
+  z-index: 0;
 
   background: ${({ theme }) => theme.colors.background};
 
@@ -89,7 +92,7 @@ export const ViewDiv = styled("div")`
   left: 0;
   box-shadow: 4px 0px 10px ${({ theme }) => theme.colors.sidebarShadow};
   background: transparent;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
 
   @media only screen and (max-width: 1023px) {

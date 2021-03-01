@@ -25,7 +25,7 @@ export const MobileContainer = styled("div")`
   display: none;
 
   @media only screen and (max-width: 576px) {
-    display: block;
+    display: inline-flex;
   }
 `;
 
@@ -70,7 +70,7 @@ export const ContainerWrapper = styled("div")`
   }
 
   @media only screen and (max-width: 576px) {
-    top: calc((100% + 0.5em) - 4rem);
+    top: calc(100% - 4rem);
     width: 100%;
     padding: 5rem 1.5rem 1rem;
     left: 0;

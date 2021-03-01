@@ -12,14 +12,28 @@ interface LinkProps {
   theme?: Theme;
 }
 
+export const Overlay = styled("div")`
+  @media only screen and (max-width: 576px) {
+    background-color: #00000030;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -3;
+  }
+`;
+
 export const StyledSearch = styled(Search)`
   position: relative;
-  left: 0.25rem;
   width: 1rem;
   height: 1rem;
-  z-index: 1;
+  z-index: 2;
   color: ${({ theme }) => theme.colors.text};
-  left: ${({ show }) => (show ? `1.25rem` : `none`)};
+  left: ${({ show }) => (show ? `1.25rem` : `0.25rem`)};
+  @media only screen and (max-width: 576px) {
+    left: 0.25rem;
+  }
 `;
 
 export const SearchBox = styled("input")`
@@ -58,6 +72,12 @@ export const SearchBox = styled("input")`
 
   ::-webkit-search-cancel-button {
     -webkit-appearance: none;
+  }
+
+  @media only screen and (max-width: 576px) {
+    padding: 0;
+    padding-left: 2rem;
+    width: 100%;
   }
 `;
 
@@ -101,10 +121,11 @@ export const HitsWrapper = styled("div")`
   }
 
   @media only screen and (max-width: 576px) {
-    top: calc((100% + 0.5em) - 4rem);
+    top: calc(100% - 4rem);
     width: 100%;
     padding: 5rem 1rem 1rem;
     left: 0;
+    border-radius: 0;
   }
 `;
 

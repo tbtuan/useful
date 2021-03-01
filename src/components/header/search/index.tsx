@@ -1,9 +1,10 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useClickOutside } from "hooks/useClickOutside";
 import { useFocus } from "hooks/useFocus";
 import { useSearch } from "hooks/useSearch";
 import {
+  Overlay,
   StyledSearch,
   SearchBox,
   SearchContainer,
@@ -91,6 +92,22 @@ const SearchLayout = () => {
     );
   });
 
+  useEffect(() => {
+    if (
+      focus &&
+      results.length > 0 &&
+      window.matchMedia("(max-width: 576px)").matches
+    ) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [
+    focus &&
+      results.length > 0 &&
+      window.matchMedia("(max-width: 576px)").matches,
+  ]);
+
   return (
     <SearchContainer ref={ref}>
       <StyledSearch show={results.length > 0 && focus ? 1 : 0} />
@@ -110,6 +127,9 @@ const SearchLayout = () => {
       <HitsWrapper show={results.length > 0 && focus}>
         {searchResults}
       </HitsWrapper>
+      {results.length > 0 && focus && (
+        <Overlay onClick={() => setFocus(false)} />
+      )}
     </SearchContainer>
   );
 };
