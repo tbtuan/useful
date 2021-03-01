@@ -53,7 +53,7 @@ const SiteProvider = ({ children }: Props) => {
           text: text,
           url: url,
         },
-        ...previousVisited?.filter((item) => item.url !== url)?.slice(0, 9),
+        ...previousVisited?.filter((item) => item.url !== url)?.slice(0, 19),
       ];
     });
   };
@@ -67,7 +67,7 @@ const SiteProvider = ({ children }: Props) => {
           text: offset !== -1 ? text + " (" + fragment + ")" : text,
           url: url,
         },
-        ...prevPageVisited?.filter((item) => item.url !== url)?.slice(0, 9),
+        ...prevPageVisited?.filter((item) => item.url !== url)?.slice(0, 19),
       ];
     });
   };

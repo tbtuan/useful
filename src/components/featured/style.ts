@@ -5,9 +5,8 @@ export const StyledDiv = styled("div")`
 `;
 
 export const StyledContainer = styled("div")`
-  margin-top: 2rem;
   overflow-y: auto;
-  max-height: 15rem;
+  max-height: 9rem;
   padding-right: 1rem;
   ::-webkit-scrollbar-track {
     background-color: ${({ theme }) => theme.colors.scrollbarTrack};
@@ -24,12 +23,9 @@ export const StyledContainer = styled("div")`
 `;
 
 export const HeadingWrapper = styled("div")`
-  position: relative;
   margin: 0;
-  height: 3.75rem;
 `;
 
 export const StyledHeading = styled("h2")`
   display: inline-block;
-  margin-top: 3rem;
 `;

@@ -98,3 +98,7 @@ html {
   font-kerning: normal;
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+html,
+body {
+  height: 100%;
+}

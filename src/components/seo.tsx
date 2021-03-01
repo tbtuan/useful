@@ -9,6 +9,10 @@ const Seo = ({
   metaDescription: string;
 }) => (
   <Helmet defer={false} title={metaTitle}>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1"
+    />
     {metaTitle ? <title>{metaTitle}</title> : null}
     {metaTitle ? <meta name="title" content={metaTitle} /> : null}
     {metaDescription ? (

@@ -69,7 +69,7 @@ const Index = ({
                 </Li>
               ))}
           </Featured>
-          <Featured title="Visited pages">
+          <Featured title="Pages">
             {siteContext?.pageVisited?.length > 0 &&
               siteContext.pageVisited.map((item, index) => (
                 <Li key={item.url + index.toString()}>

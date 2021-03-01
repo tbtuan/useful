@@ -24,10 +24,10 @@ export const CogIcon = styled(Cog)`
 
 export const Main = styled("main")`
   color: ${(props) => props.theme.colors.text};
-  display: grid;
+  //display: grid;
   max-width: calc(100% - 14rem);
-  grid-template-columns: repeat(2, minmax(0, 30rem));
-  grid-gap: 1rem;
+  /* grid-template-columns: repeat(2, minmax(0, 30rem));
+  grid-gap: 1rem; */
 
   @media only screen and (max-width: 1023px) {
     max-width: 100%;

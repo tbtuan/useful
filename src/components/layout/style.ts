@@ -53,6 +53,7 @@ export const Content = styled("main")`
 
   @media only screen and (max-width: 576px) {
     padding: 1.5rem;
+    padding-top: 3rem;
   }
 `;
 
