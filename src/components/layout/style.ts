@@ -58,8 +58,7 @@ export const Content = styled("main")`
 `;
 
 export const Div = styled("div")`
-  height: 100%;
-  min-height: 100%;
+  height: 100vh;
   position: relative;
   background-color: ${({ theme }) => theme.colors.background};
 `;
