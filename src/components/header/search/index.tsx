@@ -98,9 +98,9 @@ const SearchLayout = () => {
       results.length > 0 &&
       window.matchMedia("(max-width: 576px)").matches
     ) {
-      document.body.style.overflow = "hidden";
+      document.body.classList.add("overlay");
     } else {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("overlay");
     }
   }, [
     focus &&

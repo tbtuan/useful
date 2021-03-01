@@ -11,7 +11,7 @@ const Seo = ({
   <Helmet defer={false} title={metaTitle}>
     <meta
       name="viewport"
-      content="width=device-width, height=device-height, initial-scale=1"
+      content="width=device-width, height=device-height, initial-scale=1, user-scalable=0"
     />
     {metaTitle ? <title>{metaTitle}</title> : null}
     {metaTitle ? <meta name="title" content={metaTitle} /> : null}

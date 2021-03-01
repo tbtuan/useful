@@ -139,6 +139,10 @@ export const SearchLink = styled(Link)`
 
   background-color: ${({ selected, theme }: LinkProps) =>
     selected ? theme.colors.searchHover : `transparent`};
+
+  @media only screen and (max-width: 576px) {
+    padding: 0.4rem 0.8rem;
+  }
 `;
 
 export const SearchTitle = styled("span")`
