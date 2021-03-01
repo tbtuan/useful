@@ -98,10 +98,3 @@ html {
   font-kerning: normal;
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
-body {
-  min-height: 100%;
-  height: 100%;
-}
-.overlay {
-  overflow: hidden;
-}

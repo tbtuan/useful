@@ -12,6 +12,11 @@ import {
   SearchLink,
   SearchTitle,
 } from "./style";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 
 const SearchLayout = () => {
   if (typeof window === "undefined") {
@@ -98,23 +103,9 @@ const SearchLayout = () => {
 
   useEffect(() => {
     if (focus && window.matchMedia("(max-width: 576px)").matches) {
-      document.body.classList.add("overlay");
-      document.getElementById("navbar").style.position = "absolute";
-      document.addEventListener(
-        "touchmove",
-        function (e) {
-          e.preventDefault();
-        },
-        { passive: false }
-      );
-      //document.getElementById("header").style.position = "absolute";
+      disableBodyScroll(document.body);
     } else {
-      document.body.classList.remove("overlay");
-      document.getElementById("navbar").style.position = "fixed";
-      document.removeEventListener("touchmove", function (e) {
-        e.preventDefault();
-      });
-      //document.getElementById("header").style.position = "fixed";
+      enableBodyScroll(document.body);
     }
   }, [focus]);
 
