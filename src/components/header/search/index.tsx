@@ -92,21 +92,31 @@ const SearchLayout = () => {
     );
   });
 
+  const focusHandle = () => {
+    setFocus(true);
+  };
+
   useEffect(() => {
-    if (
-      focus &&
-      results.length > 0 &&
-      window.matchMedia("(max-width: 576px)").matches
-    ) {
+    if (focus && window.matchMedia("(max-width: 576px)").matches) {
       document.body.classList.add("overlay");
+      document.getElementById("navbar").style.position = "absolute";
+      document.addEventListener(
+        "touchmove",
+        function (e) {
+          e.preventDefault();
+        },
+        { passive: false }
+      );
+      //document.getElementById("header").style.position = "absolute";
     } else {
       document.body.classList.remove("overlay");
+      document.getElementById("navbar").style.position = "fixed";
+      document.removeEventListener("touchmove", function (e) {
+        e.preventDefault();
+      });
+      //document.getElementById("header").style.position = "fixed";
     }
-  }, [
-    focus &&
-      results.length > 0 &&
-      window.matchMedia("(max-width: 576px)").matches,
-  ]);
+  }, [focus]);
 
   return (
     <SearchContainer ref={ref}>
@@ -118,7 +128,7 @@ const SearchLayout = () => {
         aria-label="Search"
         value={query}
         onChange={searchData}
-        onFocus={() => setFocus(true)}
+        onFocus={focusHandle}
         onKeyUp={handleKeyPress}
         onKeyDown={handleKeyDownPress}
         placeholder="Search..."
@@ -127,9 +137,7 @@ const SearchLayout = () => {
       <HitsWrapper show={results.length > 0 && focus}>
         {searchResults}
       </HitsWrapper>
-      {results.length > 0 && focus && (
-        <Overlay onClick={() => setFocus(false)} />
-      )}
+      {focus && <Overlay onClick={() => setFocus(false)} />}
     </SearchContainer>
   );
 };

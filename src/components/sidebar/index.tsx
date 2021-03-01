@@ -6,7 +6,7 @@ interface Props {
 }
 
 const SidebarLayout = ({ children }: Props) => (
-  <StyledSidebar>
+  <StyledSidebar id="navbar">
     <Nav>
       <Ul>{children}</Ul>
     </Nav>

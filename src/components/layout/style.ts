@@ -85,7 +85,7 @@ export const ContentWrapper = styled("div")`
 
 export const ViewDiv = styled("div")`
   width: 18rem;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
