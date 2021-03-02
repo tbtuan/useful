@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { useClickOutside } from "hooks/useClickOutside";
 import { useFocus } from "hooks/useFocus";
 import { useSearch } from "hooks/useSearch";
+import { usePreventScroll } from "hooks/usePreventScroll";
 import {
   Overlay,
   StyledSearch,
@@ -12,12 +13,6 @@ import {
   SearchLink,
   SearchTitle,
 } from "./style";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
-import { off, on } from "process";
 
 const SearchLayout = () => {
   if (typeof window === "undefined") {
@@ -30,6 +25,8 @@ const SearchLayout = () => {
   const [query, setQuery] = useState("");
   const [focus, setFocus] = useState(false);
   const [itemIndex, setItemIndex] = useState(0);
+  const preventScrollRef = useRef(false);
+  usePreventScroll(preventScrollRef);
 
   useFocus(ref, () => document.getElementById("searchbox").focus());
   useClickOutside(ref, () => setFocus(false));
@@ -102,33 +99,10 @@ const SearchLayout = () => {
     setFocus(true);
   };
 
-  const preventScrollRef = useRef(false);
-
-  function usePreventScroll(preventScrollRef) {
-    useEffect(() => {
-      const preventScrolling = (e) => {
-        if (preventScrollRef.current) {
-          e.preventDefault();
-        }
-      };
-
-      document.addEventListener("touchmove", preventScrolling, {
-        passive: false,
-      });
-      return () => document.removeEventListener("touchmove", preventScrolling);
-    }, []);
-  }
-
-  usePreventScroll(preventScrollRef);
-
   useEffect(() => {
     if (focus && window.matchMedia("(max-width: 576px)").matches) {
-      // disableBodyScroll(document.body);
-      // disableBodyScroll(ref.current);
       preventScrollRef.current = true;
     } else {
-      // enableBodyScroll(document.body);
-      // enableBodyScroll(ref.current);
       preventScrollRef.current = false;
     }
   }, [focus]);
