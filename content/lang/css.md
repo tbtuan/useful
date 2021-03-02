@@ -103,4 +103,17 @@ li a:hover {
 
 </sc>
 
+<sc>
+
+## Enable/Disable scrolling
+
+```css
+/*Toggle class*/
+body.overflow {
+    overflow: hidden;
+}
+```
+
+</sc>
+
 </mc>

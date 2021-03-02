@@ -17,6 +17,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
+import { off, on } from "process";
 
 const SearchLayout = () => {
   if (typeof window === "undefined") {
@@ -101,15 +102,34 @@ const SearchLayout = () => {
     setFocus(true);
   };
 
+  const preventScrollRef = useRef(false);
+
+  function usePreventScroll(preventScrollRef) {
+    useEffect(() => {
+      const preventScrolling = (e) => {
+        if (preventScrollRef.current) {
+          e.preventDefault();
+        }
+      };
+
+      document.addEventListener("touchmove", preventScrolling, {
+        passive: false,
+      });
+      return () => document.removeEventListener("touchmove", preventScrolling);
+    }, []);
+  }
+
+  usePreventScroll(preventScrollRef);
+
   useEffect(() => {
     if (focus && window.matchMedia("(max-width: 576px)").matches) {
-      disableBodyScroll(document.body);
-      disableBodyScroll(document.getElementById("header"));
-      disableBodyScroll(ref.current);
+      // disableBodyScroll(document.body);
+      // disableBodyScroll(ref.current);
+      preventScrollRef.current = true;
     } else {
-      enableBodyScroll(document.body);
-      enableBodyScroll(document.getElementById("header"));
-      enableBodyScroll(ref.current);
+      // enableBodyScroll(document.body);
+      // enableBodyScroll(ref.current);
+      preventScrollRef.current = false;
     }
   }, [focus]);
 
