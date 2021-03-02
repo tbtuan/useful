@@ -10,6 +10,8 @@ import { StyledLink, Li, Container, Main } from "./style";
 import Seo from "components/seo";
 import Card from "components/card";
 
+import { uniqWith, concat } from "lodash";
+
 interface Props {
   data: Data;
 }
@@ -30,13 +32,12 @@ const Collection = ({
     return (
       <Container>
         {items.map((item, index) => {
-          const tags = [
-            ...new Set(
-              [...item.items.flatMap((item) => item.tags), ...item.tags].filter(
-                (tag) => tag !== null
-              )
-            ),
-          ];
+          const tags = uniqWith(
+            concat(
+              item.items.flatMap((item) => item.tags),
+              item.tags
+            ).filter((tag) => tag !== null)
+          );
 
           const filtered =
             tags?.filter((tag) => siteContext.filter?.includes(tag)).length >
