@@ -5,6 +5,14 @@ date: 2021-02-16
 tags: ["machine-learning"]
 ---
 
+<div>
+
+## Related topics
+
+- [Artificial intelligence and algorithms](/links/artificial-intelligence-algorithms)
+
+</div>
+
 <cc>
 
 <div>

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { StyledAnchor } from "./style";
 import { SiteContext } from "providers/siteContext";
+import { navigate } from "gatsby";
 
 const AnchorTag = ({ children: url, ...props }) => {
   const siteContext = useContext(SiteContext);
@@ -8,8 +9,13 @@ const AnchorTag = ({ children: url, ...props }) => {
     const handleClick = () => {
       siteContext.storeVisited(url, props.href);
     };
+    const handlePageClick = () => {
+      siteContext.storePageVisited(url, props.href);
+      navigate(props.href);
+    };
 
-    return (
+    return props.href.indexOf("http://") === 0 ||
+      props.href.indexOf("https://") === 0 ? (
       <StyledAnchor
         href={props.href}
         target="_blank"
@@ -18,6 +24,8 @@ const AnchorTag = ({ children: url, ...props }) => {
       >
         {url}
       </StyledAnchor>
+    ) : (
+      <StyledAnchor onClick={handlePageClick}>{url}</StyledAnchor>
     );
   } else {
     return null;

@@ -5,7 +5,23 @@ date: 2021-03-02
 tags: ["artificial-intelligence", "algorithm", "data structure"]
 ---
 
+<div>
+
+## Related topics
+
+- [Machine learning](/links/machine-learning)
+
+</div>
+
 <cc>
+
+<div>
+
+## General
+
+- [Artificial Intelligence Tutorial](https://www.javatpoint.com/artificial-intelligence-tutorial)
+
+</div>
 
 <div>
 

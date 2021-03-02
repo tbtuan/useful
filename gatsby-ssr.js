@@ -10,9 +10,9 @@ export const wrapPageElement = ({ element, props }) => {
 };
 
 export const wrapRootElement = ({ element }) => (
-  <SiteProvider>
-    <ThemeProvider>
-      <MDXProvider components={mdxComponents}>{element}</MDXProvider>
-    </ThemeProvider>
-  </SiteProvider>
+  <ThemeProvider>
+    <MDXProvider components={mdxComponents}>
+      <SiteProvider>{element}</SiteProvider>
+    </MDXProvider>
+  </ThemeProvider>
 );

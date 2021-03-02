@@ -9,11 +9,11 @@ import { MDXProvider } from "@mdx-js/react";
 import mdxComponents from "components/mdxComponents";
 
 export const wrapRootElement = ({ element }) => (
-  <SiteProvider>
-    <ThemeProvider>
-      <MDXProvider components={mdxComponents}>{element}</MDXProvider>
-    </ThemeProvider>
-  </SiteProvider>
+  <ThemeProvider>
+    <MDXProvider components={mdxComponents}>
+      <SiteProvider>{element}</SiteProvider>
+    </MDXProvider>
+  </ThemeProvider>
 );
 
 export const wrapPageElement = ({ element, props }) => {

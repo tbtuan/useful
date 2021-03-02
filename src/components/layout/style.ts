@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { css, jsx } from "@emotion/react";
+import { css } from "@emotion/react";
 import { Link } from "gatsby";
 import Github from "icons/Github.svg";
 import Edit from "icons/Edit.svg";
