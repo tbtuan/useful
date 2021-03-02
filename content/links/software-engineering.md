@@ -1,8 +1,8 @@
 ---
 title: "Software Engineering"
-description: "Best pratices in se and data structures"
-date: 2021-02-02
-tags: [general]
+description: "Best pratices in software engineering"
+date: 2021-03-02
+tags: ["general"]
 ---
 
 <cc>
@@ -13,20 +13,6 @@ tags: [general]
 
 - [TIOBE-Index](https://www.tiobe.com/tiobe-index/)
 - [PYPL-Index](https://pypl.github.io/)
-
-</div>
-
-<div>
-
-## Algorithms and data structures
-
-- [The algorithms](https://thealgorithms.github.io/)
-- [Javascript algorithms](https://github.com/trekhleb/javascript-algorithms)
-- [30-seconds-of-code](https://github.com/30-seconds/30-seconds-of-code/tree/master/snippets)
-- [Algorithm visualizer](https://algorithm-visualizer.org/)
-- [Dynamic programming - GeeksForGeeks](https://www.geeksforgeeks.org/dynamic-programming/)
-- [Dynamic programming](https://github.com/tristanguigue/dynamic-programming)
-
 
 </div>
 

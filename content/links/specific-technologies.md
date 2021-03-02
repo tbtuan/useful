@@ -2,7 +2,7 @@
 title: "Specific technologies"
 description: "Links to specific technologies"
 date: 2021-02-02
-tags: [general]
+tags: ["general"]
 ---
 
 <cc>

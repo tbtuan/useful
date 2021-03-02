@@ -2,7 +2,7 @@
 title: "Tools"
 description: "Uncategorized tools"
 date: 2021-02-02
-tags: [general]
+tags: ["general"]
 ---
 
 <cc>

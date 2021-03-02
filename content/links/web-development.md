@@ -2,7 +2,7 @@
 title: "Web Development"
 description: "Collection of links for web development"
 date: 2021-02-26
-tags: [web-development]
+tags: ["web-development"]
 ---
 
 <cc>

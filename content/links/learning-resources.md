@@ -2,7 +2,7 @@
 title: "Learning Resources"
 description: "Tutorials, EBooks, Code interviews"
 date: 2021-02-14
-tags: [general]
+tags: ["general"]
 ---
 
 <cc>
