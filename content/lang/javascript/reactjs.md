@@ -418,4 +418,38 @@ const Consumer = () => {
 
 </sc>
 
+<sc>
+
+## Useful hooks
+
+```jsx
+const usePreventScroll = (preventScrollRef) => {
+  useEffect(() => {
+    const preventScrolling = e => {
+      if (preventScrollRef.current) {
+        e.preventDefault()
+      }
+    }
+
+    document.addEventListener('touchmove', preventScrolling, {
+      passive: false,
+    })
+    return () => document.removeEventListener('touchmove', preventScrolling)
+  }, [])
+}
+const preventScrollRef = useRef(false)
+usePreventScroll(preventScrollRef)
+// Disable scroll
+preventScrollRef.current = true
+// Enable scroll
+preventScrollRef.current = false
+```
+
+### See
+
+- [usePreventScroll](https://github.com/pmndrs/react-use-gesture/issues/101#issuecomment-595608436)
+
+</sc>
+
+
 </mc>
