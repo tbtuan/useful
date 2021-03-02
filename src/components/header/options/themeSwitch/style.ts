@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Adjust from "icons/Adjust.svg";
+import Adjust from "icons/adjust.svg";
 
 export const Switch = styled("label")`
   display: flex;

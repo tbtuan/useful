@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { useClickOutside } from "hooks/useClickOutside";
 import {
   Container,
   MobileContainer,
   BarsIcon,
+  CloseIcon,
   Menu,
   ContainerWrapper,
 } from "./style";
@@ -13,12 +15,14 @@ interface Props {
 
 const OptionsLayout = ({ children }: Props) => {
   const [show, setShow] = useState(false);
+  const ref = useRef(null);
+  useClickOutside(ref, () => setShow(false));
 
   return (
     <>
-      <MobileContainer>
-        <Menu htmlFor="" onClick={() => setShow((prevShow) => !prevShow)}>
-          <BarsIcon />
+      <MobileContainer ref={ref}>
+        <Menu onClick={() => setShow((prevShow) => !prevShow)}>
+          {show ? <CloseIcon /> : <BarsIcon />}
         </Menu>
         <ContainerWrapper show={show}>{children}</ContainerWrapper>
       </MobileContainer>

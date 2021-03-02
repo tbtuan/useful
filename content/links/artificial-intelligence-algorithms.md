@@ -2,7 +2,7 @@
 title: "Artificial intelligence and algorithms"
 description: "Artificial intelligence, algorithms and data structures"
 date: 2021-03-02
-tags: ["artificial-intelligence", "algorithm", "data structure"]
+tags: ["artificial-intelligence", "algorithm", "data-structure"]
 ---
 
 <div>

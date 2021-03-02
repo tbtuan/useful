@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Cog from "icons/Cog.svg";
+import Cog from "icons/cog.svg";
 import { Link } from "gatsby";
 
 export const StyledDiv = styled("div")`

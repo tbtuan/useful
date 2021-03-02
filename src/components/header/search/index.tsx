@@ -12,6 +12,9 @@ import {
   HitsWrapper,
   SearchLink,
   SearchTitle,
+  ClearInputDiv,
+  ClearInput,
+  ClearIcon,
 } from "./style";
 
 const SearchLayout = () => {
@@ -20,12 +23,11 @@ const SearchLayout = () => {
   }
 
   const ref = useRef(null);
-
+  const preventScrollRef = useRef(false);
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState("");
   const [focus, setFocus] = useState(false);
   const [itemIndex, setItemIndex] = useState(0);
-  const preventScrollRef = useRef(false);
   usePreventScroll(preventScrollRef);
 
   useFocus(ref, () => document.getElementById("searchbox").focus());
@@ -127,6 +129,11 @@ const SearchLayout = () => {
         {searchResults}
       </HitsWrapper>
       {focus && <Overlay onClick={() => setFocus(false)} />}
+      <ClearInputDiv>
+        <ClearInput onClick={() => setQuery("")}>
+          {query && <ClearIcon />}
+        </ClearInput>
+      </ClearInputDiv>
     </SearchContainer>
   );
 };

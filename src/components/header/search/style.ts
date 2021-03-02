@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import Search from "icons/Search.svg";
+import Search from "icons/search.svg";
+import Clear from "icons/clear.svg";
 import { Link } from "gatsby";
 import { Theme } from "@emotion/react";
 
@@ -58,8 +59,10 @@ export const SearchBox = styled("input")`
   padding-left: ${({ show }) => (show ? `3rem` : `2rem`)};
   width: ${({ show }) => (show ? `40vw` : `100%`)};
 
-  :hover {
-    border-color: ${({ theme }) => theme.colors.textLink};
+  @media only screen and (min-width: 576px) {
+    :hover {
+      border-color: ${({ theme }) => theme.colors.textLink};
+    }
   }
 
   ::placeholder {
@@ -77,8 +80,12 @@ export const SearchBox = styled("input")`
   }
 
   @media only screen and (max-width: 576px) {
+    /* padding: 0;
+    padding-left: 2rem;
+    width: 100%; */
     padding: 0;
     padding-left: 2rem;
+    padding-right: 1.5rem;
     width: 100%;
   }
 `;
@@ -99,8 +106,30 @@ export const SearchContainer = styled("div")`
   @media only screen and (max-width: 576px) {
     flex: none;
     padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-right: 0rem;
     width: 70%;
+  }
+`;
+
+export const ClearInputDiv = styled("div")`
+  width: 1rem;
+`;
+
+export const ClearInput = styled("label")`
+  position: relative;
+  right: 1rem;
+  display: flex;
+  user-select: none;
+`;
+
+export const ClearIcon = styled(Clear)`
+  display: none;
+  @media only screen and (max-width: 576px) {
+    display: block;
+    cursor: pointer;
+    width: 0.9rem;
+    height: 0.9rem;
+    fill: ${({ theme }) => theme.colors.switch};
   }
 `;
 

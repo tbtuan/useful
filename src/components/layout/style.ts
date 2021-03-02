@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 import { Link } from "gatsby";
-import Github from "icons/Github.svg";
-import Edit from "icons/Edit.svg";
+import Github from "icons/github.svg";
+import Edit from "icons/edit.svg";
 
-import Code from "icons/Code.svg";
-import Terminal from "icons/Terminal.svg";
-import ExternalLinkAlt from "icons/ExternalLinkAlt.svg";
-import Cogs from "icons/Cogs.svg";
-import Keyboard from "icons/Keyboard.svg";
+import Code from "icons/code.svg";
+import Terminal from "icons/terminal.svg";
+import ExternalLinkAlt from "icons/externalLinkAlt.svg";
+import Cogs from "icons/cogs.svg";
+import Keyboard from "icons/keyboard.svg";
 
 const iconBase = css`
   width: 1rem;

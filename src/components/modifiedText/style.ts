@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Clock from "icons/Clock.svg";
+import Clock from "icons/clock.svg";
 
 export const StyledSmall = styled("small")`
   color: ${({ theme }) => theme.colors.small};

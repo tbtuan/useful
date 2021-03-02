@@ -8,7 +8,7 @@ import { ThemeSwitch } from "components/header/options/themeSwitch";
 
 import Search from "components/header/search";
 import Options from "components/header/options";
-import Logo from "icons/Logo.svg";
+import Logo from "icons/logo.svg";
 
 import {
   Div,

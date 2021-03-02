@@ -33,21 +33,24 @@ export const ListItem = styled("li")`
 `;
 
 export const NavLink = styled(Link)`
-  background-position: right bottom;
-  &:hover:not(.active) {
-    background: linear-gradient(
-      to left,
-      transparent 50%,
-      ${({ theme }) => theme.colors.navLink} 50%
-    );
-    filter: drop-shadow(
-      0px 4px 5px ${({ theme }) => theme.colors.navLinkShadow}
-    );
-    color: #fff !important;
-    background-size: 200% 100%;
-    background-position: left top;
-    transition: all 0.2s ease-in-out;
+  @media only screen and (min-width: 576px) {
+    background-position: right bottom;
+    &:hover:not(.active) {
+      background: linear-gradient(
+        to left,
+        transparent 50%,
+        ${({ theme }) => theme.colors.navLink} 50%
+      );
+      filter: drop-shadow(
+        0px 4px 5px ${({ theme }) => theme.colors.navLinkShadow}
+      );
+      color: #fff !important;
+      background-size: 200% 100%;
+      background-position: left top;
+      transition: all 0.2s ease-in-out;
+    }
   }
+
   &.active {
     background-color: ${({ theme }) => theme.colors.textLink};
     color: #fff !important;

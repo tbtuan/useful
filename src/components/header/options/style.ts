@@ -1,16 +1,26 @@
 import styled from "@emotion/styled";
-import Bars from "icons/Bars.svg";
+import Bars from "icons/bars.svg";
+import Close from "icons/close.svg";
 
 interface Props {
   show: boolean;
 }
+
+export const CloseIcon = styled(Close)`
+  cursor: pointer;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: ${({ theme }) => theme.colors.switch};
+  :hover {
+    opacity: 85%;
+  }
+`;
 
 export const BarsIcon = styled(Bars)`
   cursor: pointer;
   width: 1.25rem;
   height: 1.25rem;
   fill: ${({ theme }) => theme.colors.switch};
-  filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
   :hover {
     opacity: 85%;
   }

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import FaLink from "icons/FaLink.svg";
+import FaLink from "icons/faLink.svg";
 
 export const StyledFaLink = styled(FaLink)`
   width: 20px;
