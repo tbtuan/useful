@@ -4,11 +4,11 @@ import { Link } from "gatsby";
 import Github from "icons/github.svg";
 import Edit from "icons/edit.svg";
 
-import Code from "icons/code.svg";
-import Terminal from "icons/terminal.svg";
-import ExternalLinkAlt from "icons/externalLinkAlt.svg";
-import Cogs from "icons/cogs.svg";
-import Keyboard from "icons/keyboard.svg";
+import Languages from "icons/languages.svg";
+import Commands from "icons/commands.svg";
+import Links from "icons/links.svg";
+import Setups from "icons/setups.svg";
+import Shortcuts from "icons/shortcuts.svg";
 
 const iconBase = css`
   width: 1rem;
@@ -21,23 +21,23 @@ const iconBase = css`
   }
 `;
 
-export const TerminalIcon = styled(Terminal)`
+export const CommandsIcon = styled(Commands)`
   ${iconBase};
 `;
 
-export const ExternalLinkAltIcon = styled(ExternalLinkAlt)`
+export const LinksIcon = styled(Links)`
   ${iconBase};
 `;
 
-export const CodeIcon = styled(Code)`
+export const LanguagesIcon = styled(Languages)`
   ${iconBase};
 `;
 
-export const CogsIcon = styled(Cogs)`
+export const SetupsIcon = styled(Setups)`
   ${iconBase};
 `;
 
-export const KeyboardIcon = styled(Keyboard)`
+export const ShortcutsIcon = styled(Shortcuts)`
   ${iconBase};
 `;
 

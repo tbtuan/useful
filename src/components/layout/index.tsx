@@ -13,11 +13,11 @@ import Logo from "icons/logo.svg";
 import {
   Div,
   Content,
-  CodeIcon,
-  TerminalIcon,
-  KeyboardIcon,
-  CogsIcon,
-  ExternalLinkAltIcon,
+  LanguagesIcon,
+  CommandsIcon,
+  ShortcutsIcon,
+  SetupsIcon,
+  LinksIcon,
   ContentWrapper,
   ViewDiv,
   TitleWrapper,
@@ -64,19 +64,19 @@ const Layout = ({ children, data }: Props) => {
       </Header>
       <Sidebar>
         <NavLink text="Commands" path="/commands">
-          <TerminalIcon />
+          <CommandsIcon />
         </NavLink>
         <NavLink text="Languages" path="/lang">
-          <CodeIcon />
+          <LanguagesIcon />
         </NavLink>
         <NavLink text="Links" path="/links">
-          <ExternalLinkAltIcon />
+          <LinksIcon />
         </NavLink>
         <NavLink text="Setups" path="/setups">
-          <CogsIcon />
+          <SetupsIcon />
         </NavLink>
         <NavLink text="Shortcuts" path="/shortcuts">
-          <KeyboardIcon />
+          <ShortcutsIcon />
         </NavLink>
       </Sidebar>
       <ContentWrapper>

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import AngleRight from "icons/angleRight.svg";
+import AngleRight from "icons/angle-right.svg";
 
 import { Link } from "gatsby";
 
