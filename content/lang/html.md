@@ -2,7 +2,7 @@
 title: 'HTML'
 description: 'Resources for HTML'
 date: 2020-12-21
-tags: ["general", "web-development"]
+tags: ["html", "web-development"]
 ---
 
 ## Resources

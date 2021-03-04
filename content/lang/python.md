@@ -2,7 +2,7 @@
 title: 'Python'
 description: 'Python'
 date: 2020-12-23
-tags: ["general"]
+tags: ["python"]
 ---
 
 ## Resources

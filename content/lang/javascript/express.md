@@ -2,7 +2,7 @@
 title: 'Express'
 description: 'Javascript - Express'
 date: 2021-01-29
-tags: ["backend", "web-development"]
+tags: ["javascript", "backend", "web-development"]
 ---
 
 ## Resources

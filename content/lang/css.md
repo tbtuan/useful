@@ -2,7 +2,7 @@
 title: 'CSS'
 description: 'CSS Resources and tricks'
 date: 2021-02-08
-tags: ["web-development", "styling"]
+tags: ["css", "styling"]
 ---
 
 ## Resources

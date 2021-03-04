@@ -9,6 +9,7 @@ date: 2021-02-20
 ## Structure of a markdown
 
 ```text
+Tags are mandatory
 
 ---
 title: "ReactJS"

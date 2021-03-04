@@ -2,7 +2,7 @@
 title: 'Javascript'
 description: 'Javascript'
 date: 2021-01-28
-tags: ["web-development", "backend"]
+tags: ["javascript", "web-development"]
 ---
 
 ## Resources

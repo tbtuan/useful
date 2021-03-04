@@ -2,6 +2,7 @@
 title: 'Library'
 description: 'Javascript - Library'
 date: 2020-06-30
+tags: ["javascript"]
 ---
 
 ## dotenv

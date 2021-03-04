@@ -2,7 +2,7 @@
 title: 'NodeJS'
 description: 'NodeJS'
 date: 2021-02-09
-tags: ["web-development", "backend"]
+tags: ["javascript", "web-development", "backend"]
 ---
 
 <cc col="2">

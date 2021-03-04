@@ -2,7 +2,7 @@
 title: 'Java'
 description: 'Java'
 date: 2021-02-02
-tags: ["general"]
+tags: ["java"]
 ---
 
 ## Resources
