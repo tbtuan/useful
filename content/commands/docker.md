@@ -2,12 +2,12 @@
 title: "Docker"
 description: "Docker commands"
 date: 2021-03-04
-tags: ["docker", "commands"]
+tags: ["docker"]
 ---
 
 ## Related
 
-- [Docker (Setup)](/content/setups/docker)
+- [Docker (Setup)](/setups/docker)
 
 ## Resources
 

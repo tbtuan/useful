@@ -2,7 +2,7 @@
 title: "grep"
 description: "grep commands"
 date: 2021-02-15
-tags: ["commands"]
+tags: ["grep"]
 ---
 
 ## grep

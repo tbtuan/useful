@@ -2,7 +2,7 @@
 title: "npm"
 description: "npm commands"
 date: 2021-02-15
-tags: ["commands"]
+tags: ["npm"]
 ---
 
 ## npm

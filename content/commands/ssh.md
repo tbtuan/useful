@@ -2,7 +2,7 @@
 title: "ssh"
 description: "ssh commands"
 date: 2021-01-29
-tags: ["commands"]
+tags: ["ssh"]
 ---
 
 ## ssh

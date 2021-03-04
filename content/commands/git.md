@@ -2,7 +2,7 @@
 title: "Git"
 description: "Git commands"
 date: 2021-02-15
-tags: ["commands"]
+tags: ["git"]
 ---
 
 

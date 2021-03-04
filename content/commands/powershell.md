@@ -2,7 +2,7 @@
 title: "Powershell and CMD"
 description: "Commands for Powershell"
 date: 2021-01-29
-tags: ["commands"]
+tags: ["powershell"]
 ---
 
 Powershell and CMD

@@ -2,7 +2,7 @@
 title: "Bash"
 description: "Bash commands and awesome-shell"
 date: 2021-02-15
-tags: ["commands"]
+tags: ["bash"]
 ---
 
 ## General
