@@ -2,6 +2,7 @@ import { graphql } from "gatsby";
 import React, { useContext } from "react";
 import Seo from "components/seo";
 import { SiteContext } from "providers/siteContext";
+import { ThemeSwitch } from "components/header/options/themeSwitch";
 
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
@@ -12,9 +13,11 @@ import {
   StyledLabel,
   StyledInput,
   HeadingWrapper,
+  SwtichWrapper,
   StyledContainer,
   StyledHeading2,
   Li,
+  StyledLink,
 } from "./style";
 
 import { StyledHeading, ContentWrapper } from "../style";
@@ -70,6 +73,15 @@ const Settings = ({
         <Main>
           <StyledDiv>
             <HeadingWrapper>
+              <StyledHeading2>Page</StyledHeading2>
+            </HeadingWrapper>
+            <span>
+              <span>Light/dark mode</span>
+              <SwtichWrapper>
+                <ThemeSwitch />
+              </SwtichWrapper>
+            </span>
+            <HeadingWrapper>
               <StyledHeading2>Filter</StyledHeading2>
             </HeadingWrapper>
             <StyledContainer>
@@ -88,6 +100,7 @@ const Settings = ({
                 </Li>
               ))}
             </StyledContainer>
+            <StyledLink onClick={() => window.history.back()}>Back</StyledLink>
           </StyledDiv>
         </Main>
       </ContentWrapper>

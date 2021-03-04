@@ -26,11 +26,9 @@ const Section = ({
 }: Props) => {
   const siteContext = useContext(SiteContext);
 
-  const filtered =
-    tags?.filter((tag) => siteContext.filter?.includes(tag)).length > 0 &&
-    tags.length > 0;
+  const filteredTags = tags.filter((tag) => !siteContext.filter?.includes(tag));
 
-  if (filtered) {
+  if (filteredTags.length == 0) {
     return null;
   }
   return (
@@ -56,7 +54,7 @@ const Section = ({
       </StyledContainer>
       <TagContainer>
         <TagList>
-          {tags?.map((tag) => (
+          {filteredTags?.map((tag) => (
             <Tag key={title && tag}>#{tag}</Tag>
           ))}
         </TagList>

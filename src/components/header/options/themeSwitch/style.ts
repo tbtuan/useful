@@ -4,6 +4,8 @@ import Adjust from "icons/adjust.svg";
 export const Switch = styled("label")`
   display: flex;
   user-select: none;
+  position: absolute;
+  top: -1.05rem;
 `;
 
 export const AdjustIcon = styled(Adjust)`

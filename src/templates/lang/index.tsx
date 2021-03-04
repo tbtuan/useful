@@ -36,14 +36,12 @@ const Collection = ({
             concat(
               item.items.flatMap((item) => item.tags),
               item.tags
-            ).filter((tag) => tag !== null)
+            )
+              .filter((tag) => tag !== null)
+              .filter((tag) => !siteContext.filter?.includes(tag))
           );
 
-          const filtered =
-            tags?.filter((tag) => siteContext.filter?.includes(tag)).length >
-              0 && tags.length > 0;
-
-          if (filtered) {
+          if (tags.length == 0) {
             return null;
           }
           return (

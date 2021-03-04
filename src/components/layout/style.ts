@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { Link } from "gatsby";
 import Github from "icons/github.svg";
 import Edit from "icons/edit.svg";
+import Cog from "icons/cog.svg";
 
 import Languages from "icons/languages.svg";
 import Commands from "icons/commands.svg";
@@ -152,6 +153,24 @@ export const EditButton = styled("a")`
   }
   display: flex;
   align-items: center;
+`;
+
+export const CogIcon = styled(Cog)`
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  fill: ${({ theme }) => theme.colors.switch};
+
+  cursor: pointer;
+  :hover {
+    opacity: 85%;
+  }
+`;
+
+export const StyledIconLink = styled(Link)`
+  height: 1.25rem;
+  filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
 `;
 
 export const GithubLink = styled("a")`

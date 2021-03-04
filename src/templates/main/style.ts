@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import Cog from "icons/cog.svg";
 import { Link } from "gatsby";
 
 export const StyledDiv = styled("div")`
@@ -12,14 +11,6 @@ export const TitleWrapper = styled("div")`
   @media only screen and (max-width: 1023px) {
     width: auto;
   }
-`;
-
-export const CogIcon = styled(Cog)`
-  fill: #76828c;
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-left: 0.2rem;
-  margin-right: 0.2rem;
 `;
 
 export const Main = styled("main")`
@@ -39,18 +30,6 @@ export const Main = styled("main")`
 
   @media only screen and (max-width: 576px) {
     display: block;
-  }
-`;
-
-export const StyledIconLink = styled(Link)`
-  margin-left: 2rem;
-  margin-top: 1rem;
-  svg {
-    fill: ${(props) => props.theme.colors.text};
-
-    :hover {
-      fill: ${(props) => props.theme.colors.textLink};
-    }
   }
 `;
 

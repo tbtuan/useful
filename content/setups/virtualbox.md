@@ -1,7 +1,7 @@
 ---
-title: 'Virtualbox'
+title: 'VirtualBox'
 description: 'Virtual machine'
-date: 2020-03-04
+date: 2021-03-04
 tags: ["virtual-machine"]
 ---
 

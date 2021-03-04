@@ -26,6 +26,8 @@ import {
   EditIcon,
   GithubIcon,
   GithubLink,
+  StyledIconLink,
+  CogIcon,
 } from "./style";
 
 interface Props {
@@ -54,7 +56,9 @@ const Layout = ({ children, data }: Props) => {
             <GithubLink href={githubUrl}>
               <GithubIcon />
             </GithubLink>
-            <ThemeSwitch />
+            <StyledIconLink to="/settings">
+              <CogIcon />
+            </StyledIconLink>
             <EditButton href={docsLocation + relativePath}>
               <EditIcon />
               Edit

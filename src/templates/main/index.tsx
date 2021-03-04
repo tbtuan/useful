@@ -7,15 +7,7 @@ import ModifiedAt from "components/modifiedAt";
 import Featured from "components/featured";
 import { SiteContext } from "providers/siteContext";
 
-import {
-  TitleWrapper,
-  Main,
-  CogIcon,
-  StyledIconLink,
-  StyledLink,
-  StyledA,
-  Li,
-} from "./style";
+import { TitleWrapper, Main, StyledLink, StyledA, Li } from "./style";
 
 import { StyledHeading, ContentWrapper } from "../style";
 
@@ -47,9 +39,6 @@ const Index = ({
       <Seo metaTitle={title} metaDescription={description} />
       <TitleWrapper>
         <StyledHeading>{title}</StyledHeading>
-        <StyledIconLink to="/settings">
-          <CogIcon />
-        </StyledIconLink>
         <MDXRenderer>{body}</MDXRenderer>
       </TitleWrapper>
       <ContentWrapper>

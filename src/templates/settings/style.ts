@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "gatsby";
 
 export const TitleWrapper = styled("div")`
   color: ${(props) => props.theme.colors.text};
@@ -12,6 +13,18 @@ export const Main = styled("main")`
   @media only screen and (max-width: 1023px) {
     max-width: 100%;
   }
+`;
+
+export const StyledLink = styled("a")`
+  color: ${(props) => props.theme.colors.textLink} !important;
+  text-decoration: none;
+  cursor: pointer;
+
+  :hover {
+    text-decoration: underline;
+  }
+
+  float: right;
 `;
 
 export const Ul = styled("ul")`
@@ -28,7 +41,13 @@ export const Li = styled("li")`
 export const HeadingWrapper = styled("div")`
   position: relative;
   margin: 0;
-  height: 3.75rem;
+`;
+
+export const SwtichWrapper = styled("div")`
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  position: relative;
 `;
 
 export const StyledHeading = styled("h2")`
@@ -41,7 +60,7 @@ export const StyledDiv = styled("div")`
 `;
 
 export const StyledContainer = styled("div")`
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   overflow-y: auto;
   max-height: 15rem;
   padding-right: 1rem;
