@@ -6,7 +6,7 @@ tags: ["commands"]
 ---
 
 
-## Git
+## Resources
 
 - [Git Documentation](https://git-scm.com/docs)
 
