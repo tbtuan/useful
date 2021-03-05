@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink, IconWrapper, ListItem, TextWrapper } from "./style";
 
 interface Props {

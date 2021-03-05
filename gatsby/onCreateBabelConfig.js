@@ -5,6 +5,12 @@ module.exports = ({ actions }) => {
       sourceMap: true,
     },
   });
+  actions.setBabelPlugin({
+    name: "@babel/plugin-transform-react-jsx",
+    options: {
+      runtime: "automatic",
+    },
+  });
   actions.setBabelPreset({
     name: `babel-preset-gatsby`,
     options: {

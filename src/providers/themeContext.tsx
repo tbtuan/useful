@@ -2,7 +2,6 @@ import { useState, createContext } from "react";
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import { lightTheme, darkTheme } from "theme";
 import { storeItem, getItemFromStorage } from "utils/localStorage";
-import React from "react";
 
 interface Context {
   isDarkThemeActive: boolean;

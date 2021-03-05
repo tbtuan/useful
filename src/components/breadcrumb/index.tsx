@@ -1,4 +1,3 @@
-import React from "react";
 import { Nav, BreadcrumbLink, AngleRightIcon } from "./style";
 
 interface Crumb {

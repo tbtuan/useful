@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import React, { useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { SiteContext } from "providers/siteContext";
 import Seo from "components/seo";
 

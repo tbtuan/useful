@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledSidebar, Nav, Ul } from "./style";
 
 interface Props {

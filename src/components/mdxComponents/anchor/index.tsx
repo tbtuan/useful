@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { StyledAnchor } from "./style";
 import { SiteContext } from "providers/siteContext";
 import { navigate } from "gatsby";

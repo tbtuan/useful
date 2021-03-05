@@ -1,4 +1,3 @@
-import React from "react";
 import { ModifiedAt, ModifiedAtTitle, Li, Span, StyledLink } from "./style";
 import { dateDifference } from "utils/date";
 

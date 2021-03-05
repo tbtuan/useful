@@ -1,10 +1,6 @@
-import React from "react";
-
 import Header from "components/header";
 import Sidebar from "components/sidebar";
 import NavLink from "components/sidebar/navLink";
-
-import { ThemeSwitch } from "components/header/options/themeSwitch";
 
 import Search from "components/header/search";
 import Options from "components/header/options";

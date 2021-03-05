@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
 
 // Based on https://janosh.dev/blog/react-hooks-masonry

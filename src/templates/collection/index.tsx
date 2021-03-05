@@ -1,5 +1,4 @@
 import { graphql } from "gatsby";
-import React from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { StyledHeading, TitleWrapper, Padding } from "../style";

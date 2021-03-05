@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledSmall, ClockIcon } from "./style";
 import { zuluDateToString } from "utils/date";
 

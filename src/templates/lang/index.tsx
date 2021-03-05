@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { calculateTreeData } from "utils/nestedTree";
 

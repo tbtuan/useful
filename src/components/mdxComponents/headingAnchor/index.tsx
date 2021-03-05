@@ -1,4 +1,3 @@
-import React from "react";
 import { stringToSlug } from "utils/slugify";
 
 import { Link } from "gatsby";

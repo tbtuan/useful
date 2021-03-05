@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Link } from "gatsby";
 import { TableOfContents, TOCTitle, Li } from "./style";
 import { useObserver } from "hooks/useObserver";

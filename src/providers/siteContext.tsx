@@ -1,7 +1,5 @@
 import { useState, useEffect, createContext } from "react";
 import { storeItem, getItemFromStorage } from "utils/localStorage";
-import React from "react";
-
 interface Context {
   includeTags: (text: string) => void;
   excludeTags: (text: string) => void;
