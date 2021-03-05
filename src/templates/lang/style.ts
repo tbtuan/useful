@@ -4,6 +4,10 @@ import styled from "@emotion/styled";
 export const StyledLink = styled(Link)`
   color: ${(props) => props.theme.colors.textLink} !important;
   text-decoration: none;
+
+  :hover {
+    text-decoration: underline;
+  }
 `;
 
 export const Ul = styled("ul")`

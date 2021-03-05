@@ -13,10 +13,13 @@ export const lightTheme = {
     navLink: "rgb(59, 69, 78)",
     activeNavLinkShadow: "rgba(247, 119, 35, 0.5)",
     navLinkShadow: "rgba(59, 69, 78, 0.5)",
+    // Theme switch
+    switch: "#f77723",
+    switchbg: "#e6e6e6",
     // Header
     seperator: "#e6ecf1",
-    switch: "#3B454E",
-    switchShadow: "rgba(59, 69, 78, 0.5)",
+    options: "#3B454E",
+    optionsShadow: "rgba(59, 69, 78, 0.5)",
     editButtonText: "#fff",
     editButton: "#f77723",
     editButtonShadow: "rgba(247, 119, 35, 0.5)",
@@ -54,10 +57,13 @@ export const darkTheme = {
     navLink: "#39426A",
     activeNavLinkShadow: "rgba(50, 161, 228, 0.3)",
     navLinkShadow: "rgba(37, 46, 86, 0.8)",
+    // Theme switch
+    switch: "#2a93d2",
+    switchbg: "#353a60",
     // Header
     seperator: "#1F2230",
-    switch: "#ececec",
-    switchShadow: "rgba(179, 171, 172, 0.3)",
+    options: "#ececec",
+    optionsShadow: "rgba(179, 171, 172, 0.3)",
     editButtonText: "#fff",
     editButton: "#2A93D2",
     editButtonShadow: "rgba(42, 147, 210, 0.3)",

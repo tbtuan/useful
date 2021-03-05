@@ -160,17 +160,23 @@ export const CogIcon = styled(Cog)`
   height: 1.2rem;
   margin-left: 0.2rem;
   margin-right: 0.2rem;
-  fill: ${({ theme }) => theme.colors.switch};
+  fill: ${({ theme }) => theme.colors.options};
 
   cursor: pointer;
   :hover {
     opacity: 85%;
+    animation: spin 6s linear infinite;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
   }
 `;
 
 export const StyledIconLink = styled(Link)`
   height: 1.25rem;
-  filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
+  filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.optionsShadow});
 `;
 
 export const GithubLink = styled("a")`
@@ -184,8 +190,8 @@ export const GithubLink = styled("a")`
 
 export const GithubIcon = styled(Github)`
   height: 1.25rem;
-  color: ${({ theme }) => theme.colors.switch};
-  filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.switchShadow});
+  color: ${({ theme }) => theme.colors.options};
+  filter: drop-shadow(0px 4px 5px ${({ theme }) => theme.colors.optionsShadow});
   cursor: pointer;
   :hover {
     opacity: 85%;

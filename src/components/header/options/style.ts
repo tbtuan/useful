@@ -10,7 +10,7 @@ export const CloseIcon = styled(Close)`
   cursor: pointer;
   width: 1.25rem;
   height: 1.25rem;
-  fill: ${({ theme }) => theme.colors.switch};
+  fill: ${({ theme }) => theme.colors.options};
   :hover {
     opacity: 85%;
   }
@@ -20,7 +20,7 @@ export const BarsIcon = styled(Bars)`
   cursor: pointer;
   width: 1.25rem;
   height: 1.25rem;
-  fill: ${({ theme }) => theme.colors.switch};
+  fill: ${({ theme }) => theme.colors.options};
   :hover {
     opacity: 85%;
   }

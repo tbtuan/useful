@@ -14,9 +14,13 @@ interface Color {
   navLink: string;
   activeNavLinkShadow: string;
   navLinkShadow: string;
+  // Theme switch
+  switch: string;
+  switchbg: string;
   // Header
   seperator: string;
-  switch: string;
+  options: string;
+  optionsbg: string;
   switchShadow: string;
   editButtonText: string;
   editButton: string;

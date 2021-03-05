@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { Link } from "gatsby";
 
 export const TitleWrapper = styled("div")`
   color: ${(props) => props.theme.colors.text};

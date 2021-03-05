@@ -129,7 +129,7 @@ export const ClearIcon = styled(Clear)`
     cursor: pointer;
     width: 0.9rem;
     height: 0.9rem;
-    fill: ${({ theme }) => theme.colors.switch};
+    fill: ${({ theme }) => theme.colors.options};
   }
 `;
 
