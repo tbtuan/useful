@@ -1,9 +1,14 @@
 ---
 title: 'HTML'
 description: 'Resources for HTML'
-date: 2020-12-21
+date: 2020-03-06
 tags: ["html"]
 ---
+
+## Related
+
+- [Javascript](/lang/javascript)
+- [CSS](/lang/css)
 
 ## Resources
 

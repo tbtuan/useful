@@ -5,6 +5,10 @@ date: 2021-01-28
 tags: ["javascript", "web-development"]
 ---
 
+## Related
+
+- [HTML](/lang/html)
+- [CSS](/lang/css)
 ## Resources
 
 - [awesome-javascript](https://github.com/sorrycc/awesome-javascript)

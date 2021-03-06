@@ -7,7 +7,7 @@ tags: ["css", "styling"]
 
 ## Related
 
-- [Bootstrap](/lang/bootstrap)
+- [Bootstrap](/lang/css/bootstrap)
 - [Sass](/lang/sass)
 ## Resources
 
