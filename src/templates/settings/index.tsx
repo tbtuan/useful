@@ -10,7 +10,8 @@ import {
   TitleWrapper,
   Main,
   StyledDiv,
-  StyledLabel,
+  CheckboxContainer,
+  Checkbox,
   StyledInput,
   HeadingWrapper,
   SwtichWrapper,
@@ -55,6 +56,15 @@ const Settings = ({
     }
   };
 
+  const handleClick = (item) => {
+    console.log(item);
+    if (item.checked) {
+      siteContext.includeTags(item.name);
+    } else {
+      siteContext.excludeTags(item.name);
+    }
+  };
+
   const tags = pageContext.tags.map((item) => {
     return {
       name: item,
@@ -87,16 +97,17 @@ const Settings = ({
             <StyledContainer>
               {tags?.map((item, index) => (
                 <Li key={item.name + index.toString()}>
-                  <StyledLabel>
+                  <CheckboxContainer>
                     <StyledInput
+                      id={"check-" + item.name}
                       type="checkbox"
                       name="checkbox"
                       value={item.name}
                       defaultChecked={item.checked}
                       onChange={(e) => handleChange(e, item.name)}
                     ></StyledInput>
-                    {item.name}
-                  </StyledLabel>
+                    <label htmlFor={"check-" + item.name}>{item.name}</label>
+                  </CheckboxContainer>
                 </Li>
               ))}
             </StyledContainer>

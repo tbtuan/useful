@@ -16,6 +16,12 @@ export const lightTheme = {
     // Theme switch
     switch: "#f77723",
     switchbg: "#e6e6e6",
+    // Checkbox
+    checkbox: "#f77723",
+    checkboxUnselected: "#E6E6E6",
+    checkboxHover: "#d5d5d5",
+    checkboxSelectedHover: "#e66612",
+    checkboxbg: "#e6e6e6",
     // Header
     seperator: "#e6ecf1",
     options: "#3B454E",
@@ -57,6 +63,12 @@ export const darkTheme = {
     navLink: "#39426A",
     activeNavLinkShadow: "rgba(50, 161, 228, 0.3)",
     navLinkShadow: "rgba(37, 46, 86, 0.8)",
+    // Checkbox
+    checkbox: "#2a93d2",
+    checkboxUnselected: "#353a60",
+    checkboxHover: "#464b71",
+    checkboxSelectedHover: "#0871b0",
+    checkboxbg: "#353a60",
     // Theme switch
     switch: "#2a93d2",
     switchbg: "#353a60",

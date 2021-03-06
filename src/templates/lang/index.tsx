@@ -50,14 +50,20 @@ const Collection = ({
               title={item.title}
               tags={tags}
             >
-              <Li key={item.url + index.toString() + "Index"}>
-                <StyledLink to={item.url}>Index</StyledLink>
-              </Li>
-              {item.items.map((innerItem, index) => (
-                <Li key={innerItem.url + index.toString()}>
-                  <StyledLink to={innerItem.url}>{innerItem.title}</StyledLink>
+              {item.tags.some((element) => tags.includes(element)) ? (
+                <Li key={item.url + index.toString() + "Index"}>
+                  <StyledLink to={item.url}>Index</StyledLink>
                 </Li>
-              ))}
+              ) : null}
+              {item.items.map((innerItem, index) =>
+                innerItem.tags.some((element) => tags.includes(element)) ? (
+                  <Li key={innerItem.url + index.toString()}>
+                    <StyledLink to={innerItem.url}>
+                      {innerItem.title}
+                    </StyledLink>
+                  </Li>
+                ) : null
+              )}
             </Card>
           );
         })}

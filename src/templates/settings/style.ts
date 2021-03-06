@@ -83,10 +83,62 @@ export const StyledHeading2 = styled("h2")`
   margin-top: 3rem;
 `;
 
-export const StyledLabel = styled("label")`
+export const CheckboxContainer = styled("div")`
   user-select: none;
 `;
 
 export const StyledInput = styled("input")`
-  margin-right: 1rem;
+  position: absolute;
+  opacity: 0;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  & + label:before {
+    content: "";
+    margin-right: 10px;
+    margin-top: 2px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.1rem;
+    background: ${({ theme }) => theme.colors.checkboxUnselected};
+  }
+
+  &:hover + label:before {
+    background: ${({ theme }) => theme.colors.checkboxHover};
+  }
+  &:checked + label:before {
+    background: ${({ theme }) => theme.colors.checkbox};
+  }
+
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+      4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+
+  &:hover&:checked + label:before {
+    background: ${({ theme }) => theme.colors.checkboxSelectedHover};
+  }
 `;

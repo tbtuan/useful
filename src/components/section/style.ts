@@ -86,6 +86,7 @@ export const Tag = styled("span")`
   margin-right: 0.5rem;
   background-color: ${({ theme }) => theme.colors.tag};
   border-radius: 1rem;
+  user-select: none;
 `;
 
 export const TagList = styled("ol")`

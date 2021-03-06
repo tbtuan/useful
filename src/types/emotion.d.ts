@@ -17,6 +17,12 @@ interface Color {
   // Theme switch
   switch: string;
   switchbg: string;
+  // Checkbox
+  checkbox: string;
+  checkboxUnselected: string;
+  checkboxHover: string;
+  checkboxSelectedHover: string;
+  checkboxbg: string;
   // Header
   seperator: string;
   options: string;
