@@ -127,7 +127,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
                 }
                 return true;
               })
-              .sort((a, b) => a.slug.length < b.slug.length),
+              .sort((a, b) => a.slug.length - b.slug.length),
           },
         });
         break;

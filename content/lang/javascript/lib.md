@@ -5,6 +5,9 @@ date: 2020-06-30
 tags: ["javascript"]
 ---
 
+## Related
+
+- [Javascript](/lang/javascript)
 ## dotenv
 
 ```js
