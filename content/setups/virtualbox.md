@@ -7,7 +7,7 @@ tags: ["virtual-machine"]
 
 ## Resources
 
--[Documentation](https://docs.oracle.com/en/virtualization/virtualbox/)
+- [Documentation](https://docs.oracle.com/en/virtualization/virtualbox/)
 
 ## Increase image size (Linux)
 

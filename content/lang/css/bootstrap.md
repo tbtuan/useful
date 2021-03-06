@@ -1,8 +1,15 @@
 ---
 title: 'Bootstrap'
 description: 'CSS - Bootstrap'
-date: 2020-06-30
+date: 2021-03-06
 tags: ["css", "styling"]
 ---
 
-## Resources
+## Related
+
+- [Bootstrap](/lang/bootstrap)
+- [css](/lang/css)
+
+## Resource
+
+- [Documentation](https://getbootstrap.com/docs/)

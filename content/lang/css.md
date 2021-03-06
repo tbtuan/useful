@@ -1,10 +1,14 @@
 ---
 title: 'CSS'
 description: 'CSS Resources and tricks'
-date: 2021-02-08
+date: 2021-03-06
 tags: ["css", "styling"]
 ---
 
+## Related
+
+- [Bootstrap](/lang/bootstrap)
+- [Sass](/lang/sass)
 ## Resources
 
 - [cssreference.io](https://cssreference.io/)

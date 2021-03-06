@@ -1,8 +1,10 @@
 ---
 title: 'Sass'
 description: 'CSS - Sass'
-date: 2020-06-30
+date: 2021-06-30
 tags: ["sass", "styling"]
 ---
 
-## Resources
+## Related
+
+- [css](/lang/css)

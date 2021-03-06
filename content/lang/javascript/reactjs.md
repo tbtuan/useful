@@ -5,6 +5,10 @@ date: 2021-01-29
 tags: ["javascript", "web-development", "frontend"]
 ---
 
+## Related
+
+- [Javascript](/lang/javascript)
+
 <cc col="2">
 
 <div>
