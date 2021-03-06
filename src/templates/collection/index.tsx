@@ -71,7 +71,7 @@ export const pageQuery = graphql`
         date
       }
     }
-    allMdx(filter: { slug: { regex: $slugRegex } }) {
+    allMdx(filter: { slug: { regex: $slugRegex } }, sort: { fields: slug }) {
       edges {
         node {
           frontmatter {

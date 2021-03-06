@@ -57,7 +57,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
       tags.push(node.frontmatter.tags);
     }
   });
-  tags = [...new Set([].concat.apply([], tags))];
+  tags = [...new Set([].concat.apply([], tags))].sort();
 
   // Create blog posts pages.
   result.data.allMdx.edges.forEach(({ node }) => {
@@ -112,20 +112,22 @@ module.exports = async ({ graphql, actions, reporter }) => {
           component: resolve("./src/templates/default/index.tsx"),
           context: {
             id: node.fields.id,
-            crumbs: crumbs.filter((crumb) => {
-              // Returns an array of crumbs according to the current slug
-              // crumbs array is sorted
-              if (crumb.slug === "/") {
-                return false;
-              }
-              const crumbParts = crumb.slug.split("/");
-              for (const crumbPart of crumbParts) {
-                if (slugArr.indexOf(crumbPart) === -1) {
+            crumbs: crumbs
+              .filter((crumb) => {
+                // Returns an array of crumbs according to the current slug
+                // crumbs array is sorted
+                if (crumb.slug === "/") {
                   return false;
                 }
-              }
-              return true;
-            }),
+                const crumbParts = crumb.slug.split("/");
+                for (const crumbPart of crumbParts) {
+                  if (slugArr.indexOf(crumbPart) === -1) {
+                    return false;
+                  }
+                }
+                return true;
+              })
+              .sort((a, b) => a.slug.length < b.slug.length),
           },
         });
         break;

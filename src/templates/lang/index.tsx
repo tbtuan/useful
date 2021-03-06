@@ -113,7 +113,7 @@ export const pageQuery = graphql`
         date
       }
     }
-    allMdx(filter: { slug: { regex: "/lang//" } }) {
+    allMdx(filter: { slug: { regex: "/lang//" } }, sort: { fields: slug }) {
       edges {
         node {
           frontmatter {
