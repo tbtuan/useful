@@ -39,7 +39,7 @@ const Collection = ({
             )
               .filter((tag) => tag !== null)
               .filter((tag) => !siteContext.filter?.includes(tag))
-          );
+          ).sort();
 
           if (tags.length == 0) {
             return null;

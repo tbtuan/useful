@@ -26,7 +26,9 @@ const Section = ({
 }: Props) => {
   const siteContext = useContext(SiteContext);
 
-  const filteredTags = tags.filter((tag) => !siteContext.filter?.includes(tag));
+  const filteredTags = tags
+    .filter((tag) => !siteContext.filter?.includes(tag))
+    .sort();
 
   if (filteredTags.length == 0) {
     return null;
