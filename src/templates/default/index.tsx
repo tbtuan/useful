@@ -62,7 +62,11 @@ const Index = ({
       <Seo metaTitle={title} metaDescription={description} />
       <TitleWrapper>
         {pageContext?.crumbs?.length > 1 && (
-          <Breadcrumb crumbs={pageContext?.crumbs} />
+          <Breadcrumb
+            crumbs={pageContext?.crumbs.sort(
+              (a, b) => a.slug.length - b.slug.length
+            )}
+          />
         )}
         <StyledHeading>{title}</StyledHeading>
         {date && <ModifiedText modifiedTime={date} />}
