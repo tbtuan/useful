@@ -5,8 +5,6 @@ date: 2020-12-02
 tags: ["python", "machine-learning"]
 ---
 
-## Cheatsheet
+## Related
 
-[Python Cheatsheet](https://www.pythoncheatsheet.org/)
-
-[Python Crash Course](https://github.com/ehmatthes/pcc)
+- [Machine learning](/links/machine-learning)

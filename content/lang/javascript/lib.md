@@ -1,7 +1,7 @@
 ---
-title: 'Library'
-description: 'Javascript - Library'
-date: 2020-06-30
+title: 'Libraries'
+description: 'Javascript - Libraries'
+date: 2020-03-07
 tags: ["javascript"]
 ---
 
@@ -27,7 +27,9 @@ tags: ["javascript"]
 // TODO
 ```
 
-## Mongoose
+## MongoDB
+
+- [Documentation](https://docs.mongodb.com/drivers/node/)
 
 ```js
 // TODO

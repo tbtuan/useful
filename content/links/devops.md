@@ -13,6 +13,7 @@ tags: ["devops"]
 
 - [Docker](https://docs.docker.com/reference/)
 - [Kubernetes](https://kubernetes.io/docs/reference/kubernetes-api/)
+- [Ansible](https://docs.ansible.com/)
 
 </div>
 

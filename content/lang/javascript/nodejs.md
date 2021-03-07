@@ -9,6 +9,10 @@ tags: ["javascript", "web-development", "backend"]
 
 - [Javascript](/lang/javascript)
 
+## Resources
+
+- [Documentation](https://nodejs.org/en/docs)
+
 <cc col="2">
 
 <div>
@@ -65,6 +69,7 @@ tags: ["javascript", "web-development", "backend"]
 ### Testing
 
 - [Jest](https://jestjs.io/docs/en/getting-started)
+- [Cypress](https://docs.cypress.io/)
 
 </div>
 

@@ -5,6 +5,13 @@ date: 2020-03-04
 tags: ["devops"]
 ---
 
+
+## Related
+
+- [Devops](/links/devops)
+## Resources
+
+- [Docker Hub](https://hub.docker.com/)
 ## VM Setup
 
 https://docs.docker.com/engine/install/ubuntu/

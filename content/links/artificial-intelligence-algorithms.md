@@ -7,7 +7,7 @@ tags: ["artificial-intelligence", "algorithm", "data-structure"]
 
 <div>
 
-## Related topics
+## Related
 
 - [Machine learning](/links/machine-learning)
 

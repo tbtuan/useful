@@ -7,7 +7,7 @@ tags: ["machine-learning"]
 
 <div>
 
-## Related topics
+## Related
 
 - [Artificial intelligence and algorithms](/links/artificial-intelligence-algorithms)
 
@@ -56,6 +56,10 @@ tags: ["machine-learning"]
 - [VAE](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73)
 - [GAN](https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29)
 - [Flow-based Deep Generative Models](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html)
+
+## Object detection
+
+- [R-CNN, Fast R-CNN, Faster R-CNN, YOLO](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e)
 
 </div>
 
