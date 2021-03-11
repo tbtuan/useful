@@ -15,7 +15,7 @@
 
 ### How to contibute
 
-- [Guideline](https://github.com/tbtuan/useful/contibuting.md)
+- [Guideline](https://github.com/tbtuan/useful/blob/master/contributing.md)
 
 ### Markdown & Features
 
