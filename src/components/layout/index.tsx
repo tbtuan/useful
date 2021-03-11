@@ -12,7 +12,7 @@ import {
   LanguagesIcon,
   CommandsIcon,
   ShortcutsIcon,
-  SetupsIcon,
+  CollectionsIcon,
   LinksIcon,
   ContentWrapper,
   ViewDiv,
@@ -72,8 +72,8 @@ const Layout = ({ children, data }: Props) => {
         <NavLink text="Links" path="/links">
           <LinksIcon />
         </NavLink>
-        <NavLink text="Setups" path="/setups">
-          <SetupsIcon />
+        <NavLink text="Collections" path="/collections">
+          <CollectionsIcon />
         </NavLink>
         <NavLink text="Shortcuts" path="/shortcuts">
           <ShortcutsIcon />

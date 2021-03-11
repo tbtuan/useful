@@ -7,7 +7,7 @@ tags: ["docker"]
 
 ## Related
 
-- [Docker (Setup)](/setups/docker)
+- [Docker (Setup)](/collections/docker)
 
 ## Resources
 

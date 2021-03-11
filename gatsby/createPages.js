@@ -91,7 +91,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
         });
         break;
       case "/commands":
-      case "/setups":
+      case "/collections":
       case "/links":
       case "/shortcuts":
         createPage({

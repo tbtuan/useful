@@ -8,7 +8,7 @@ import Cog from "icons/cog.svg";
 import Languages from "icons/languages.svg";
 import Commands from "icons/commands.svg";
 import Links from "icons/links.svg";
-import Setups from "icons/setups.svg";
+import Collections from "icons/collections.svg";
 import Shortcuts from "icons/shortcuts.svg";
 
 const iconBase = css`
@@ -34,7 +34,7 @@ export const LanguagesIcon = styled(Languages)`
   ${iconBase};
 `;
 
-export const SetupsIcon = styled(Setups)`
+export const CollectionsIcon = styled(Collections)`
   ${iconBase};
 `;
 
