@@ -12,6 +12,17 @@ tags: ["devops"]
 ## Resources
 
 - [Docker Hub](https://hub.docker.com/)
+
+## Dockerfile
+
+- [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
+
+```dockerfile
+ENTRYPOINT ["", ..., ""]
+
+CMD ["", ..., ""]
+```
+
 ## VM Setup
 
 https://docs.docker.com/engine/install/ubuntu/

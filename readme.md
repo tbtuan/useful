@@ -13,18 +13,14 @@
 - a site to outsource your knowledge
 - a collection of websites, tools and other resources you might use
 
-### Basic structure
-- Commands: Like "git status"
-- Languages: Cheatsheets for every programming/markup/script languages including frameworks/libraries etc.
-- Links: Documentations, useful websites
-- Setups: How to get things up and running
-- Shortcuts: Like <kbd>Ctrl</kbd> + <kbd>F</kbd>
+### How to contibute
+
+- [Guideline](https://github.com/tbtuan/useful/contibuting.md)
 
 ### Markdown & Features
 
 - [Roadmap](https://github.com/tbtuan/useful/projects/1)
 - [Planed Markdowns](https://github.com/tbtuan/useful/projects/2)
-- [/useful wiki](https://github.com/tbtuan/useful/wiki)
 
 ### How to navigate
 
