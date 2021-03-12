@@ -1,7 +1,7 @@
 ---
 title: "Misc"
 description: "Similar sites"
-date: 2021-02-14
+date: 2021-03-12
 tags: ["general"]
 ---
 
@@ -19,6 +19,7 @@ tags: ["general"]
 
 ## Github 
 
+- [gitignore.io](gitignore.io)
 - [gitstar-ranking](https://gitstar-ranking.com/)
 - [Github stars search](https://github.com/search?o=desc&q=stars%3A%3E1&s=stars&type=Repositories)
 - [awesomeopensource](https://awesomeopensource.com/projects/)
@@ -31,6 +32,7 @@ tags: ["general"]
 
 - [devhints.io](https://devhints.io/)
 - [free-for.dev](https://free-for.dev)
+- [awesome-cheatsheets](https://lecoupa.github.io/awesome-cheatsheets/)
 
 </div>
 
