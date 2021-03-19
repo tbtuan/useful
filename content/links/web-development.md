@@ -1,7 +1,7 @@
 ---
 title: "Web Development"
 description: "Collection of links for web development"
-date: 2021-02-26
+date: 2021-03-19
 tags: ["web-development"]
 ---
 
@@ -25,6 +25,8 @@ tags: ["web-development"]
 - [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references)
 - [frontend-dev-bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
 - [Backend Development](https://gist.github.com/dypsilon/5819528)
+- [Web Fundamentals](https://developers.google.com/web/fundamentals)
+- [How Browsers Work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
 
 </div>
 
@@ -48,7 +50,6 @@ tags: ["web-development"]
 - [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 - [Serviceworke.rs](https://serviceworke.rs/)
 - [Workbox](https://developers.google.com/web/tools/workbox/modules)
-
 
 </div>
 
@@ -102,6 +103,14 @@ tags: ["web-development"]
 ## Benchmarking
 
 - [wrk](https://github.com/wg/wrk)
+
+</div>
+
+<div>
+
+## Sockets
+
+- [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
 
 </div>
 
