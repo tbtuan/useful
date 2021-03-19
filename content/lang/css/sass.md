@@ -1,7 +1,7 @@
 ---
-title: 'Sass'
-description: 'CSS - Sass'
-date: 2021-06-30
+title: "Sass"
+description: "CSS - Sass"
+date: 2021-01-30
 tags: ["sass", "styling"]
 ---
 

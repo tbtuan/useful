@@ -15,7 +15,9 @@ interface Props {
 
 const OptionsLayout = ({ children }: Props) => {
   const [show, setShow] = useState(false);
+
   const ref = useRef(null);
+
   useClickOutside(ref, () => setShow(false));
 
   return (

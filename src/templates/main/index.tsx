@@ -26,6 +26,7 @@ const Index = ({
 }: Props) => {
   if (typeof location === "undefined") return null;
   const siteContext = useContext(SiteContext);
+
   const dateTitleSlug = edges.map((item) => {
     return {
       title: item.node.frontmatter.title,

@@ -27,7 +27,9 @@ const SiteProvider = ({ children }: Props) => {
     return null;
   }
   const [filter, setFilter] = useState(getItemFromStorage("filter") || []);
+
   const [visited, setVisited] = useState(getItemFromStorage("visited") || []);
+
   const [pageVisited, setPageVisited] = useState(
     getItemFromStorage("page_visited") || []
   );
@@ -58,7 +60,9 @@ const SiteProvider = ({ children }: Props) => {
 
   const storePageVisited = (text: string, url: string) => {
     const offset = url.indexOf("#");
+
     const fragment = url.substring(offset);
+
     setPageVisited((prevPageVisited) => {
       return [
         {

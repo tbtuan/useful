@@ -1,7 +1,7 @@
 ---
 title: "Security"
 description: "Best pratices and tools for pentesters"
-date: 2021-02-02
+date: 2021-03-19
 tags: ["security"]
 ---
 
@@ -17,6 +17,7 @@ tags: ["security"]
 - [Firefox Monitor](https://monitor.firefox.com/)
 - [have i been pwned?](https://haveibeenpwned.com/)
 - [twofactorauth](https://twofactorauth.org/)
+- [Mozilla Observatory](https://observatory.mozilla.org/)
 
 </div>
 
@@ -40,6 +41,14 @@ tags: ["security"]
 - [List of pentest tools](https://www.reddit.com/r/HowToHack/comments/ewm1ax/a_complete_penetration_testing_hacking_tools_list/)
 - [Awesome-Hacking](https://github.com/NetanMangal/Awesome-Hacking)
 - [awesome-web-security](https://github.com/qazbnm456/awesome-web-security)
+
+</div>
+
+<div>
+
+## Password recovery
+
+- [Hashcat](https://hashcat.net/hashcat/)
 
 </div>
 

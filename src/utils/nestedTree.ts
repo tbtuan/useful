@@ -10,8 +10,11 @@ export const calculateTreeData = (edges: Edges[]) => {
       }
     ) => {
       const parts = slug.split("/");
+
       let { items: prevItems } = accu;
+
       const slicedParts = parts.slice(1, -1);
+
       for (const part of slicedParts) {
         let tmp = prevItems && prevItems.find(({ label }) => label == part);
 
@@ -38,5 +41,6 @@ export const calculateTreeData = (edges: Edges[]) => {
     },
     { items: [] }
   );
+
   return tree.items[0];
 };

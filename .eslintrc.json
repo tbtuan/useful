@@ -7,11 +7,7 @@
     "prettier",
     "prettier/react"
   ],
-  "plugins": [
-    "react",
-    "import",
-    "jsx-a11y"
-  ],
+  "plugins": ["react", "import", "jsx-a11y"],
   "settings": {
     "react": {
       "version": "detect"
@@ -21,33 +17,20 @@
     "import/no-unresolved": "off",
     "react/prop-types": 0,
     "react/react-in-jsx-scope": "off",
-    "lines-between-class-members": [
-      "error",
-      "always"
-    ],
+    "react/jsx-uses-react": "warn",
+    "lines-between-class-members": ["error", "always"],
+    "react/display-name": ["off", { "ignoreTranspilerName": "off" }],
     "padding-line-between-statements": [
       "error",
       {
         "blankLine": "always",
-        "prev": [
-          "const",
-          "let",
-          "var"
-        ],
+        "prev": ["const", "let", "var"],
         "next": "*"
       },
       {
         "blankLine": "always",
-        "prev": [
-          "const",
-          "let",
-          "var"
-        ],
-        "next": [
-          "const",
-          "let",
-          "var"
-        ]
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
       },
       {
         "blankLine": "always",

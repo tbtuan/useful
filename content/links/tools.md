@@ -9,6 +9,14 @@ tags: ["general"]
 
 <div>
 
+## IDE
+
+- [replit](https://repl.it/)
+
+</div>
+
+<div>
+
 ## Text editor
 
 - [Dillinger - Markdown Editor](https://dillinger.io/)
@@ -32,6 +40,8 @@ tags: ["general"]
 - [Firefox Send (File sharing)](https://send.firefox.com/)
 - [namechk (Social media name check)](https://namechk.com/)
 - [Regexr](https://regexr.com/)
+- [Translator](https://www.deepl.com/translator)
+- [TinEye](https://tineye.com/)
 
 </div>
 

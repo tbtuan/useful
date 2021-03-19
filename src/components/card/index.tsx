@@ -18,6 +18,7 @@ interface Props {
 
 const Card = ({ title, tags, children }: Props) => {
   const tagsRef = useRef(null);
+
   const [showMore, setShowMore] = useState(false);
 
   const handleShowMore = () => {

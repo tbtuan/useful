@@ -5,10 +5,12 @@ import { navigate } from "gatsby";
 
 const AnchorTag = ({ children: url, ...props }) => {
   const siteContext = useContext(SiteContext);
+
   if (url) {
     const handleClick = () => {
       siteContext.storeVisited(url, props.href);
     };
+
     const handlePageClick = () => {
       siteContext.storePageVisited(url, props.href);
       navigate(props.href);

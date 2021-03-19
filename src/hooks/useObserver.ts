@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export const useObserver = () => {
   let [current, setCurrent] = useState([]);
+
   useEffect(() => {
     const links = document.querySelectorAll("h2");
 

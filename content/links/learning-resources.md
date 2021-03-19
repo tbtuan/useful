@@ -1,8 +1,8 @@
 ---
 title: "Learning Resources"
 description: "Tutorials, EBooks, Code interviews"
-date: 2021-02-14
-tags: ["general"]
+date: 2021-03-19
+tags: ["tutorials"]
 ---
 
 <cc>
@@ -39,6 +39,14 @@ tags: ["general"]
 ## E-Books
 
 - 📚 [List of Free Learning Resources](https://github.com/EbookFoundation/free-programming-books/blob/master/README.md)
+
+</div>
+
+<div>
+
+## Learning tools
+
+- [mem.dev](https://mem.dev/)
 
 </div>
 

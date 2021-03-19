@@ -34,7 +34,9 @@ interface Props {
 
 const Layout = ({ children, data }: Props) => {
   const docsLocation = data?.site?.siteMetadata?.docsLocation;
+
   const githubUrl = data?.site?.siteMetadata?.githubUrl;
+
   const relativePath = data?.mdx?.parent?.relativePath;
 
   return (

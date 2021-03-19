@@ -1,7 +1,7 @@
 ---
 title: "Misc"
 description: "Similar sites"
-date: 2021-03-12
+date: 2021-03-19
 tags: ["general"]
 ---
 
@@ -17,12 +17,13 @@ tags: ["general"]
 
 <div>
 
-## Github 
+## Github
 
 - [gitignore.io](gitignore.io)
 - [gitstar-ranking](https://gitstar-ranking.com/)
 - [Github stars search](https://github.com/search?o=desc&q=stars%3A%3E1&s=stars&type=Repositories)
 - [awesomeopensource](https://awesomeopensource.com/projects/)
+- [markdown-badges](https://github.com/Ileriayo/markdown-badges)
 
 </div>
 
@@ -54,4 +55,3 @@ tags: ["general"]
 </div>
 
 </cc>
-

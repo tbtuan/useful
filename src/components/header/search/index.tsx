@@ -22,11 +22,17 @@ const SearchLayout = () => {
   }
 
   const ref = useRef(null);
+
   const preventScrollRef = useRef(false);
+
   const [results, setResults] = useState([]);
+
   const [query, setQuery] = useState("");
+
   const [focus, setFocus] = useState(false);
+
   const [itemIndex, setItemIndex] = useState(0);
+
   usePreventScroll(preventScrollRef);
 
   useFocus(ref, () => document.getElementById("searchbox").focus());
