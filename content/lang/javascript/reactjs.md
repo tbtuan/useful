@@ -1,7 +1,7 @@
 ---
 title: "ReactJS"
 description: "Javascript - ReactJS"
-date: 2021-01-29
+date: 2021-03-20
 tags: ["javascript", "web-development", "frontend"]
 ---
 
@@ -23,6 +23,7 @@ tags: ["javascript", "web-development", "frontend"]
 - [Redux concept](https://medium.com/javascript-in-plain-english/the-only-introduction-to-redux-and-react-redux-youll-ever-need-8ce5da9e53c6)
 - [Redux ecosystem links](https://github.com/markerikson/redux-ecosystem-links)
 - [Performance optimization](https://medium.com/technofunnel/https-medium-com-mayank-gupta-6-88-21-performance-optimizations-techniques-for-react-d15fa52c2349#2809)
+- [Flux](https://facebook.github.io/flux/docs/in-depth-overview/)
 
 ### Community
 
@@ -429,24 +430,24 @@ const Consumer = () => {
 ```jsx
 const usePreventScroll = (preventScrollRef) => {
   useEffect(() => {
-    const preventScrolling = e => {
+    const preventScrolling = (e) => {
       if (preventScrollRef.current) {
-        e.preventDefault()
+        e.preventDefault();
       }
-    }
+    };
 
-    document.addEventListener('touchmove', preventScrolling, {
+    document.addEventListener("touchmove", preventScrolling, {
       passive: false,
-    })
-    return () => document.removeEventListener('touchmove', preventScrolling)
-  }, [])
-}
-const preventScrollRef = useRef(false)
-usePreventScroll(preventScrollRef)
+    });
+    return () => document.removeEventListener("touchmove", preventScrolling);
+  }, []);
+};
+const preventScrollRef = useRef(false);
+usePreventScroll(preventScrollRef);
 // Disable scroll
-preventScrollRef.current = true
+preventScrollRef.current = true;
 // Enable scroll
-preventScrollRef.current = false
+preventScrollRef.current = false;
 ```
 
 ### See
@@ -454,6 +455,5 @@ preventScrollRef.current = false
 - [usePreventScroll](https://github.com/pmndrs/react-use-gesture/issues/101#issuecomment-595608436)
 
 </sc>
-
 
 </mc>

@@ -7,6 +7,6 @@ tags: ["shortcuts"]
 
 ## Figma
 
-| Description                | Shortcut                                          |
-| -------------------------- | ------------------------------------------------- |
-| Click through group      | <kbd>Ctrl</kbd> + <kbd>Click</kbd>                  |
+| Description         | Shortcut                           |
+| ------------------- | ---------------------------------- |
+| Click through group | <kbd>Ctrl</kbd> + <kbd>Click</kbd> |

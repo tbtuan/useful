@@ -1,9 +1,13 @@
 ---
 title: "Windows"
 description: "Shortcuts for Windows"
-date: 2020-06-30
-tags: ["shortcuts"]
+date: 2021-03-23
+tags: ["windows"]
 ---
+
+## Related
+
+- [Windows (Commands)](/commands/windows)
 
 ## Windows Explorer
 
