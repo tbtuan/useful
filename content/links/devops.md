@@ -1,7 +1,7 @@
 ---
 title: "DevOps"
 description: "DevOps tools"
-date: 2021-03-19
+date: 2021-03-27
 tags: ["devops"]
 ---
 
@@ -11,6 +11,7 @@ tags: ["devops"]
 
 ## General
 
+- [CNCF Cloud Native Interactive Landscape](https://landscape.cncf.io/)
 - [Docker](https://docs.docker.com/reference/)
 - [Kubernetes](https://kubernetes.io/docs/reference/kubernetes-api/)
 - [Ansible](https://docs.ansible.com/)
@@ -41,7 +42,12 @@ tags: ["devops"]
 
 ## Monitoring
 
+- [Grafana](https://grafana.com/docs/)
 - [Graphite](https://graphite.readthedocs.io/en/latest/)
+- [Prometheus](https://prometheus.io/docs/)
+- [Prometheus Operator](https://prometheus-operator.dev/docs)
+- [Thanos](https://thanos.io/tip/thanos/getting-started.md/)
+- [Awesome Prometheus alerts](https://awesome-prometheus-alerts.grep.to/)
 
 </div>
 

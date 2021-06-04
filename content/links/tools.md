@@ -1,7 +1,7 @@
 ---
 title: "Tools"
 description: "Uncategorized tools"
-date: 2021-02-02
+date: 2021-03-31
 tags: ["general"]
 ---
 
@@ -42,6 +42,7 @@ tags: ["general"]
 - [Regexr](https://regexr.com/)
 - [Translator](https://www.deepl.com/translator)
 - [TinEye](https://tineye.com/)
+- [Sysinternals Utilities](https://docs.microsoft.com/en-us/sysinternals/downloads/)
 
 </div>
 
