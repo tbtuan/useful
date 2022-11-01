@@ -50,10 +50,9 @@ jobs:
         env:
           CI: true
 
-      - name: Firebase Tools
-        run: sudo yarn global add firebase-tools
-
-      - name: Firebase Deployment
-        run: firebase deploy
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_USEFUL }}
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_USEFUL }}"
+          expires: 30d
+          projectId: useful
