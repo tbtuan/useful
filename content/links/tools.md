@@ -1,7 +1,7 @@
 ---
 title: "Tools"
 description: "Uncategorized tools"
-date: 2021-03-31
+date: 2022-11-01
 tags: ["general"]
 ---
 
@@ -43,6 +43,8 @@ tags: ["general"]
 - [Translator](https://www.deepl.com/translator)
 - [TinEye](https://tineye.com/)
 - [Sysinternals Utilities](https://docs.microsoft.com/en-us/sysinternals/downloads/)
+- [PinEyes (Face recognition, image reverse search)](https://pimeyes.com/)
+- [Nextcloud](https://nextcloud.com/)
 
 </div>
 

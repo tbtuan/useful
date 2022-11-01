@@ -1,11 +1,31 @@
 ---
 title: "Misc"
 description: "Similar sites"
-date: 2021-03-19
+date: 2022-11-01
 tags: ["general"]
 ---
 
 <cc>
+
+<div>
+
+## Alternative tools
+
+- [SimplyTranslate](https://simplytranslate.org/)
+- [Invidious](https://invidious.snopyta.org/)
+- [Nitter](https://nitter.net/)
+
+</div>
+
+
+<div>
+
+## Alternative frontends
+
+- [Nitter instances](https://github.com/xnaas/nitter-instances)
+- [Alternative frontends](https://github.com/digitalblossom/alternative-frontends)
+
+</div>
 
 <div>
 
