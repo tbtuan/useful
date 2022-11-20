@@ -1,7 +1,7 @@
 ---
 title: "Machine learning"
 description: "Resources for deep learning"
-date: 2021-02-16
+date: 2022-11-20
 tags: ["machine-learning"]
 ---
 
@@ -57,9 +57,14 @@ tags: ["machine-learning"]
 - [GAN](https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29)
 - [Flow-based Deep Generative Models](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html)
 
-## Object detection
+### Object detection
 
 - [R-CNN, Fast R-CNN, Faster R-CNN, YOLO](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e)
+
+### Stable diffusion (text to image)
+
+- [Stability AI](https://stability.ai/)
+- [List of SD Tutorials & Resources](https://www.reddit.com/r/StableDiffusion/comments/yknrjt/list_of_sd_tutorials_resources/)
 
 </div>
 
