@@ -41,9 +41,8 @@ jobs:
         with:
           node-version: "16.x"
 
-      # `--prefer-offline` gives cache priority
       - name: Install dependencies
-        run: yarn install --prefer-offline --frozen-lockfile --production
+        run: yarn install --frozen-lockfile --production
 
       - name: Build gatsby
         run: yarn build --log-pages
