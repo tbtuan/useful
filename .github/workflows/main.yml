@@ -50,7 +50,7 @@ jobs:
           CI: true
 
       - name: Firebase Tools
-        run: sudo yarn dlx add firebase-tools
+        run: sudo yarn dlx firebase-tools
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
