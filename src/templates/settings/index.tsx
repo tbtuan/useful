@@ -4,14 +4,11 @@ import Seo from "components/seo";
 import { SiteContext } from "providers/siteContext";
 import { ThemeSwitch } from "components/header/options/themeSwitch";
 
-import { MDXRenderer } from "gatsby-plugin-mdx";
-
 import {
   TitleWrapper,
   Main,
   StyledDiv,
   CheckboxContainer,
-  Checkbox,
   StyledInput,
   HeadingWrapper,
   SwtichWrapper,
@@ -36,8 +33,8 @@ const Settings = ({
   data: {
     mdx: {
       frontmatter: { title, description },
-      body,
     },
+    children,
   },
   pageContext,
 }: Props) => {
@@ -77,7 +74,7 @@ const Settings = ({
       <Seo metaTitle={title} metaDescription={description} />
       <TitleWrapper>
         <StyledHeading>{title}</StyledHeading>
-        <MDXRenderer>{body}</MDXRenderer>
+        {children}
       </TitleWrapper>
       <ContentWrapper>
         <Main>
@@ -127,13 +124,12 @@ export const pageQuery = graphql`
         githubUrl
       }
     }
-    mdx(fields: { id: { eq: $id } }) {
+    mdx(fields: {id: {eq: $id}}) {
       fields {
         id
         title
         slug
       }
-      body
       tableOfContents
       parent {
         ... on File {
@@ -146,8 +142,8 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: { frontmatter: { date: { gt: "0" } } }
-      sort: { order: DESC, fields: frontmatter___date }
+      filter: {frontmatter: {date: {gt: "0"}}}
+      sort: {frontmatter: {date: DESC}}
       limit: 10
     ) {
       edges {

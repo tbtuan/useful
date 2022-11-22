@@ -3,7 +3,6 @@ import { useEffect, useContext } from "react";
 import { SiteContext } from "providers/siteContext";
 import Seo from "components/seo";
 
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import ModifiedText from "components/modifiedText";
 import TableOfContents from "components/tableOfContents";
 import Breadcrumb from "components/breadcrumb";
@@ -36,15 +35,17 @@ const Index = ({
   data: {
     mdx: {
       frontmatter: { date, title, description },
-      body,
       headings,
     },
+    children,
   },
   pageContext,
 }: Props) => {
   if (typeof location === "undefined") return null;
 
   const siteContext = useContext(SiteContext);
+
+  console.log(children)
 
   const tableOfContents = headings.map((item) => {
     return {
@@ -74,7 +75,7 @@ const Index = ({
       <ContentWrapper>
         <TableOfContents tableOfContents={tableOfContents} />
         <StyledMainWrapper>
-          <MDXRenderer>{body}</MDXRenderer>
+          {children}
         </StyledMainWrapper>
       </ContentWrapper>
       <Padding />
@@ -95,8 +96,7 @@ export const pageQuery = graphql`
         id
         title
       }
-      body
-      headings(depth: h2) {
+      headings {
         value
       }
       parent {

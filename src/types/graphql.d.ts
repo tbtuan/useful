@@ -4,6 +4,7 @@ interface Data {
   site?: Site;
   allMdx?: AllMdx;
   mdx?: Mdx;
+  children?;
 }
 
 /* Site specific */
@@ -39,7 +40,7 @@ interface Node {
 
 interface Mdx {
   fields?: Fields;
-  body?: string;
+  //children?: string;
   headings?: Value[];
   tableOfContents?: Items;
   parent?: Parent;

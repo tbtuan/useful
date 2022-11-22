@@ -2,7 +2,6 @@ import { graphql } from "gatsby";
 import { useContext } from "react";
 import Seo from "components/seo";
 
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import ModifiedAt from "components/modifiedAt";
 import Featured from "components/featured";
 import { SiteContext } from "providers/siteContext";
@@ -19,14 +18,13 @@ const Index = ({
   data: {
     mdx: {
       frontmatter: { title, description },
-      body,
     },
+    children,
     allMdx: { edges },
   },
 }: Props) => {
   if (typeof location === "undefined") return null;
   const siteContext = useContext(SiteContext);
-
   const dateTitleSlug = edges.map((item) => {
     return {
       title: item.node.frontmatter.title,
@@ -40,7 +38,7 @@ const Index = ({
       <Seo metaTitle={title} metaDescription={description} />
       <TitleWrapper>
         <StyledHeading>{title}</StyledHeading>
-        <MDXRenderer>{body}</MDXRenderer>
+        {children}
       </TitleWrapper>
       <ContentWrapper>
         <ModifiedAt dateTitleSlug={dateTitleSlug} />
@@ -81,7 +79,7 @@ export const pageQuery = graphql`
         githubUrl
       }
     }
-    mdx(fields: { id: { eq: $id } }) {
+    mdx(fields: {id: {eq: $id}}) {
       fields {
         id
         title
@@ -100,8 +98,8 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: { frontmatter: { date: { gt: "0" } } }
-      sort: { order: DESC, fields: frontmatter___date }
+      filter: {frontmatter: {date: {eq: null}}}
+      sort: {frontmatter: {date: DESC}}
       limit: 10
     ) {
       edges {

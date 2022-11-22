@@ -22,6 +22,9 @@ const ModifiedAtLayout = ({ dateTitleSlug }: Props) => {
   );
 
   const toc = dateTitleSlug.map((item, index) => {
+    if (item.date == null) {
+      return null;
+    }
     return (
       <Li key={index}>
         <StyledLink to={item.slug}>{item.title}</StyledLink>

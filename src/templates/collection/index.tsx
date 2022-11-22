@@ -1,5 +1,4 @@
 import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { StyledHeading, TitleWrapper, Padding } from "../style";
 import { Container, Main } from "./style";
@@ -16,8 +15,8 @@ const Links = ({ data }: Props) => {
   const {
     mdx: {
       frontmatter: { title, description },
-      body,
     },
+    children,
     allMdx: { edges },
   } = data;
 
@@ -38,7 +37,7 @@ const Links = ({ data }: Props) => {
         <StyledHeading>{title}</StyledHeading>
       </TitleWrapper>
       <Main>
-        <MDXRenderer>{body}</MDXRenderer>
+        {children}
         <SectionContainer edges={edges} />
       </Main>
       <Padding />
@@ -59,7 +58,6 @@ export const pageQuery = graphql`
         id
         title
       }
-      body
       parent {
         ... on File {
           relativePath
@@ -71,7 +69,7 @@ export const pageQuery = graphql`
         date
       }
     }
-    allMdx(filter: { slug: { regex: $slugRegex } }, sort: { fields: slug }) {
+    allMdx(filter: { fields: {slug: { regex: $slugRegex } }}, sort: {fields: {slug: ASC}}) {
       edges {
         node {
           frontmatter {
