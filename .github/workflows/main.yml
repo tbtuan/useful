@@ -42,7 +42,7 @@ jobs:
           node-version: "16.x"
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --production
+        run: yarn install
 
       - name: Build gatsby
         run: yarn build --log-pages
