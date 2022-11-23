@@ -1,5 +1,4 @@
 const plugins = [
-  "gatsby-plugin-react-helmet",
   "gatsby-plugin-remove-serviceworker",
   {
     resolve: "gatsby-plugin-emotion",
@@ -59,5 +58,7 @@ module.exports = {
     docsLocation: "https://github.com/tbtuan/useful/tree/master/content/",
     githubUrl: "https://github.com/tbtuan/useful",
   },
+  jsxRuntime: "automatic",
+  jsxImportSource: "@emotion/react",
   plugins: plugins,
 };

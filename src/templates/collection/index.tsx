@@ -7,16 +7,16 @@ import Section from "components/section";
 
 interface Props {
   data: Data;
+  children: string;
 }
 
-const Links = ({ data }: Props) => {
+const Links = ({ data, children }: Props) => {
   if (typeof location === "undefined") return null;
 
   const {
     mdx: {
       frontmatter: { title, description },
     },
-    children,
     allMdx: { edges },
   } = data;
 

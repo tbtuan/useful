@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { calculateTreeData } from "utils/nestedTree";
 
 import { SiteContext } from "providers/siteContext";
@@ -13,6 +13,7 @@ import { uniqWith, concat } from "lodash";
 
 interface Props {
   data: Data;
+  children: string;
 }
 
 const Collection = ({
@@ -20,14 +21,14 @@ const Collection = ({
     mdx: {
       frontmatter: { title, description },
     },
-    children,
     allMdx: { edges },
   },
+  children
 }: Props) => {
   if (typeof location === "undefined") return null;
   const CardContainer = ({ items }) => {
     const siteContext = useContext(SiteContext);
-
+    
     return (
       <Container>
         {items.map((item, index) => {

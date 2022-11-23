@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import Seo from "components/seo";
 import { SiteContext } from "providers/siteContext";
 import { ThemeSwitch } from "components/header/options/themeSwitch";
@@ -26,6 +26,7 @@ interface PageContext {
 
 interface Props {
   data: Data;
+  children: string;
   pageContext: PageContext;
 }
 
@@ -34,8 +35,8 @@ const Settings = ({
     mdx: {
       frontmatter: { title, description },
     },
-    children,
   },
+  children,
   pageContext,
 }: Props) => {
   if (typeof location === "undefined") return null;

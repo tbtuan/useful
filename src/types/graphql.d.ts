@@ -4,7 +4,7 @@ interface Data {
   site?: Site;
   allMdx?: AllMdx;
   mdx?: Mdx;
-  children?;
+  children?: string;
 }
 
 /* Site specific */

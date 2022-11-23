@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import Seo from "components/seo";
 
 import ModifiedAt from "components/modifiedAt";
@@ -12,6 +12,7 @@ import { StyledHeading, ContentWrapper } from "../style";
 
 interface Props {
   data: Data;
+  children: string;
 }
 
 const Index = ({
@@ -19,9 +20,9 @@ const Index = ({
     mdx: {
       frontmatter: { title, description },
     },
-    children,
     allMdx: { edges },
   },
+  children,
 }: Props) => {
   if (typeof location === "undefined") return null;
   const siteContext = useContext(SiteContext);

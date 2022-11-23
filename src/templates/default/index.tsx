@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import { useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { SiteContext } from "providers/siteContext";
 import Seo from "components/seo";
 
@@ -28,6 +28,7 @@ interface PageContext {
 
 interface Props {
   data: Data;
+  children: string;
   pageContext: PageContext;
 }
 
@@ -37,15 +38,13 @@ const Index = ({
       frontmatter: { date, title, description },
       headings,
     },
-    children,
   },
+  children,
   pageContext,
 }: Props) => {
   if (typeof location === "undefined") return null;
 
   const siteContext = useContext(SiteContext);
-
-  console.log(children)
 
   const tableOfContents = headings.map((item) => {
     return {
