@@ -1,7 +1,7 @@
 ---
 title: 'matplotlib'
-description: 'Data visualization'
-date: 2020-12-08
+deSCription: 'Data visualization'
+date: 2022-11-30
 tags: ["python", "data-visualization"]
 ---
 
@@ -10,9 +10,9 @@ tags: ["python", "data-visualization"]
 - [matplotlib documentation](https://matplotlib.org/contents.html)
 
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ## Simple plot
 
@@ -37,9 +37,9 @@ plt.show()
 
 - [Controlling line properties](https://matplotlib.org/tutorials/introductory/pyplot.html#controlling-line-properties)
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Figure
 
@@ -58,9 +58,9 @@ ax2.scatter(x, y2)
 
 - [Figure.add_subplot](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_subplot)
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Subplot
 
@@ -74,6 +74,6 @@ axes[1, 0].plot(x, y2)
 plt.show()
 ```
 
-</sc>
+</SC>
 
-</mc>
+</MC>

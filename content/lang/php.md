@@ -10,9 +10,9 @@ tags: ["web-development", "backend"]
 - [Laravel](https://laravel.com/docs)
 - [Composer](https://getcomposer.org/doc/)
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ## Echo
 
@@ -21,9 +21,9 @@ tags: ["web-development", "backend"]
 <?= /*Shorthand*/ $a; ?>
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Array
 
@@ -43,9 +43,9 @@ $array2["key2"] = "value2";
 $array2 = array("key1" => "value1", "key2" => "value2");
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Foreach
 
@@ -55,9 +55,9 @@ foreach($array as $key => $value) {
 }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Class
 
@@ -93,6 +93,6 @@ class Point {
 $p = new Point(1, 2);
 ```
 
-</sc>
+</SC>
 
-</mc>
+</MC>

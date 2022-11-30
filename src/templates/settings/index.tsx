@@ -1,17 +1,14 @@
 import { graphql } from "gatsby";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import Seo from "components/seo";
 import { SiteContext } from "providers/siteContext";
 import { ThemeSwitch } from "components/header/options/themeSwitch";
-
-import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import {
   TitleWrapper,
   Main,
   StyledDiv,
   CheckboxContainer,
-  Checkbox,
   StyledInput,
   HeadingWrapper,
   SwtichWrapper,
@@ -29,6 +26,7 @@ interface PageContext {
 
 interface Props {
   data: Data;
+  children: string;
   pageContext: PageContext;
 }
 
@@ -36,9 +34,9 @@ const Settings = ({
   data: {
     mdx: {
       frontmatter: { title, description },
-      body,
     },
   },
+  children,
   pageContext,
 }: Props) => {
   if (typeof location === "undefined") return null;
@@ -77,7 +75,7 @@ const Settings = ({
       <Seo metaTitle={title} metaDescription={description} />
       <TitleWrapper>
         <StyledHeading>{title}</StyledHeading>
-        <MDXRenderer>{body}</MDXRenderer>
+        {children}
       </TitleWrapper>
       <ContentWrapper>
         <Main>
@@ -127,13 +125,12 @@ export const pageQuery = graphql`
         githubUrl
       }
     }
-    mdx(fields: { id: { eq: $id } }) {
+    mdx(fields: {id: {eq: $id}}) {
       fields {
         id
         title
         slug
       }
-      body
       tableOfContents
       parent {
         ... on File {
@@ -145,11 +142,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMdx(
-      filter: { frontmatter: { date: { gt: "0" } } }
-      sort: { order: DESC, fields: frontmatter___date }
-      limit: 10
-    ) {
+    allMdx {
       edges {
         node {
           frontmatter {

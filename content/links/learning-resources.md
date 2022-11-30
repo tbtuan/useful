@@ -5,7 +5,7 @@ date: 2021-03-19
 tags: ["tutorials"]
 ---
 
-<cc>
+<CC>
 
 <div>
 
@@ -99,4 +99,4 @@ tags: ["tutorials"]
 
 </div>
 
-</cc>
+</CC>

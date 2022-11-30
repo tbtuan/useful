@@ -19,9 +19,9 @@ tags: ["python"]
 - [Pandas](https://pandas.pydata.org/docs/)
 - [OpenCV](https://opencv.org/)
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ## Data types
 
@@ -40,9 +40,9 @@ True
 False
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Input
 
@@ -51,9 +51,9 @@ name = input('Name:' )
 print('Hello', name)
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Conditions
 
@@ -68,9 +68,9 @@ else
     print('Something else')
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## List and tuples
 
@@ -84,9 +84,9 @@ x[0] = 0
 tuple1 = (0, 1, 2, 3) 
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Loops
 
@@ -106,9 +106,9 @@ while True:
     print('runs forever')
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Unpacking arguments
 
@@ -137,9 +137,9 @@ func3(1, 2, 3, a=1, b=1)
 
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Classes
 
@@ -156,6 +156,6 @@ class child(Parent):
 
 ```
 
-</sc>
+</SC>
 
-</mc>
+</MC>

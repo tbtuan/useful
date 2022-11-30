@@ -9,9 +9,9 @@ tags: ["shortcuts"]
 
 - [Google Chrome Shortcuts](https://support.google.com/chrome/answer/157179)
 
-<mc>
+<MC>
 
-<tc>
+<TC>
 
 ### Tab and window
 
@@ -30,9 +30,9 @@ tags: ["shortcuts"]
 | Close the current tab         | <kbd>Ctrl</kbd> + <kbd>W</kbd> / <kbd>Ctrl</kbd> + <kbd>F4</kbd> |
 | Close the current window      | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd>                |
 
-</tc>
+</TC>
 
-<tc>
+<TC>
 
 ### Google Chrome feature
 
@@ -47,9 +47,9 @@ tags: ["shortcuts"]
 | Open the Clear Browsing Data options         | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Delete</kbd>             |
 | Log in a different user or browse as a Guest | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>                  |
 
-</tc>
+</TC>
 
-<tc>
+<TC>
 
 ### Address bar
 
@@ -59,9 +59,9 @@ tags: ["shortcuts"]
 | Search from anywhere on the page         | <kbd>Ctrl</kbd> + <kbd>K</kbd> / <kbd>Ctrl</kbd> + <kbd>E</kbd>                 |
 | Remove predictions from your address bar | <kbd>↓</kbd> to highlight + <kbd>Shift</kbd> + <kbd>Delete</kbd>                |
 
-</tc>
+</TC>
 
-<tc>
+<TC>
 
 ### Webpage
 
@@ -74,9 +74,9 @@ tags: ["shortcuts"]
 | Browse clickable items moving forward    | <kbd>Tab</kbd>                                                                  |
 | Browse clickable items moving backward   | <kbd>Shift</kbd> + <kbd>Tab</kbd>                                               |
 
-</tc>
+</TC>
 
-<tc>
+<TC>
 
 ### Mouse
 
@@ -87,6 +87,6 @@ tags: ["shortcuts"]
 | Open a link in a new window       | <kbd>Shift</kbd> + <kbd>Click a link</kbd>                   |
 | Download the target of a link     | <kbd>Alt</kbd> + <kbd>Click a link</kbd>                     |
 
-</tc>
+</TC>
 
-</mc>
+</MC>

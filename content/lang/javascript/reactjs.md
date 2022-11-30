@@ -1,7 +1,7 @@
 ---
 title: "ReactJS"
 description: "Javascript - ReactJS"
-date: 2021-03-20
+date: 2022-11-30
 tags: ["javascript", "web-development", "frontend"]
 ---
 
@@ -9,7 +9,7 @@ tags: ["javascript", "web-development", "frontend"]
 
 - [Javascript](/lang/javascript)
 
-<cc col="2">
+<CC col="2">
 
 <div>
 
@@ -36,7 +36,7 @@ tags: ["javascript", "web-development", "frontend"]
 
 ## Ecosystem
 
-<cc>
+<CC>
 
 <div>
 
@@ -93,15 +93,15 @@ tags: ["javascript", "web-development", "frontend"]
 
 </div>
 
-</cc>
+</CC>
 
 </div>
 
-</cc>
+</CC>
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ## Render
 
@@ -119,9 +119,9 @@ ReactDOM.render(
 );
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Javascript in JSX
 
@@ -142,9 +142,9 @@ function App() {
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## CSS in JSX
 
@@ -168,9 +168,9 @@ function App() {
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Props in JSX
 
@@ -195,9 +195,9 @@ const Card = (props) => {
 };
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## High Order Functions
 
@@ -214,9 +214,9 @@ const App = () => {
 };
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Class-Components
 
@@ -234,9 +234,9 @@ class App extends Component {
 }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## States
 
@@ -248,9 +248,9 @@ constructor(props) {
 
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Event handling
 
@@ -271,9 +271,9 @@ function App() {
 }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Change state
 
@@ -324,9 +324,9 @@ onClick={() => props.handleClick2(42)}
 onClick={() => props.handleClick2(props.number)}
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## React API Pitfalls
 
@@ -350,9 +350,9 @@ not as a semantic guarantee.
 - [React Top-Level API - React.memo](https://reactjs.org/docs/react-api.html#reactmemo)
 - [Pitfalls of overusing React Context](https://blog.logrocket.com/pitfalls-of-overusing-react-context/)
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## React Hooks
 
@@ -421,9 +421,9 @@ const Consumer = () => {
 }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Useful hooks
 
@@ -454,6 +454,6 @@ preventScrollRef.current = false;
 
 - [usePreventScroll](https://github.com/pmndrs/react-use-gesture/issues/101#issuecomment-595608436)
 
-</sc>
+</SC>
 
-</mc>
+</MC>

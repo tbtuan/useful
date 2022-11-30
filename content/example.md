@@ -4,7 +4,7 @@ description: "Example page"
 date: 2021-02-20
 ---
 
-<sc>
+<SC>
 
 ## Structure of a markdown
 
@@ -25,7 +25,7 @@ tags: ["web-development", "frontend"]
 My content
 ```
 
-</sc>
+</SC>
 
 # Heading level 1
 
@@ -47,34 +47,34 @@ List
 - [Links](https://useful.web.app)
 
 
-<sc>
+<SC>
 
 ## Code within Syntax Container
 
 ```text
-Heading 2 within <sc></sc>
+Heading 2 within <SC></SC>
 
 for example
 
-<sc>
+<SC>
 ## Heading 2
-</sc>
+</SC>
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Code within Syntax Container2
 
 ```text
-Heading 2 within <sc></sc>
+Heading 2 within <SC></SC>
 
 for example
 
-<sc>
+<SC>
 ## Heading 2
-</sc>
+</SC>
 ### See
 - [Link1](/)
 - [Link2](/)
@@ -85,11 +85,11 @@ for example
 - [Link1](https://useful.web.app)
 - [Link2](https://useful.web.app)
 
-</sc>
+</SC>
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ## Syntax Container
 
@@ -97,9 +97,9 @@ for example
 print("Example for a python code")
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## JSX
 
@@ -107,13 +107,13 @@ print("Example for a python code")
 <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>
 ```
 
-</sc>
+</SC>
 
-</mc>
+</MC>
 
-<mc>
+<MC>
 
-<cc>
+<CC>
 
 <div>
 
@@ -141,7 +141,7 @@ print("Example for a python code")
 
 </div>
 
-</cc>
+</CC>
 
 
-</mc>
+</MC>

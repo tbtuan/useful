@@ -36,14 +36,14 @@ export default {
 
   // Layer 1 Containers
   // MasonryContainer
-  mc: (props) => <MasonryContainer {...props} />,
+  MC: (props) => <MasonryContainer {...props} />,
   // ColumnContainer
-  cc: (props) => <ColumnContainer {...props} />,
+  CC: (props) => <ColumnContainer {...props} />,
 
   // Layer 2 Containers
   // TableContainer
-  tc: (props) => <TableContainer {...props} />,
+  TC: (props) => <TableContainer {...props} />,
   // SyntaxContainer
-  sc: (props) => <SyntaxContainer {...props} />,
+  SC: (props) => <SyntaxContainer {...props} />,
   // TODO add `blockquote`
 };

@@ -1,7 +1,7 @@
 ---
 title: 'Numpy'
 description: 'Multidimensional array'
-date: 2020-12-08
+date: 2022-11-30
 tags: ["python"]
 ---
 
@@ -10,9 +10,9 @@ tags: ["python"]
 - [NumPy documentation](https://numpy.org/doc/stable/reference/index.html)
 
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ## Basic operations
 
@@ -24,9 +24,9 @@ np.exp([1,2,3])
 np.ones((3, 3))
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Reshape
 
@@ -43,9 +43,9 @@ column_vector = row_vector.T
 matrix = array.reshape(3,3)
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Slicing
 
@@ -59,6 +59,6 @@ every_second_column = M[:,::2]
 flipped_rows = M[:,::-1]
 ```
 
-</sc>
+</SC>
 
-</mc>
+</MC>
