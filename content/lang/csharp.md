@@ -14,9 +14,9 @@ tags: ["csharp"]
 - [PInvoke.net](http://pinvoke.net/)
 - [NuGet](https://www.nuget.org/)
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ## Named Argument
 
@@ -28,9 +28,9 @@ void Log(string msg, string system = "asdf", int priority) {
 Log("Tracker", priority: 0);
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## out-Keyword
 
@@ -40,9 +40,9 @@ string s = "42";
 int result;
 int.TryParse(s, out result)
 ```
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Lambda
 
@@ -50,9 +50,9 @@ int.TryParse(s, out result)
 people.Find(person => person.Name == "John");
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Extension Method
 
@@ -69,9 +69,9 @@ public static class ExtensionMethods {
 Console.ReadLine().toInt("a");
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## String interpolation
 
@@ -79,9 +79,9 @@ Console.ReadLine().toInt("a");
 Console.WriteLine($"Priority: {priority}, Msg: {msg}");
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Delegates
 
@@ -97,9 +97,9 @@ MyDelegate f = MyFunc;
 int result = f(1, "Hello World");
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Anonymous delegates
 
@@ -110,9 +110,9 @@ MyDelegate f = delegate(int i, string s)
 };
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Composable/chained delegates
 
@@ -127,9 +127,9 @@ f1f2 += delegate(string s)
 }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Event handler
 
@@ -155,9 +155,9 @@ class EventPublisher {
 
 }
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 class Program {
 
@@ -177,9 +177,9 @@ class Program {
 }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Thread/Task
 
@@ -191,9 +191,9 @@ Task.Run(() => MyMethod());
 Tasks.Factory.StartNew(() => MyMethod());
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Monitor
 
@@ -208,9 +208,9 @@ try {
 // Same as lock(myLock) { }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Mutex
 
@@ -221,9 +221,9 @@ MyMethod();
 mutex.ReleaseMutex();
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Reader-Writer-Lock
 
@@ -238,6 +238,6 @@ MyWriteMethod();
 readerWriterLockSlim.ExitWriteLock();
 ```
 
-</sc>
+</SC>
 
-</mc>
+</MC>

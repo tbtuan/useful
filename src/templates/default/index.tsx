@@ -1,9 +1,8 @@
 import { graphql } from "gatsby";
-import { useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { SiteContext } from "providers/siteContext";
 import Seo from "components/seo";
 
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import ModifiedText from "components/modifiedText";
 import TableOfContents from "components/tableOfContents";
 import Breadcrumb from "components/breadcrumb";
@@ -29,6 +28,7 @@ interface PageContext {
 
 interface Props {
   data: Data;
+  children: string;
   pageContext: PageContext;
 }
 
@@ -36,10 +36,10 @@ const Index = ({
   data: {
     mdx: {
       frontmatter: { date, title, description },
-      body,
       headings,
     },
   },
+  children,
   pageContext,
 }: Props) => {
   if (typeof location === "undefined") return null;
@@ -74,7 +74,7 @@ const Index = ({
       <ContentWrapper>
         <TableOfContents tableOfContents={tableOfContents} />
         <StyledMainWrapper>
-          <MDXRenderer>{body}</MDXRenderer>
+          {children}
         </StyledMainWrapper>
       </ContentWrapper>
       <Padding />
@@ -95,8 +95,7 @@ export const pageQuery = graphql`
         id
         title
       }
-      body
-      headings(depth: h2) {
+      headings {
         value
       }
       parent {

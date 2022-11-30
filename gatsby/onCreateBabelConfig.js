@@ -9,6 +9,7 @@ module.exports = ({ actions }) => {
     name: "@babel/plugin-transform-react-jsx",
     options: {
       runtime: "automatic",
+      reactImportSource: "@emotion/react",
     },
   });
   actions.setBabelPreset({

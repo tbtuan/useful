@@ -1,6 +1,5 @@
 import { graphql } from "gatsby";
-import { useContext } from "react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import React, { useContext } from "react";
 import { calculateTreeData } from "utils/nestedTree";
 
 import { SiteContext } from "providers/siteContext";
@@ -14,21 +13,22 @@ import { uniqWith, concat } from "lodash";
 
 interface Props {
   data: Data;
+  children: string;
 }
 
 const Collection = ({
   data: {
     mdx: {
       frontmatter: { title, description },
-      body,
     },
     allMdx: { edges },
   },
+  children
 }: Props) => {
   if (typeof location === "undefined") return null;
   const CardContainer = ({ items }) => {
     const siteContext = useContext(SiteContext);
-
+    
     return (
       <Container>
         {items.map((item, index) => {
@@ -80,7 +80,7 @@ const Collection = ({
         <StyledHeading>{title}</StyledHeading>
       </TitleWrapper>
       <Main>
-        <MDXRenderer>{body}</MDXRenderer>
+        {children}
         <CardContainer {...treeData} />
       </Main>
       <Padding />
@@ -101,7 +101,6 @@ export const pageQuery = graphql`
         id
         title
       }
-      body
       parent {
         ... on File {
           relativePath
@@ -113,7 +112,7 @@ export const pageQuery = graphql`
         date
       }
     }
-    allMdx(filter: { slug: { regex: "/lang//" } }, sort: { fields: slug }) {
+    allMdx(filter: { fields: {slug: { regex: "/lang//" } }}, sort: {fields: {slug: ASC}}) {
       edges {
         node {
           frontmatter {

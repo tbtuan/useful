@@ -7,9 +7,9 @@ tags: ["python"]
 
 - [Pandas API Reference](https://pandas.pydata.org/pandas-docs/stable/reference/index.html#api)
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ## Read csv
 
@@ -21,9 +21,9 @@ df = pd.read_csv('file.csv', sep=';')
 df.head(1)
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Rename columns
 
@@ -31,9 +31,9 @@ df.head(1)
 df = df.rename(columns={'old_name':'new_name'})  
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Select row/column
 
@@ -47,6 +47,6 @@ df.loc[[1, 2], ['stuff1', 'stuff2']]
 df.loc[1:2, ['stuff1', 'stuff2']]
 ```
 
-</sc>
+</SC>
 
-</mc>
+</MC>

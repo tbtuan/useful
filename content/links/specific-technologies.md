@@ -5,7 +5,7 @@ date: 2021-02-02
 tags: ["general"]
 ---
 
-<cc>
+<CC>
 
 <div>
 
@@ -53,4 +53,4 @@ tags: ["general"]
 
 </div>
 
-</cc>
+</CC>

@@ -31,9 +31,9 @@ tags: ["javascript", "web-development"]
 - [webpack](https://webpack.js.org/concepts/)
 
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ```js
 // Object literals
@@ -87,9 +87,9 @@ if (username) {
 let defaultName = username || 'Stranger';
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ### RegEx
 
@@ -103,6 +103,6 @@ regex.test(string);
 string.match(regex);
 ```
 
-</sc>
+</SC>
 
-</mc>
+</MC>

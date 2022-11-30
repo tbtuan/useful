@@ -13,7 +13,7 @@ tags: ["machine-learning"]
 
 </div>
 
-<cc>
+<CC>
 
 <div>
 
@@ -93,4 +93,4 @@ tags: ["machine-learning"]
 
 </div>
 
-</cc>
+</CC>

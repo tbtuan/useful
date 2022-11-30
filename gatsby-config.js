@@ -1,5 +1,4 @@
 const plugins = [
-  "gatsby-plugin-react-helmet",
   "gatsby-plugin-remove-serviceworker",
   {
     resolve: "gatsby-plugin-emotion",
@@ -22,6 +21,12 @@ const plugins = [
     resolve: "gatsby-plugin-mdx",
     options: {
       extensions: [".mdx", ".md"],
+      mdxOptions: {
+        remarkPlugins: [
+          // Add GitHub Flavored Markdown (GFM) support
+          require(`remark-gfm`)
+        ],
+      },
     },
   },
   {
@@ -59,5 +64,6 @@ module.exports = {
     docsLocation: "https://github.com/tbtuan/useful/tree/master/content/",
     githubUrl: "https://github.com/tbtuan/useful",
   },
+  jsxRuntime: "automatic",
   plugins: plugins,
 };

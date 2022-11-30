@@ -3,8 +3,7 @@ name: build
 on:
   push:
     branches:
-      - master
-      - release/*
+      - develop
 
 jobs:
   Deploy:
@@ -56,5 +55,5 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_USEFUL }}'
-          channelId: live
+          channelId: preview
           projectId: useful

@@ -9,9 +9,9 @@ tags: ["shortcuts"]
 
 [VSCode Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
-<mc>
+<MC>
 
-<tc>
+<TC>
 
 ### General
 
@@ -20,9 +20,9 @@ tags: ["shortcuts"]
 | Show Command Palette | <kbd>F1</kbd> / <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> |
 | User Settings        | <kbd>Ctrl</kbd> + <kbd>,</kbd>                                    |
 
-</tc>
+</TC>
 
-<tc>
+<TC>
 
 ### Basic editing
 
@@ -38,9 +38,9 @@ tags: ["shortcuts"]
 | Fold region       | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>ß</kbd> / <kbd>[</kbd>  |
 | Unfold region     | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>´</kbd> / <kbd>]</kbd>  |
 
-</tc>
+</TC>
 
-<tc>
+<TC>
 
 ### Navigation
 
@@ -49,9 +49,9 @@ tags: ["shortcuts"]
 | Go to File...   | <kbd>Ctrl</kbd> + <kbd>P</kbd>                    |
 | Go to Symbol... | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> |
 
-</tc>
+</TC>
 
-<tc>
+<TC>
 
 ### Multi-cursor and selection
 
@@ -64,9 +64,9 @@ tags: ["shortcuts"]
 | Select current line         | <kbd>Ctrl</kbd> + <kbd>L</kbd>                                 |
 | Column (box) selection      | <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>(drag mouse)</kbd>    |
 
-</tc>
+</TC>
 
-<tc>
+<TC>
 
 ### Rich languages editing
 
@@ -76,9 +76,9 @@ tags: ["shortcuts"]
 | Trigger parameter hints | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd> |
 | Rename Symbol           | <kbd>F2</kbd>                                         |
 
-</tc>
+</TC>
 
-<tc>
+<TC>
 
 ### Display
 
@@ -88,9 +88,9 @@ tags: ["shortcuts"]
 | Show Search                  | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> |
 | Open Markdown preview        | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> |
 
-</tc>
+</TC>
 
-<tc>
+<TC>
 
 ### Debug
 
@@ -102,6 +102,6 @@ tags: ["shortcuts"]
 | Step into/out     | <kbd>F11</kbd> / <kbd>Shift</kbd> + <kbd>F11</kbd> |
 | Step over         | <kbd>F10</kbd>                                     |
 
-</tc>
+</TC>
 
-</mc>
+</MC>
