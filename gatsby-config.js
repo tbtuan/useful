@@ -21,6 +21,12 @@ const plugins = [
     resolve: "gatsby-plugin-mdx",
     options: {
       extensions: [".mdx", ".md"],
+      mdxOptions: {
+        remarkPlugins: [
+          // Add GitHub Flavored Markdown (GFM) support
+          require(`remark-gfm`)
+        ],
+      },
     },
   },
   {
@@ -59,6 +65,5 @@ module.exports = {
     githubUrl: "https://github.com/tbtuan/useful",
   },
   jsxRuntime: "automatic",
-  jsxImportSource: "@emotion/react",
   plugins: plugins,
 };

@@ -1,7 +1,7 @@
 ---
 title: 'NodeJS'
 description: 'NodeJS'
-date: 2021-02-09
+date: 2022-11-30
 tags: ["javascript", "web-development", "backend"]
 ---
 
@@ -13,7 +13,7 @@ tags: ["javascript", "web-development", "backend"]
 
 - [Documentation](https://nodejs.org/en/docs)
 
-<cc col="2">
+<CC col="2">
 
 <div>
 
@@ -29,7 +29,7 @@ tags: ["javascript", "web-development", "backend"]
 
 ## Ecosystem
 
-<cc>
+<CC>
 
 <div>
 
@@ -73,8 +73,8 @@ tags: ["javascript", "web-development", "backend"]
 
 </div>
 
-</cc>
+</CC>
 
 </div>
 
-</cc>
+</CC>

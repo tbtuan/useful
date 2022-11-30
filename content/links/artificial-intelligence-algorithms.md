@@ -13,7 +13,7 @@ tags: ["artificial-intelligence", "algorithm", "data-structure"]
 
 </div>
 
-<cc>
+<CC>
 
 <div>
 
@@ -55,4 +55,4 @@ tags: ["artificial-intelligence", "algorithm", "data-structure"]
 
 </div>
 
-</cc>
+</CC>

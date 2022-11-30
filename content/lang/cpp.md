@@ -10,9 +10,9 @@ tags: ["cpp"]
 - [awesome-cpp](https://github.com/fffaraz/awesome-cpp)
 - [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines)
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ## Types
 
@@ -28,9 +28,9 @@ void*
 void (*)()
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Initialization
 
@@ -52,9 +52,9 @@ char& c = a[0];
 
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## References
 
@@ -73,10 +73,10 @@ void setInt(int&& value) { }
 
 ```
 
-</sc>
+</SC>
 
 
-<sc>
+<SC>
 
 ## Constructor/Destructor
 
@@ -134,9 +134,9 @@ int main() {
 
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Other constructors/assignment operators
 
@@ -175,9 +175,9 @@ int main() {
 }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Access modifiers
 
@@ -196,9 +196,9 @@ class Foo {
 };
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Dynamic polymorphism
 
@@ -263,9 +263,9 @@ class Bar: public C {
 };
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Type casting
 
@@ -287,9 +287,9 @@ const_cast<int>
 
 [Stackoverflow - When should static_cast, dynamic_cast, const_cast and reinterpret_cast be used?](https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used)
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Memory management
 
@@ -297,9 +297,9 @@ const_cast<int>
 // TODO Something about RAII and stuff
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Function pointer
 
@@ -318,9 +318,9 @@ myfunction3(4);
 auto myFunction4 = myFunction;
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Iterators
 
@@ -328,9 +328,9 @@ auto myFunction4 = myFunction;
 // TODO Iterators
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Templates
 
@@ -362,9 +362,9 @@ int main() {
 }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Lambdas
 
@@ -411,6 +411,6 @@ int main() {
 - [cppreference - find](https://en.cppreference.com/w/cpp/algorithm/find)
 
 
-</sc>
+</SC>
 
-</mc>
+</MC>

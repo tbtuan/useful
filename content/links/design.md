@@ -5,7 +5,7 @@ date: 2021-02-14
 tags: ["design"]
 ---
 
-<cc>
+<CC>
 
 <div>
 
@@ -86,4 +86,4 @@ tags: ["design"]
 
 </div>
 
-</cc>
+</CC>

@@ -24,9 +24,9 @@ tags: ["css", "styling"]
 - [Sass](https://sass-lang.com/documentation)
 - [PostCSS](https://postcss.org/)
 
-<mc>
+<MC>
 
-<sc>
+<SC>
 
 ## CSS Grid without media queries
 
@@ -43,9 +43,9 @@ grid-template-columns: repeat(auto-fit, minmax(0, min-content));
 
 [CSS Grid Layout](https://drafts.csswg.org/css-grid/#auto-repeat)
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Navbar
 
@@ -69,9 +69,9 @@ li a:hover {
 
 [CSS Grid Layout](https://drafts.csswg.org/css-grid/#auto-repeat)
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Anchor link offset
 
@@ -84,9 +84,9 @@ li a:hover {
 }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Center div
 
@@ -105,9 +105,9 @@ li a:hover {
 }
 ```
 
-</sc>
+</SC>
 
-<sc>
+<SC>
 
 ## Enable/Disable scrolling
 
@@ -118,6 +118,6 @@ body.overflow {
 }
 ```
 
-</sc>
+</SC>
 
-</mc>
+</MC>

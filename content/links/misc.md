@@ -5,7 +5,7 @@ date: 2022-11-01
 tags: ["general"]
 ---
 
-<cc>
+<CC>
 
 <div>
 
@@ -74,4 +74,4 @@ tags: ["general"]
 
 </div>
 
-</cc>
+</CC>

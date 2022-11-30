@@ -8,7 +8,7 @@ tags: ["python", "machine-learning"]
 
 ## Related
 
-<cc col="2">
+<CC col="2">
 
 <div>
 
@@ -27,7 +27,7 @@ tags: ["python", "machine-learning"]
 
 </div>
 
-</cc>
+</CC>
 
 ## Resources
 
