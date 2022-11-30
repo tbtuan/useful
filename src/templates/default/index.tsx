@@ -46,7 +46,7 @@ const Index = ({
 
   const siteContext = useContext(SiteContext);
 
-  const tableOfContents = headings.map((item) => {
+  const tableOfContents = headings.filter(item => item.depth === 2).map((item) => {
     return {
       title: item.value,
       url: `#${stringToSlug(item.value)}`,
@@ -97,6 +97,7 @@ export const pageQuery = graphql`
       }
       headings {
         value
+        depth
       }
       parent {
         ... on File {

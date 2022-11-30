@@ -49,6 +49,7 @@ interface Mdx {
 
 interface Value {
   value: string;
+  depth: Number;
 }
 interface Items {
   items?: Item[];
