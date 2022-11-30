@@ -142,11 +142,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMdx(
-      filter: {frontmatter: {date: {gt: "0"}}}
-      sort: {frontmatter: {date: DESC}}
-      limit: 10
-    ) {
+    allMdx {
       edges {
         node {
           frontmatter {

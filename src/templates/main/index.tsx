@@ -99,8 +99,8 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: {frontmatter: {date: {eq: null}}}
-      sort: {frontmatter: {date: DESC}}
+      filter: { fields: {slug: { regex: "//*.//gm"}}}
+      sort: { frontmatter: {date: DESC} }
       limit: 10
     ) {
       edges {
