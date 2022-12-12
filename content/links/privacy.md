@@ -11,7 +11,7 @@ tags: ["privacy"]
 
 ## General
 
-- [Privacy guides](https://www.privacyguides.org/)
+- [Privacy guides](https://www.privacyguides.org/tools/)
 
 </div>
 
@@ -25,13 +25,20 @@ tags: ["privacy"]
 
 </div>
 
-
 <div>
 
 ## Alternative frontends
 
 - [Nitter instances](https://github.com/xnaas/nitter-instances)
 - [Alternative frontends](https://github.com/digitalblossom/alternative-frontends)
+
+</div>
+
+<div>
+
+## Alternative OS
+
+- [/e/OS](https://doc.e.foundation/)
 
 </div>
 
