@@ -9,6 +9,14 @@ tags: ["privacy"]
 
 <div>
 
+## General
+
+- [Privacy guides](https://www.privacyguides.org/)
+
+</div>
+
+<div>
+
 ## Alternative tools
 
 - [SimplyTranslate](https://simplytranslate.org/)
