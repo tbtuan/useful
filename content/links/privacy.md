@@ -17,7 +17,7 @@ tags: ["privacy"]
 
 <div>
 
-## Alternative tools
+## Alternative websites
 
 - [SimplyTranslate](https://simplytranslate.org/)
 - [Invidious](https://invidious.snopyta.org/)

@@ -7,7 +7,8 @@ A collection of links, tutorials and cheatsheets for developers and ui/ux design
 
 ## ✨Recommended
 
-- [Tools (online tools for example draw.io)](/links/machine-learning/)
+- [Tools (online tools for example draw.io)](/links/tools/)
+- [Privacy (alternative frontends such as nitter)](/links/privacy/)
 - [Learning resources (contains useful sites such as "awesome" and "Web Developer Roadmap")](/links/learning-resources/)
 - [Machine learning (resources for ai models such as stable diffusion and GPT)](/links/machine-learning/)
 - [Example (/useful example page for contributors)](/example/)
