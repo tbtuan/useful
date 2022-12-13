@@ -1,7 +1,7 @@
 ---
 title: "Learning Resources"
 description: "Tutorials, EBooks, Code interviews"
-date: 2023-12-13
+date: 2022-12-13
 tags: ["tutorials"]
 ---
 

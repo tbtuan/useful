@@ -32,7 +32,10 @@ const Links = ({ data, children }: Props) => {
 
   return (
     <>
-      <Seo metaTitle={title} metaDescription={description} />
+      {title == "/useful" ? 
+      <Seo metaTitle={title} metaDescription={description} /> :
+      <Seo metaTitle={title + " | /useful"} metaDescription={description} />
+      }
       <TitleWrapper>
         <StyledHeading>{title}</StyledHeading>
       </TitleWrapper>
