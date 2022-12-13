@@ -1,7 +1,7 @@
 ---
 title: "Learning Resources"
 description: "Tutorials, EBooks, Code interviews"
-date: 2021-03-19
+date: 2023-12-13
 tags: ["tutorials"]
 ---
 
@@ -19,6 +19,7 @@ tags: ["tutorials"]
 
 ## Useful websites
 
+- 📖 [awesome](https://github.com/sindresorhus/awesome)
 - 📖 [Some useful websites for programmers](https://github.com/sdmg15/Best-websites-a-programmer-should-visit)
 - 📖 [awesome-interview-questions](https://github.com/MaximAbramchuck/awesome-interview-questions)
 - 📖 [Coding Interview University](https://github.com/jwasham/coding-interview-university)
