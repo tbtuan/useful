@@ -1,7 +1,7 @@
 ---
 title: "Machine learning"
 description: "Resources for deep learning"
-date: 2022-11-20
+date: 2022-12-13
 tags: ["machine-learning"]
 ---
 
@@ -64,6 +64,8 @@ tags: ["machine-learning"]
 ### Stable diffusion (text to image)
 
 - [Stability AI](https://stability.ai/)
+- [Stable diffusion models](https://huggingface.co/models?other=stable-diffusion)
+- [Stable diffusion web ui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 - [List of SD Tutorials & Resources](https://www.reddit.com/r/StableDiffusion/comments/yknrjt/list_of_sd_tutorials_resources/)
 
 </div>

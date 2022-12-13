@@ -1,7 +1,7 @@
 ---
 title: 'VirtualBox'
 description: 'Virtual machine'
-date: 2021-03-04
+date: 2022-12-13
 tags: ["virtual-machine"]
 ---
 
@@ -26,5 +26,13 @@ sudo gparted
 Select a disk -> Right click -> Resize/move
 ```
 
+## Shared folder
+
+- [Gist](https://gist.github.com/estorgio/1d679f962e8209f8a9232f7593683265)
+
+mount to the shared folder
+```text
+sudo mount -t vboxsf shared ~/shared
+```
 
 

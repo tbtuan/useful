@@ -30,7 +30,8 @@ tags: ["privacy"]
 ## Alternative frontends
 
 - [Nitter instances](https://github.com/xnaas/nitter-instances)
-- [Alternative frontends](https://github.com/digitalblossom/alternative-frontends)
+- [digitalblossom - Alternative frontends](https://github.com/digitalblossom/alternative-frontends)
+- [FSMdotCOM - Alternative frontends](https://gitlab.com/FSMdotCOM/foss-front-ends-and-alternatives)
 
 </div>
 
