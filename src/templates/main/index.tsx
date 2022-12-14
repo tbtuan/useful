@@ -36,7 +36,7 @@ const Index = ({
 
   return (
     <>
-      <Seo metaTitle={title} metaDescription={description} />
+      <Seo metaTitle={title == "/useful" ? title : title + " | /useful"} metaDescription={description} />
       <TitleWrapper>
         <StyledHeading>{title}</StyledHeading>
         {children}
@@ -44,7 +44,7 @@ const Index = ({
       <ContentWrapper>
         <ModifiedAt dateTitleSlug={dateTitleSlug} />
         <Main>
-          <Featured title="Visited links">
+          <Featured title="🔗 Visited links">
             {siteContext?.visited?.length > 0 &&
               siteContext.visited.map((item, index) => (
                 <Li key={item.url + index.toString()}>
@@ -58,7 +58,7 @@ const Index = ({
                 </Li>
               ))}
           </Featured>
-          <Featured title="Pages">
+          <Featured title="📃 Visited pages">
             {siteContext?.pageVisited?.length > 0 &&
               siteContext.pageVisited.map((item, index) => (
                 <Li key={item.url + index.toString()}>

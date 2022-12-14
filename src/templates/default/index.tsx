@@ -59,7 +59,7 @@ const Index = ({
 
   return (
     <>
-      <Seo metaTitle={title} metaDescription={description} />
+      <Seo metaTitle={title == "/useful" ? title : title + " | /useful"} metaDescription={description} />
       <TitleWrapper>
         {pageContext?.crumbs?.length > 1 && (
           <Breadcrumb

@@ -75,7 +75,7 @@ const Collection = ({
 
   return (
     <>
-      <Seo metaTitle={title} metaDescription={description} />
+      <Seo metaTitle={title == "/useful" ? title : title + " | /useful"} metaDescription={description} />
       <TitleWrapper>
         <StyledHeading>{title}</StyledHeading>
       </TitleWrapper>

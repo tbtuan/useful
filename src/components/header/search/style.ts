@@ -133,6 +133,26 @@ export const ClearIcon = styled(Clear)`
   }
 `;
 
+export const ScrollWrapper = styled("div")`
+  display: flex;
+  flex-direction: column;
+  padding-right: 1rem;
+  max-height: 16rem;
+  overflow-y: auto;
+  ::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.colors.scrollbarTrack};
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    background-color: ${({ theme }) => theme.colors.scrollbar};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.scrollbar};
+  }
+`
+
 export const HitsWrapper = styled("div")`
   display: ${(props: Props) => (props.show ? `flex` : `none`)};
   flex-direction: column;

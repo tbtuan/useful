@@ -12,11 +12,17 @@ export const useSearch = (
         includeMatches: true,
         includeScore: true,
         threshold: 0.3,
-        keys: ["id", "title", "url", "toc.title"],
+        keys: ["title", "url", "toc.title"],
       });
 
-      const results = fuse.search(query, { limit: 5 });
-
+      let results;
+      if (query === "") {
+        // every url has /, display all results
+        results = fuse.search("/");
+      } else {
+        // Optional fuse.search(query, { limit: 5 });
+        results = fuse.search(query);
+      }
       setResults(results);
       // To keep the selection inside the bounds while typing
       if (results && itemIndex > results.length - 1) {

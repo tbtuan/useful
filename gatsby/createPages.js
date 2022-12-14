@@ -60,6 +60,12 @@ module.exports = async ({ graphql, actions, reporter }) => {
       tags.push(node.frontmatter.tags);
     }
   });
+  searchIndex.sort(function(a, b) {
+    const keyA = a.title.toLowerCase(), keyB = b.title.toLowerCase();
+    if (keyA > keyB) return 1;
+    if (keyA < keyB) return -1;
+    return 0;
+  })
   tags = [...new Set([].concat.apply([], tags))].sort();
 
   // Create blog posts pages.
