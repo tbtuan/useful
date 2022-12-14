@@ -9,6 +9,7 @@ import {
   SearchBox,
   SearchContainer,
   HitsWrapper,
+  ScrollWrapper,
   SearchLink,
   SearchTitle,
   ClearInputDiv,
@@ -131,7 +132,9 @@ const SearchLayout = () => {
         autoComplete="off"
       />
       <HitsWrapper show={results.length > 0 && focus}>
-        {searchResults}
+        <ScrollWrapper>
+          {searchResults}
+        </ScrollWrapper>
       </HitsWrapper>
       {focus && <Overlay onClick={() => setFocus(false)} />}
       <ClearInputDiv>
