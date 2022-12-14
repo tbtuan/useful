@@ -40,7 +40,7 @@ const Layout = ({ children, data }: Props) => {
   const relativePath = data?.mdx?.parent?.relativePath;
 
   return (
-    <Div id="main-div">
+    <Div>
       <ViewDiv />
       <Header>
         <TitleWrapper>

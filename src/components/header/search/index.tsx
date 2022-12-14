@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { useClickOutside } from "hooks/useClickOutside";
 import { useFocus } from "hooks/useFocus";
 import { useSearch } from "hooks/useSearch";
-import { usePreventScroll } from "hooks/usePreventScroll";
 import {
   Overlay,
   StyledSearch,
@@ -24,8 +23,6 @@ const SearchLayout = () => {
 
   const ref = useRef(null);
 
-  const preventScrollRef = useRef(false);
-
   const [results, setResults] = useState([]);
 
   const [query, setQuery] = useState("");
@@ -33,8 +30,6 @@ const SearchLayout = () => {
   const [focus, setFocus] = useState(false);
 
   const [itemIndex, setItemIndex] = useState(0);
-
-  usePreventScroll(preventScrollRef);
 
   useFocus(ref, () => document.getElementById("searchbox").focus());
   useClickOutside(ref, () => setFocus(false));
@@ -109,9 +104,9 @@ const SearchLayout = () => {
 
   useEffect(() => {
     if (focus && window.matchMedia("(max-width: 576px)").matches) {
-      preventScrollRef.current = true;
+      document.documentElement.style.overflow = "hidden";
     } else {
-      preventScrollRef.current = false;
+      document.documentElement.style.overflow = "";
     }
   }, [focus]);
 
