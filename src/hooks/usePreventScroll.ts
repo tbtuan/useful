@@ -2,15 +2,10 @@ import { useEffect } from "react";
 
 export const usePreventScroll = (preventScrollRef) => {
   useEffect(() => {
-    const preventScrolling = (e) => {
-      if (preventScrollRef.current) {
-        e.preventDefault();
-      }
-    };
-
-    document.addEventListener("touchmove", preventScrolling, {
-      passive: false,
-    });
-    return () => document.removeEventListener("touchmove", preventScrolling);
+    if (preventScrollRef.current) {
+      document.getElementById("main-div").style.overflow = "hidden";
+    } else {
+      document.getElementById("main-div").style.overflow = "auto";
+    }
   }, []);
 };
